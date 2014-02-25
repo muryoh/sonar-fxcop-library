@@ -1,0 +1,1395 @@
+<rules>
+
+  <rule key="CA1000">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1000]]></name>
+    <description>CA1000</description>
+  </rule>
+
+  <rule key="CA1001">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1001]]></name>
+    <description>CA1001</description>
+  </rule>
+
+  <rule key="CA1002">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1002]]></name>
+    <description>CA1002</description>
+  </rule>
+
+  <rule key="CA1003">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1003]]></name>
+    <description>CA1003</description>
+  </rule>
+
+  <rule key="CA1004">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1004]]></name>
+    <description>CA1004</description>
+  </rule>
+
+  <rule key="CA1005">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1005]]></name>
+    <description>CA1005</description>
+  </rule>
+
+  <rule key="CA1006">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1006]]></name>
+    <description>CA1006</description>
+  </rule>
+
+  <rule key="CA1007">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1007]]></name>
+    <description>CA1007</description>
+  </rule>
+
+  <rule key="CA1008">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1008]]></name>
+    <description>CA1008</description>
+  </rule>
+
+  <rule key="CA1009">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1009]]></name>
+    <description>CA1009</description>
+  </rule>
+
+  <rule key="CA1010">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1010]]></name>
+    <description>CA1010</description>
+  </rule>
+
+  <rule key="CA1011">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1011]]></name>
+    <description>CA1011</description>
+  </rule>
+
+  <rule key="CA1012">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1012]]></name>
+    <description>CA1012</description>
+  </rule>
+
+  <rule key="CA1013">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1013]]></name>
+    <description>CA1013</description>
+  </rule>
+
+  <rule key="CA1014">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1014]]></name>
+    <description>CA1014</description>
+  </rule>
+
+  <rule key="CA1016">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1016]]></name>
+    <description>CA1016</description>
+  </rule>
+
+  <rule key="CA1017">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1017]]></name>
+    <description>CA1017</description>
+  </rule>
+
+  <rule key="CA1018">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1018]]></name>
+    <description>CA1018</description>
+  </rule>
+
+  <rule key="CA1019">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1019]]></name>
+    <description>CA1019</description>
+  </rule>
+
+  <rule key="CA1020">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1020]]></name>
+    <description>CA1020</description>
+  </rule>
+
+  <rule key="CA1021">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1021]]></name>
+    <description>CA1021</description>
+  </rule>
+
+  <rule key="CA1023">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1023]]></name>
+    <description>CA1023</description>
+  </rule>
+
+  <rule key="CA1024">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1024]]></name>
+    <description>CA1024</description>
+  </rule>
+
+  <rule key="CA1025">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1025]]></name>
+    <description>CA1025</description>
+  </rule>
+
+  <rule key="CA1026">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1026]]></name>
+    <description>CA1026</description>
+  </rule>
+
+  <rule key="CA1027">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1027]]></name>
+    <description>CA1027</description>
+  </rule>
+
+  <rule key="CA1028">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1028]]></name>
+    <description>CA1028</description>
+  </rule>
+
+  <rule key="CA1030">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1030]]></name>
+    <description>CA1030</description>
+  </rule>
+
+  <rule key="CA1031">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1031]]></name>
+    <description>CA1031</description>
+  </rule>
+
+  <rule key="CA1032">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1032]]></name>
+    <description>CA1032</description>
+  </rule>
+
+  <rule key="CA1033">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1033]]></name>
+    <description>CA1033</description>
+  </rule>
+
+  <rule key="CA1034">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1034]]></name>
+    <description>CA1034</description>
+  </rule>
+
+  <rule key="CA1035">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1035]]></name>
+    <description>CA1035</description>
+  </rule>
+
+  <rule key="CA1036">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1036]]></name>
+    <description>CA1036</description>
+  </rule>
+
+  <rule key="CA1038">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1038]]></name>
+    <description>CA1038</description>
+  </rule>
+
+  <rule key="CA1039">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1039]]></name>
+    <description>CA1039</description>
+  </rule>
+
+  <rule key="CA1040">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1040]]></name>
+    <description>CA1040</description>
+  </rule>
+
+  <rule key="CA1041">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1041]]></name>
+    <description>CA1041</description>
+  </rule>
+
+  <rule key="CA1043">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1043]]></name>
+    <description>CA1043</description>
+  </rule>
+
+  <rule key="CA1044">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1044]]></name>
+    <description>CA1044</description>
+  </rule>
+
+  <rule key="CA1045">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1045]]></name>
+    <description>CA1045</description>
+  </rule>
+
+  <rule key="CA1046">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1046]]></name>
+    <description>CA1046</description>
+  </rule>
+
+  <rule key="CA1047">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1047]]></name>
+    <description>CA1047</description>
+  </rule>
+
+  <rule key="CA1048">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1048]]></name>
+    <description>CA1048</description>
+  </rule>
+
+  <rule key="CA1049">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1049]]></name>
+    <description>CA1049</description>
+  </rule>
+
+  <rule key="CA1050">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1050]]></name>
+    <description>CA1050</description>
+  </rule>
+
+  <rule key="CA1051">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1051]]></name>
+    <description>CA1051</description>
+  </rule>
+
+  <rule key="CA1052">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1052]]></name>
+    <description>CA1052</description>
+  </rule>
+
+  <rule key="CA1053">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1053]]></name>
+    <description>CA1053</description>
+  </rule>
+
+  <rule key="CA1054">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1054]]></name>
+    <description>CA1054</description>
+  </rule>
+
+  <rule key="CA1055">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1055]]></name>
+    <description>CA1055</description>
+  </rule>
+
+  <rule key="CA1056">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1056]]></name>
+    <description>CA1056</description>
+  </rule>
+
+  <rule key="CA1057">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1057]]></name>
+    <description>CA1057</description>
+  </rule>
+
+  <rule key="CA1058">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1058]]></name>
+    <description>CA1058</description>
+  </rule>
+
+  <rule key="CA1059">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1059]]></name>
+    <description>CA1059</description>
+  </rule>
+
+  <rule key="CA1060">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1060]]></name>
+    <description>CA1060</description>
+  </rule>
+
+  <rule key="CA1061">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1061]]></name>
+    <description>CA1061</description>
+  </rule>
+
+  <rule key="CA1062">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1062]]></name>
+    <description>CA1062</description>
+  </rule>
+
+  <rule key="CA1063">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1063]]></name>
+    <description>CA1063</description>
+  </rule>
+
+  <rule key="CA1064">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1064]]></name>
+    <description>CA1064</description>
+  </rule>
+
+  <rule key="CA1065">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1065]]></name>
+    <description>CA1065</description>
+  </rule>
+
+  <rule key="CA1300">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1300]]></name>
+    <description>CA1300</description>
+  </rule>
+
+  <rule key="CA1301">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1301]]></name>
+    <description>CA1301</description>
+  </rule>
+
+  <rule key="CA1302">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1302]]></name>
+    <description>CA1302</description>
+  </rule>
+
+  <rule key="CA1303">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1303]]></name>
+    <description>CA1303</description>
+  </rule>
+
+  <rule key="CA1304">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1304]]></name>
+    <description>CA1304</description>
+  </rule>
+
+  <rule key="CA1305">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1305]]></name>
+    <description>CA1305</description>
+  </rule>
+
+  <rule key="CA1306">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1306]]></name>
+    <description>CA1306</description>
+  </rule>
+
+  <rule key="CA1307">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1307]]></name>
+    <description>CA1307</description>
+  </rule>
+
+  <rule key="CA1308">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1308]]></name>
+    <description>CA1308</description>
+  </rule>
+
+  <rule key="CA1309">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1309]]></name>
+    <description>CA1309</description>
+  </rule>
+
+  <rule key="CA1400">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1400]]></name>
+    <description>CA1400</description>
+  </rule>
+
+  <rule key="CA1401">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1401]]></name>
+    <description>CA1401</description>
+  </rule>
+
+  <rule key="CA1402">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1402]]></name>
+    <description>CA1402</description>
+  </rule>
+
+  <rule key="CA1403">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1403]]></name>
+    <description>CA1403</description>
+  </rule>
+
+  <rule key="CA1404">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1404]]></name>
+    <description>CA1404</description>
+  </rule>
+
+  <rule key="CA1405">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1405]]></name>
+    <description>CA1405</description>
+  </rule>
+
+  <rule key="CA1406">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1406]]></name>
+    <description>CA1406</description>
+  </rule>
+
+  <rule key="CA1407">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1407]]></name>
+    <description>CA1407</description>
+  </rule>
+
+  <rule key="CA1408">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1408]]></name>
+    <description>CA1408</description>
+  </rule>
+
+  <rule key="CA1409">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1409]]></name>
+    <description>CA1409</description>
+  </rule>
+
+  <rule key="CA1410">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1410]]></name>
+    <description>CA1410</description>
+  </rule>
+
+  <rule key="CA1411">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1411]]></name>
+    <description>CA1411</description>
+  </rule>
+
+  <rule key="CA1412">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1412]]></name>
+    <description>CA1412</description>
+  </rule>
+
+  <rule key="CA1413">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1413]]></name>
+    <description>CA1413</description>
+  </rule>
+
+  <rule key="CA1414">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1414]]></name>
+    <description>CA1414</description>
+  </rule>
+
+  <rule key="CA1415">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1415]]></name>
+    <description>CA1415</description>
+  </rule>
+
+  <rule key="CA1500">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1500]]></name>
+    <description>CA1500</description>
+  </rule>
+
+  <rule key="CA1501">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1501]]></name>
+    <description>CA1501</description>
+  </rule>
+
+  <rule key="CA1502">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1502]]></name>
+    <description>CA1502</description>
+  </rule>
+
+  <rule key="CA1504">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1504]]></name>
+    <description>CA1504</description>
+  </rule>
+
+  <rule key="CA1505">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1505]]></name>
+    <description>CA1505</description>
+  </rule>
+
+  <rule key="CA1506">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1506]]></name>
+    <description>CA1506</description>
+  </rule>
+
+  <rule key="CA1600">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1600]]></name>
+    <description>CA1600</description>
+  </rule>
+
+  <rule key="CA1601">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1601]]></name>
+    <description>CA1601</description>
+  </rule>
+
+  <rule key="CA1700">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1700]]></name>
+    <description>CA1700</description>
+  </rule>
+
+  <rule key="CA1701">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1701]]></name>
+    <description>CA1701</description>
+  </rule>
+
+  <rule key="CA1702">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1702]]></name>
+    <description>CA1702</description>
+  </rule>
+
+  <rule key="CA1703">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1703]]></name>
+    <description>CA1703</description>
+  </rule>
+
+  <rule key="CA1704">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1704]]></name>
+    <description>CA1704</description>
+  </rule>
+
+  <rule key="CA1707">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1707]]></name>
+    <description>CA1707</description>
+  </rule>
+
+  <rule key="CA1708">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1708]]></name>
+    <description>CA1708</description>
+  </rule>
+
+  <rule key="CA1709">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1709]]></name>
+    <description>CA1709</description>
+  </rule>
+
+  <rule key="CA1710">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1710]]></name>
+    <description>CA1710</description>
+  </rule>
+
+  <rule key="CA1711">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1711]]></name>
+    <description>CA1711</description>
+  </rule>
+
+  <rule key="CA1712">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1712]]></name>
+    <description>CA1712</description>
+  </rule>
+
+  <rule key="CA1713">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1713]]></name>
+    <description>CA1713</description>
+  </rule>
+
+  <rule key="CA1714">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1714]]></name>
+    <description>CA1714</description>
+  </rule>
+
+  <rule key="CA1715">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1715]]></name>
+    <description>CA1715</description>
+  </rule>
+
+  <rule key="CA1716">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1716]]></name>
+    <description>CA1716</description>
+  </rule>
+
+  <rule key="CA1717">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1717]]></name>
+    <description>CA1717</description>
+  </rule>
+
+  <rule key="CA1719">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1719]]></name>
+    <description>CA1719</description>
+  </rule>
+
+  <rule key="CA1720">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1720]]></name>
+    <description>CA1720</description>
+  </rule>
+
+  <rule key="CA1721">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1721]]></name>
+    <description>CA1721</description>
+  </rule>
+
+  <rule key="CA1722">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1722]]></name>
+    <description>CA1722</description>
+  </rule>
+
+  <rule key="CA1724">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1724]]></name>
+    <description>CA1724</description>
+  </rule>
+
+  <rule key="CA1725">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1725]]></name>
+    <description>CA1725</description>
+  </rule>
+
+  <rule key="CA1726">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1726]]></name>
+    <description>CA1726</description>
+  </rule>
+
+  <rule key="CA1800">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1800]]></name>
+    <description>CA1800</description>
+  </rule>
+
+  <rule key="CA1801">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1801]]></name>
+    <description>CA1801</description>
+  </rule>
+
+  <rule key="CA1802">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1802]]></name>
+    <description>CA1802</description>
+  </rule>
+
+  <rule key="CA1804">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1804]]></name>
+    <description>CA1804</description>
+  </rule>
+
+  <rule key="CA1806">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1806]]></name>
+    <description>CA1806</description>
+  </rule>
+
+  <rule key="CA1809">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1809]]></name>
+    <description>CA1809</description>
+  </rule>
+
+  <rule key="CA1810">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1810]]></name>
+    <description>CA1810</description>
+  </rule>
+
+  <rule key="CA1811">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1811]]></name>
+    <description>CA1811</description>
+  </rule>
+
+  <rule key="CA1812">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1812]]></name>
+    <description>CA1812</description>
+  </rule>
+
+  <rule key="CA1813">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1813]]></name>
+    <description>CA1813</description>
+  </rule>
+
+  <rule key="CA1814">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1814]]></name>
+    <description>CA1814</description>
+  </rule>
+
+  <rule key="CA1815">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1815]]></name>
+    <description>CA1815</description>
+  </rule>
+
+  <rule key="CA1816">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1816]]></name>
+    <description>CA1816</description>
+  </rule>
+
+  <rule key="CA1819">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1819]]></name>
+    <description>CA1819</description>
+  </rule>
+
+  <rule key="CA1820">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1820]]></name>
+    <description>CA1820</description>
+  </rule>
+
+  <rule key="CA1821">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1821]]></name>
+    <description>CA1821</description>
+  </rule>
+
+  <rule key="CA1822">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1822]]></name>
+    <description>CA1822</description>
+  </rule>
+
+  <rule key="CA1823">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1823]]></name>
+    <description>CA1823</description>
+  </rule>
+
+  <rule key="CA1824">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1824]]></name>
+    <description>CA1824</description>
+  </rule>
+
+  <rule key="CA1900">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1900]]></name>
+    <description>CA1900</description>
+  </rule>
+
+  <rule key="CA1901">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1901]]></name>
+    <description>CA1901</description>
+  </rule>
+
+  <rule key="CA1903">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA1903]]></name>
+    <description>CA1903</description>
+  </rule>
+
+  <rule key="CA2000">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2000]]></name>
+    <description>CA2000</description>
+  </rule>
+
+  <rule key="CA2001">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2001]]></name>
+    <description>CA2001</description>
+  </rule>
+
+  <rule key="CA2002">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2002]]></name>
+    <description>CA2002</description>
+  </rule>
+
+  <rule key="CA2003">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2003]]></name>
+    <description>CA2003</description>
+  </rule>
+
+  <rule key="CA2004">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2004]]></name>
+    <description>CA2004</description>
+  </rule>
+
+  <rule key="CA2006">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2006]]></name>
+    <description>CA2006</description>
+  </rule>
+
+  <rule key="CA2100">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2100]]></name>
+    <description>CA2100</description>
+  </rule>
+
+  <rule key="CA2101">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2101]]></name>
+    <description>CA2101</description>
+  </rule>
+
+  <rule key="CA2102">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2102]]></name>
+    <description>CA2102</description>
+  </rule>
+
+  <rule key="CA2103">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2103]]></name>
+    <description>CA2103</description>
+  </rule>
+
+  <rule key="CA2104">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2104]]></name>
+    <description>CA2104</description>
+  </rule>
+
+  <rule key="CA2105">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2105]]></name>
+    <description>CA2105</description>
+  </rule>
+
+  <rule key="CA2106">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2106]]></name>
+    <description>CA2106</description>
+  </rule>
+
+  <rule key="CA2107">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2107]]></name>
+    <description>CA2107</description>
+  </rule>
+
+  <rule key="CA2108">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2108]]></name>
+    <description>CA2108</description>
+  </rule>
+
+  <rule key="CA2109">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2109]]></name>
+    <description>CA2109</description>
+  </rule>
+
+  <rule key="CA2111">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2111]]></name>
+    <description>CA2111</description>
+  </rule>
+
+  <rule key="CA2112">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2112]]></name>
+    <description>CA2112</description>
+  </rule>
+
+  <rule key="CA2114">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2114]]></name>
+    <description>CA2114</description>
+  </rule>
+
+  <rule key="CA2115">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2115]]></name>
+    <description>CA2115</description>
+  </rule>
+
+  <rule key="CA2116">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2116]]></name>
+    <description>CA2116</description>
+  </rule>
+
+  <rule key="CA2117">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2117]]></name>
+    <description>CA2117</description>
+  </rule>
+
+  <rule key="CA2118">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2118]]></name>
+    <description>CA2118</description>
+  </rule>
+
+  <rule key="CA2119">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2119]]></name>
+    <description>CA2119</description>
+  </rule>
+
+  <rule key="CA2120">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2120]]></name>
+    <description>CA2120</description>
+  </rule>
+
+  <rule key="CA2121">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2121]]></name>
+    <description>CA2121</description>
+  </rule>
+
+  <rule key="CA2122">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2122]]></name>
+    <description>CA2122</description>
+  </rule>
+
+  <rule key="CA2123">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2123]]></name>
+    <description>CA2123</description>
+  </rule>
+
+  <rule key="CA2124">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2124]]></name>
+    <description>CA2124</description>
+  </rule>
+
+  <rule key="CA2126">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2126]]></name>
+    <description>CA2126</description>
+  </rule>
+
+  <rule key="CA2130">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2130]]></name>
+    <description>CA2130</description>
+  </rule>
+
+  <rule key="CA2131">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2131]]></name>
+    <description>CA2131</description>
+  </rule>
+
+  <rule key="CA2132">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2132]]></name>
+    <description>CA2132</description>
+  </rule>
+
+  <rule key="CA2133">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2133]]></name>
+    <description>CA2133</description>
+  </rule>
+
+  <rule key="CA2134">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2134]]></name>
+    <description>CA2134</description>
+  </rule>
+
+  <rule key="CA2135">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2135]]></name>
+    <description>CA2135</description>
+  </rule>
+
+  <rule key="CA2136">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2136]]></name>
+    <description>CA2136</description>
+  </rule>
+
+  <rule key="CA2137">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2137]]></name>
+    <description>CA2137</description>
+  </rule>
+
+  <rule key="CA2138">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2138]]></name>
+    <description>CA2138</description>
+  </rule>
+
+  <rule key="CA2139">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2139]]></name>
+    <description>CA2139</description>
+  </rule>
+
+  <rule key="CA2140">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2140]]></name>
+    <description>CA2140</description>
+  </rule>
+
+  <rule key="CA2141">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2141]]></name>
+    <description>CA2141</description>
+  </rule>
+
+  <rule key="CA2142">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2142]]></name>
+    <description>CA2142</description>
+  </rule>
+
+  <rule key="CA2143">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2143]]></name>
+    <description>CA2143</description>
+  </rule>
+
+  <rule key="CA2144">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2144]]></name>
+    <description>CA2144</description>
+  </rule>
+
+  <rule key="CA2145">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2145]]></name>
+    <description>CA2145</description>
+  </rule>
+
+  <rule key="CA2146">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2146]]></name>
+    <description>CA2146</description>
+  </rule>
+
+  <rule key="CA2147">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2147]]></name>
+    <description>CA2147</description>
+  </rule>
+
+  <rule key="CA2149">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2149]]></name>
+    <description>CA2149</description>
+  </rule>
+
+  <rule key="CA2151">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2151]]></name>
+    <description>CA2151</description>
+  </rule>
+
+  <rule key="CA2200">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2200]]></name>
+    <description>CA2200</description>
+  </rule>
+
+  <rule key="CA2201">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2201]]></name>
+    <description>CA2201</description>
+  </rule>
+
+  <rule key="CA2202">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2202]]></name>
+    <description>CA2202</description>
+  </rule>
+
+  <rule key="CA2204">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2204]]></name>
+    <description>CA2204</description>
+  </rule>
+
+  <rule key="CA2205">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2205]]></name>
+    <description>CA2205</description>
+  </rule>
+
+  <rule key="CA2207">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2207]]></name>
+    <description>CA2207</description>
+  </rule>
+
+  <rule key="CA2208">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2208]]></name>
+    <description>CA2208</description>
+  </rule>
+
+  <rule key="CA2210">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2210]]></name>
+    <description>CA2210</description>
+  </rule>
+
+  <rule key="CA2211">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2211]]></name>
+    <description>CA2211</description>
+  </rule>
+
+  <rule key="CA2212">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2212]]></name>
+    <description>CA2212</description>
+  </rule>
+
+  <rule key="CA2213">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2213]]></name>
+    <description>CA2213</description>
+  </rule>
+
+  <rule key="CA2214">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2214]]></name>
+    <description>CA2214</description>
+  </rule>
+
+  <rule key="CA2215">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2215]]></name>
+    <description>CA2215</description>
+  </rule>
+
+  <rule key="CA2216">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2216]]></name>
+    <description>CA2216</description>
+  </rule>
+
+  <rule key="CA2217">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2217]]></name>
+    <description>CA2217</description>
+  </rule>
+
+  <rule key="CA2218">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2218]]></name>
+    <description>CA2218</description>
+  </rule>
+
+  <rule key="CA2219">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2219]]></name>
+    <description>CA2219</description>
+  </rule>
+
+  <rule key="CA2220">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2220]]></name>
+    <description>CA2220</description>
+  </rule>
+
+  <rule key="CA2221">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2221]]></name>
+    <description>CA2221</description>
+  </rule>
+
+  <rule key="CA2222">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2222]]></name>
+    <description>CA2222</description>
+  </rule>
+
+  <rule key="CA2223">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2223]]></name>
+    <description>CA2223</description>
+  </rule>
+
+  <rule key="CA2224">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2224]]></name>
+    <description>CA2224</description>
+  </rule>
+
+  <rule key="CA2225">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2225]]></name>
+    <description>CA2225</description>
+  </rule>
+
+  <rule key="CA2226">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2226]]></name>
+    <description>CA2226</description>
+  </rule>
+
+  <rule key="CA2227">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2227]]></name>
+    <description>CA2227</description>
+  </rule>
+
+  <rule key="CA2228">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2228]]></name>
+    <description>CA2228</description>
+  </rule>
+
+  <rule key="CA2229">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2229]]></name>
+    <description>CA2229</description>
+  </rule>
+
+  <rule key="CA2230">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2230]]></name>
+    <description>CA2230</description>
+  </rule>
+
+  <rule key="CA2231">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2231]]></name>
+    <description>CA2231</description>
+  </rule>
+
+  <rule key="CA2232">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2232]]></name>
+    <description>CA2232</description>
+  </rule>
+
+  <rule key="CA2233">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2233]]></name>
+    <description>CA2233</description>
+  </rule>
+
+  <rule key="CA2234">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2234]]></name>
+    <description>CA2234</description>
+  </rule>
+
+  <rule key="CA2235">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2235]]></name>
+    <description>CA2235</description>
+  </rule>
+
+  <rule key="CA2236">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2236]]></name>
+    <description>CA2236</description>
+  </rule>
+
+  <rule key="CA2237">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2237]]></name>
+    <description>CA2237</description>
+  </rule>
+
+  <rule key="CA2238">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2238]]></name>
+    <description>CA2238</description>
+  </rule>
+
+  <rule key="CA2239">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2239]]></name>
+    <description>CA2239</description>
+  </rule>
+
+  <rule key="CA2240">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2240]]></name>
+    <description>CA2240</description>
+  </rule>
+
+  <rule key="CA2241">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2241]]></name>
+    <description>CA2241</description>
+  </rule>
+
+  <rule key="CA2242">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2242]]></name>
+    <description>CA2242</description>
+  </rule>
+
+  <rule key="CA2243">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA2243]]></name>
+    <description>CA2243</description>
+  </rule>
+
+  <rule key="CA5122">
+    <priority>MAJOR</priority>
+    <name><![CDATA[CA5122]]></name>
+    <description>CA5122</description>
+  </rule>
+
+</rules>

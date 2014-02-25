@@ -19,16 +19,17 @@
  */
 package org.sonar.plugins.fxcop;
 
+import com.google.common.collect.ImmutableList;
 import org.sonar.api.SonarPlugin;
 
-import java.util.Collections;
 import java.util.List;
 
 public class FxCopPlugin extends SonarPlugin {
 
   @Override
   public List getExtensions() {
-    return Collections.emptyList();
+    return ImmutableList.of(
+      FxCopRuleRepository.class);
   }
 
 }

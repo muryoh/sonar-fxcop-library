@@ -20,15 +20,25 @@
 package org.sonar.plugins.fxcop;
 
 import org.junit.Test;
+import org.sonar.api.rules.Rule;
+import org.sonar.api.rules.XMLRuleParser;
+
+import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class FxCopPluginTest {
+public class FxCopRuleRepositoryTest {
 
   @Test
   public void test() {
-    assertThat(new FxCopPlugin().getExtensions()).containsOnly(
-      FxCopRuleRepository.class);
+    List<Rule> rules = new FxCopRuleRepository(new XMLRuleParser()).createRules();
+
+    assertThat(rules.size()).isEqualTo(232);
+    for (Rule rule : rules) {
+      assertThat(rule.getKey()).isNotNull();
+      assertThat(rule.getName()).isNotNull();
+      assertThat(rule.getDescription()).isNotNull();
+    }
   }
 
 }

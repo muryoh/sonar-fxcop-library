@@ -19,16 +19,8 @@
  */
 package org.sonar.plugins.fxcop;
 
-import org.junit.Test;
+public interface HardcodedCrap {
 
-import static org.fest.assertions.Assertions.assertThat;
-
-public class FxCopPluginTest {
-
-  @Test
-  public void test() {
-    assertThat(new FxCopPlugin().getExtensions()).containsOnly(
-      FxCopRuleRepository.class);
-  }
+  String LANGUAGE_KEY = "vbnet";
 
 }

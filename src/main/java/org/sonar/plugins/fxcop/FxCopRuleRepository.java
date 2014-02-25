@@ -19,16 +19,25 @@
  */
 package org.sonar.plugins.fxcop;
 
-import org.junit.Test;
+import org.sonar.api.rules.Rule;
+import org.sonar.api.rules.RuleRepository;
+import org.sonar.api.rules.XMLRuleParser;
 
-import static org.fest.assertions.Assertions.assertThat;
+import java.util.List;
 
-public class FxCopPluginTest {
+public final class FxCopRuleRepository extends RuleRepository {
 
-  @Test
-  public void test() {
-    assertThat(new FxCopPlugin().getExtensions()).containsOnly(
-      FxCopRuleRepository.class);
+  private final XMLRuleParser xmlRuleParser;
+
+  public FxCopRuleRepository(XMLRuleParser xmlRuleParser) {
+    super("fxcop", HardcodedCrap.LANGUAGE_KEY);
+    setName("FxCop");
+    this.xmlRuleParser = xmlRuleParser;
+  }
+
+  @Override
+  public List<Rule> createRules() {
+    return xmlRuleParser.parse(getClass().getResourceAsStream("/org/sonar/plugins/fxcop/rules.xml"));
   }
 
 }
