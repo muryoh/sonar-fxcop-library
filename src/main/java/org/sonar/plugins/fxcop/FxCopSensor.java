@@ -31,6 +31,7 @@ import org.sonar.api.profiles.RulesProfile;
 import org.sonar.api.resources.Project;
 import org.sonar.api.rule.RuleKey;
 import org.sonar.api.rules.ActiveRule;
+import org.sonar.api.scan.filesystem.FileQuery;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
 import org.sonar.api.utils.command.Command;
 import org.sonar.api.utils.command.CommandExecutor;
@@ -59,7 +60,7 @@ public class FxCopSensor implements Sensor {
   public boolean shouldExecuteOnProject(Project project) {
     boolean shouldExecute;
 
-    if (!settings.hasKey(HardcodedCrap.ASSEMBLIES_PROPERTY_KEY)) {
+    if (!settings.hasKey(HardcodedCrap.ASSEMBLIES_PROPERTY_KEY) || !hasFilesToAnalyze()) {
       shouldExecute = false;
     } else if (profile.getActiveRulesByRepository(HardcodedCrap.REPOSITORY_KEY).isEmpty()) {
       LOG.info("All FxCop rules are disabled, skipping its execution.");
@@ -69,6 +70,10 @@ public class FxCopSensor implements Sensor {
     }
 
     return shouldExecute;
+  }
+
+  private boolean hasFilesToAnalyze() {
+    return !fileSystem.files(FileQuery.onSource().onLanguage(HardcodedCrap.LANGUAGE_KEY)).isEmpty();
   }
 
   @Override
