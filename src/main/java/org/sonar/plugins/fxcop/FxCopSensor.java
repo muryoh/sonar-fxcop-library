@@ -85,19 +85,19 @@ public class FxCopSensor implements Sensor {
     executor.execute(HardcodedCrap.FXCOPCMD_PATH, settings.getString(HardcodedCrap.ASSEMBLIES_PROPERTY_KEY), rulesetFile, reportFile);
 
     for (FxCopIssue issue : new FxCopReportParser().parse(reportFile)) {
-      if (issue.path() == null || issue.file() == null || issue.line() == null) {
-        LOG.info("Skipping the FxCop issue at line " + issue.reportLine() + " which has no associated file.");
+      if (!hasFileAndLine(issue)) {
+        logSkippedIssue(issue, "which has no associated file.");
         continue;
       }
 
       File file = new File(new File(issue.path()), issue.file());
       org.sonar.api.resources.File sonarFile = org.sonar.api.resources.File.fromIOFile(file, project);
       if (sonarFile == null) {
-        logSkippedFileOutsideOfSonarQube(issue, file);
+        logSkippedIssueOutsideOfSonarQube(issue, file);
       } else if (HardcodedCrap.LANGUAGE_KEY.equals(sonarFile.getLanguage().getKey())) {
         Issuable issuable = perspectives.as(Issuable.class, sonarFile);
         if (issuable == null) {
-          logSkippedFileOutsideOfSonarQube(issue, file);
+          logSkippedIssueOutsideOfSonarQube(issue, file);
         } else {
           issuable.addIssue(
             issuable.newIssueBuilder()
@@ -110,11 +110,15 @@ public class FxCopSensor implements Sensor {
     }
   }
 
-  private static void logSkippedFileOutsideOfSonarQube(FxCopIssue issue, File file) {
-    logSkippedFile(issue, "whose file \"" + file.getAbsolutePath() + "\" is not in SonarQube.");
+  private static boolean hasFileAndLine(FxCopIssue issue) {
+    return issue.path() == null || issue.file() == null || issue.line() == null;
   }
 
-  private static void logSkippedFile(FxCopIssue issue, String reason) {
+  private static void logSkippedIssueOutsideOfSonarQube(FxCopIssue issue, File file) {
+    logSkippedIssue(issue, "whose file \"" + file.getAbsolutePath() + "\" is not in SonarQube.");
+  }
+
+  private static void logSkippedIssue(FxCopIssue issue, String reason) {
     LOG.info("Skipping the FxCop issue at line " + issue.reportLine() + " " + reason);
   }
 
