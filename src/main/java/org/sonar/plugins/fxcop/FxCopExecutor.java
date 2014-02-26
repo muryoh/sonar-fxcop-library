@@ -31,13 +31,14 @@ public class FxCopExecutor implements BatchExtension {
   private static final int FXCOPCMD_TIMEOUT_MINUTES = 30;
 
   public void execute(String executable, String assemblies, File rulesetFile, File reportFile) {
-    Command command = Command.create(executable)
-      .addArgument("/file:" + assemblies)
-      .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
-      .addArgument("/out:" + reportFile.getAbsolutePath())
-      .addArgument("/outxsl:none")
-      .addArgument("/forceoutput");
-    CommandExecutor.create().execute(command, TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
+    CommandExecutor.create().execute(
+      Command.create(executable)
+        .addArgument("/file:" + assemblies)
+        .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
+        .addArgument("/out:" + reportFile.getAbsolutePath())
+        .addArgument("/outxsl:none")
+        .addArgument("/forceoutput"),
+      TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
   }
 
 }
