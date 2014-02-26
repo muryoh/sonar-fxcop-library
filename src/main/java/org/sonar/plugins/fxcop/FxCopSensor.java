@@ -33,12 +33,9 @@ import org.sonar.api.rule.RuleKey;
 import org.sonar.api.rules.ActiveRule;
 import org.sonar.api.scan.filesystem.FileQuery;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
-import org.sonar.api.utils.command.Command;
-import org.sonar.api.utils.command.CommandExecutor;
 
 import java.io.File;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class FxCopSensor implements Sensor {
 
@@ -47,12 +44,14 @@ public class FxCopSensor implements Sensor {
   private final Settings settings;
   private final RulesProfile profile;
   private final ModuleFileSystem fileSystem;
+  private final FxCopExecutor executor;
   private final ResourcePerspectives perspectives;
 
-  public FxCopSensor(Settings settings, RulesProfile profile, ModuleFileSystem fileSystem, ResourcePerspectives perspectives) {
+  public FxCopSensor(Settings settings, RulesProfile profile, ModuleFileSystem fileSystem, FxCopExecutor executor, ResourcePerspectives perspectives) {
     this.settings = settings;
     this.profile = profile;
     this.fileSystem = fileSystem;
+    this.executor = executor;
     this.perspectives = perspectives;
   }
 
@@ -83,13 +82,7 @@ public class FxCopSensor implements Sensor {
 
     File reportFile = new File(fileSystem.workingDir(), "fxcop-report.xml");
 
-    Command command = Command.create(HardcodedCrap.FXCOPCMD_PATH)
-      .addArgument("/file:" + settings.getString(HardcodedCrap.ASSEMBLIES_PROPERTY_KEY))
-      .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
-      .addArgument("/out:" + reportFile.getAbsolutePath())
-      .addArgument("/outxsl:none")
-      .addArgument("/forceoutput");
-    CommandExecutor.create().execute(command, TimeUnit.MINUTES.toMillis(HardcodedCrap.FXCOPCMD_TIMEOUT_MINUTES));
+    executor.execute(HardcodedCrap.FXCOPCMD_PATH, settings.getString(HardcodedCrap.ASSEMBLIES_PROPERTY_KEY), rulesetFile, reportFile);
 
     for (FxCopIssue issue : new FxCopReportParser().parse(reportFile)) {
       if (issue.path() == null || issue.file() == null || issue.line() == null) {
@@ -99,20 +92,30 @@ public class FxCopSensor implements Sensor {
 
       File file = new File(new File(issue.path()), issue.file());
       org.sonar.api.resources.File sonarFile = org.sonar.api.resources.File.fromIOFile(file, project);
-      // FIXME check that sonarFile is not null
-      Issuable issuable = perspectives.as(Issuable.class, sonarFile);
-      if (issuable == null) {
-        LOG.info("Skipping the FxCop issue at line " + issue.reportLine() + " whose file \"" + file.getAbsolutePath() + "\" is not in SonarQube.");
-        continue;
+      if (sonarFile == null) {
+        logSkippedFileOutsideOfSonarQube(issue, file);
+      } else if (HardcodedCrap.LANGUAGE_KEY.equals(sonarFile.getLanguage().getKey())) {
+        Issuable issuable = perspectives.as(Issuable.class, sonarFile);
+        if (issuable == null) {
+          logSkippedFileOutsideOfSonarQube(issue, file);
+        } else {
+          issuable.addIssue(
+            issuable.newIssueBuilder()
+              .ruleKey(RuleKey.of(HardcodedCrap.REPOSITORY_KEY, issue.ruleKey()))
+              .line(issue.line())
+              .message(issue.message())
+              .build());
+        }
       }
-
-      issuable.addIssue(
-        issuable.newIssueBuilder()
-          .ruleKey(RuleKey.of(HardcodedCrap.REPOSITORY_KEY, issue.ruleKey()))
-          .line(issue.line())
-          .message(issue.message())
-          .build());
     }
+  }
+
+  private static void logSkippedFileOutsideOfSonarQube(FxCopIssue issue, File file) {
+    logSkippedFile(issue, "whose file \"" + file.getAbsolutePath() + "\" is not in SonarQube.");
+  }
+
+  private static void logSkippedFile(FxCopIssue issue, String reason) {
+    LOG.info("Skipping the FxCop issue at line " + issue.reportLine() + " " + reason);
   }
 
   private List<String> enabledRuleKeys() {

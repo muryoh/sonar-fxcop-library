@@ -19,16 +19,25 @@
  */
 package org.sonar.plugins.fxcop;
 
-public interface HardcodedCrap {
+import org.sonar.api.BatchExtension;
+import org.sonar.api.utils.command.Command;
+import org.sonar.api.utils.command.CommandExecutor;
 
-  String LANGUAGE_KEY = "cs";
+import java.io.File;
+import java.util.concurrent.TimeUnit;
 
-  String ASSEMBLIES_PROPERTY_KEY = "sonar.dotnet.assemblies";
+public class FxCopExecutor implements BatchExtension {
 
-  String REPOSITORY_KEY = "fxcop";
+  private static final int FXCOPCMD_TIMEOUT_MINUTES = 30;
 
-  String REPOSITORY_NAME = "FxCop";
-
-  String FXCOPCMD_PATH = "C:\\Program Files\\Microsoft Visual Studio 12.0\\Team Tools\\Static Analysis Tools\\FxCop\\FxCopCmd.exe";
+  public void execute(String executable, String assemblies, File rulesetFile, File reportFile) {
+    Command command = Command.create(executable)
+      .addArgument("/file:" + assemblies)
+      .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
+      .addArgument("/out:" + reportFile.getAbsolutePath())
+      .addArgument("/outxsl:none")
+      .addArgument("/forceoutput");
+    CommandExecutor.create().execute(command, TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
+  }
 
 }
