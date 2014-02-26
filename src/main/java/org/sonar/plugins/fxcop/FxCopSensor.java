@@ -99,6 +99,7 @@ public class FxCopSensor implements Sensor {
 
       File file = new File(new File(issue.path()), issue.file());
       org.sonar.api.resources.File sonarFile = org.sonar.api.resources.File.fromIOFile(file, project);
+      // FIXME check that sonarFile is not null
       Issuable issuable = perspectives.as(Issuable.class, sonarFile);
       if (issuable == null) {
         LOG.info("Skipping the FxCop issue at line " + issue.reportLine() + " whose file \"" + file.getAbsolutePath() + "\" is not in SonarQube.");
