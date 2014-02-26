@@ -24,13 +24,15 @@ import javax.annotation.Nullable;
 public class FxCopIssue {
 
   private final int reportLine;
+  private final String ruleKey;
   private final String path;
   private final String file;
   private final Integer line;
   private final String message;
 
-  public FxCopIssue(int reportLine, @Nullable String path, @Nullable String file, @Nullable Integer line, String message) {
+  public FxCopIssue(int reportLine, String ruleKey, @Nullable String path, @Nullable String file, @Nullable Integer line, String message) {
     this.reportLine = reportLine;
+    this.ruleKey = ruleKey;
     this.path = path;
     this.file = file;
     this.line = line;
@@ -39,6 +41,10 @@ public class FxCopIssue {
 
   public int reportLine() {
     return reportLine;
+  }
+
+  public String ruleKey() {
+    return ruleKey;
   }
 
   @Nullable

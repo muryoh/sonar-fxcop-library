@@ -27,15 +27,17 @@ public class FxCopIssueTest {
 
   @Test
   public void test() {
-    FxCopIssue issue = new FxCopIssue(0, "path", null, null, "message");
+    FxCopIssue issue = new FxCopIssue(0, "S007", "path", null, null, "message");
     assertThat(issue.reportLine()).isEqualTo(0);
+    assertThat(issue.ruleKey()).isEqualTo("S007");
     assertThat(issue.path()).isEqualTo("path");
     assertThat(issue.file()).isNull();
     assertThat(issue.line()).isNull();
     assertThat(issue.message()).isEqualTo("message");
 
-    issue = new FxCopIssue(42, null, "foo", 1, "bar");
+    issue = new FxCopIssue(42, "CA1000", null, "foo", 1, "bar");
     assertThat(issue.reportLine()).isEqualTo(42);
+    assertThat(issue.ruleKey()).isEqualTo("CA1000");
     assertThat(issue.path()).isNull();
     assertThat(issue.file()).isEqualTo("foo");
     assertThat(issue.line()).isEqualTo(1);

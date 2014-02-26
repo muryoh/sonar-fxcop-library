@@ -41,6 +41,7 @@ public class FxCopReportParserTest {
 
     FxCopIssue issue = issues.get(0);
     assertThat(issue.reportLine()).isEqualTo(9);
+    assertThat(issue.ruleKey()).isEqualTo("CA2210");
     assertThat(issue.path()).isNull();
     assertThat(issue.file()).isNull();
     assertThat(issue.line()).isNull();
@@ -48,6 +49,7 @@ public class FxCopReportParserTest {
 
     issue = issues.get(2);
     assertThat(issue.reportLine()).isEqualTo(23);
+    assertThat(issue.ruleKey()).isEqualTo("CA1704");
     assertThat(issue.path()).isEqualTo("c:\\Users\\SonarSource\\Documents\\Visual Studio 2013\\Projects\\CSharpPlayground\\MyLibrary");
     assertThat(issue.file()).isEqualTo("Class1.cs");
     assertThat(issue.line()).isEqualTo(12);
@@ -55,11 +57,19 @@ public class FxCopReportParserTest {
   }
 
   @Test
-  public void invalid() {
+  public void invalid_line() {
     thrown.expectMessage("Expected an integer instead of \"foo\" for the attribute \"Line\"");
-    thrown.expectMessage("invalid.xml at line 9");
+    thrown.expectMessage("invalid_line.xml at line 9");
 
-    new FxCopReportParser().parse(new File("src/test/resources/FxCopReportParserTest/invalid.xml"));
+    new FxCopReportParser().parse(new File("src/test/resources/FxCopReportParserTest/invalid_line.xml"));
+  }
+
+  @Test
+  public void missing_checkid() {
+    thrown.expectMessage("Missing attribute \"CheckId\" in element <Message>");
+    thrown.expectMessage("missing_checkid.xml at line 8");
+
+    new FxCopReportParser().parse(new File("src/test/resources/FxCopReportParserTest/missing_checkid.xml"));
   }
 
   @Test

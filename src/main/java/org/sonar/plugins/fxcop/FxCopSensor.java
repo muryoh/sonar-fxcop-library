@@ -108,7 +108,7 @@ public class FxCopSensor implements Sensor {
 
       issuable.addIssue(
         issuable.newIssueBuilder()
-          .ruleKey(RuleKey.of(HardcodedCrap.REPOSITORY_KEY, HardcodedCrap.SINGLE_RULE_KEY))
+          .ruleKey(RuleKey.of(HardcodedCrap.REPOSITORY_KEY, issue.ruleKey()))
           .line(issue.line())
           .message(issue.message())
           .build());
