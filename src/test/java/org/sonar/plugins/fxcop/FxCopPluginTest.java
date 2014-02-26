@@ -28,7 +28,8 @@ public class FxCopPluginTest {
   @Test
   public void test() {
     assertThat(new FxCopPlugin().getExtensions()).containsOnly(
-      FxCopRuleRepository.class);
+      FxCopRuleRepository.class,
+      FxCopSensor.class);
   }
 
 }

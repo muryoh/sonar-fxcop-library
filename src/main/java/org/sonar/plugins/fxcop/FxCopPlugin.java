@@ -29,7 +29,8 @@ public class FxCopPlugin extends SonarPlugin {
   @Override
   public List getExtensions() {
     return ImmutableList.of(
-      FxCopRuleRepository.class);
+      FxCopRuleRepository.class,
+      FxCopSensor.class);
   }
 
 }

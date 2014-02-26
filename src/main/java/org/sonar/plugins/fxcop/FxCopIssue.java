@@ -19,20 +19,45 @@
  */
 package org.sonar.plugins.fxcop;
 
-public interface HardcodedCrap {
+import javax.annotation.Nullable;
 
-  String LANGUAGE_KEY = "vbnet";
+public class FxCopIssue {
 
-  String ASSEMBLIES_PROPERTY_KEY = "sonar.dotnet.assemblies";
+  private final int reportLine;
+  private final String path;
+  private final String file;
+  private final Integer line;
+  private final String message;
 
-  String REPOSITORY_KEY = "fxcop";
+  public FxCopIssue(int reportLine, @Nullable String path, @Nullable String file, @Nullable Integer line, String message) {
+    this.reportLine = reportLine;
+    this.path = path;
+    this.file = file;
+    this.line = line;
+    this.message = message;
+  }
 
-  String REPOSITORY_NAME = "FxCop";
+  public int reportLine() {
+    return reportLine;
+  }
 
-  String FXCOPCMD_PATH = "C:\\Program Files\\Microsoft Visual Studio 12.0\\Team Tools\\Static Analysis Tools\\FxCop\\FxCopCmd.exe";
+  @Nullable
+  public String path() {
+    return path;
+  }
 
-  int FXCOPCMD_TIMEOUT_MINUTES = 5;
+  @Nullable
+  public String file() {
+    return file;
+  }
 
-  String SINGLE_RULE_KEY = "CA1000";
+  @Nullable
+  public Integer line() {
+    return line;
+  }
+
+  public String message() {
+    return message;
+  }
 
 }

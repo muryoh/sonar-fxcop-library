@@ -30,8 +30,8 @@ public final class FxCopRuleRepository extends RuleRepository {
   private final XMLRuleParser xmlRuleParser;
 
   public FxCopRuleRepository(XMLRuleParser xmlRuleParser) {
-    super("fxcop", HardcodedCrap.LANGUAGE_KEY);
-    setName("FxCop");
+    super(HardcodedCrap.REPOSITORY_KEY, HardcodedCrap.LANGUAGE_KEY);
+    setName(HardcodedCrap.REPOSITORY_NAME);
     this.xmlRuleParser = xmlRuleParser;
   }
 

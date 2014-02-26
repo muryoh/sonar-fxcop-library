@@ -19,20 +19,27 @@
  */
 package org.sonar.plugins.fxcop;
 
-public interface HardcodedCrap {
+import org.junit.Test;
 
-  String LANGUAGE_KEY = "vbnet";
+import static org.fest.assertions.Assertions.assertThat;
 
-  String ASSEMBLIES_PROPERTY_KEY = "sonar.dotnet.assemblies";
+public class FxCopIssueTest {
 
-  String REPOSITORY_KEY = "fxcop";
+  @Test
+  public void test() {
+    FxCopIssue issue = new FxCopIssue(0, "path", null, null, "message");
+    assertThat(issue.reportLine()).isEqualTo(0);
+    assertThat(issue.path()).isEqualTo("path");
+    assertThat(issue.file()).isNull();
+    assertThat(issue.line()).isNull();
+    assertThat(issue.message()).isEqualTo("message");
 
-  String REPOSITORY_NAME = "FxCop";
-
-  String FXCOPCMD_PATH = "C:\\Program Files\\Microsoft Visual Studio 12.0\\Team Tools\\Static Analysis Tools\\FxCop\\FxCopCmd.exe";
-
-  int FXCOPCMD_TIMEOUT_MINUTES = 5;
-
-  String SINGLE_RULE_KEY = "CA1000";
+    issue = new FxCopIssue(42, null, "foo", 1, "bar");
+    assertThat(issue.reportLine()).isEqualTo(42);
+    assertThat(issue.path()).isNull();
+    assertThat(issue.file()).isEqualTo("foo");
+    assertThat(issue.line()).isEqualTo(1);
+    assertThat(issue.message()).isEqualTo("bar");
+  }
 
 }
