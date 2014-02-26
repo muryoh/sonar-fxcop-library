@@ -21,7 +21,7 @@ package org.sonar.plugins.fxcop;
 
 public interface HardcodedCrap {
 
-  String LANGUAGE_KEY = "vbnet";
+  String LANGUAGE_KEY = "cs";
 
   String ASSEMBLIES_PROPERTY_KEY = "sonar.dotnet.assemblies";
 
