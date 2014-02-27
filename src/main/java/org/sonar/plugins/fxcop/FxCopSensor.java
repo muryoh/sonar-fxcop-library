@@ -97,7 +97,8 @@ public class FxCopSensor implements Sensor {
       }
 
       File file = new File(new File(issue.path()), issue.file());
-      org.sonar.api.resources.File sonarFile = fileProvider.fromIOFile(file);
+      // Workaround SonarQube < 4.2
+      org.sonar.api.resources.File sonarFile = context.getResource(fileProvider.fromIOFile(file));
       if (sonarFile == null) {
         logSkippedIssueOutsideOfSonarQube(issue, file);
       } else if (fxCopConf.languageKey().equals(sonarFile.getLanguage().getKey())) {
