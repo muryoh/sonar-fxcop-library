@@ -19,25 +19,20 @@
  */
 package org.sonar.plugins.fxcop;
 
-import org.sonar.api.utils.command.Command;
-import org.sonar.api.utils.command.CommandExecutor;
+import org.sonar.api.resources.Project;
 
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
-public class FxCopExecutor {
+public class FileProvider {
 
-  private static final int FXCOPCMD_TIMEOUT_MINUTES = 30;
+  private final Project project;
 
-  public void execute(String executable, String assemblies, File rulesetFile, File reportFile) {
-    CommandExecutor.create().execute(
-      Command.create(executable)
-        .addArgument("/file:" + assemblies)
-        .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
-        .addArgument("/out:" + reportFile.getAbsolutePath())
-        .addArgument("/outxsl:none")
-        .addArgument("/forceoutput"),
-      TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
+  public FileProvider(Project project) {
+    this.project = project;
+  }
+
+  public org.sonar.api.resources.File fromIOFile(File file) {
+    return org.sonar.api.resources.File.fromIOFile(file, project);
   }
 
 }

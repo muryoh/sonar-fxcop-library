@@ -19,6 +19,7 @@
  */
 package org.sonar.plugins.fxcop;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,12 +49,11 @@ public class FxCopSensor implements Sensor {
   private final Settings settings;
   private final RulesProfile profile;
   private final ModuleFileSystem fileSystem;
-  private final FxCopExecutor executor;
   private final ResourcePerspectives perspectives;
 
-  public FxCopSensor(String languageKey, String repositoryKey, String assemblyPropertyKey, String fxCopCmdPropertyKey, Settings settings, RulesProfile profile,
-    ModuleFileSystem fileSystem,
-    FxCopExecutor executor, ResourcePerspectives perspectives) {
+  public FxCopSensor(String languageKey, String repositoryKey, String assemblyPropertyKey, String fxCopCmdPropertyKey,
+    Settings settings, RulesProfile profile, ModuleFileSystem fileSystem, ResourcePerspectives perspectives) {
+
     this.languageKey = languageKey;
     this.repositoryKey = repositoryKey;
     this.assemblyPropertyKey = assemblyPropertyKey;
@@ -61,7 +61,6 @@ public class FxCopSensor implements Sensor {
     this.settings = settings;
     this.profile = profile;
     this.fileSystem = fileSystem;
-    this.executor = executor;
     this.perspectives = perspectives;
   }
 
@@ -87,6 +86,11 @@ public class FxCopSensor implements Sensor {
 
   @Override
   public void analyse(Project project, SensorContext context) {
+    analyse(context, new FileProvider(project), new FxCopExecutor());
+  }
+
+  @VisibleForTesting
+  void analyse(SensorContext context, FileProvider fileProvider, FxCopExecutor executor) {
     File rulesetFile = new File(fileSystem.workingDir(), "fxcop-sonarqube.ruleset");
     new FxCopRulesetWriter().write(enabledRuleKeys(), rulesetFile);
 
@@ -101,7 +105,7 @@ public class FxCopSensor implements Sensor {
       }
 
       File file = new File(new File(issue.path()), issue.file());
-      org.sonar.api.resources.File sonarFile = org.sonar.api.resources.File.fromIOFile(file, project);
+      org.sonar.api.resources.File sonarFile = fileProvider.fromIOFile(file);
       if (sonarFile == null) {
         logSkippedIssueOutsideOfSonarQube(issue, file);
       } else if (languageKey.equals(sonarFile.getLanguage().getKey())) {
@@ -121,7 +125,7 @@ public class FxCopSensor implements Sensor {
   }
 
   private static boolean hasFileAndLine(FxCopIssue issue) {
-    return issue.path() == null || issue.file() == null || issue.line() == null;
+    return issue.path() != null && issue.file() != null && issue.line() != null;
   }
 
   private static void logSkippedIssueOutsideOfSonarQube(FxCopIssue issue, File file) {
