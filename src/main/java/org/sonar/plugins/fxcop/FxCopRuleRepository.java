@@ -27,11 +27,13 @@ import java.util.List;
 
 public final class FxCopRuleRepository extends RuleRepository {
 
+  private static final String REPOSITORY_NAME = "Code Analysis / FxCop";
+
   private final XMLRuleParser xmlRuleParser;
 
-  public FxCopRuleRepository(XMLRuleParser xmlRuleParser) {
-    super(HardcodedCrap.REPOSITORY_KEY, HardcodedCrap.LANGUAGE_KEY);
-    setName(HardcodedCrap.REPOSITORY_NAME);
+  public FxCopRuleRepository(String languageKey, String repositoryKey, XMLRuleParser xmlRuleParser) {
+    super(repositoryKey, languageKey);
+    setName(REPOSITORY_NAME);
     this.xmlRuleParser = xmlRuleParser;
   }
 

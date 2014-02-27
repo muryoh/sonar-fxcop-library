@@ -19,16 +19,12 @@
  */
 package org.sonar.plugins.fxcop;
 
-public interface HardcodedCrap {
+import org.junit.Test;
 
-  String LANGUAGE_KEY = "cs";
+public class FxCopSensorTest {
 
-  String ASSEMBLIES_PROPERTY_KEY = "sonar.dotnet.assemblies";
-
-  String REPOSITORY_KEY = "fxcop";
-
-  String REPOSITORY_NAME = "FxCop";
-
-  String FXCOPCMD_PATH = "C:\\Program Files\\Microsoft Visual Studio 12.0\\Team Tools\\Static Analysis Tools\\FxCop\\FxCopCmd.exe";
+  @Test
+  public void shouldExecuteOnProject() {
+  }
 
 }
