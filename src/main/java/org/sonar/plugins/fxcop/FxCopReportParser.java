@@ -98,10 +98,10 @@ public class FxCopReportParser {
 
     private void handleIssueTag() throws XMLStreamException {
       String path = getAttribute("Path");
-      String file = getAttribute("File");
+      String fileAttribute = getAttribute("File");
       Integer line = getIntAttribute("Line");
       String message = stream.getElementText();
-      filesBuilder.add(new FxCopIssue(stream.getLocation().getLineNumber(), ruleKey, path, file, line, message));
+      filesBuilder.add(new FxCopIssue(stream.getLocation().getLineNumber(), ruleKey, path, fileAttribute, line, message));
     }
 
     private String getRequiredAttribute(String name) {
