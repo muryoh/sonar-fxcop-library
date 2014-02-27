@@ -42,22 +42,14 @@ public class FxCopSensor implements Sensor {
 
   private static final Logger LOG = LoggerFactory.getLogger(FxCopSensor.class);
 
-  private final String languageKey;
-  private final String repositoryKey;
-  private final String assemblyPropertyKey;
-  private final String fxCopCmdPropertyKey;
+  private final FxCopConfiguration fxCopConf;
   private final Settings settings;
   private final RulesProfile profile;
   private final ModuleFileSystem fileSystem;
   private final ResourcePerspectives perspectives;
 
-  public FxCopSensor(String languageKey, String repositoryKey, String assemblyPropertyKey, String fxCopCmdPropertyKey,
-    Settings settings, RulesProfile profile, ModuleFileSystem fileSystem, ResourcePerspectives perspectives) {
-
-    this.languageKey = languageKey;
-    this.repositoryKey = repositoryKey;
-    this.assemblyPropertyKey = assemblyPropertyKey;
-    this.fxCopCmdPropertyKey = fxCopCmdPropertyKey;
+  public FxCopSensor(FxCopConfiguration fxCopConf, Settings settings, RulesProfile profile, ModuleFileSystem fileSystem, ResourcePerspectives perspectives) {
+    this.fxCopConf = fxCopConf;
     this.settings = settings;
     this.profile = profile;
     this.fileSystem = fileSystem;
@@ -68,9 +60,9 @@ public class FxCopSensor implements Sensor {
   public boolean shouldExecuteOnProject(Project project) {
     boolean shouldExecute;
 
-    if (!settings.hasKey(assemblyPropertyKey) || !hasFilesToAnalyze()) {
+    if (!settings.hasKey(fxCopConf.assemblyPropertyKey()) || !hasFilesToAnalyze()) {
       shouldExecute = false;
-    } else if (profile.getActiveRulesByRepository(repositoryKey).isEmpty()) {
+    } else if (profile.getActiveRulesByRepository(fxCopConf.repositoryKey()).isEmpty()) {
       LOG.info("All FxCop rules are disabled, skipping its execution.");
       shouldExecute = false;
     } else {
@@ -81,7 +73,7 @@ public class FxCopSensor implements Sensor {
   }
 
   private boolean hasFilesToAnalyze() {
-    return !fileSystem.files(FileQuery.onSource().onLanguage(languageKey)).isEmpty();
+    return !fileSystem.files(FileQuery.onSource().onLanguage(fxCopConf.languageKey())).isEmpty();
   }
 
   @Override
@@ -96,7 +88,7 @@ public class FxCopSensor implements Sensor {
 
     File reportFile = new File(fileSystem.workingDir(), "fxcop-report.xml");
 
-    executor.execute(settings.getString(fxCopCmdPropertyKey), settings.getString(assemblyPropertyKey), rulesetFile, reportFile);
+    executor.execute(settings.getString(fxCopConf.fxCopCmdPropertyKey()), settings.getString(fxCopConf.assemblyPropertyKey()), rulesetFile, reportFile);
 
     for (FxCopIssue issue : parser.parse(reportFile)) {
       if (!hasFileAndLine(issue)) {
@@ -108,14 +100,14 @@ public class FxCopSensor implements Sensor {
       org.sonar.api.resources.File sonarFile = fileProvider.fromIOFile(file);
       if (sonarFile == null) {
         logSkippedIssueOutsideOfSonarQube(issue, file);
-      } else if (languageKey.equals(sonarFile.getLanguage().getKey())) {
+      } else if (fxCopConf.languageKey().equals(sonarFile.getLanguage().getKey())) {
         Issuable issuable = perspectives.as(Issuable.class, sonarFile);
         if (issuable == null) {
           logSkippedIssueOutsideOfSonarQube(issue, file);
         } else {
           issuable.addIssue(
             issuable.newIssueBuilder()
-              .ruleKey(RuleKey.of(repositoryKey, issue.ruleKey()))
+              .ruleKey(RuleKey.of(fxCopConf.repositoryKey(), issue.ruleKey()))
               .line(issue.line())
               .message(issue.message())
               .build());
@@ -138,7 +130,7 @@ public class FxCopSensor implements Sensor {
 
   private List<String> enabledRuleKeys() {
     ImmutableList.Builder<String> builder = ImmutableList.builder();
-    for (ActiveRule activeRule : profile.getActiveRulesByRepository(repositoryKey)) {
+    for (ActiveRule activeRule : profile.getActiveRulesByRepository(fxCopConf.repositoryKey())) {
       builder.add(activeRule.getRuleKey());
     }
     return builder.build();

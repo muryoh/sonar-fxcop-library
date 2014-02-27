@@ -56,7 +56,7 @@ public class FxCopSensorTest {
     Project project = mock(Project.class);
 
     FxCopSensor sensor = new FxCopSensor(
-      "foo", "foo-fxcop", "assemblyKey", "fxcopcmdPath",
+      new FxCopConfiguration("foo", "foo-fxcop", "assemblyKey", "fxcopcmdPath"),
       settings, profile, fileSystem, perspectives);
 
     when(settings.hasKey("assemblyKey")).thenReturn(false);
@@ -85,7 +85,7 @@ public class FxCopSensorTest {
     ResourcePerspectives perspectives = mock(ResourcePerspectives.class);
 
     FxCopSensor sensor = new FxCopSensor(
-      "foo", "foo-fxcop", "assemblyKey", "fxcopcmdPath",
+      new FxCopConfiguration("foo", "foo-fxcop", "assemblyKey", "fxcopcmdPath"),
       settings, profile, fileSystem, perspectives);
 
     List<ActiveRule> activeRules = mockActiveRules("CA0000", "CA1000");
