@@ -86,19 +86,19 @@ public class FxCopSensor implements Sensor {
 
   @Override
   public void analyse(Project project, SensorContext context) {
-    analyse(context, new FileProvider(project), new FxCopExecutor());
+    analyse(context, new FileProvider(project), new FxCopRulesetWriter(), new FxCopReportParser(), new FxCopExecutor());
   }
 
   @VisibleForTesting
-  void analyse(SensorContext context, FileProvider fileProvider, FxCopExecutor executor) {
+  void analyse(SensorContext context, FileProvider fileProvider, FxCopRulesetWriter writer, FxCopReportParser parser, FxCopExecutor executor) {
     File rulesetFile = new File(fileSystem.workingDir(), "fxcop-sonarqube.ruleset");
-    new FxCopRulesetWriter().write(enabledRuleKeys(), rulesetFile);
+    writer.write(enabledRuleKeys(), rulesetFile);
 
     File reportFile = new File(fileSystem.workingDir(), "fxcop-report.xml");
 
     executor.execute(settings.getString(fxCopCmdPropertyKey), settings.getString(assemblyPropertyKey), rulesetFile, reportFile);
 
-    for (FxCopIssue issue : new FxCopReportParser().parse(reportFile)) {
+    for (FxCopIssue issue : parser.parse(reportFile)) {
       if (!hasFileAndLine(issue)) {
         logSkippedIssue(issue, "which has no associated file.");
         continue;
