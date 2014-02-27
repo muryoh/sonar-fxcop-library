@@ -19,6 +19,7 @@
  */
 package org.sonar.plugins.fxcop;
 
+import org.sonar.api.batch.SensorContext;
 import org.sonar.api.resources.Project;
 
 import java.io.File;
@@ -26,13 +27,16 @@ import java.io.File;
 public class FileProvider {
 
   private final Project project;
+  private final SensorContext context;
 
-  public FileProvider(Project project) {
+  public FileProvider(Project project, SensorContext context) {
     this.project = project;
+    this.context = context;
   }
 
   public org.sonar.api.resources.File fromIOFile(File file) {
-    return org.sonar.api.resources.File.fromIOFile(file, project);
+    // Workaround SonarQube < 4.2, the context should not be required
+    return context.getResource(org.sonar.api.resources.File.fromIOFile(file, project));
   }
 
 }

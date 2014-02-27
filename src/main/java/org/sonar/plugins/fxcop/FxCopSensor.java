@@ -78,7 +78,7 @@ public class FxCopSensor implements Sensor {
 
   @Override
   public void analyse(Project project, SensorContext context) {
-    analyse(context, new FileProvider(project), new FxCopRulesetWriter(), new FxCopReportParser(), new FxCopExecutor());
+    analyse(context, new FileProvider(project, context), new FxCopRulesetWriter(), new FxCopReportParser(), new FxCopExecutor());
   }
 
   @VisibleForTesting
@@ -97,8 +97,7 @@ public class FxCopSensor implements Sensor {
       }
 
       File file = new File(new File(issue.path()), issue.file());
-      // Workaround SonarQube < 4.2
-      org.sonar.api.resources.File sonarFile = context.getResource(fileProvider.fromIOFile(file));
+      org.sonar.api.resources.File sonarFile = fileProvider.fromIOFile(file);
       if (sonarFile == null) {
         logSkippedIssueOutsideOfSonarQube(issue, file);
       } else if (fxCopConf.languageKey().equals(sonarFile.getLanguage().getKey())) {

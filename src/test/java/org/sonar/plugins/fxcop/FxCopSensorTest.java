@@ -22,8 +22,6 @@ package org.sonar.plugins.fxcop;
 import com.google.common.collect.ImmutableList;
 import org.junit.Test;
 import org.mockito.Mockito;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.component.ResourcePerspectives;
 import org.sonar.api.config.Settings;
@@ -33,7 +31,6 @@ import org.sonar.api.issue.Issue;
 import org.sonar.api.profiles.RulesProfile;
 import org.sonar.api.resources.Language;
 import org.sonar.api.resources.Project;
-import org.sonar.api.resources.Resource;
 import org.sonar.api.rule.RuleKey;
 import org.sonar.api.rules.ActiveRule;
 import org.sonar.api.scan.filesystem.FileQuery;
@@ -95,14 +92,6 @@ public class FxCopSensorTest {
     when(profile.getActiveRulesByRepository("foo-fxcop")).thenReturn(activeRules);
 
     SensorContext context = mock(SensorContext.class);
-    // Workaround SonarQube < 4.2
-    when(context.getResource(Mockito.any(Resource.class))).thenAnswer(new Answer<Resource>() {
-      @Override
-      public Resource answer(InvocationOnMock invocation) throws Throwable {
-        return (Resource) invocation.getArguments()[0];
-      }
-    });
-
     FileProvider fileProvider = mock(FileProvider.class);
     FxCopExecutor executor = mock(FxCopExecutor.class);
 
