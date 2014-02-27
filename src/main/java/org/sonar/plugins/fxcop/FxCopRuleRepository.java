@@ -25,14 +25,14 @@ import org.sonar.api.rules.XMLRuleParser;
 
 import java.util.List;
 
-public final class FxCopRuleRepository extends RuleRepository {
+public class FxCopRuleRepository extends RuleRepository {
 
   private static final String REPOSITORY_NAME = "Code Analysis / FxCop";
 
   private final XMLRuleParser xmlRuleParser;
 
-  public FxCopRuleRepository(String languageKey, String repositoryKey, XMLRuleParser xmlRuleParser) {
-    super(repositoryKey, languageKey);
+  public FxCopRuleRepository(FxCopConfiguration fxCopConf, XMLRuleParser xmlRuleParser) {
+    super(fxCopConf.repositoryKey(), fxCopConf.languageKey());
     setName(REPOSITORY_NAME);
     this.xmlRuleParser = xmlRuleParser;
   }

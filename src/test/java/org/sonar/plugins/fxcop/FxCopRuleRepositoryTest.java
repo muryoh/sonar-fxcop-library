@@ -31,7 +31,7 @@ public class FxCopRuleRepositoryTest {
 
   @Test
   public void test() {
-    FxCopRuleRepository repo = new FxCopRuleRepository("cs", "cs-fxcop", new XMLRuleParser());
+    FxCopRuleRepository repo = new FxCopRuleRepository(new FxCopConfiguration("cs", "cs-fxcop", "", ""), new XMLRuleParser());
     assertThat(repo.getLanguage()).isEqualTo("cs");
     assertThat(repo.getKey()).isEqualTo("cs-fxcop");
 
