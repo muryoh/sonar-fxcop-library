@@ -60,7 +60,7 @@ public class FxCopSensor implements Sensor {
   public boolean shouldExecuteOnProject(Project project) {
     boolean shouldExecute;
 
-    if (!settings.hasKey(fxCopConf.assemblyPropertyKey()) || !hasFilesToAnalyze()) {
+    if (!hasFilesToAnalyze()) {
       shouldExecute = false;
     } else if (profile.getActiveRulesByRepository(fxCopConf.repositoryKey()).isEmpty()) {
       LOG.info("All FxCop rules are disabled, skipping its execution.");

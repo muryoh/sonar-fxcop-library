@@ -56,22 +56,16 @@ public class FxCopSensorTest {
     Project project = mock(Project.class);
 
     FxCopSensor sensor = new FxCopSensor(
-      new FxCopConfiguration("foo", "foo-fxcop", "assemblyKey", "fxcopcmdPath"),
+      new FxCopConfiguration("", "foo-fxcop", "", ""),
       settings, profile, fileSystem, perspectives);
 
-    when(settings.hasKey("assemblyKey")).thenReturn(false);
-    assertThat(sensor.shouldExecuteOnProject(project)).isFalse();
-
-    when(settings.hasKey("assemblyKey")).thenReturn(true);
     when(fileSystem.files(Mockito.any(FileQuery.class))).thenReturn(ImmutableList.<File>of());
     assertThat(sensor.shouldExecuteOnProject(project)).isFalse();
 
-    when(settings.hasKey("assemblyKey")).thenReturn(true);
     when(fileSystem.files(Mockito.any(FileQuery.class))).thenReturn(ImmutableList.of(mock(File.class)));
     when(profile.getActiveRulesByRepository("foo-fxcop")).thenReturn(ImmutableList.<ActiveRule>of());
     assertThat(sensor.shouldExecuteOnProject(project)).isFalse();
 
-    when(settings.hasKey("assemblyKey")).thenReturn(true);
     when(fileSystem.files(Mockito.any(FileQuery.class))).thenReturn(ImmutableList.of(mock(File.class)));
     when(profile.getActiveRulesByRepository("foo-fxcop")).thenReturn(ImmutableList.of(mock(ActiveRule.class)));
     assertThat(sensor.shouldExecuteOnProject(project)).isTrue();
