@@ -40,7 +40,8 @@ public class FxCopExecutor {
         .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
         .addArgument("/out:" + reportFile.getAbsolutePath())
         .addArgument("/outxsl:none")
-        .addArgument("/forceoutput"),
+        .addArgument("/forceoutput")
+        .addArgument("/searchgac"),
       TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
     Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || exitCode == EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD,
       "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");
