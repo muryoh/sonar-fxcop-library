@@ -28,6 +28,9 @@ import java.util.concurrent.TimeUnit;
 
 public class FxCopExecutor {
 
+  private static final int EXIT_CODE_SUCCESS = 0;
+  private static final int EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD = 1024;
+
   private static final int FXCOPCMD_TIMEOUT_MINUTES = 30;
 
   public void execute(String executable, String assemblies, File rulesetFile, File reportFile) {
@@ -39,7 +42,8 @@ public class FxCopExecutor {
         .addArgument("/outxsl:none")
         .addArgument("/forceoutput"),
       TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
-    Preconditions.checkState(exitCode == 0, "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");
+    Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || exitCode == EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD,
+      "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");
   }
 
 }
