@@ -19,6 +19,7 @@
  */
 package org.sonar.plugins.fxcop;
 
+import com.google.common.base.Preconditions;
 import org.sonar.api.utils.command.Command;
 import org.sonar.api.utils.command.CommandExecutor;
 
@@ -30,7 +31,7 @@ public class FxCopExecutor {
   private static final int FXCOPCMD_TIMEOUT_MINUTES = 30;
 
   public void execute(String executable, String assemblies, File rulesetFile, File reportFile) {
-    CommandExecutor.create().execute(
+    int exitCode = CommandExecutor.create().execute(
       Command.create(executable)
         .addArgument("/file:" + assemblies)
         .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
@@ -38,6 +39,7 @@ public class FxCopExecutor {
         .addArgument("/outxsl:none")
         .addArgument("/forceoutput"),
       TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
+    Preconditions.checkState(exitCode == 0, "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");
   }
 
 }
