@@ -19,6 +19,8 @@
  */
 package org.sonar.plugins.fxcop;
 
+import org.sonar.api.config.Settings;
+
 public class FxCopConfiguration {
 
   private final String languageKey;
@@ -47,6 +49,17 @@ public class FxCopConfiguration {
 
   public String fxCopCmdPropertyKey() {
     return fxCopCmdPropertyKey;
+  }
+
+  public void checkProperties(Settings settings) {
+    checkProperty(settings, assemblyPropertyKey);
+    checkProperty(settings, fxCopCmdPropertyKey);
+  }
+
+  private static void checkProperty(Settings settings, String property) {
+    if (!settings.hasKey(property)) {
+      throw new IllegalStateException("The property \"" + property + "\" must be set.");
+    }
   }
 
 }

@@ -83,6 +83,8 @@ public class FxCopSensor implements Sensor {
 
   @VisibleForTesting
   void analyse(SensorContext context, FileProvider fileProvider, FxCopRulesetWriter writer, FxCopReportParser parser, FxCopExecutor executor) {
+    fxCopConf.checkProperties(settings);
+
     File rulesetFile = new File(fileSystem.workingDir(), "fxcop-sonarqube.ruleset");
     writer.write(enabledRuleKeys(), rulesetFile);
 

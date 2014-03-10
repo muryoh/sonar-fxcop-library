@@ -19,11 +19,19 @@
  */
 package org.sonar.plugins.fxcop;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
+import org.sonar.api.config.Settings;
 
 import static org.fest.assertions.Assertions.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class FxCopConfigurationTest {
+
+  @Rule
+  public ExpectedException thrown = ExpectedException.none();
 
   @Test
   public void test() {
@@ -38,6 +46,38 @@ public class FxCopConfigurationTest {
     assertThat(fxCopConf.repositoryKey()).isEqualTo("vbnet-fxcop");
     assertThat(fxCopConf.assemblyPropertyKey()).isEqualTo("barAssemblyKey");
     assertThat(fxCopConf.fxCopCmdPropertyKey()).isEqualTo("barFxCopCmdPathKey");
+  }
+
+  @Test
+  public void check_properties() {
+    Settings settings = mock(Settings.class);
+    when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
+    when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(true);
+
+    new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey").checkProperties(settings);
+  }
+
+  @Test
+  public void check_properties_assembly_property() {
+    thrown.expect(IllegalStateException.class);
+    thrown.expectMessage("The property \"fooAssemblyKey\" must be set.");
+
+    Settings settings = mock(Settings.class);
+    when(settings.hasKey("fooAssemblyKey")).thenReturn(false);
+
+    new FxCopConfiguration("", "", "fooAssemblyKey", "").checkProperties(settings);
+  }
+
+  @Test
+  public void check_properties_fxcopcmd_property() {
+    thrown.expect(IllegalStateException.class);
+    thrown.expectMessage("The property \"fooFxCopCmdPathKey\" must be set.");
+
+    Settings settings = mock(Settings.class);
+    when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
+    when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(false);
+
+    new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey").checkProperties(settings);
   }
 
 }

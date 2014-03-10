@@ -20,7 +20,9 @@
 package org.sonar.plugins.fxcop;
 
 import com.google.common.collect.ImmutableList;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.component.ResourcePerspectives;
@@ -45,6 +47,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class FxCopSensorTest {
+
+  @Rule
+  public ExpectedException thrown = ExpectedException.none();
 
   @Test
   public void shouldExecuteOnProject() {
@@ -81,6 +86,8 @@ public class FxCopSensorTest {
     FxCopSensor sensor = new FxCopSensor(
       new FxCopConfiguration("foo", "foo-fxcop", "assemblyKey", "fxcopcmdPath"),
       settings, profile, fileSystem, perspectives);
+    when(settings.hasKey("assemblyKey")).thenReturn(true);
+    when(settings.hasKey("fxcopcmdPath")).thenReturn(true);
 
     List<ActiveRule> activeRules = mockActiveRules("CA0000", "CA1000");
     when(profile.getActiveRulesByRepository("foo-fxcop")).thenReturn(activeRules);
@@ -144,6 +151,15 @@ public class FxCopSensorTest {
 
     verify(issueBuilder2).line(6);
     verify(issueBuilder2).message("Third message");
+  }
+
+  @Test
+  public void check_properties() {
+    thrown.expectMessage("fooAssemblyKey");
+
+    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "");
+    new FxCopSensor(fxCopConf, mock(Settings.class), mock(RulesProfile.class), mock(ModuleFileSystem.class), mock(ResourcePerspectives.class))
+      .analyse(mock(Project.class), mock(SensorContext.class));
   }
 
   private static org.sonar.api.resources.File mockSonarFile(String languageKey) {
