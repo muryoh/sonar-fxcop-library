@@ -27,7 +27,7 @@ import java.util.List;
 
 public class FxCopRuleRepository extends RuleRepository {
 
-  private static final String REPOSITORY_NAME = "Code Analysis / FxCop";
+  private static final String REPOSITORY_NAME = "FxCop / Code Analysis";
 
   private final XMLRuleParser xmlRuleParser;
 
