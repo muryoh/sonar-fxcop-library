@@ -24,6 +24,8 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.sonar.api.config.Settings;
 
+import java.io.File;
+
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -52,14 +54,25 @@ public class FxCopConfigurationTest {
   public void check_properties() {
     Settings settings = mock(Settings.class);
     when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
+    when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibrary.dll").getAbsolutePath());
     when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(true);
 
     new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey").checkProperties(settings);
   }
 
   @Test
-  public void check_properties_assembly_property() {
-    thrown.expect(IllegalStateException.class);
+  public void check_properties_without_assembly_extension() {
+    Settings settings = mock(Settings.class);
+    when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
+    when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibrary").getAbsolutePath());
+    when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(true);
+
+    new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey").checkProperties(settings);
+  }
+
+  @Test
+  public void check_properties_assembly_property_not_set() {
+    thrown.expect(IllegalArgumentException.class);
     thrown.expectMessage("The property \"fooAssemblyKey\" must be set.");
 
     Settings settings = mock(Settings.class);
@@ -69,12 +82,41 @@ public class FxCopConfigurationTest {
   }
 
   @Test
+  public void check_properties_assembly_property_not_not_found() {
+    thrown.expect(IllegalArgumentException.class);
+    thrown.expectMessage("Cannot find the assembly");
+    thrown.expectMessage(new File("src/test/resources/FxCopConfigurationTest/MyLibraryNotFound.dll").getAbsolutePath());
+    thrown.expectMessage("\"fooAssemblyKey\"");
+
+    Settings settings = mock(Settings.class);
+    when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
+    when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibraryNotFound.dll").getAbsolutePath());
+
+    new FxCopConfiguration("", "", "fooAssemblyKey", "").checkProperties(settings);
+  }
+
+  @Test
+  public void check_properties_assembly_property_pdb_not_found() {
+    thrown.expect(IllegalArgumentException.class);
+    thrown.expectMessage("Cannot find the .pdb file");
+    thrown.expectMessage(new File("src/test/resources/FxCopConfigurationTest/MyLibraryWithoutPdb.pdb").getAbsolutePath());
+    thrown.expectMessage("\"fooAssemblyKey\"");
+
+    Settings settings = mock(Settings.class);
+    when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
+    when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibraryWithoutPdb.dll").getAbsolutePath());
+
+    new FxCopConfiguration("", "", "fooAssemblyKey", "").checkProperties(settings);
+  }
+
+  @Test
   public void check_properties_fxcopcmd_property() {
-    thrown.expect(IllegalStateException.class);
+    thrown.expect(IllegalArgumentException.class);
     thrown.expectMessage("The property \"fooFxCopCmdPathKey\" must be set.");
 
     Settings settings = mock(Settings.class);
     when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
+    when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibrary.dll").getAbsolutePath());
     when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(false);
 
     new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey").checkProperties(settings);

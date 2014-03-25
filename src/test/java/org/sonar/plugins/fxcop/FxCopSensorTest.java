@@ -83,8 +83,14 @@ public class FxCopSensorTest {
     ModuleFileSystem fileSystem = mock(ModuleFileSystem.class);
     ResourcePerspectives perspectives = mock(ResourcePerspectives.class);
 
+    FxCopConfiguration fxCopConf = mock(FxCopConfiguration.class);
+    when(fxCopConf.languageKey()).thenReturn("foo");
+    when(fxCopConf.repositoryKey()).thenReturn("foo-fxcop");
+    when(fxCopConf.assemblyPropertyKey()).thenReturn("assemblyKey");
+    when(fxCopConf.fxCopCmdPropertyKey()).thenReturn("fxcopcmdPath");
+
     FxCopSensor sensor = new FxCopSensor(
-      new FxCopConfiguration("foo", "foo-fxcop", "assemblyKey", "fxcopcmdPath"),
+      fxCopConf,
       settings, profile, fileSystem, perspectives);
     when(settings.hasKey("assemblyKey")).thenReturn(true);
     when(settings.hasKey("fxcopcmdPath")).thenReturn(true);

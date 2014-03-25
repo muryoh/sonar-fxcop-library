@@ -19,7 +19,10 @@
  */
 package org.sonar.plugins.fxcop;
 
+import com.google.common.base.Preconditions;
 import org.sonar.api.config.Settings;
+
+import java.io.File;
 
 public class FxCopConfiguration {
 
@@ -52,14 +55,39 @@ public class FxCopConfiguration {
   }
 
   public void checkProperties(Settings settings) {
-    checkProperty(settings, assemblyPropertyKey);
+    checkAssemblyProperty(settings);
     checkProperty(settings, fxCopCmdPropertyKey);
+  }
+
+  private void checkAssemblyProperty(Settings settings) {
+    checkProperty(settings, assemblyPropertyKey);
+
+    String assemblyPath = settings.getString(assemblyPropertyKey);
+
+    File assemblyFile = new File(assemblyPath);
+    Preconditions.checkArgument(
+      assemblyFile.isFile(),
+      "Cannot find the assembly \"" + assemblyFile.getAbsolutePath() + "\" provided in the property \"" + assemblyPropertyKey + "\".");
+
+    File pdbFile = new File(pdbPath(assemblyPath));
+    Preconditions.checkArgument(
+      pdbFile.isFile(),
+      "Cannot find the .pdb file \"" + pdbFile.getAbsolutePath() + "\" inferred from the property \"" + assemblyPropertyKey + "\".");
   }
 
   private static void checkProperty(Settings settings, String property) {
     if (!settings.hasKey(property)) {
-      throw new IllegalStateException("The property \"" + property + "\" must be set.");
+      throw new IllegalArgumentException("The property \"" + property + "\" must be set.");
     }
+  }
+
+  private static String pdbPath(String assemblyPath) {
+    int i = assemblyPath.lastIndexOf('.');
+    if (i == -1) {
+      i = assemblyPath.length();
+    }
+
+    return assemblyPath.substring(0, i) + ".pdb";
   }
 
 }
