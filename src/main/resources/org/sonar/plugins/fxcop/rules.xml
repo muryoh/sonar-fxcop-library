@@ -6,11 +6,11 @@
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            An externally visible generic type contains a static (Shared in Visual Basic) member.
+            An externally visible generic type contains a <code>static</code> (<code>Shared</code> in Visual Basic) member.
 </p>
 <h2>Rule Description</h2>
 <p>
-            When a static member of a generic type is called, the type argument must be specified for the type. When a generic instance member that does not support inference is called, the type argument must be specified for the member. The syntax for specifying the type argument in these two cases is different and easily confused, as the following calls demonstrate:
+            When a <code>static</code> member of a generic type is called, the type argument must be specified for the type. When a generic instance member that does not support inference is called, the type argument must be specified for the member. The syntax for specifying the type argument in these two cases is different and easily confused, as the following calls demonstrate:
 
 
 
@@ -477,7 +477,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 </p>
 <h2>Rule Description</h2>
 <p>
-            A reference parameter is a parameter that is modified by using the ref (ByRef in Visual Basic) keyword. The argument type that is supplied for a reference parameter must exactly match the reference parameter type. To use a type that is derived from the reference parameter type, the type must first be cast and assigned to a variable of the reference parameter type. Use of a generic method allows all types, subject to constraints, to be passed to the method without first casting the type to the reference parameter type.
+            A reference parameter is a parameter that is modified by using the <code>ref</code> (<code>ByRef</code> in Visual Basic) keyword. The argument type that is supplied for a reference parameter must exactly match the reference parameter type. To use a type that is derived from the reference parameter type, the type must first be cast and assigned to a variable of the reference parameter type. Use of a generic method allows all types, subject to constraints, to be passed to the method without first casting the type to the reference parameter type.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -591,7 +591,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <h2>Rule Description</h2>
 <p>
             Event handler methods take two parameters. The first is of type <code>System.Object</code> and is named 'sender'. This is the object that raised the event. The second parameter is of type <code>System.EventArgs</code> and is named 'e'. This is the data that is associated with the event. For example, if the event is raised whenever a file is opened, the event data typically contains the name of the file.
-            Event handler methods should not return a value. In the C# programming language, this is indicated by the return type void. An event handler can invoke multiple methods in multiple objects. If the methods were allowed to return a value, multiple return values would occur for each event, and only the value of the last method that was invoked would be available.
+            Event handler methods should not return a value. In the C# programming language, this is indicated by the return type <code>void</code>. An event handler can invoke multiple methods in multiple objects. If the methods were allowed to return a value, multiple return values would occur for each event, and only the value of the last method that was invoked would be available.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -1055,7 +1055,7 @@ namespace Samples
 </p>
 <h2>Rule Description</h2>
 <p>
-            When instances of a type can be combined by using operations such as addition and subtraction, you should almost always define equality to return true for any two instances that have the same constituent values.
+            When instances of a type can be combined by using operations such as addition and subtraction, you should almost always define equality to return <code>true</code> for any two instances that have the same constituent values.
             You cannot use the default equality operator in an overloaded implementation of the equality operator. Doing so will cause a stack overflow. To implement the equality operator, use the Object.Equals method in your implementation. See the following example.
 
 
@@ -1115,7 +1115,7 @@ return left.Equals(right);
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            Do not suppress a warning from this rule. If you do not want the assembly to be compliant, apply the attribute and set its value to false.
+            Do not suppress a warning from this rule. If you do not want the assembly to be compliant, apply the attribute and set its value to <code>false</code>.
 </p>]]></description>
   </rule>
 
@@ -1172,11 +1172,11 @@ return left.Equals(right);
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, add the attribute to the assembly. If you do not want the assembly to be visible to COM clients, apply the attribute and set its value to false.
+            To fix a violation of this rule, add the attribute to the assembly. If you do not want the assembly to be visible to COM clients, apply the attribute and set its value to <code>false</code>.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            Do not suppress a warning from this rule. If you want the assembly to be visible, apply the attribute and set its value to true.
+            Do not suppress a warning from this rule. If you want the assembly to be visible, apply the attribute and set its value to <code>true</code>.
 </p>]]></description>
   </rule>
 
@@ -1192,7 +1192,7 @@ return left.Equals(right);
 <h2>Rule Description</h2>
 <p>
             When you define a custom attribute, mark it by using <code>AttributeUsageAttribute</code> to indicate where in the source code the custom attribute can be applied. The meaning and intended usage of an attribute will determine its valid locations in code. For example, you might define an attribute that identifies the person who is responsible for maintaining and enhancing each type in a library, and that responsibility is always assigned at the type level. In this case, compilers should enable the attribute on classes, enumerations, and interfaces, but should not enable it on methods, events, or properties. Organizational policies and procedures would dictate whether the attribute should be enabled on assemblies.
-            The <code>System.AttributeTargets</code> enumeration defines the targets that you can specify for a custom attribute. If you omit <code>AttributeUsageAttribute</code>, your custom attribute will be valid for all targets, as defined by the All value of <code>AttributeTargets</code> enumeration.
+            The <code>System.AttributeTargets</code> enumeration defines the targets that you can specify for a custom attribute. If you omit <code>AttributeUsageAttribute</code>, your custom attribute will be valid for all targets, as defined by the <code>All</code> value of <code>AttributeTargets</code> enumeration.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -1432,7 +1432,7 @@ public string MyOtherProperty
 
 
 
-                    Design-time types and permissions should not be merged into other namespaces to comply with this guideline. These types belong in their own namespaces below your main namespace, and the namespaces should end in .Design and .Permissions, respectively.
+                    Design-time types and permissions should not be merged into other namespaces to comply with this guideline. These types belong in their own namespaces below your main namespace, and the namespaces should end in <code>.Design</code> and <code>.Permissions</code>, respectively.
 
 
 
@@ -1455,14 +1455,14 @@ public string MyOtherProperty
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A public or protected method in a public type has an out parameter.
+            A public or protected method in a public type has an <code>out</code> parameter.
 </p>
 <h2>Rule Description</h2>
 <p>
-            Passing types by reference (using out or ref) requires experience with pointers, understanding how value types and reference types differ, and handling methods with multiple return values. Also, the difference between out and ref parameters is not widely understood.
+            Passing types by reference (using <code>out</code> or <code>ref</code>) requires experience with pointers, understanding how value types and reference types differ, and handling methods with multiple return values. Also, the difference between <code>out</code> and <code>ref</code> parameters is not widely understood.
             When a reference type is passed "by reference," the method intends to use the parameter to return a different instance of the object. Passing a reference type by reference is also known as using a double pointer, pointer to a pointer, or double indirection. By using the default calling convention, which is pass "by value," a parameter that takes a reference type already receives a pointer to the object. The pointer, not the object to which it points, is passed by value. Pass by value means that the method cannot change the pointer to have it point to a new instance of the reference type. However, it can change the contents of the object to which it points. For most applications this is sufficient and yields the desired behavior.
             If a method must return a different instance, use the return value of the method to accomplish this. See the <code>System.String</code> class for a variety of methods that operate on strings and return a new instance of a string. When this model is used, the caller must decide whether the original object is preserved.
-            Although return values are commonplace and heavily used, the correct application of out and ref parameters requires intermediate design and coding skills. Library architects who design for a general audience should not expect users to master working with out or ref parameters.
+            Although return values are commonplace and heavily used, the correct application of <code>out</code> and <code>ref</code> parameters requires intermediate design and coding skills. Library architects who design for a general audience should not expect users to master working with <code>out</code> or <code>ref</code> parameters.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -2001,7 +2001,7 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A general exception such as <code>System.Exception</code> or <code>System.SystemException</code> is caught in a catch statement, or a general catch clause such as catch() is used.
+            A general exception such as <code>System.Exception</code> or <code>System.SystemException</code> is caught in a <code>catch</code> statement, or a general catch clause such as catch() is used.
 </p>
 <h2>Rule Description</h2>
 <p>
@@ -2009,7 +2009,7 @@ namespace Samples
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, catch a more specific exception, or rethrow the general exception as the last statement in the catch block.
+            To fix a violation of this rule, catch a more specific exception, or rethrow the general exception as the last statement in the <code>catch</code> block.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -2089,7 +2089,7 @@ namespace Samples
 </p>
 <h2>Rule Description</h2>
 <p>
-            Consider a base type that explicitly implements a public interface method. A type that derives from the base type can access the inherited interface method only through a reference to the current instance (this in C#) that is cast to the interface. If the derived type re-implements (explicitly) the inherited interface method, the base implementation can no longer be accessed. The call through the current instance reference will invoke the derived implementation; this causes recursion and an eventual stack overflow.
+            Consider a base type that explicitly implements a public interface method. A type that derives from the base type can access the inherited interface method only through a reference to the current instance (<code>this</code> in C#) that is cast to the interface. If the derived type re-implements (explicitly) the inherited interface method, the base implementation can no longer be accessed. The call through the current instance reference will invoke the derived implementation; this causes recursion and an eventual stack overflow.
             This rule does not report a violation for an explicit implementation of <code>IDisposable.Dispose</code> when an externally visible Close() or System.IDisposable.Dispose(Boolean) method is provided.
 </p>
 <h2>How to Fix Violations</h2>
@@ -2443,14 +2443,14 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A public or protected method in a public type has a ref parameter that takes a primitive type, a reference type, or a value type that is not one of the built-in types.
+            A public or protected method in a public type has a <code>ref</code> parameter that takes a primitive type, a reference type, or a value type that is not one of the built-in types.
 </p>
 <h2>Rule Description</h2>
 <p>
-            Passing types by reference (using out or ref) requires experience with pointers, understanding how value types and reference types differ, and handling methods that have multiple return values. Also, the difference between out and ref parameters is not widely understood.
+            Passing types by reference (using <code>out</code> or <code>ref</code>) requires experience with pointers, understanding how value types and reference types differ, and handling methods that have multiple return values. Also, the difference between <code>out</code> and <code>ref</code> parameters is not widely understood.
             When a reference type is passed "by reference," the method intends to use the parameter to return a different instance of the object. (Passing a reference type by reference is also known as using a double pointer, pointer to a pointer, or double indirection.) Using the default calling convention, which is pass "by value," a parameter that takes a reference type already receives a pointer to the object. The pointer, not the object to which it points, is passed by value. Passing by value means that the method cannot change the pointer to have it point to a new instance of the reference type, but can change the contents of the object to which it points. For most applications this is sufficient and yields the behavior that you want.
             If a method must return a different instance, use the return value of the method to accomplish this. See the <code>System.String</code> class for a variety of methods that operate on strings and return a new instance of a string. By using this model, it is left to the caller to decide whether the original object is preserved.
-            Although return values are commonplace and heavily used, the correct application of out and ref parameters requires intermediate design and coding skills. Library architects who design for a general audience should not expect users to master working with out or ref parameters.
+            Although return values are commonplace and heavily used, the correct application of <code>out</code> and <code>ref</code> parameters requires intermediate design and coding skills. Library architects who design for a general audience should not expect users to master working with <code>out</code> or <code>ref</code> parameters.
 
 
 
@@ -2461,7 +2461,7 @@ namespace Samples
 
 
 
-                    When you work with parameters that are large structures, the additional resources that are required to copy these structures could cause a performance effect when you pass by value. In these cases, you might consider using ref or out parameters.
+                    When you work with parameters that are large structures, the additional resources that are required to copy these structures could cause a performance effect when you pass by value. In these cases, you might consider using <code>ref</code> or <code>out</code> parameters.
 
 
 
@@ -2524,7 +2524,7 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A public type is sealed (NotInheritable in Visual basic) and declares a protected member or a protected nested type. This rule does not report violations for <code>Finalize</code> methods, which must follow this pattern.
+            A public type is <code>sealed</code> (<code>NotInheritable</code> in Visual basic) and declares a protected member or a protected nested type. This rule does not report violations for <code>Finalize</code> methods, which must follow this pattern.
 </p>
 <h2>Rule Description</h2>
 <p>
@@ -2548,7 +2548,7 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A public type is sealed and declares a method that is both virtual (Overridable in Visual Basic) and not final. This rule does not report violations for delegate types, which must follow this pattern.
+            A public type is sealed and declares a method that is both <code>virtual</code> (<code>Overridable</code> in Visual Basic) and not final. This rule does not report violations for delegate types, which must follow this pattern.
 </p>
 <h2>Rule Description</h2>
 <p>
@@ -2646,12 +2646,12 @@ namespace Samples
 </p>
 <h2>Rule Description</h2>
 <p>
-            The primary use of a field should be as an implementation detail. Fields should be private or internal and should be exposed by using properties. It is as easy to access a property as it is to access a field, and the code in the accessors of a property can change as the features of the type expand without introducing breaking changes. Properties that just return the value of a private or internal field are optimized to perform on par with accessing a field; very little performance gain is associated with the use of externally visible fields over properties.
-            Externally visible refers to public, protected, and protected internal (Public, Protected, and Protected Friend in Visual Basic) accessibility levels.
+            The primary use of a field should be as an implementation detail. Fields should be <code>private</code> or <code>internal</code> and should be exposed by using properties. It is as easy to access a property as it is to access a field, and the code in the accessors of a property can change as the features of the type expand without introducing breaking changes. Properties that just return the value of a private or internal field are optimized to perform on par with accessing a field; very little performance gain is associated with the use of externally visible fields over properties.
+            Externally visible refers to <code>public</code>, <code>protected</code>, and <code>protected internal</code> (<code>Public</code>, <code>Protected</code>, and <code>Protected Friend</code> in Visual Basic) accessibility levels.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, make the field private or internal and expose it by using an externally visible property.
+            To fix a violation of this rule, make the field <code>private</code> or <code>internal</code> and expose it by using an externally visible property.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -2678,15 +2678,15 @@ namespace Samples
 </p>
 <h2>Rule Description</h2>
 <p>
-            This rule assumes that a type that contains only static members is not designed to be inherited, because the type does not provide any functionality that can be overridden in a derived type. A type that is not meant to be inherited should be marked with the sealed modifier to prohibit its use as a base type.
+            This rule assumes that a type that contains only static members is not designed to be inherited, because the type does not provide any functionality that can be overridden in a derived type. A type that is not meant to be inherited should be marked with the <code>sealed</code> modifier to prohibit its use as a base type.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, mark the type as sealed. If you are targeting .NET Framework 2.0 or earlier, a better approach is to mark the type as static. In this manner, you avoid having to declare a private constructor to prevent the class from being created.
+            To fix a violation of this rule, mark the type as <code>sealed</code>. If you are targeting .NET Framework 2.0 or earlier, a better approach is to mark the type as <code>static</code>. In this manner, you avoid having to declare a private constructor to prevent the class from being created.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            Suppress a warning from this rule only if the type is designed to be inherited. The absence of the sealed modifier suggests that the type is useful as a base type.
+            Suppress a warning from this rule only if the type is designed to be inherited. The absence of the <code>sealed</code> modifier suggests that the type is useful as a base type.
 </p>
 <h2>Example of a Violation</h2>
 
@@ -2743,7 +2743,7 @@ namespace DesignLibrary
 
 <h2>Description</h2>
 <p>
-                The following example shows how to fix a violation of this rule by marking the type with the static modifier.
+                The following example shows how to fix a violation of this rule by marking the type with the <code>static</code> modifier.
 </p>
 <h2>Code</h2>
 <p>
@@ -3249,7 +3249,7 @@ public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
 </p>
 <h2>Rule Description</h2>
 <p>
-            Platform Invocation methods, such as those that are marked by using the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute, or methods that are defined by using the Declare keyword in Visual Basic, access unmanaged code. These methods should be in one of the following classes:
+            Platform Invocation methods, such as those that are marked by using the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute, or methods that are defined by using the <code>Declare</code> keyword in Visual Basic, access unmanaged code. These methods should be in one of the following classes:
             <ul>
               <li>
 
@@ -3264,7 +3264,7 @@ public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
                   UnsafeNativeMethods - This class suppresses stack walks for unmanaged code permission. (<code>System.Security.SuppressUnmanagedCodeSecurityAttribute</code> is applied to this class.) This class is for methods that are potentially dangerous. Any caller of these methods must perform a full security review to make sure that the usage is secure because no stack walk will be performed.
               </li>
             </ul>
-            These classes are declared as internal (Friend, in Visual Basic) and declare a private constructor to prevent new instances from being created. The methods in these classes should be static and internal (Shared and Friend in Visual Basic).
+            These classes are declared as <code>internal</code> (<code>Friend</code>, in Visual Basic) and declare a private constructor to prevent new instances from being created. The methods in these classes should be <code>static</code> and <code>internal</code> (<code>Shared</code> and <code>Friend</code> in Visual Basic).
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -3462,16 +3462,16 @@ internal static class UnsafeNativeMethods
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            An externally visible method dereferences one of its reference arguments without verifying whether that argument is null (Nothing in Visual Basic).
+            An externally visible method dereferences one of its reference arguments without verifying whether that argument is <code>null</code> (<code>Nothing</code> in Visual Basic).
 </p>
 <h2>Rule Description</h2>
 <p>
-            All reference arguments that are passed to externally visible methods should be checked against null. If appropriate, throw a <code>ArgumentNullException</code> when the argument is null.
+            All reference arguments that are passed to externally visible methods should be checked against <code>null</code>. If appropriate, throw a <code>ArgumentNullException</code> when the argument is <code>null</code>.
             If a method can be called from an unknown assembly because it is declared public or protected, you should validate all parameters of the method. If the method is designed to be called only by known assemblies, you should make the method internal and apply the <code>InternalsVisibleToAttribute</code>  attribute to the assembly that contains the method.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, validate each reference argument against null.
+            To fix a violation of this rule, validate each reference argument against <code>null</code>.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -3488,7 +3488,7 @@ internal static class UnsafeNativeMethods
 <p>
 
 
-                IDisposable
+                <code>IDisposable</code>
                is not implemented correctly. Some reasons for this problem are listed here:
             <ul>
               <li>
@@ -3667,7 +3667,7 @@ internal static class UnsafeNativeMethods
 
                   </li>
                 </ul>
-                An Equals method should return true or false instead of throwing an exception. For example, if Equals is passed two mismatched types it should just return false instead of throwing an <code>ArgumentException</code>.
+                An Equals method should return <code>true</code> or <code>false</code> instead of throwing an exception. For example, if Equals is passed two mismatched types it should just return <code>false</code> instead of throwing an <code>ArgumentException</code>.
 </p>
 <h2>GetHashCode Methods</h2>
 <p>
@@ -3704,12 +3704,12 @@ internal static class UnsafeNativeMethods
 </p>
 <h2>Dispose Methods</h2>
 <p>
-                A <code>IDisposable.Dispose</code> method should not throw an exception. Dispose is often called as part of the clean up logic in a finally clause. Therefore, explicitly throwing an exception from Dispose forces the user to add exception handling inside the finally clause.
+                A <code>IDisposable.Dispose</code> method should not throw an exception. Dispose is often called as part of the clean up logic in a <code>finally</code> clause. Therefore, explicitly throwing an exception from Dispose forces the user to add exception handling inside the <code>finally</code> clause.
                 The Dispose(false) code path should never throw exceptions, because this is almost always called from a finalizer.
 </p>
 <h2>Equality Operators (==, !=)</h2>
 <p>
-                Like Equals methods, equality operators should return either true or false and should not throw exceptions.
+                Like Equals methods, equality operators should return either <code>true</code> or <code>false</code> and should not throw exceptions.
 </p>
 <h2>Implicit Cast Operators</h2>
 <p>
@@ -4107,11 +4107,11 @@ internal static class UnsafeNativeMethods
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A public or protected method in a public type has the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute (also implemented by the Declare keyword in Visual Basic).
+            A public or protected method in a public type has the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute (also implemented by the <code>Declare</code> keyword in Visual Basic).
 </p>
 <h2>Rule Description</h2>
 <p>
-            Methods that are marked with the <code>DllImportAttribute</code> attribute (or methods that are defined by using the Declare keyword in Visual Basic) use Platform Invocation Services to access unmanaged code. Such methods should not be exposed. By keeping these methods private or internal, you make sure that your library cannot be used to breach security by allowing callers access to unmanaged APIs that they could not call otherwise.
+            Methods that are marked with the <code>DllImportAttribute</code> attribute (or methods that are defined by using the <code>Declare</code> keyword in Visual Basic) use Platform Invocation Services to access unmanaged code. Such methods should not be exposed. By keeping these methods private or internal, you make sure that your library cannot be used to breach security by allowing callers access to unmanaged APIs that they could not call otherwise.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -4225,7 +4225,7 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 
                 <code>Auto</code>
                layout types are managed by the common language runtime. The layout of these types can change between versions of the .NET Framework, which will break COM clients that expect a specific layout. Note that if the <code>StructLayoutAttribute</code> attribute is not specified, the C#, Visual Basic, and C++ compilers specify the <code>Sequential</code> layout for value types.
-            Unless marked otherwise, all public nongeneric types are visible to COM; all nonpublic and generic types are invisible to COM. However, to reduce false positives, this rule requires the COM visibility of the type to be explicitly stated; the containing assembly must be marked with the <code>System.Runtime.InteropServices.ComVisibleAttribute</code> set to false and the type must be marked with the <code>ComVisibleAttribute</code> set to true.
+            Unless marked otherwise, all public nongeneric types are visible to COM; all nonpublic and generic types are invisible to COM. However, to reduce false positives, this rule requires the COM visibility of the type to be explicitly stated; the containing assembly must be marked with the <code>System.Runtime.InteropServices.ComVisibleAttribute</code> set to <code>false</code> and the type must be marked with the <code>ComVisibleAttribute</code> set to <code>true</code>.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -4252,11 +4252,11 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A call is made to the Marshal.GetLastWin32Error method or the equivalent Win32 GetLastError function, and the call that comes immediately before is not to a platform invoke method.
+            A call is made to the Marshal.GetLastWin32Error method or the equivalent Win32 <code>GetLastError</code> function, and the call that comes immediately before is not to a platform invoke method.
 </p>
 <h2>Rule Description</h2>
 <p>
-            A platform invoke method accesses unmanaged code and is defined by using the Declare keyword in Visual Basic or the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute. Generally, upon failure, unmanaged functions call the Win32 SetLastError function to set an error code that is associated with the failure. The caller of the failed function calls the Win32 GetLastError function to retrieve the error code and determine the cause of the failure. The error code is maintained on a per-thread basis and is overwritten by the next call to SetLastError. After a call to a failed platform invoke method, managed code can retrieve the error code by calling the GetLastWin32Error method. Because the error code can be overwritten by internal calls from other managed class library methods, the GetLastError or GetLastWin32Error method should be called immediately after the platform invoke method call.
+            A platform invoke method accesses unmanaged code and is defined by using the <code>Declare</code> keyword in Visual Basic or the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute. Generally, upon failure, unmanaged functions call the Win32 <code>SetLastError</code> function to set an error code that is associated with the failure. The caller of the failed function calls the Win32 <code>GetLastError</code> function to retrieve the error code and determine the cause of the failure. The error code is maintained on a per-thread basis and is overwritten by the next call to <code>SetLastError</code>. After a call to a failed platform invoke method, managed code can retrieve the error code by calling the GetLastWin32Error method. Because the error code can be overwritten by internal calls from other managed class library methods, the <code>GetLastError</code> or GetLastWin32Error method should be called immediately after the platform invoke method call.
             The rule ignores calls to the following managed members when they occur between the call to the platform invoke method and the call to GetLastWin32Error. These members do not change the error code and are useful for determining the success of some platform invoke method calls.
             <ul>
               <li>
@@ -4362,11 +4362,11 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 <h2>Rule Description</h2>
 <p>
             Visual Basic 6 COM clients cannot access 64-bit integers.
-            By default, the following are visible to COM: assemblies, public types, public instance members in public types, and all members of public value types. However, to reduce false positives, this rule requires the COM visibility of the type to be explicitly stated; the containing assembly must be marked with the <code>System.Runtime.InteropServices.ComVisibleAttribute</code> set to false and the type must be marked with the <code>ComVisibleAttribute</code> set to true.
+            By default, the following are visible to COM: assemblies, public types, public instance members in public types, and all members of public value types. However, to reduce false positives, this rule requires the COM visibility of the type to be explicitly stated; the containing assembly must be marked with the <code>System.Runtime.InteropServices.ComVisibleAttribute</code> set to <code>false</code> and the type must be marked with the <code>ComVisibleAttribute</code> set to <code>true</code>.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule for a parameter whose value can always be expressed as a 32-bit integral, change the parameter type to System.Int32. If the value of the parameter might be larger than can be expressed as a 32-bit integral, change the parameter type to <code>System.Decimal</code>. Note that both <code>System.Single</code> and <code>System.Double</code> lose precision at the upper ranges of the Int64 data type. If the member is not meant to be visible to COM, mark it with the <code>ComVisibleAttribute</code> set to false.
+            To fix a violation of this rule for a parameter whose value can always be expressed as a 32-bit integral, change the parameter type to System.Int32. If the value of the parameter might be larger than can be expressed as a 32-bit integral, change the parameter type to <code>System.Decimal</code>. Note that both <code>System.Single</code> and <code>System.Double</code> lose precision at the upper ranges of the Int64 data type. If the member is not meant to be visible to COM, mark it with the <code>ComVisibleAttribute</code> set to <code>false</code>.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -4399,14 +4399,14 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A type that is specifically marked as visible to Component Object Model (COM) contains a public static method.
+            A type that is specifically marked as visible to Component Object Model (COM) contains a <code>public</code> <code>static</code> method.
 </p>
 <h2>Rule Description</h2>
 <p>
-            COM does not support static methods.
+            COM does not support <code>static</code> methods.
             This rule ignores property and event accessors, operator overloading methods, or methods that are marked by using either the <code>System.Runtime.InteropServices.ComRegisterFunctionAttribute</code> attribute or the <code>System.Runtime.InteropServices.ComUnregisterFunctionAttribute</code> attribute.
             By default, the following are visible to COM: assemblies, public types, public instance members in public types, and all members of public value types.
-            For this rule to occur, an assembly-level <code>ComVisibleAttribute</code> must be set to false and the class- <code>ComVisibleAttribute</code> must be set to true, as the following code shows.
+            For this rule to occur, an assembly-level <code>ComVisibleAttribute</code> must be set to <code>false</code> and the class- <code>ComVisibleAttribute</code> must be set to <code>true</code>, as the following code shows.
 
 
 
@@ -4452,13 +4452,13 @@ namespace Samples
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            It is safe to suppress a warning from this rule if a COM client does not require access to the functionality that is provided by the static method.
+            It is safe to suppress a warning from this rule if a COM client does not require access to the functionality that is provided by the <code>static</code> method.
 </p>
 <h2>Example Violation</h2>
 
 <h2>Description</h2>
 <p>
-                The following example shows a static method that violates this rule.
+                The following example shows a <code>static</code> method that violates this rule.
 </p>
 <h2>Code</h2>
 <p>
@@ -4614,7 +4614,7 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A Component Object Model (COM) visible type is marked with the <code>ClassInterfaceAttribute</code> attribute set to the AutoDual value of <code>ClassInterfaceType</code>.
+            A Component Object Model (COM) visible type is marked with the <code>ClassInterfaceAttribute</code> attribute set to the <code>AutoDual</code> value of <code>ClassInterfaceType</code>.
 </p>
 <h2>Rule Description</h2>
 <p>
@@ -4623,7 +4623,7 @@ namespace Samples
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, change the value of the <code>ClassInterfaceAttribute</code> attribute to the None value of <code>ClassInterfaceType</code> and explicitly define the interface.
+            To fix a violation of this rule, change the value of the <code>ClassInterfaceAttribute</code> attribute to the <code>None</code> value of <code>ClassInterfaceType</code> and explicitly define the interface.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -4723,7 +4723,7 @@ namespace Samples
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, change the accessibility of the method to private or internal (Friend in Visual Basic).
+            To fix a violation of this rule, change the accessibility of the method to <code>private</code> or <code>internal</code> (<code>Friend</code> in Visual Basic).
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -4746,14 +4746,14 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A type is marked with the <code>ComSourceInterfacesAttribute</code> attribute and at least one specified interface is not marked with the <code>InterfaceTypeAttribute</code> attribute set to the InterfaceIsDispatch value.
+            A type is marked with the <code>ComSourceInterfacesAttribute</code> attribute and at least one specified interface is not marked with the <code>InterfaceTypeAttribute</code> attribute set to the <code>InterfaceIsDispatch</code> value.
 </p>
 <h2>Rule Description</h2>
 <p>
 
 
                 <code>ComSourceInterfacesAttribute</code>
-               is used to identify the event interfaces that a class exposes to Component Object Model (COM) clients. These interfaces must be exposed as InterfaceIsIDispatch to enable Visual Basic 6 COM clients to receive event notifications. By default, if an interface is not marked with the <code>InterfaceTypeAttribute</code> attribute, it is exposed as a dual interface.
+               is used to identify the event interfaces that a class exposes to Component Object Model (COM) clients. These interfaces must be exposed as <code>InterfaceIsIDispatch</code> to enable Visual Basic 6 COM clients to receive event notifications. By default, if an interface is not marked with the <code>InterfaceTypeAttribute</code> attribute, it is exposed as a dual interface.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -4785,7 +4785,7 @@ namespace Samples
 <h2>Rule Description</h2>
 <p>
             Nonpublic instance fields of COM-visible value types are visible to COM clients. Review the content of the field for information that should not be exposed, or that will have an unintended design or security effect.
-            By default, all public value types are visible to COM. However, to reduce false positives, this rule requires the COM visibility of the type to be explicitly stated. The containing assembly must be marked with the <code>System.Runtime.InteropServices.ComVisibleAttribute</code> set to false and the type must be marked with the <code>ComVisibleAttribute</code> set to true.
+            By default, all public value types are visible to COM. However, to reduce false positives, this rule requires the COM visibility of the type to be explicitly stated. The containing assembly must be marked with the <code>System.Runtime.InteropServices.ComVisibleAttribute</code> set to <code>false</code> and the type must be marked with the <code>ComVisibleAttribute</code> set to <code>true</code>.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -4821,7 +4821,7 @@ namespace Samples
 </p>
 <h2>Rule Description</h2>
 <p>
-            A platform invoke method accesses unmanaged code and is defined by using the Declare keyword in Visual Basic or the <code>System.Runtime.InteropServices.DllImportAttribute</code>. <code>MarshalAsAttribute</code> specifies the marshaling behavior that is used to convert data types between managed and unmanaged code. Many simple data types, such as <code>System.Byte</code> and System.Int32, have a single representation in unmanaged code and do not require specification of their marshaling behavior; the common language runtime automatically supplies the correct behavior.
+            A platform invoke method accesses unmanaged code and is defined by using the <code>Declare</code> keyword in Visual Basic or the <code>System.Runtime.InteropServices.DllImportAttribute</code>. <code>MarshalAsAttribute</code> specifies the marshaling behavior that is used to convert data types between managed and unmanaged code. Many simple data types, such as <code>System.Byte</code> and System.Int32, have a single representation in unmanaged code and do not require specification of their marshaling behavior; the common language runtime automatically supplies the correct behavior.
             The <code>Boolean</code> data type has multiple representations in unmanaged code. When the <code>MarshalAsAttribute</code> is not specified, the default marshaling behavior for the <code>Boolean</code> data type is <code>UnmanagedType.Bool</code>. This is a 32-bit integer, which is not appropriate in all circumstances. The Boolean representation that is required by the unmanaged method should be determined and matched to the appropriate <code>System.Runtime.InteropServices.UnmanagedType</code>. UnmanagedType.Bool is the Win32 BOOL type, which is always 4 bytes. UnmanagedType.U1 should be used for C++ bool or other 1-byte types. For more information, see Default Marshaling for Boolean Types.
 </p>
 <h2>How to Fix Violations</h2>
@@ -4858,7 +4858,7 @@ namespace Samples
 </p>
 <h2>Rule Description</h2>
 <p>
-            A platform invoke method accesses unmanaged code and is defined by using the Declare keyword in Visual Basic or the <code>System.Runtime.InteropServices.DllImportAttribute</code>. Currently, this rule looks for platform invoke method declarations that target Win32 functions that have a pointer to an OVERLAPPED structure parameter and the corresponding managed parameter is not a pointer to a <code>System.Threading.NativeOverlapped</code> structure.
+            A platform invoke method accesses unmanaged code and is defined by using the <code>Declare</code> keyword in Visual Basic or the <code>System.Runtime.InteropServices.DllImportAttribute</code>. Currently, this rule looks for platform invoke method declarations that target Win32 functions that have a pointer to an OVERLAPPED structure parameter and the corresponding managed parameter is not a pointer to a <code>System.Threading.NativeOverlapped</code> structure.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -4881,7 +4881,7 @@ namespace Samples
 </p>
 <h2>Rule Description</h2>
 <p>
-            When the name of an instance field matches a parameter or a local variable name, the instance field is accessed by using the this (Me in Visual Basic) keyword when inside the method body. When maintaining code, it is easy to forget this difference and assume that the parameter/local variable refers to the instance field, which leads to errors. This is true especially for lengthy method bodies.
+            When the name of an instance field matches a parameter or a local variable name, the instance field is accessed by using the <code>this</code> (<code>Me</code> in Visual Basic) keyword when inside the method body. When maintaining code, it is easy to forget this difference and assume that the parameter/local variable refers to the instance field, which leads to errors. This is true especially for lengthy method bodies.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -4940,17 +4940,17 @@ namespace Samples
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            It is safe to suppress a warning from this rule if the complexity cannot easily be reduced and the method is easy to understand, test, and maintain. In particular, a method that contains a large switch (Select in Visual Basic) statement is a candidate for exclusion. The risk of destabilizing the code base late in the development cycle or introducing an unexpected change in runtime behavior in previously shipped code might outweigh the maintainability benefits of refactoring the code.
+            It is safe to suppress a warning from this rule if the complexity cannot easily be reduced and the method is easy to understand, test, and maintain. In particular, a method that contains a large <code>switch</code> (<code>Select</code> in Visual Basic) statement is a candidate for exclusion. The risk of destabilizing the code base late in the development cycle or introducing an unexpected change in runtime behavior in previously shipped code might outweigh the maintainability benefits of refactoring the code.
 </p>
 <h2>How Cyclomatic Complexity is Calculated</h2>
 <p>
             The cyclomatic complexity is calculated by adding 1 to the following:
             <ul>
               <li>
-                Number of branches (such as if, while, and do)
+                Number of branches (such as <code>if</code>, <code>while</code>, and <code>do</code>)
               </li>
               <li>
-                Number of case statements in a switch
+                Number of <code>case</code> statements in a <code>switch</code>
               </li>
             </ul>
             The following examples show methods that have varying cyclomatic complexities.
@@ -4972,7 +4972,7 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            The name of an instance field starts with "s_" or the name of a static (Shared in Visual Basic) field starts with "m_".
+            The name of an instance field starts with "s_" or the name of a <code>static</code> (<code>Shared</code> in Visual Basic) field starts with "m_".
 </p>
 <h2>Rule Description</h2>
 <p>
@@ -4980,7 +4980,7 @@ namespace Samples
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, rename the field by using the appropriate prefix. Alternatively, make the field agree with the current suffix by adding or removing the static modifier.
+            To fix a violation of this rule, rename the field by using the appropriate prefix. Alternatively, make the field agree with the current suffix by adding or removing the <code>static</code> modifier.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -5043,15 +5043,15 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            This rule occurs when processes are set to ProcessPriorityClass.Idle.
+            This rule occurs when processes are set to <code>ProcessPriorityClass.Idle</code>.
 </p>
 <h2>Rule Description</h2>
 <p>
-            Do not set process priority to Idle. Processes that have System.Diagnostics.ProcessPriorityClass.Idle will occupy the CPU when it would otherwise be idle, and will therefore block standby.
+            Do not set process priority to Idle. Processes that have <code>System.Diagnostics.ProcessPriorityClass.Idle</code> will occupy the CPU when it would otherwise be idle, and will therefore block standby.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            Set processes to ProcessPriorityClass.BelowNormal.
+            Set processes to <code>ProcessPriorityClass.BelowNormal</code>.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -5098,7 +5098,7 @@ namespace Samples
 
 
 
-            In a limited number of cases the addition of a member is a breaking change even when the original members retain their original values. Primarily, the new member cannot be returned from existing code paths without breaking callers that use a switch (Select in Visual Basic) statement on the return value that encompasses the whole member list and that throw an exception in the default case. A secondary concern is that client code might not handle the change in behavior from reflection methods such as <code>Enum.IsDefined</code>. Accordingly, if the new member has to be returned from existing methods or a known application incompatibility occurs because of poor reflection usage, the only nonbreaking solution is to:
+            In a limited number of cases the addition of a member is a breaking change even when the original members retain their original values. Primarily, the new member cannot be returned from existing code paths without breaking callers that use a <code>switch</code> (<code>Select</code> in Visual Basic) statement on the return value that encompasses the whole member list and that throw an exception in the default case. A secondary concern is that client code might not handle the change in behavior from reflection methods such as <code>Enum.IsDefined</code>. Accordingly, if the new member has to be returned from existing methods or a known application incompatibility occurs because of poor reflection usage, the only nonbreaking solution is to:
 
               <li>
                 Add a new enumeration that contains the original and new members.
@@ -5768,7 +5768,7 @@ namespace NamingLibrary
 
 
             Types that implement <code>ICollection</code> and are a generalized type of data structure, such as a dictionary, stack, or queue, are allowed names that provide meaningful information about the intended usage of the type.
-            Types that implement <code>ICollection</code> and are a collection of specific items have names that end with the word 'Collection'. For example, a collection of <code>Queue</code> objects would have the name 'QueueCollection'. The 'Collection' suffix signifies that the members of the collection can be enumerated by using the foreach (For Each in Visual Basic) statement.
+            Types that implement <code>ICollection</code> and are a collection of specific items have names that end with the word 'Collection'. For example, a collection of <code>Queue</code> objects would have the name 'QueueCollection'. The 'Collection' suffix signifies that the members of the collection can be enumerated by using the <code>foreach</code> (<code>For Each</code> in Visual Basic) statement.
             Types that implement <code>IDictionary</code> have names that end with the word 'Dictionary' even if the type also implements <code>IEnumerable</code> or <code>ICollection</code>. The 'Collection' and 'Dictionary' suffix naming conventions enable users to distinguish between the following two enumeration patterns.
             Types with the 'Collection' suffix follow this enumeration pattern.
 
@@ -5820,7 +5820,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            It is safe to suppress a warning to use the 'Collection' suffix if the type is a generalized data structure that might be extended or that will hold an arbitrary set of diverse items. In this case, a name that provides meaningful information about the implementation, performance, or other characteristics of the data structure might make sense (for example, BinaryTree). In cases where the type represents a collection of a specific type (for example, StringCollection), do not suppress a warning from this rule because the suffix indicates that the type can be enumerated by using a foreach statement.
+            It is safe to suppress a warning to use the 'Collection' suffix if the type is a generalized data structure that might be extended or that will hold an arbitrary set of diverse items. In this case, a name that provides meaningful information about the implementation, performance, or other characteristics of the data structure might make sense (for example, BinaryTree). In cases where the type represents a collection of a specific type (for example, StringCollection), do not suppress a warning from this rule because the suffix indicates that the type can be enumerated by using a <code>foreach</code> statement.
             For other suffixes, do not suppress a warning from this rule. The suffix allows the intended usage to be evident from the type name.
 </p>
 <h2>Related Rules</h2>
@@ -6866,7 +6866,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>Rule Description</h2>
 <p>
             Duplicate casts decrease performance, especially when the casts are performed in compact iteration statements. For explicit duplicate cast operations, store the result of the cast in a local variable and use the local variable instead of the duplicate cast operations.
-            If the C# is operator is used to test whether the cast will succeed before the actual cast is performed, consider testing the result of the as operator instead. This provides the same functionality without the implicit cast operation that is performed by the is operator.
+            If the C# <code>is</code> operator is used to test whether the cast will succeed before the actual cast is performed, consider testing the result of the <code>as</code> operator instead. This provides the same functionality without the implicit cast operation that is performed by the <code>is</code> operator.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -6894,16 +6894,16 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 Methods used as event handlers.
               </li>
               <li>
-                Methods declared with the abstract (MustOverride in Visual Basic) modifier.
+                Methods declared with the <code>abstract</code> (<code>MustOverride</code> in Visual Basic) modifier.
               </li>
               <li>
-                Methods declared with the virtual (Overridable in Visual Basic) modifier.
+                Methods declared with the <code>virtual</code> (<code>Overridable</code> in Visual Basic) modifier.
               </li>
               <li>
-                Methods declared with the override (Overrides in Visual Basic) modifier.
+                Methods declared with the <code>override</code> (<code>Overrides</code> in Visual Basic) modifier.
               </li>
               <li>
-                Methods declared with the extern (Declare statement in Visual Basic) modifier.
+                Methods declared with the <code>extern</code> (<code>Declare</code> statement in Visual Basic) modifier.
               </li>
             </ul>
 </p>
@@ -6947,17 +6947,17 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A field is declared static and readonly (Shared and ReadOnly in Visual Basic), and is initialized with a value that is computable at compile time.
+            A field is declared <code>static</code> and <code>readonly</code> (<code>Shared</code> and <code>ReadOnly</code> in Visual Basic), and is initialized with a value that is computable at compile time.
 </p>
 <h2>Rule Description</h2>
 <p>
-            The value of a static readonly field is computed at runtime when the static constructor for the declaring type is called. If the static readonly field is initialized when it is declared and a static constructor is not declared explicitly, the compiler emits a static constructor to initialize the field.
-            The value of a const field is computed at compile time and stored in the metadata, which increases runtime performance when it is compared to a static readonly field.
-            Because the value assigned to the targeted field is computable at compile time, change the declaration to a const field so that the value is computed at compile time instead of at runtime.
+            The value of a <code>static</code> <code>readonly</code> field is computed at runtime when the static constructor for the declaring type is called. If the <code>static</code> <code>readonly</code> field is initialized when it is declared and a static constructor is not declared explicitly, the compiler emits a static constructor to initialize the field.
+            The value of a <code>const</code> field is computed at compile time and stored in the metadata, which increases runtime performance when it is compared to a <code>static</code> <code>readonly</code> field.
+            Because the value assigned to the targeted field is computable at compile time, change the declaration to a <code>const</code> field so that the value is computed at compile time instead of at runtime.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, replace the static and readonly modifiers with the const modifier.
+            To fix a violation of this rule, replace the <code>static</code> and <code>readonly</code> modifiers with the <code>const</code> modifier.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -6980,7 +6980,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, remove or use the local variable. Note that the C# compiler that is included with .NET Framework 2.0 removes unused local variables when the optimize option is enabled.
+            To fix a violation of this rule, remove or use the local variable. Note that the C# compiler that is included with .NET Framework 2.0 removes unused local variables when the <code>optimize</code> option is enabled.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -7090,8 +7090,8 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>Rule Description</h2>
 <p>
             When a type declares an explicit static constructor, the just-in-time (JIT) compiler adds a check to each static method and instance constructor of the type to make sure that the static constructor was previously called. Static initialization is triggered when any static member is accessed or when an instance of the type is created. However, static initialization is not triggered if you declare a variable of the type but do not use it, which can be important if the initialization changes global state.
-            When all static data is initialized inline and an explicit static constructor is not declared, Microsoft intermediate language (MSIL) compilers add the beforefieldinit flag and an implicit static constructor, which initializes the static data, to the MSIL type definition. When the JIT compiler encounters the beforefieldinit flag, most of the time the static constructor checks are not added. Static initialization is guaranteed to occur at some time before any static fields are accessed but not before a static method or instance constructor is invoked. Note that static initialization can occur at any time after a variable of the type is declared.
-            Static constructor checks can decrease performance. Often a static constructor is used only to initialize static fields, in which case you must only make sure that static initialization occurs before the first access of a static field. The beforefieldinit behavior is appropriate for these and most other types. It is only inappropriate when static initialization affects global state and one of the following is true:
+            When all static data is initialized inline and an explicit static constructor is not declared, Microsoft intermediate language (MSIL) compilers add the <code>beforefieldinit</code> flag and an implicit static constructor, which initializes the static data, to the MSIL type definition. When the JIT compiler encounters the <code>beforefieldinit</code> flag, most of the time the static constructor checks are not added. Static initialization is guaranteed to occur at some time before any static fields are accessed but not before a static method or instance constructor is invoked. Note that static initialization can occur at any time after a variable of the type is declared.
+            Static constructor checks can decrease performance. Often a static constructor is used only to initialize static fields, in which case you must only make sure that static initialization occurs before the first access of a static field. The <code>beforefieldinit</code> behavior is appropriate for these and most other types. It is only inappropriate when static initialization affects global state and one of the following is true:
             <ul>
               <li>
                 The effect on global state is expensive and is not required if the type is not used.
@@ -7207,11 +7207,11 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 Compiler-emitted array types
               </li>
               <li>
-                Types that cannot be instantiated and that define static (Shared in Visual Basic) methods only.
+                Types that cannot be instantiated and that define <code>static</code> (<code>Shared</code> in Visual Basic) methods only.
               </li>
             </ul>
-            If you apply <code>System.Runtime.CompilerServices.InternalsVisibleToAttribute</code> to the assembly that is being analyzed, this rule will not occur on any constructors that are marked as internal because you cannot tell whether a field is being used by another friend assembly.
-            Even though you cannot work around this limitation in Visual Studio Code Analysis, the external stand-alone FxCop will occur on internal constructors if every friend assembly is present in the analysis.
+            If you apply <code>System.Runtime.CompilerServices.InternalsVisibleToAttribute</code> to the assembly that is being analyzed, this rule will not occur on any constructors that are marked as <code>internal</code> because you cannot tell whether a field is being used by another <code>friend</code> assembly.
+            Even though you cannot work around this limitation in Visual Studio Code Analysis, the external stand-alone FxCop will occur on internal constructors if every <code>friend</code> assembly is present in the analysis.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -7221,7 +7221,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 A private constructor for types that target .NET Framework versions 1.0 and 1.1.
               </li>
               <li>
-                The static (Shared in Visual Basic) modifier for types that target .NET Framework 2.0.
+                The <code>static</code> (<code>Shared</code> in Visual Basic) modifier for types that target .NET Framework 2.0.
               </li>
             </ul>
 </p>
@@ -7299,7 +7299,7 @@ mc.Create();
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A public type inherits from <code>System.Attribute</code>, is not abstract, and is not sealed (NotInheritable in Visual Basic).
+            A public type inherits from <code>System.Attribute</code>, is not abstract, and is not sealed (<code>NotInheritable</code> in Visual Basic).
 </p>
 <h2>Rule Description</h2>
 <p>
@@ -7855,7 +7855,7 @@ namespace PerformanceLibrary
 <h2>Rule Description</h2>
 <p>
             Comparing strings using the <code>String.Length</code> property or the <code>String.IsNullOrEmpty</code> method is significantly faster than using <code>Equals</code>. This is because <code>Equals</code> executes significantly more MSIL instructions than either <code>IsNullOrEmpty</code> or the number of instructions executed to retrieve the <code>Length</code> property value and compare it to zero.
-            You should be aware that <code>Equals</code> and <code>Length</code> == 0 behave differently for null strings. If you try to get the value of the <code>Length</code> property on a null string, the common language runtime throws a <code>System.NullReferenceException</code>. If you perform a comparison between a null string and the empty string, the common language runtime does not throw an exception; the comparison returns false. Testing for null does not significantly affect the relative performance of these two approaches. When targeting .NET Framework 2.0, use the <code>IsNullOrEmpty</code> method. Otherwise, use the <code>Length</code> == comparison whenever possible.
+            You should be aware that <code>Equals</code> and <code>Length</code> == 0 behave differently for null strings. If you try to get the value of the <code>Length</code> property on a null string, the common language runtime throws a <code>System.NullReferenceException</code>. If you perform a comparison between a null string and the empty string, the common language runtime does not throw an exception; the comparison returns <code>false</code>. Testing for null does not significantly affect the relative performance of these two approaches. When targeting .NET Framework 2.0, use the <code>IsNullOrEmpty</code> method. Otherwise, use the <code>Length</code> == comparison whenever possible.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -8035,7 +8035,7 @@ namespace PerformanceLibrary
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            All fields that are smaller than 8 bytes must have offsets that are a multiple of their size, and fields that are 8 bytes or more must have offsets that are a multiple of 8. Another solution is to use LayoutKind.Sequential instead of LayoutKind.Explicit, if reasonable.
+            All fields that are smaller than 8 bytes must have offsets that are a multiple of their size, and fields that are 8 bytes or more must have offsets that are a multiple of 8. Another solution is to use <code>LayoutKind.Sequential</code> instead of <code>LayoutKind.Explicit</code>, if reasonable.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -8057,16 +8057,16 @@ namespace PerformanceLibrary
             Either of the following scenarios violates this rule occurs:
             <ul>
               <li>
-                The return value or parameter is typed as a fixed-size integer when it should be typed as an IntPtr.
+                The return value or parameter is typed as a fixed-size integer when it should be typed as an <code>IntPtr</code>.
               </li>
               <li>
-                The return value or parameter is typed as an IntPtr when it should be typed as a fixed-size integer.
+                The return value or parameter is typed as an <code>IntPtr</code> when it should be typed as a fixed-size integer.
               </li>
             </ul>
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            You can fix this violation by using IntPtr or UIntPtr to represent handles instead of Int32 or UInt32.
+            You can fix this violation by using <code>IntPtr</code> or <code>UIntPtr</code> to represent handles instead of <code>Int32</code> or <code>UInt32</code>.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -8164,7 +8164,7 @@ namespace PerformanceLibrary
 <h2>How to Fix Violations</h2>
 <p>
             To fix a violation of this rule, call <code>Dispose</code> on the object before all references to it are out of scope.
-            Note that you can use the using statement (Using in Visual Basic) to wrap objects that implement IDisposable. Objects that are wrapped in this manner will automatically be disposed at the close of the using block.
+            Note that you can use the <code>using</code> statement (<code>Using</code> in Visual Basic) to wrap objects that implement <code>IDisposable</code>. Objects that are wrapped in this manner will automatically be disposed at the close of the <code>using</code> block.
             The following are some situations where the using statement is not enough to protect IDisposable objects and can cause CA2000 to occur.
             <ul>
               <li>
@@ -8200,7 +8200,7 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            Do not suppress a warning from this rule unless you have called a method on your object that calls Dispose, such as <code>Close</code>, or if the method that raised the warning returns an IDisposable object wraps your object.
+            Do not suppress a warning from this rule unless you have called a method on your object that calls <code>Dispose</code>, such as <code>Close</code>, or if the method that raised the warning returns an IDisposable object wraps your object.
 </p>
 <h2>Related Rules</h2>
 <p>
@@ -8450,19 +8450,19 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            Classes use SafeHandle but still contain calls to GC.KeepAlive.
+            Classes use <code>SafeHandle</code> but still contain calls to <code>GC.KeepAlive</code>.
 </p>
 <h2>Rule Description</h2>
 <p>
-            If you are converting to SafeHandle usage, remove all calls to GC.KeepAlive (object). In this case, classes should not have to call GC.KeepAlive, assuming they do not have a finalizer but rely on SafeHandle to complete the OS handle for them.  Although the cost of leaving in a call to GC.KeepAlive might be negligible as measured by performance, the perception that a call to GC.KeepAlive is either necessary or sufficient to solve a lifetime issue that might no longer exist makes the code harder to maintain.
+            If you are converting to <code>SafeHandle</code> usage, remove all calls to <code>GC.KeepAlive </code>(object). In this case, classes should not have to call <code>GC.KeepAlive</code>,<code> </code>assuming they do not have a finalizer but rely on <code>SafeHandle</code> to complete the OS handle for them.  Although the cost of leaving in a call to <code>GC.KeepAlive</code> might be negligible as measured by performance, the perception that a call to <code>GC.KeepAlive</code> is either necessary or sufficient to solve a lifetime issue that might no longer exist makes the code harder to maintain.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            Remove calls to GC.KeepAlive.
+            Remove calls to <code>GC.KeepAlive</code>.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            You can suppress this warning only if it is not technically correct to convert to SafeHandle usage in your class.
+            You can suppress this warning only if it is not technically correct to convert to <code>SafeHandle</code> usage in your class.
 </p>]]></description>
   </rule>
 
@@ -8477,13 +8477,13 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 </p>
 <h2>Rule Description</h2>
 <p>
-            Use of IntPtr in managed code might indicate a potential security and reliability problem. All uses of IntPtr must be reviewed to determine whether the use of a <code>SafeHandle</code> , or a similar technology, is required in its place. Problems will occur if the IntPtr represents some native resource, such as memory, a file handle, or a socket, that the managed code is considered to own. If the managed code owns the resource, it must also release the native resources associated with it, because a failure to do so would cause resource leakage.
-            In such scenarios, security or reliability problems will also exist if multithreaded access is allowed to the IntPtr and a way of releasing the resource that is represented by the IntPtr is provided. These problems involve recycling of the IntPtr value on resource release while simultaneous use of the resource is being made on another thread. This can cause race conditions where one thread can read or write data that is associated with the wrong resource. For example, if your type stores an OS handle as an IntPtr and allows users to call both Close and any other method that uses that handle simultaneously and without some kind of synchronization, your code has a handle recycling problem.
-            This handle recycling problem can cause data corruption and, frequently, a security vulnerability. SafeHandle and its sibling class <code>CriticalHandle</code> provide a mechanism to encapsulate a native handle to a resource so that such threading problems can be avoided. Additionally, you can use SafeHandle and its sibling class CriticalHandle for other threading issues, for example, to carefully control the lifetime of managed objects that contain a copy of the native handle over calls to native methods. In this situation, you can often remove calls to GC.KeepAlive. The performance overhead thay you incur when you use SafeHandle and, to a lesser degree, CriticalHandle, can frequently be reduced through careful design.
+            Use of <code>IntPtr</code> in managed code might indicate a potential security and reliability problem. All uses of <code>IntPtr</code> must be reviewed to determine whether the use of a <code>SafeHandle</code> , or a similar technology, is required in its place. Problems will occur if the <code>IntPtr</code> represents some native resource, such as memory, a file handle, or a socket, that the managed code is considered to own. If the managed code owns the resource, it must also release the native resources associated with it, because a failure to do so would cause resource leakage.
+            In such scenarios, security or reliability problems will also exist if multithreaded access is allowed to the <code>IntPtr</code> and a way of releasing the resource that is represented by the <code>IntPtr</code> is provided. These problems involve recycling of the <code>IntPtr</code> value on resource release while simultaneous use of the resource is being made on another thread. This can cause race conditions where one thread can read or write data that is associated with the wrong resource. For example, if your type stores an OS handle as an <code>IntPtr</code> and allows users to call both Close and any other method that uses that handle simultaneously and without some kind of synchronization, your code has a handle recycling problem.
+            This handle recycling problem can cause data corruption and, frequently, a security vulnerability. <code>SafeHandle</code> and its sibling class <code>CriticalHandle</code> provide a mechanism to encapsulate a native handle to a resource so that such threading problems can be avoided. Additionally, you can use <code>SafeHandle</code> and its sibling class <code>CriticalHandle</code> for other threading issues, for example, to carefully control the lifetime of managed objects that contain a copy of the native handle over calls to native methods. In this situation, you can often remove calls to <code>GC.KeepAlive</code>. The performance overhead thay you incur when you use <code>SafeHandle</code> and, to a lesser degree, <code>CriticalHandle</code>, can frequently be reduced through careful design.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            Convert IntPtr usage to SafeHandle to safely manage access to native resources. See the <code>SafeHandle</code> reference topic for examples.
+            Convert <code>IntPtr</code> usage to <code>SafeHandle</code> to safely manage access to native resources. See the <code>SafeHandle</code> reference topic for examples.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -8725,7 +8725,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 </p>
 <h2>Rule Description</h2>
 <p>
-            When you apply the readonly (ReadOnly in Visual Basic) modifier to a field that contains an array, the field cannot be changed to refer to a different array. However, the elements of the array that are stored in a read-only field can be changed. Code that makes decisions or performs operations that are based on the elements of a read-only array that can be publicly accessed might contain an exploitable security vulnerability.
+            When you apply the <code>readonly</code> (<code>ReadOnly</code> in Visual Basic) modifier to a field that contains an array, the field cannot be changed to refer to a different array. However, the elements of the array that are stored in a read-only field can be changed. Code that makes decisions or performs operations that are based on the elements of a read-only array that can be publicly accessed might contain an exploitable security vulnerability.
             Note that having a public field also violates the design rule CA1051: Do not declare visible instance fields.
 </p>
 <h2>How to Fix Violations</h2>
@@ -8743,7 +8743,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            Exclusion of a warning from this rule is strongly discouraged. Almost no scenarios occur where the contents of a read-only field are unimportant. If this is the case with your scenario, remove the readonly modifier instead of excluding the message.
+            Exclusion of a warning from this rule is strongly discouraged. Almost no scenarios occur where the contents of a read-only field are unimportant. If this is the case with your scenario, remove the <code>readonly</code> modifier instead of excluding the message.
 </p>]]></description>
   </rule>
 
@@ -8992,7 +8992,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, add a call to <code>KeepAlive</code> to the method, passing the current instance (this in C# and C++) as the argument. Position the call after the last line of code where the object must be protected from garbage collection. Immediately after the call to <code>KeepAlive</code>, the object is again considered ready for garbage collection assuming that there are no managed references to it.
+            To fix a violation of this rule, add a call to <code>KeepAlive</code> to the method, passing the current instance (<code>this</code> in C# and C++) as the argument. Position the call after the last line of code where the object must be protected from garbage collection. Immediately after the call to <code>KeepAlive</code>, the object is again considered ready for garbage collection assuming that there are no managed references to it.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -9153,27 +9153,27 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            An inheritable public type provides an overridable method implementation of an internal (Friend in Visual Basic) interface.
+            An inheritable public type provides an overridable method implementation of an <code>internal</code> (<code>Friend</code> in Visual Basic) interface.
 </p>
 <h2>Rule Description</h2>
 <p>
-            Interface methods have public accessibility, which cannot be changed by the implementing type. An internal interface creates a contract that is not intended to be implemented outside the assembly that defines the interface. A public type that implements a method of an internal interface using the virtual (Overridable in Visual Basic) modifier allows the method to be overridden by a derived type that is outside the assembly. If a second type in the defining assembly calls the method and expects an internal-only contract, behavior might be compromised when, instead, the overridden method in the outside assembly is executed. This creates a security vulnerability.
+            Interface methods have public accessibility, which cannot be changed by the implementing type. An internal interface creates a contract that is not intended to be implemented outside the assembly that defines the interface. A public type that implements a method of an internal interface using the <code>virtual</code> (<code>Overridable</code> in Visual Basic) modifier allows the method to be overridden by a derived type that is outside the assembly. If a second type in the defining assembly calls the method and expects an internal-only contract, behavior might be compromised when, instead, the overridden method in the outside assembly is executed. This creates a security vulnerability.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
             To fix a violation of this rule, prevent the method from being overridden outside the assembly by using one of the following:
             <ul>
               <li>
-                Make the declaring type sealed (NotInheritable in Visual Basic).
+                Make the declaring type <code>sealed</code> (<code>NotInheritable</code> in Visual Basic).
               </li>
               <li>
-                Change the accessibility of the declaring type to internal (Friend in Visual Basic).
+                Change the accessibility of the declaring type to <code>internal</code> (<code>Friend</code> in Visual Basic).
               </li>
               <li>
                 Remove all public constructors from the declaring type.
               </li>
               <li>
-                Implement the method without using the virtual modifier.
+                Implement the method without using the <code>virtual</code> modifier.
               </li>
               <li>
                 Implement the method explicitly.
@@ -9309,11 +9309,11 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            In versions 1.0 and 1.1 of the .NET Framework, a public or protected method contains a try/catch/finally block. The finally block appears to reset security state and is not enclosed in a finally block.
+            In versions 1.0 and 1.1 of the .NET Framework, a public or protected method contains a <code>try</code>/<code>catch</code>/<code>finally</code> block. The <code>finally</code> block appears to reset security state and is not enclosed in a <code>finally</code> block.
 </p>
 <h2>Rule Description</h2>
 <p>
-            This rule locates try/finally blocks in code that targets versions 1.0 and 1.1 of the .NET Framework that might be vulnerable to malicious exception filters present in the call stack. If sensitive operations such as impersonation occur in the try block, and an exception is thrown, the filter can execute before the finally block. For the impersonation example, this means that the filter would execute as the impersonated user. Filters are currently implementable only in Visual Basic.
+            This rule locates <code>try</code>/<code>finally</code> blocks in code that targets versions 1.0 and 1.1 of the .NET Framework that might be vulnerable to malicious exception filters present in the call stack. If sensitive operations such as impersonation occur in the try block, and an exception is thrown, the filter can execute before the <code>finally</code> block. For the impersonation example, this means that the filter would execute as the impersonated user. Filters are currently implementable only in Visual Basic.
 
 
 
@@ -9325,7 +9325,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 
-                      Note   In versions 2.0 and later of the .NET Framework, the runtime automatically protects a try/catch/ finally block from malicious exception filters, if the reset occurs directly within the method that contains the exception block.
+                      Note   In versions 2.0 and later of the .NET Framework, the runtime automatically protects a <code>try</code>/<code>catch</code>/ <code>finally</code> block from malicious exception filters, if the reset occurs directly within the method that contains the exception block.
 
 
 
@@ -9333,7 +9333,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            Place the unwrapped try/finally in an outer try block. See the second example that follows. This forces the finally to execute before filter code.
+            Place the unwrapped <code>try</code>/<code>finally</code> in an outer try block. See the second example that follows. This forces the <code>finally</code> to execute before filter code.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -9874,7 +9874,7 @@ namespace TransparencyWarningsDemo
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A security transparent method calls a method in an assembly that is not marked with the <code>AllowPartiallyTrustedCallersAttribute</code> (APTCA) attribute, or a security transparent method satisfies a SecurityAction.LinkDemand for a type or a method.
+            A security transparent method calls a method in an assembly that is not marked with the <code>AllowPartiallyTrustedCallersAttribute</code> (APTCA) attribute, or a security transparent method satisfies a SecurityAction<code>.LinkDemand</code> for a type or a method.
 </p>
 <h2>Rule Description</h2>
 <p>
@@ -9921,7 +9921,7 @@ namespace TransparencyWarningsDemo
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A tranparent type or method is declaratively marked with a <code>System.Security.Permissions.SecurityAction</code>.Demand demand or the method calls the <code>CodeAccessPermission.Demand</code> method.
+            A tranparent type or method is declaratively marked with a <code>System.Security.Permissions.SecurityAction</code><code>.Demand</code> demand or the method calls the <code>CodeAccessPermission.Demand</code> method.
 </p>
 <h2>Rule Description</h2>
 <p>
@@ -10077,7 +10077,7 @@ namespace TransparencyWarningsDemo
             This rule analyzes all methods and types in an assembly which is either 100% transparent or mixed transparent/critical, and flags any declarative or imperative usage of <code>Assert</code>.
             At run time, any calls to <code>Assert</code> from transparent code will cause a <code>InvalidOperationException</code> to be thrown. This can occur in both 100% transparent assemblies, and also in mixed transparent/critical assemblies where a method or type is declared transparent, but includes a declarative or imperative Assert.
             The .NET Framework 2.0 introduced a feature named transparency. Individual methods, fields, interfaces, classes, and types can be either transparent or critical.
-            Transparent code is not allowed to elevate security privileges. Therefore, any permissions granted or demanded of it are automatically passed through the code to the caller or host application domain. Examples of elevations include Asserts, LinkDemands, SuppressUnmanagedCode, and unsafe code.
+            Transparent code is not allowed to elevate security privileges. Therefore, any permissions granted or demanded of it are automatically passed through the code to the caller or host application domain. Examples of elevations include Asserts, LinkDemands, SuppressUnmanagedCode, and <code>unsafe</code> code.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -10259,11 +10259,11 @@ namespace TransparencyWarningsDemo
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            An exception is re-thrown and the exception is explicitly specified in the throw statement.
+            An exception is re-thrown and the exception is explicitly specified in the <code>throw</code> statement.
 </p>
 <h2>Rule Description</h2>
 <p>
-            Once an exception is thrown, part of the information it carries is the stack trace. The stack trace is a list of the method call hierarchy that starts with the method that throws the exception and ends with the method that catches the exception. If an exception is re-thrown by specifying the exception in the throw statement, the stack trace is restarted at the current method and the list of method calls between the original method that threw the exception and the current method is lost. To keep the original stack trace information with the exception, use the throw statement without specifying the exception.
+            Once an exception is thrown, part of the information it carries is the stack trace. The stack trace is a list of the method call hierarchy that starts with the method that throws the exception and ends with the method that catches the exception. If an exception is re-thrown by specifying the exception in the <code>throw</code> statement, the stack trace is restarted at the current method and the list of method calls between the original method that threw the exception and the current method is lost. To keep the original stack trace information with the exception, use the <code>throw</code> statement without specifying the exception.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -10367,7 +10367,7 @@ namespace TransparencyWarningsDemo
 
 
 
-                        null
+                        <code>null</code>
                        reference 
 
 
@@ -10392,7 +10392,7 @@ namespace TransparencyWarningsDemo
 
 
 
-                    Invalid enum value
+                    Invalid <code>enum</code> value
 
 
 
@@ -10543,7 +10543,7 @@ namespace TransparencyWarningsDemo
 </p>
 <h2>Rule Description</h2>
 <p>
-            A platform invoke method is used to call an unmanaged DLL function and is defined using the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute, or the Declare keyword in Visual Basic. An incorrectly defined platform invoke method can lead to runtime exceptions because of issues such as a misnamed function, faulty mapping of parameter and return value data types, and incorrect field specifications, such as the calling convention and character set. If available, it is generally simpler and less error prone to call the equivalent managed method than to define and call the unmanaged method directly. Calling a platform invoke method can also lead to additional security issues that need to be addressed.
+            A platform invoke method is used to call an unmanaged DLL function and is defined using the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute, or the <code>Declare</code> keyword in Visual Basic. An incorrectly defined platform invoke method can lead to runtime exceptions because of issues such as a misnamed function, faulty mapping of parameter and return value data types, and incorrect field specifications, such as the calling convention and character set. If available, it is generally simpler and less error prone to call the equivalent managed method than to define and call the unmanaged method directly. Calling a platform invoke method can also lead to additional security issues that need to be addressed.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -10594,8 +10594,8 @@ namespace TransparencyWarningsDemo
 </p>
 <h2>Rule Description</h2>
 <p>
-            When a value-type is declared, it undergoes a default initialization where all value-type fields are set to zero and all reference-type fields are set to null (Nothing in Visual Basic). An explicit static constructor is only guaranteed to run before an instance constructor or static member of the type is called. Therefore, if the type is created without calling an instance constructor, the static constructor is not guaranteed to run.
-            If all static data is initialized inline and no explicit static constructor is declared, the C# and Visual Basic compilers add the beforefieldinit flag to the MSIL class definition. The compilers also add a private static constructor that contains the static initialization code. This private static constructor is guaranteed to run before any static fields of the type are accessed.
+            When a value-type is declared, it undergoes a default initialization where all value-type fields are set to zero and all reference-type fields are set to <code>null</code> (<code>Nothing</code> in Visual Basic). An explicit static constructor is only guaranteed to run before an instance constructor or static member of the type is called. Therefore, if the type is created without calling an instance constructor, the static constructor is not guaranteed to run.
+            If all static data is initialized inline and no explicit static constructor is declared, the C# and Visual Basic compilers add the <code>beforefieldinit</code> flag to the MSIL class definition. The compilers also add a private static constructor that contains the static initialization code. This private static constructor is guaranteed to run before any static fields of the type are accessed.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -10893,11 +10893,11 @@ namespace TransparencyWarningsDemo
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, call base.<code>Dispose</code> in your <code>Dispose</code> method.
+            To fix a violation of this rule, call <code>base</code>.<code>Dispose</code> in your <code>Dispose</code> method.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
-            It is safe to suppress a warning from this rule if the call to base.<code>Dispose</code> occurs at a deeper calling level than the rule checks.
+            It is safe to suppress a warning from this rule if the call to <code>base</code>.<code>Dispose</code> occurs at a deeper calling level than the rule checks.
 </p>]]></description>
   </rule>
 
@@ -11065,7 +11065,7 @@ namespace TransparencyWarningsDemo
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule, provide an implementation of <code>GetHashCode</code>. For a pair of objects of the same type, you must ensure that the implementation returns the same value if your implementation of <code>Equals</code> returns true for the pair.
+            To fix a violation of this rule, provide an implementation of <code>GetHashCode</code>. For a pair of objects of the same type, you must ensure that the implementation returns the same value if your implementation of <code>Equals</code> returns <code>true</code> for the pair.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -11418,17 +11418,17 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            An exception is thrown from a finally, filter, or fault clause.
+            An exception is thrown from a <code>finally</code>, filter, or fault clause.
 </p>
 <h2>Rule Description</h2>
 <p>
             When an exception is raised in an exception clause, it greatly increases the difficulty of debugging.
-            When an exception is raised in a finally or fault clause, the new exception hides the active exception, if present. This makes the original error hard to detect and debug.
+            When an exception is raised in a <code>finally</code> or fault clause, the new exception hides the active exception, if present. This makes the original error hard to detect and debug.
             When an exception is raised in a filter clause, the runtime silently catches the exception, and causes the filter to evaluate to false. There is no way to tell the difference between the filter evaluating to false and an exception being throw from a filter. This makes it hard to detect and debug errors in the filter's logic.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix this violation of this rule, do not explicitly raise an exception from a finally, filter, or fault clause.
+            To fix this violation of this rule, do not explicitly raise an exception from a <code>finally</code>, filter, or fault clause.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -12549,16 +12549,16 @@ namespace Samples
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
-            A public or protected type contains a public or protected method that uses the VarArgs calling convention.
+            A public or protected type contains a public or protected method that uses the <code>VarArgs</code> calling convention.
 </p>
 <h2>Rule Description</h2>
 <p>
-            The VarArgs calling convention is used with certain method definitions that take a variable number of parameters. A method using the VarArgs calling convention is not Common Language Specification (CLS) compliant and might not be accessible across programming languages.
-            In C#, the VarArgs calling convention is used when a method's parameter list ends with the __arglist keyword. Visual Basic does not support the VarArgs calling convention, and Visual C++  allows its use only in unmanaged code that uses the ellipse ... notation.
+            The <code>VarArgs</code> calling convention is used with certain method definitions that take a variable number of parameters. A method using the <code>VarArgs</code> calling convention is not Common Language Specification (CLS) compliant and might not be accessible across programming languages.
+            In C#, the <code>VarArgs</code> calling convention is used when a method's parameter list ends with the <code>__arglist</code> keyword. Visual Basic does not support the <code>VarArgs</code> calling convention, and Visual C++  allows its use only in unmanaged code that uses the ellipse <code>...</code> notation.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
-            To fix a violation of this rule in C#, use the params (C# Reference) keyword instead of __arglist.
+            To fix a violation of this rule in C#, use the params (C# Reference) keyword instead of <code>__arglist</code>.
 </p>
 <h2>When to Suppress Warnings</h2>
 <p>
@@ -13213,7 +13213,7 @@ namespace Samples
 
               </li>
             </ul>
-            Serialization event handlers take a single parameter of type <code>System.Runtime.Serialization.StreamingContext</code>, return void, and have private visibility.
+            Serialization event handlers take a single parameter of type <code>System.Runtime.Serialization.StreamingContext</code>, return <code>void</code>, and have <code>private</code> visibility.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
@@ -13431,7 +13431,7 @@ namespace Samples
 
 
                 <code>Double.NaN</code>
-              , which represents not-a-number, results when an arithmetic operation is undefined. Any expression that tests equality between a value and <code>Double.NaN</code> always returns false. Any expression that tests inequality between a value and <code>Double.NaN</code> always returns true.
+              , which represents not-a-number, results when an arithmetic operation is undefined. Any expression that tests equality between a value and <code>Double.NaN</code> always returns <code>false</code>. Any expression that tests inequality between a value and <code>Double.NaN</code> always returns <code>true</code>.
 </p>
 <h2>How to Fix Violations</h2>
 <p>
