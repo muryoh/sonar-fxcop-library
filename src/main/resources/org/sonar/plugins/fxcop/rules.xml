@@ -13,22 +13,20 @@
             When a static member of a generic type is called, the type argument must be specified for the type. When a generic instance member that does not support inference is called, the type argument must be specified for the member. The syntax for specifying the type argument in these two cases is different and easily confused, as the following calls demonstrate:
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 // Static method in a generic type.
 GenericType&lt;int&gt;.StaticMethod();
 
 // Generic instance method that does not support inference.
 someObject.GenericMethod&lt;int&gt;();
-
+</pre>
 
 
 
@@ -691,16 +689,14 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Collections;
 
@@ -756,7 +752,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -778,16 +774,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Collections.ObjectModel;
 
@@ -807,7 +801,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -829,16 +823,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -941,7 +933,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -1067,20 +1059,18 @@ namespace Samples
             You cannot use the default equality operator in an overloaded implementation of the equality operator. Doing so will cause a stack overflow. To implement the equality operator, use the Object.Equals method in your implementation. See the following example.
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 if (Object.ReferenceEquals(left, null))
     return Object.ReferenceEquals(right, null);
 return left.Equals(right);
-
+</pre>
 
 
 
@@ -1261,16 +1251,14 @@ return left.Equals(right);
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace DesignLibrary
@@ -1314,7 +1302,7 @@ namespace DesignLibrary
       }
    }
 }
-
+</pre>
 
 
 
@@ -1333,16 +1321,14 @@ namespace DesignLibrary
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace DesignLibrary
@@ -1370,7 +1356,7 @@ namespace DesignLibrary
         }
     }
 }
-
+</pre>
 
 
 
@@ -1386,16 +1372,14 @@ namespace DesignLibrary
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 [GoodCustomAttribute("ThisIsSomeMandatoryData", OptionalData = "ThisIsSomeOptionalData")]
 public string MyProperty
 {
@@ -1409,7 +1393,7 @@ public string MyOtherProperty
     get { return myOtherProperty; }
     set { myOtherProperty = value; }
 }
-
+</pre>
 
 
 
@@ -1500,16 +1484,14 @@ public string MyOtherProperty
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -1575,7 +1557,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -1687,16 +1669,14 @@ namespace Samples
             You can prevent the debugger from auto-expanding properties by applying <code>System.Diagnostics.DebuggerBrowsableAttribute</code>. The following example shows this attribute being applied to an instance property.
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Diagnostics;
 
@@ -1717,7 +1697,7 @@ namespace Microsoft.Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -1857,16 +1837,14 @@ namespace Microsoft.Samples
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace DesignLibrary
@@ -1891,7 +1869,7 @@ namespace DesignLibrary
       Yellow      = 4
    }
 }
-
+</pre>
 
 
 
@@ -1909,16 +1887,14 @@ namespace DesignLibrary
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -1943,7 +1919,7 @@ namespace Samples
         Yellow      = 4
     }
 }
-
+</pre>
 
 
 
@@ -2723,16 +2699,14 @@ namespace Samples
 
 
 
-        C#C++VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace DesignLibrary
@@ -2758,7 +2732,7 @@ namespace DesignLibrary
         public static void SomeMethod() {}
     }
 }
-
+</pre>
 
 
 
@@ -2776,16 +2750,14 @@ namespace DesignLibrary
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace DesignLibrary
@@ -2809,7 +2781,7 @@ namespace DesignLibrary
 
     public delegate void SomeDelegate();
 }
-
+</pre>
 
 
 
@@ -3142,16 +3114,14 @@ namespace DesignLibrary
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 public class MyCollection : CollectionBase
 {
 }
@@ -3159,7 +3129,7 @@ public class MyCollection : CollectionBase
 public class MyReadOnlyCollection : ReadOnlyCollectionBase
 {
 }
-
+</pre>
 
 
 
@@ -3167,16 +3137,14 @@ public class MyReadOnlyCollection : ReadOnlyCollectionBase
 Examples of Correct Usage
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 public class MyCollection : Collection&lt;T&gt;
 {
 }
@@ -3184,7 +3152,7 @@ public class MyCollection : Collection&lt;T&gt;
 public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
 {
 }
-
+</pre>
 
 
 
@@ -3321,16 +3289,14 @@ public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Runtime.InteropServices;
 using System.ComponentModel;
@@ -3353,7 +3319,7 @@ internal static class NativeMethods
     [return: MarshalAs(UnmanagedType.Bool)]
     internal static extern bool MessageBeep(int uType);
 }
-
+</pre>
 
 
 
@@ -3372,16 +3338,14 @@ internal static class NativeMethods
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Runtime.InteropServices;
 using System.Security;
@@ -3407,7 +3371,7 @@ internal static class SafeNativeMethods
     [DllImport("kernel32.dll", CharSet=CharSet.Auto, ExactSpelling=true)]
     internal static extern int GetTickCount();
 }
-
+</pre>
 
 
 
@@ -3426,16 +3390,14 @@ internal static class SafeNativeMethods
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Runtime.InteropServices;
 using System.Security;
@@ -3461,7 +3423,7 @@ internal static class UnsafeNativeMethods
     [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
     internal static extern int ShowCursor([MarshalAs(UnmanagedType.Bool)]bool bShow);
 }
-
+</pre>
 
 
 
@@ -4180,15 +4142,13 @@ internal static class UnsafeNativeMethods
 
 
 
-                Copy
 
 
-
-
+            <pre>
    void SomeMethod(int valueOne);
    void SomeMethod(int valueOne, int valueTwo, int valueThree);
    void SomeMethod(int valueOne, int valueTwo);
-
+</pre>
 
 
 
@@ -4201,15 +4161,13 @@ These methods are exposed to COM clients as the following.
 
 
 
-                Copy
 
 
-
-
+            <pre>
    void SomeMethod(int valueOne);
    void SomeMethod_2(int valueOne, int valueTwo, int valueThree);
    void SomeMethod_3(int valueOne, int valueTwo);
-
+</pre>
 
 
 
@@ -4451,16 +4409,14 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
             For this rule to occur, an assembly-level <code>ComVisibleAttribute</code> must be set to false and the class- <code>ComVisibleAttribute</code> must be set to true, as the following code shows.
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Runtime.InteropServices;
 
@@ -4475,7 +4431,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -4509,16 +4465,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Runtime.InteropServices;
 using System.Collections.ObjectModel;
@@ -4556,7 +4510,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -4579,16 +4533,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Runtime.InteropServices;
 using System.Collections.ObjectModel;
@@ -4628,7 +4580,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -5378,11 +5330,9 @@ namespace Samples
 
 
 
-                Copy
 
 
-
-
+            <pre>
    &lt;Dictionary&gt;
       &lt;Words&gt;
          &lt;Unrecognized&gt;
@@ -5403,7 +5353,7 @@ namespace Samples
          &lt;/CasingExceptions&gt;
       &lt;/Acronyms&gt;
    &lt;/Dictionary&gt;
-
+</pre>
 
 
 
@@ -5522,16 +5472,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 namespace NamingLibrary
 {
@@ -5545,7 +5493,7 @@ namespace NamingLibrary
         }
     }
 }
-
+</pre>
 
 
 
@@ -5830,13 +5778,11 @@ namespace NamingLibrary
 
 
 
-                Copy
 
 
-
-
+            <pre>
     foreach(SomeType x in SomeCollection) { }
-
+</pre>
 
 
 
@@ -5849,13 +5795,11 @@ Types with the 'Dictionary' suffix follow this enumeration pattern.
 
 
 
-                Copy
 
 
-
-
+            <pre>
     foreach(SomeType x in SomeDictionary.Values) { }
-
+</pre>
 
 
 
@@ -7295,16 +7239,14 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 The class is passed as a generic type parameter that has a new constraint. For example, the following example will raise this rule.
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 internal class MyClass
 {
     public DoSomething()
@@ -7321,7 +7263,7 @@ public class MyGeneric&lt;T&gt; where T : new()
 // [...]
 MyGeneric&lt;MyClass&gt; mc = new MyGeneric&lt;MyClass&gt;();
 mc.Create();
-
+</pre>
 
 
 
@@ -7441,16 +7383,14 @@ mc.Create();
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -7478,7 +7418,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -7496,16 +7436,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -7563,7 +7501,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -7673,16 +7611,14 @@ namespace Samples
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace PerformanceLibrary
@@ -7702,7 +7638,7 @@ namespace PerformanceLibrary
         }
     }
 }
-
+</pre>
 
 
 
@@ -7724,16 +7660,14 @@ namespace PerformanceLibrary
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace PerformanceLibrary
@@ -7755,7 +7689,7 @@ namespace PerformanceLibrary
         }
     }
 }
-
+</pre>
 
 
 
@@ -7775,16 +7709,14 @@ namespace PerformanceLibrary
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Collections.ObjectModel;
 
@@ -7804,7 +7736,7 @@ namespace PerformanceLibrary
         }
     }
 }
-
+</pre>
 
 
 
@@ -7822,16 +7754,14 @@ namespace PerformanceLibrary
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace PerformanceLibrary
@@ -7852,7 +7782,7 @@ namespace PerformanceLibrary
         }
     }
 }
-
+</pre>
 
 
 
@@ -7868,16 +7798,14 @@ namespace PerformanceLibrary
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Collections.ObjectModel;
 
@@ -7898,7 +7826,7 @@ namespace PerformanceLibrary
         }
     }
 }
-
+</pre>
 
 
 
@@ -8254,14 +8182,12 @@ namespace PerformanceLibrary
 
 
 
-                Copy
 
 
-
-
+            <pre>
 using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))
 { ... }
-
+</pre>
 
 
 
@@ -8627,14 +8553,12 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 
 
 
-                Copy
 
 
-
-
+            <pre>
 int x = 10;
 string query = "SELECT TOP " + x.ToString() + " FROM Table";
-
+</pre>
 
 
 
@@ -8647,14 +8571,12 @@ The rule is violated because a malicious user can override the ToString() method
 
 
 
-                Copy
 
 
-
-
+            <pre>
 int x = 10;
 string query = String.Format("SELECT TOP {0} FROM Table", x);
-
+</pre>
 
 
 
@@ -9542,16 +9464,14 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Security;
 
@@ -9592,7 +9512,7 @@ namespace TransparencyWarningsDemo
         public DerivedWithSafeCriticalDefaultCtor() { }
     }
 }
-
+</pre>
 
 
 
@@ -9625,16 +9545,14 @@ namespace TransparencyWarningsDemo
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Security;
 
@@ -9663,7 +9581,7 @@ namespace TransparencyWarningsDemo
         void TransparentTarget() { }
     }
 }
-
+</pre>
 
 
 
@@ -9705,16 +9623,14 @@ namespace TransparencyWarningsDemo
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Security;
 
@@ -9767,7 +9683,7 @@ namespace TransparencyWarningsDemo
     }
 
 }
-
+</pre>
 
 
 
@@ -10090,16 +10006,14 @@ namespace TransparencyWarningsDemo
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Runtime.InteropServices;
 using System.Security;
@@ -10117,7 +10031,7 @@ namespace TransparencyWarningsDemo
         internal static extern bool Beep(uint dwFreq, uint dwDuration);
     }
 }
-
+</pre>
 
 
 
@@ -10208,16 +10122,14 @@ namespace TransparencyWarningsDemo
             A security transparent field or a safe critical field is declared. Its type is specified as security critical. For example:
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 [assembly: AllowPartiallyTrustedCallers]
 
    [SecurityCritical]
@@ -10227,7 +10139,7 @@ namespace TransparencyWarningsDemo
    {
       Type1 m_field; // CA2151, transparent field of critical type
    }
-
+</pre>
 
 
 
@@ -10251,16 +10163,14 @@ In this example, m_field is a security transparent field of a type that is secur
             To fix a violation of this rule, mark the field with the <code>SecurityCriticalAttribute</code> attribute, or make the type that is referenced by the field eith security transparent or safe critical.
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 // Fix 1: Make the referencing field security critical
 [assembly: AllowPartiallyTrustedCallers]
 
@@ -10284,7 +10194,7 @@ In this example, m_field is a security transparent field of a type that is secur
       [SecurityCritical]
       Type1 m_field; // Fixed: critical type, critical field
    }
-
+</pre>
 
 
 
@@ -10308,16 +10218,14 @@ In this example, m_field is a security transparent field of a type that is secur
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 using System.Runtime.InteropServices;
 using System.Security;
@@ -10335,7 +10243,7 @@ namespace TransparencyWarningsDemo
         internal static extern bool Beep(uint dwFreq, uint dwDuration);
     }
 }
-
+</pre>
 
 
 
@@ -11174,16 +11082,14 @@ namespace TransparencyWarningsDemo
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -11227,7 +11133,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -11243,16 +11149,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -11310,7 +11214,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -11328,16 +11232,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -11391,7 +11293,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -11407,16 +11309,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -11474,7 +11374,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -11669,16 +11569,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace UsageLibrary
@@ -11730,7 +11628,7 @@ namespace UsageLibrary
         }
     }
 }
-
+</pre>
 
 
 
@@ -11748,16 +11646,14 @@ namespace UsageLibrary
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -11809,7 +11705,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -11827,16 +11723,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -11882,7 +11776,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -12687,21 +12581,20 @@ namespace Samples
             You cannot use the default equality operator in an overloaded implementation of the equality operator. Doing so will cause a stack overflow. To implement the equality operator, use the Object.Equals method in your implementation. For example:
 
 
-        VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 If (Object.ReferenceEquals(left, Nothing)) Then
     Return Object.ReferenceEquals(right, Nothing)
 Else
     Return left.Equals(right)
 End If
+</pre>
 
 
 
@@ -12710,20 +12603,17 @@ End If
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
-
-
+            <pre>
 if (Object.ReferenceEquals(left, null))
     return Object.ReferenceEquals(right, null);
 return left.Equals(right);
-
+</pre>
 
 
 
@@ -12849,16 +12739,14 @@ return left.Equals(right);
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -12873,7 +12761,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -12891,18 +12779,16 @@ namespace Samples
 
 
 
-                Copy
 
 
-
-
+            <pre>
 public static void Main()
 {
     int value = int.MinValue;    // int.MinValue is -2147483648
     value = Calculator.Decrement(value);
     Console.WriteLine(value);
 }
-
+</pre>
 
 
 
@@ -12915,17 +12801,15 @@ public static void Main()
 
 
 
-                Copy
 
 
-
-
+            <pre>
 Public Shared Sub Main()
     Dim value = Integer.MinValue    ' Integer.MinValue is -2147483648
     value = Calculator.Decrement(value)
     Console.WriteLine(value)
 End Sub
-
+</pre>
 
 
 
@@ -12955,16 +12839,14 @@ End Sub
 
 
 
-        C#VB
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -12981,7 +12863,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -13000,16 +12882,14 @@ namespace Samples
 
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 using System;
 
 namespace Samples
@@ -13027,7 +12907,7 @@ namespace Samples
         }
     }
 }
-
+</pre>
 
 
 
@@ -13598,16 +13478,14 @@ namespace Samples
             A P/Invoke declaration has been marked with a <code>SecuritySafeCriticalAttribute</code>:
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 [assembly: AllowPartiallyTrustedCallers]
 
 // ...
@@ -13617,7 +13495,7 @@ public class C
     [DllImport("kernel32.dll")]
     public static extern bool Beep(int frequency, int duration); // CA5122 – safe critical p/invoke
    }
-
+</pre>
 
 
 
@@ -13641,16 +13519,14 @@ In this example, C.Beep(...) has been marked as a security safe critical method.
             To make a P/Invoke available to transparent code, expose a security safe critical wrapper method for it:
 
 
-        C#
 
 
 
 
-                Copy
 
 
 
-
+            <pre>
 [assembly: AllowPartiallyTrustedCallers
 
 class C
@@ -13665,7 +13541,7 @@ class C
       return BeepPInvoke(frequency, duration);
    }
 }
-
+</pre>
 
 
 
