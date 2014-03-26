@@ -53,32 +53,32 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA1005}
+                {rule:cs-fxcop:CA1005}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1010}
+                {rule:cs-fxcop:CA1010}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1002}
+                {rule:cs-fxcop:CA1002}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1006}
+                {rule:cs-fxcop:CA1006}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1004}
+                {rule:cs-fxcop:CA1004}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1003}
+                {rule:cs-fxcop:CA1003}<br/>
 
 
 
@@ -114,17 +114,17 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA2213}
+                {rule:cs-fxcop:CA2213}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2216}
+                {rule:cs-fxcop:CA2216}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2215}
+                {rule:cs-fxcop:CA2215}<br/>
 
 
 
@@ -186,32 +186,32 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA1005}
+                {rule:cs-fxcop:CA1005}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1010}
+                {rule:cs-fxcop:CA1010}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1000}
+                {rule:cs-fxcop:CA1000}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1006}
+                {rule:cs-fxcop:CA1006}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1004}
+                {rule:cs-fxcop:CA1004}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1003}
+                {rule:cs-fxcop:CA1003}<br/>
 
 
 
@@ -247,32 +247,32 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA1005}
+                {rule:cs-fxcop:CA1005}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1010}
+                {rule:cs-fxcop:CA1010}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1000}
+                {rule:cs-fxcop:CA1000}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1002}
+                {rule:cs-fxcop:CA1002}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1006}
+                {rule:cs-fxcop:CA1006}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1004}
+                {rule:cs-fxcop:CA1004}<br/>
 
 
 
@@ -308,32 +308,32 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA1005}
+                {rule:cs-fxcop:CA1005}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1010}
+                {rule:cs-fxcop:CA1010}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1000}
+                {rule:cs-fxcop:CA1000}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1002}
+                {rule:cs-fxcop:CA1002}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1006}
+                {rule:cs-fxcop:CA1006}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1003}
+                {rule:cs-fxcop:CA1003}<br/>
 
 
 
@@ -369,32 +369,32 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA1010}
+                {rule:cs-fxcop:CA1010}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1000}
+                {rule:cs-fxcop:CA1000}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1002}
+                {rule:cs-fxcop:CA1002}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1006}
+                {rule:cs-fxcop:CA1006}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1004}
+                {rule:cs-fxcop:CA1004}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1003}
+                {rule:cs-fxcop:CA1003}<br/>
 
 
 
@@ -430,32 +430,32 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA1005}
+                {rule:cs-fxcop:CA1005}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1010}
+                {rule:cs-fxcop:CA1010}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1000}
+                {rule:cs-fxcop:CA1000}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1002}
+                {rule:cs-fxcop:CA1002}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1004}
+                {rule:cs-fxcop:CA1004}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1003}
+                {rule:cs-fxcop:CA1003}<br/>
 
 
 
@@ -491,32 +491,32 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA1005}
+                {rule:cs-fxcop:CA1005}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1010}
+                {rule:cs-fxcop:CA1010}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1000}
+                {rule:cs-fxcop:CA1000}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1002}
+                {rule:cs-fxcop:CA1002}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1006}
+                {rule:cs-fxcop:CA1006}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1004}
+                {rule:cs-fxcop:CA1004}<br/>
 
 
 
@@ -553,22 +553,22 @@ Generally, both of the prior declarations should be avoided so that the type arg
 <p>
 
 
-                {rule:cs-fxcop:CA2217}
+                {rule:cs-fxcop:CA2217}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1700}
+                {rule:cs-fxcop:CA1700}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1712}
+                {rule:cs-fxcop:CA1712}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1028}
+                {rule:cs-fxcop:CA1028}<br/>
 
 
 
@@ -944,32 +944,32 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1005}
+                {rule:cs-fxcop:CA1005}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1000}
+                {rule:cs-fxcop:CA1000}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1002}
+                {rule:cs-fxcop:CA1002}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1006}
+                {rule:cs-fxcop:CA1006}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1004}
+                {rule:cs-fxcop:CA1004}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1003}
+                {rule:cs-fxcop:CA1003}<br/>
 
 
 
@@ -1206,7 +1206,7 @@ return left.Equals(right);
 <p>
 
 
-                {rule:cs-fxcop:CA1019}
+                {rule:cs-fxcop:CA1019}<br/>
 
 
 
@@ -1599,7 +1599,7 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1043}
+                {rule:cs-fxcop:CA1043}<br/>
 
 
 
@@ -1930,22 +1930,22 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1008}
+                {rule:cs-fxcop:CA1008}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1027}
+                {rule:cs-fxcop:CA1027}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2217}
+                {rule:cs-fxcop:CA2217}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1700}
+                {rule:cs-fxcop:CA1700}<br/>
 
 
 
@@ -2158,7 +2158,7 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1038}
+                {rule:cs-fxcop:CA1038}<br/>
 
 
 
@@ -2402,7 +2402,7 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1023}
+                {rule:cs-fxcop:CA1023}<br/>
 
 
 
@@ -2591,17 +2591,17 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2115}
+                {rule:cs-fxcop:CA2115}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1816}
+                {rule:cs-fxcop:CA1816}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2216}
+                {rule:cs-fxcop:CA2216}<br/>
 
 
 
@@ -2861,17 +2861,17 @@ namespace DesignLibrary
 <p>
 
 
-                {rule:cs-fxcop:CA1056}
+                {rule:cs-fxcop:CA1056}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1055}
+                {rule:cs-fxcop:CA1055}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2234}
+                {rule:cs-fxcop:CA2234}<br/>
 
 
 
@@ -2907,17 +2907,17 @@ namespace DesignLibrary
 <p>
 
 
-                {rule:cs-fxcop:CA1056}
+                {rule:cs-fxcop:CA1056}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1054}
+                {rule:cs-fxcop:CA1054}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2234}
+                {rule:cs-fxcop:CA2234}<br/>
 
 
 
@@ -2953,17 +2953,17 @@ namespace DesignLibrary
 <p>
 
 
-                {rule:cs-fxcop:CA1054}
+                {rule:cs-fxcop:CA1054}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1055}
+                {rule:cs-fxcop:CA1055}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2234}
+                {rule:cs-fxcop:CA2234}<br/>
 
 
 
@@ -2999,17 +2999,17 @@ namespace DesignLibrary
 <p>
 
 
-                {rule:cs-fxcop:CA2234}
+                {rule:cs-fxcop:CA2234}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1056}
+                {rule:cs-fxcop:CA1056}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1054}
+                {rule:cs-fxcop:CA1054}<br/>
 
 
 
@@ -4194,12 +4194,12 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 <p>
 
 
-                {rule:cs-fxcop:CA1413}
+                {rule:cs-fxcop:CA1413}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1407}
+                {rule:cs-fxcop:CA1407}<br/>
 
 
 
@@ -4301,22 +4301,22 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 <p>
 
 
-                {rule:cs-fxcop:CA1060}
+                {rule:cs-fxcop:CA1060}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1400}
+                {rule:cs-fxcop:CA1400}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1401}
+                {rule:cs-fxcop:CA1401}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2101}
+                {rule:cs-fxcop:CA2101}<br/>
 
 
 
@@ -4376,12 +4376,12 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 <p>
 
 
-                {rule:cs-fxcop:CA1413}
+                {rule:cs-fxcop:CA1413}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1407}
+                {rule:cs-fxcop:CA1407}<br/>
 
 
 
@@ -4591,12 +4591,12 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1017}
+                {rule:cs-fxcop:CA1017}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1406}
+                {rule:cs-fxcop:CA1406}<br/>
 
 
 
@@ -4633,7 +4633,7 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1403}
+                {rule:cs-fxcop:CA1403}<br/>
 
 
 
@@ -4799,7 +4799,7 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1407}
+                {rule:cs-fxcop:CA1407}<br/>
 
 
 
@@ -4836,7 +4836,7 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1901}
+                {rule:cs-fxcop:CA1901}<br/>
 
 
 
@@ -5121,22 +5121,22 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2217}
+                {rule:cs-fxcop:CA2217}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1712}
+                {rule:cs-fxcop:CA1712}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1028}
+                {rule:cs-fxcop:CA1028}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1008}
+                {rule:cs-fxcop:CA1008}<br/>
 
 
 
@@ -5179,7 +5179,7 @@ namespace Samples
 
 
 
-                {rule:cs-fxcop:CA1709}
+                {rule:cs-fxcop:CA1709}<br/>
 
 
 
@@ -5221,7 +5221,7 @@ namespace Samples
 
 
 
-                {rule:cs-fxcop:CA1709}
+                {rule:cs-fxcop:CA1709}<br/>
 
 
 
@@ -5386,17 +5386,17 @@ namespace Samples
 
 
 
-                {rule:cs-fxcop:CA1709}
+                {rule:cs-fxcop:CA1709}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1708}
+                {rule:cs-fxcop:CA1708}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1707}
+                {rule:cs-fxcop:CA1707}<br/>
 
 
 
@@ -5433,7 +5433,7 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1709}
+                {rule:cs-fxcop:CA1709}<br/>
 
 
 
@@ -6073,12 +6073,12 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
 
 
-                {rule:cs-fxcop:CA1711}
+                {rule:cs-fxcop:CA1711}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1027}
+                {rule:cs-fxcop:CA1027}<br/>
 
 
 
@@ -6139,7 +6139,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
 
 
-                {rule:cs-fxcop:CA1027}
+                {rule:cs-fxcop:CA1027}<br/>
 
 
 
@@ -6254,7 +6254,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 
-                {rule:cs-fxcop:CA1027}
+                {rule:cs-fxcop:CA1027}<br/>
 
 
 
@@ -6290,12 +6290,12 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
 
 
-                {rule:cs-fxcop:CA1709}
+                {rule:cs-fxcop:CA1709}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1708}
+                {rule:cs-fxcop:CA1708}<br/>
 
 
 
@@ -6469,17 +6469,17 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
 
 
-                {rule:cs-fxcop:CA1709}
+                {rule:cs-fxcop:CA1709}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1708}
+                {rule:cs-fxcop:CA1708}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1707}
+                {rule:cs-fxcop:CA1707}<br/>
 
 
 
@@ -6924,12 +6924,12 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
 
 
-                {rule:cs-fxcop:CA1811}
+                {rule:cs-fxcop:CA1811}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1812}
+                {rule:cs-fxcop:CA1812}<br/>
 
 
 
@@ -6990,17 +6990,17 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
 
 
-                {rule:cs-fxcop:CA1809}
+                {rule:cs-fxcop:CA1809}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1811}
+                {rule:cs-fxcop:CA1811}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1812}
+                {rule:cs-fxcop:CA1812}<br/>
 
 
 
@@ -7161,12 +7161,12 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
 
 
-                {rule:cs-fxcop:CA1812}
+                {rule:cs-fxcop:CA1812}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1801}
+                {rule:cs-fxcop:CA1801}<br/>
 
 
 
@@ -7276,12 +7276,12 @@ mc.Create();
 <p>
 
 
-                {rule:cs-fxcop:CA1811}
+                {rule:cs-fxcop:CA1811}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1801}
+                {rule:cs-fxcop:CA1801}<br/>
 
 
 
@@ -7317,7 +7317,7 @@ mc.Create();
 <p>
 
 
-                {rule:cs-fxcop:CA1019}
+                {rule:cs-fxcop:CA1019}<br/>
 
 
 
@@ -7512,12 +7512,12 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2224}
+                {rule:cs-fxcop:CA2224}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2231}
+                {rule:cs-fxcop:CA2231}<br/>
 
 
 
@@ -7568,7 +7568,7 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2215}
+                {rule:cs-fxcop:CA2215}<br/>
 
 
 
@@ -7915,12 +7915,12 @@ namespace PerformanceLibrary
 <p>
 
 
-                {rule:cs-fxcop:CA1811}
+                {rule:cs-fxcop:CA1811}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1812}
+                {rule:cs-fxcop:CA1812}<br/>
 
 
 
@@ -7956,17 +7956,17 @@ namespace PerformanceLibrary
 <p>
 
 
-                {rule:cs-fxcop:CA1812}
+                {rule:cs-fxcop:CA1812}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1801}
+                {rule:cs-fxcop:CA1801}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1804}
+                {rule:cs-fxcop:CA1804}<br/>
 
 
 
@@ -8206,7 +8206,7 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <p>
 
 
-                {rule:cs-fxcop:CA2213}
+                {rule:cs-fxcop:CA2213}<br/>
 
 
 
@@ -8911,7 +8911,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
 
 
-                {rule:cs-fxcop:CA2112}
+                {rule:cs-fxcop:CA2112}<br/>
 
 
 
@@ -9211,7 +9211,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
 
 
-                {rule:cs-fxcop:CA2229}
+                {rule:cs-fxcop:CA2229}<br/>
 
 
 
@@ -9372,17 +9372,17 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
 
 
-                {rule:cs-fxcop:CA2108}
+                {rule:cs-fxcop:CA2108}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2112}
+                {rule:cs-fxcop:CA2112}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2122}
+                {rule:cs-fxcop:CA2122}<br/>
 
 
 
@@ -10557,22 +10557,22 @@ namespace TransparencyWarningsDemo
 <p>
 
 
-                {rule:cs-fxcop:CA1404}
+                {rule:cs-fxcop:CA1404}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1060}
+                {rule:cs-fxcop:CA1060}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1400}
+                {rule:cs-fxcop:CA1400}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1401}
+                {rule:cs-fxcop:CA1401}<br/>
 
 
 
@@ -10949,12 +10949,12 @@ namespace TransparencyWarningsDemo
 <p>
 
 
-                {rule:cs-fxcop:CA2115}
+                {rule:cs-fxcop:CA2115}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1816}
+                {rule:cs-fxcop:CA1816}<br/>
 
 
 
@@ -11385,22 +11385,22 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1046}
+                {rule:cs-fxcop:CA1046}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2225}
+                {rule:cs-fxcop:CA2225}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2226}
+                {rule:cs-fxcop:CA2226}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2224}
+                {rule:cs-fxcop:CA2224}<br/>
 
 
 
@@ -11787,22 +11787,22 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1046}
+                {rule:cs-fxcop:CA1046}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2225}
+                {rule:cs-fxcop:CA2225}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2226}
+                {rule:cs-fxcop:CA2226}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2218}
+                {rule:cs-fxcop:CA2218}<br/>
 
 
 
@@ -12367,22 +12367,22 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1046}
+                {rule:cs-fxcop:CA1046}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2226}
+                {rule:cs-fxcop:CA2226}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2224}
+                {rule:cs-fxcop:CA2224}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2218}
+                {rule:cs-fxcop:CA2218}<br/>
 
 
 
@@ -12419,22 +12419,22 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1046}
+                {rule:cs-fxcop:CA1046}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2225}
+                {rule:cs-fxcop:CA2225}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2224}
+                {rule:cs-fxcop:CA2224}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2218}
+                {rule:cs-fxcop:CA2218}<br/>
 
 
 
@@ -12640,22 +12640,22 @@ return left.Equals(right);
 <p>
 
 
-                {rule:cs-fxcop:CA1046}
+                {rule:cs-fxcop:CA1046}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2225}
+                {rule:cs-fxcop:CA2225}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2226}
+                {rule:cs-fxcop:CA2226}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2224}
+                {rule:cs-fxcop:CA2224}<br/>
 
 
 
@@ -12959,17 +12959,17 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA1057}
+                {rule:cs-fxcop:CA1057}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1056}
+                {rule:cs-fxcop:CA1056}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA1054}
+                {rule:cs-fxcop:CA1054}<br/>
 
 
 
@@ -13005,32 +13005,32 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2236}
+                {rule:cs-fxcop:CA2236}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2240}
+                {rule:cs-fxcop:CA2240}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2229}
+                {rule:cs-fxcop:CA2229}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2238}
+                {rule:cs-fxcop:CA2238}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2237}
+                {rule:cs-fxcop:CA2237}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2239}
+                {rule:cs-fxcop:CA2239}<br/>
 
 
 
@@ -13074,32 +13074,32 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2240}
+                {rule:cs-fxcop:CA2240}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2229}
+                {rule:cs-fxcop:CA2229}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2238}
+                {rule:cs-fxcop:CA2238}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2235}
+                {rule:cs-fxcop:CA2235}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2237}
+                {rule:cs-fxcop:CA2237}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2239}
+                {rule:cs-fxcop:CA2239}<br/>
 
 
 
@@ -13135,32 +13135,32 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2236}
+                {rule:cs-fxcop:CA2236}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2240}
+                {rule:cs-fxcop:CA2240}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2229}
+                {rule:cs-fxcop:CA2229}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2238}
+                {rule:cs-fxcop:CA2238}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2235}
+                {rule:cs-fxcop:CA2235}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2239}
+                {rule:cs-fxcop:CA2239}<br/>
 
 
 
@@ -13227,32 +13227,32 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2236}
+                {rule:cs-fxcop:CA2236}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2240}
+                {rule:cs-fxcop:CA2240}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2229}
+                {rule:cs-fxcop:CA2229}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2235}
+                {rule:cs-fxcop:CA2235}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2237}
+                {rule:cs-fxcop:CA2237}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2239}
+                {rule:cs-fxcop:CA2239}<br/>
 
 
 
@@ -13288,32 +13288,32 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2236}
+                {rule:cs-fxcop:CA2236}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2240}
+                {rule:cs-fxcop:CA2240}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2229}
+                {rule:cs-fxcop:CA2229}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2238}
+                {rule:cs-fxcop:CA2238}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2235}
+                {rule:cs-fxcop:CA2235}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2237}
+                {rule:cs-fxcop:CA2237}<br/>
 
 
 
@@ -13358,32 +13358,32 @@ namespace Samples
 <p>
 
 
-                {rule:cs-fxcop:CA2236}
+                {rule:cs-fxcop:CA2236}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2229}
+                {rule:cs-fxcop:CA2229}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2238}
+                {rule:cs-fxcop:CA2238}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2235}
+                {rule:cs-fxcop:CA2235}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2237}
+                {rule:cs-fxcop:CA2237}<br/>
 
 
 
 
-                {rule:cs-fxcop:CA2239}
+                {rule:cs-fxcop:CA2239}<br/>
 
 
 
