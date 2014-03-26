@@ -86,7 +86,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1007}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182139.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -132,7 +134,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1049}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182172.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -219,7 +223,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1007}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182142.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -280,7 +286,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1007}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182178.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -341,7 +349,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1007}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182150.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -402,7 +412,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1007}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182129.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -463,7 +475,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1007}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182144.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -524,7 +538,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1003}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182179.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -576,7 +592,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA1027}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182149.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -608,7 +626,9 @@ Generally, both of the prior declarations should be avoided so that the type arg
                 {rule:cs-fxcop:CA2109}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182133.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -977,7 +997,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1007}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182132.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1018,7 +1040,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1059}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/3hk32yyz.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1041,7 +1065,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. The abstract type has a public constructor.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182126.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1092,7 +1118,9 @@ return left.Equals(right);
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the default implementation of the equality operator provides the correct behavior for the type.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182164.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1116,7 +1144,9 @@ return left.Equals(right);
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. If you do not want the assembly to be compliant, apply the attribute and set its value to <code>false</code>.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182156.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1154,7 +1184,9 @@ return left.Equals(right);
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule for assemblies that are used by third parties, or in a production environment.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182155.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1177,7 +1209,9 @@ return left.Equals(right);
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. If you want the assembly to be visible, apply the attribute and set its value to <code>true</code>.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182157.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1214,7 +1248,9 @@ return left.Equals(right);
                 {rule:cs-fxcop:CA1813}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182158.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1407,7 +1443,9 @@ public string MyOtherProperty
                 {rule:cs-fxcop:CA1813}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182136.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1445,7 +1483,9 @@ public string MyOtherProperty
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the namespace does not contain types that are used with the types in your other namespaces.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182130.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1571,7 +1611,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1045}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182131.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1607,7 +1649,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1024}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182152.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1715,7 +1759,9 @@ namespace Microsoft.Samples
 
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182181.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1738,7 +1784,9 @@ namespace Microsoft.Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             It is always safe to suppress a warning from this rule; however, this design might cause usability issues.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182167.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1770,7 +1818,9 @@ namespace Microsoft.Samples
                 {rule:cs-fxcop:CA1025}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182135.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1802,7 +1852,9 @@ namespace Microsoft.Samples
                 {rule:cs-fxcop:CA2217}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182159.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1953,7 +2005,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1712}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182147.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -1991,7 +2045,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Suppress a warning from this rule if the method does not work with the .NET Framework event model.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182177.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2037,7 +2093,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2200}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182137.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2075,7 +2133,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the violation is caused by using a different access level for the public constructors.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182151.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2099,7 +2159,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if an externally visible method is provided that has the same functionality but a different name than the explicitly implemented method.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182153.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2125,7 +2187,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182162.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2166,7 +2230,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1039}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/49stb304.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2204,7 +2270,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the violation is caused by missing operators and your programming language does not support operator overloading, as is the case with Visual Basic .NET. It is also safe to suppress a warning for from this rule when it fires on equality operators other than op_Equality if you determine that implementing the operators does not make sense in your application context. However, you should always over op_Equality and the == operator if you override Object.Equals.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182163.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2263,7 +2331,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1039}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182148.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2324,7 +2394,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1038}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182154.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2348,7 +2420,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the interface is used to identify a set of types at compile time.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182128.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2374,7 +2448,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule because the <code>Message</code> property provides critical information about the obsolete type or member.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182166.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2410,7 +2486,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1024}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182180.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2433,7 +2511,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             It is strongly recommended that you do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182165.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2483,7 +2563,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1021}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182146.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2514,7 +2596,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1013}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182145.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2538,7 +2622,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. Leaving the type in its current state can cause maintenance issues and does not provide any benefits.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182138.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2562,7 +2648,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. Leaving the type in its current state can cause maintenance issues and does not provide any benefits.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182140.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2609,7 +2697,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1001}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182173.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2632,7 +2722,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Although you never have to suppress a warning from this rule, it is safe to do this when the assembly will never be used together with other assemblies.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182134.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2664,7 +2756,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2112}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182141.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2795,7 +2889,9 @@ namespace DesignLibrary
                 {rule:cs-fxcop:CA1053}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182168.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2833,7 +2929,9 @@ namespace DesignLibrary
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. The presence of the constructor suggests that the type is not a static type.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182169.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2879,7 +2977,9 @@ namespace DesignLibrary
                 {rule:cs-fxcop:CA1057}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182174.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2925,7 +3025,9 @@ namespace DesignLibrary
                 {rule:cs-fxcop:CA1057}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182176.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -2971,7 +3073,9 @@ namespace DesignLibrary
                 {rule:cs-fxcop:CA1057}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182175.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3017,7 +3121,9 @@ namespace DesignLibrary
                 {rule:cs-fxcop:CA1055}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182170.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3167,7 +3273,9 @@ public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule for violations about <code>ApplicationException</code>. It is safe to suppress a warning from this rule for violations about <code>XmlDocument</code>. It is safe to suppress a warning about a non-generic collection if the code was released previously.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182171.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3235,7 +3343,9 @@ public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
                 <code>CA1011: Consider passing base types as parameters</code>
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182160.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3429,7 +3539,9 @@ internal static class UnsafeNativeMethods
 
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182161.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3452,7 +3564,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182143.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3476,7 +3590,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
              You can suppress a warning from this rule if you are sure that the dereferenced parameter has been validated by another method call in the function.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182182.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3556,7 +3672,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms244737.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3580,7 +3698,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             Suppress a message from this rule if you are sure in all cases that the private exception will be caught within its own internal scope.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264484.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3731,7 +3851,9 @@ internal static class UnsafeNativeMethods
                 CA2219: Do not raise exceptions in exception clauses
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386039.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3754,7 +3876,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the code library will not be localized for a culture that uses a right-to-left reading order.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182191.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3778,7 +3902,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182185.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3810,7 +3936,9 @@ internal static class UnsafeNativeMethods
                 {rule:cs-fxcop:CA1303}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182186.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3846,7 +3974,9 @@ internal static class UnsafeNativeMethods
 <p>
             It is safe to suppress a warning from this rule if the code library will not be localized, or if the string is not exposed to the end user or a developer using the code library.
             Users can eliminate noise against methods which should not be passed localized strings by either renaming the parameter or property named, or by marking these items as conditional.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182187.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3913,7 +4043,9 @@ internal static class UnsafeNativeMethods
                 {rule:cs-fxcop:CA1305}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182189.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -3980,7 +4112,9 @@ internal static class UnsafeNativeMethods
                 {rule:cs-fxcop:CA1304}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182190.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4003,7 +4137,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the library or application is for a limited local audience, the data is not shared, or the default setting yields the desired behavior in all supported scenarios.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182188.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4027,7 +4163,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the library or application is intended for a limited local audience and will therefore not be localized.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386080.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4050,7 +4188,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning message when you are not making security decision based on the result (for example, when you are displaying it in the UI).
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386042.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4074,7 +4214,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule when the library or application is intended for a limited local audience or when the semantics of the current culture should be used.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb385972.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4097,7 +4239,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule when the unmanaged library is in the same directory as the managed assembly that references it. It might be safe to suppress a warning from this rule in the case where the unmanaged library could not be located.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182208.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4120,7 +4264,9 @@ internal static class UnsafeNativeMethods
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182209.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4207,7 +4353,9 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
                 {rule:cs-fxcop:CA1017}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182197.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4242,7 +4390,9 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
                 {rule:cs-fxcop:CA1408}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182194.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4324,7 +4474,9 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
                 {rule:cs-fxcop:CA2205}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182199.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4347,7 +4499,9 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182202.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4389,7 +4543,9 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
                 {rule:cs-fxcop:CA1017}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182195.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4604,7 +4760,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1413}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182198.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4641,7 +4799,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1412}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182205.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4674,7 +4834,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1017}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182203.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4705,7 +4867,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1411}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182200.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4736,7 +4900,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1410}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182201.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4770,7 +4936,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1408}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182207.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4807,7 +4975,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1017}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182196.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4844,7 +5014,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2101}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182206.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4867,7 +5039,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182204.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4890,7 +5064,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182216.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4913,7 +5089,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule. However, the code might be more difficult to maintain. Note that, depending on the visibility of base types, resolving violations of this rule might create breaking changes. For example, removing public base types is a breaking change.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182213.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4962,7 +5140,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1501}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182212.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -4985,7 +5165,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb164506.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5009,7 +5191,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Exclude this warning when a type or method is still considered maintainable despite its large size or when the type or method cannot be split.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386043.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5033,7 +5217,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Exclude this warning when the type or method is still considered maintainable despite its large number of dependencies on other types.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb397994.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5056,7 +5242,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             This rule should be suppressed only when Idle process priority is required and mobility considerations can be ignored safely.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182219.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5079,7 +5267,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             This rule should be suppressed only if firing the timer more than one time per second is required and mobility considerations can safely be ignored.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182230.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5144,7 +5334,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1027}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182236.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5187,7 +5379,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1708}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264481.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5229,7 +5423,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1708}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264474.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5271,7 +5467,9 @@ namespace Samples
                 CA2204: Literals should be spelled correctly
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264483.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5404,7 +5602,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1726}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264492.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5441,7 +5641,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1708}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182245.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5507,7 +5709,9 @@ namespace NamingLibrary
                 {rule:cs-fxcop:CA1709}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182242.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5547,7 +5751,9 @@ namespace NamingLibrary
                 {rule:cs-fxcop:CA1708}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182240.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -5830,7 +6036,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1711}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182244.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6044,7 +6252,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1710}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182247.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6086,7 +6296,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA2217}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182237.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6110,7 +6322,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182238.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6147,7 +6361,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA2217}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264486.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6183,7 +6399,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1722}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182243.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6219,7 +6437,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>When to Suppress Warnings</h2>
 <p>
             You can suppress a warning from this rule if you are convinced that the identifier will not confuse users of the API, and that  the library is usable in all available languages in the .NET Framework.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182248.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6262,7 +6482,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA2217}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264487.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6303,7 +6525,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1707}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182252.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6487,7 +6711,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1719}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb531486.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6534,7 +6760,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1024}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182253.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6567,7 +6795,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1715}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182246.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6590,7 +6820,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>When to Suppress Warnings</h2>
 <p>
             For new development, no known scenarios occur where you must suppress a warning from this rule. Before you suppress the warning, carefully consider how the users of your library might be confused by the matching name. For shipping libraries, you might have to suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182257.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6613,7 +6845,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule except for COM visible methods in libraries that have previously shipped.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182251.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6851,7 +7085,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 Naming Warnings
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182258.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6875,7 +7111,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule, or to ignore the rule completely, if performance is not a concern.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182271.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6937,7 +7175,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1804}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182268.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -6962,7 +7202,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule, or disable the rule, if performance is not of concern.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182280.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7008,7 +7250,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1801}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182278.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7044,7 +7288,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule unless the act of creating the object serves some purpose.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182273.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7075,7 +7321,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1804}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182263.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7116,7 +7364,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA2207}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182275.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7174,7 +7424,9 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
                 {rule:cs-fxcop:CA1804}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182264.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7289,7 +7541,9 @@ mc.Create();
                 {rule:cs-fxcop:CA1804}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182265.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7325,7 +7579,9 @@ mc.Create();
                 {rule:cs-fxcop:CA1018}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182267.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7348,7 +7604,9 @@ mc.Create();
 <h2>When to Suppress Warnings</h2>
 <p>
             Suppress a warning from this rule if the multidimensional array does not waste space.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182277.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7525,7 +7783,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2226}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182276.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7576,7 +7836,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2216}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182269.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7840,7 +8102,9 @@ namespace PerformanceLibrary
                 {rule:cs-fxcop:CA1024}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/0fss9skc.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7864,7 +8128,9 @@ namespace PerformanceLibrary
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if performance is not an issue.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182279.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7887,7 +8153,9 @@ namespace PerformanceLibrary
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a message from this rule. Failure to suppress finalization decreases performance and provides no benefits.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264476.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7928,7 +8196,9 @@ namespace PerformanceLibrary
                 {rule:cs-fxcop:CA1804}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms245046.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -7974,7 +8244,9 @@ namespace PerformanceLibrary
                 {rule:cs-fxcop:CA1811}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms245042.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8017,7 +8289,9 @@ namespace PerformanceLibrary
 <h2>When to Suppress Warnings</h2>
 <p>
             It is permissible to suppress a warning from this rule. However, startup performance might decrease.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb385967.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8040,7 +8314,9 @@ namespace PerformanceLibrary
 <h2>When to Suppress Warnings</h2>
 <p>
             This warning should be suppressed only if it occurs in error.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182285.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8071,7 +8347,9 @@ namespace PerformanceLibrary
 <h2>When to Suppress Warnings</h2>
 <p>
             You should not suppress this warning.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182284.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8145,7 +8423,9 @@ namespace PerformanceLibrary
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule if this was not a deliberate dependency on the specified service pack. In this situation, your application might fail to run on systems without this service pack installed. Suppress the warning or turn this rule off if this was a deliberate dependency.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/cc667408.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8214,7 +8494,9 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
                 {rule:cs-fxcop:CA2202}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182289.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8328,7 +8610,9 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <h2>When to Suppress Warnings</h2>
 <p>
             You should suppress messages from this rule only when no alternatives to the problematic method are available.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb385973.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8417,7 +8701,9 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
                 {rule:cs-fxcop:CA2213}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182290.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8440,7 +8726,9 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <h2>When to Suppress Warnings</h2>
 <p>
             You should not suppress this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182291.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8463,7 +8751,9 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <h2>When to Suppress Warnings</h2>
 <p>
             You can suppress this warning only if it is not technically correct to convert to <code>SafeHandle</code> usage in your class.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182293.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8488,7 +8778,9 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <h2>When to Suppress Warnings</h2>
 <p>
             You should not suppress this warning.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182294.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8598,7 +8890,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if the command text does not contain any user input.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182310.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8622,7 +8916,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182319.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8662,7 +8958,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
                 {rule:cs-fxcop:CA1031}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264489.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8686,7 +8984,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if the permission does not rely on changing data. However, it is better to change the imperative demand to its declarative equivalent.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182309.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8711,7 +9011,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if the field type is immutable.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182302.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8744,7 +9046,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Exclusion of a warning from this rule is strongly discouraged. Almost no scenarios occur where the contents of a read-only field are unimportant. If this is the case with your scenario, remove the <code>readonly</code> modifier instead of excluding the message.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182299.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8767,7 +9071,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Suppress a warning from this rule only after a careful security review.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182314.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8812,7 +9118,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Suppress a warning from this rule only after you complete a security review.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182308.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8835,7 +9143,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             You can suppress a warning from this rule if any caller can obtain instances of the value type in its default state without posing a threat to security.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182307.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8879,7 +9189,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Suppress a warning from this rule only after a careful security review to make sure that your code does not pose a security threat.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182312.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8919,7 +9231,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
                 {rule:cs-fxcop:CA1051}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182306.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8950,7 +9264,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
                 {rule:cs-fxcop:CA1051}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182318.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -8973,7 +9289,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if the method does not require the security specified by the type. However, this is not an ordinary scenario and might indicate a need for a careful design review.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182304.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9006,7 +9324,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
               </li>
             </ul>
             Carefully review other messages before excluding them. This rule detects errors that are difficult to reproduce and debug.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182300.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9053,7 +9373,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
                 {rule:cs-fxcop:CA2117}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182297.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9103,7 +9425,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
                 {rule:cs-fxcop:CA2116}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182298.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9143,7 +9467,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             To safely suppress a warning from this rule, you must ensure that your code does not provide callers access to native operations or resources that can be used in a destructive manner.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182311.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9183,7 +9509,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if, after careful review, no security issues exist that might be exploitable if the method is overridden outside the assembly.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182313.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9219,7 +9547,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
                 {rule:cs-fxcop:CA2237}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182317.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9252,7 +9582,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress these violations. If your software design requires an explicit call to a static constructor, it is likely that the design contains serious flaws and should be reviewed.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182320.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9275,7 +9607,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             To safely suppress a warning from this rule, you must make sure that your code does not grant its callers access to operations or resources that can be used in a destructive manner.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182303.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9299,7 +9633,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182305.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9344,7 +9680,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>Description</h2>
 <p>
                 The following pseudo-code illustrates the pattern detected by this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182322.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9390,7 +9728,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
                 {rule:cs-fxcop:CA2123}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182321.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9413,7 +9753,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997446.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9436,7 +9778,9 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997564.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9518,7 +9862,9 @@ namespace TransparencyWarningsDemo
 
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd983956.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9587,7 +9933,9 @@ namespace TransparencyWarningsDemo
 
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997710.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9689,7 +10037,9 @@ namespace TransparencyWarningsDemo
 
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997447.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9712,7 +10062,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997569.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9735,7 +10087,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress warnings from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264493.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9759,7 +10113,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd983954.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9783,7 +10139,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997711.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9806,7 +10164,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997565.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9864,7 +10224,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264475.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9911,7 +10273,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997567.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9934,7 +10298,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997566.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -9979,7 +10345,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997568.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10037,7 +10405,9 @@ namespace TransparencyWarningsDemo
 
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997570.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10060,7 +10430,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997443.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10086,7 +10458,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a message from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264482.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10109,7 +10483,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ee155709.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10249,7 +10625,9 @@ namespace TransparencyWarningsDemo
 
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dn621098.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10272,7 +10650,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182363.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10449,7 +10829,9 @@ namespace TransparencyWarningsDemo
                 {rule:cs-fxcop:CA1031}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182338.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10480,7 +10862,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. Even if <code>Dispose</code> for the object is known to be safely callable multiple times, the implementation might change in the future.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182334.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10529,7 +10913,9 @@ namespace TransparencyWarningsDemo
                 CA1703: Resource strings should be spelled correctly
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264488.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10580,7 +10966,9 @@ namespace TransparencyWarningsDemo
                 {rule:cs-fxcop:CA2101}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182365.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10612,7 +11000,9 @@ namespace TransparencyWarningsDemo
                 {rule:cs-fxcop:CA1810}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182346.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10676,7 +11066,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule only if a parameterized constructor is called with the correct string arguments.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182347.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10780,7 +11172,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Only suppress a warning from this rule if the assembly is used in an environment where tampering with the contents is not a concern.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182127.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10803,7 +11197,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if you are developing an application and therefore have full control over access to the type that contains the static field. Library designers should not suppress a warning from this rule; using non-constant static fields can make using the library difficult for developers to use correctly.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182353.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10829,7 +11225,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. There are no scenarios where combining these elements is correct.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182336.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10852,7 +11250,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if you are not responsible for releasing the resource held by the field, or if the call to <code>Dispose</code> occurs at a deeper calling level than the rule checks.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182328.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10875,7 +11275,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. The constructor should be redesigned to eliminate the call to the virtual method.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182331.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10898,7 +11300,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if the call to <code>base</code>.<code>Dispose</code> occurs at a deeper calling level than the rule checks.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182330.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10962,7 +11366,9 @@ namespace TransparencyWarningsDemo
                 {rule:cs-fxcop:CA1049}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182329.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -10993,7 +11399,9 @@ namespace TransparencyWarningsDemo
                 {rule:cs-fxcop:CA1027}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182335.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -11408,7 +11816,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2231}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182358.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -11441,7 +11851,9 @@ namespace Samples
                 CA1065: Do not raise exceptions in unexpected locations
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386041.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -11464,7 +11876,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule. Some compilers that target the common language runtime insert a call to the base type's finalizer into the Microsoft intermediate language (MSIL). If a warning from this rule is reported, your compiler does not insert the call, and you must add it to your code.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182341.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -11487,7 +11901,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182340.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -11510,7 +11926,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182332.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -11533,7 +11951,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182352.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -11810,7 +12230,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2231}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182357.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12390,7 +12812,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2231}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182355.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12442,7 +12866,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2231}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182356.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12474,7 +12900,9 @@ namespace Samples
                 <code>CA1819: Properties should not return arrays</code>
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182327.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12497,7 +12925,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182339.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12539,7 +12969,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2237}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182343.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12563,7 +12995,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182366.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12663,7 +13097,9 @@ return left.Equals(right);
                 {rule:cs-fxcop:CA2218}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182359.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12704,7 +13140,9 @@ return left.Equals(right);
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if you are developing for the .NET Compact Framework, for which the <code>STAThreadAttribute</code> attribute is unnecessary and not supported.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182351.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12931,7 +13369,9 @@ namespace Samples
                 Select Check for arithmetic overflow/underflow and click OK.
               </li>
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182354.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -12977,7 +13417,9 @@ namespace Samples
                 {rule:cs-fxcop:CA1055}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182360.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13038,7 +13480,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2120}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182349.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13107,7 +13551,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2120}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182326.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13168,7 +13614,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2120}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182350.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13260,7 +13708,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2120}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182344.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13321,7 +13771,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2120}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182362.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13391,7 +13843,9 @@ namespace Samples
                 {rule:cs-fxcop:CA2120}
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182342.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13414,7 +13868,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182361.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13440,7 +13896,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264491.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
@@ -13465,7 +13923,9 @@ namespace Samples
 <h2>When to Suppress Warnings</h2>
 <p>
             It is safe to suppress a warning from this rule if the parameter does not represent a URL, GUID, or Version.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264490.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+]]></description>
   </rule>
 
 
