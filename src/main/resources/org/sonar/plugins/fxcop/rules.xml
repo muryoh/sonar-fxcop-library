@@ -2,1394 +2,5068 @@
 
   <rule key="CA1000">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1000]]></name>
-    <description>CA1000</description>
+    <name><![CDATA[CA1000: Do not declare static members on generic types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible generic type contains a static (Shared in Visual Basic) member.
+</p>
+<h2>Rule Description</h2>
+<p>
+            When a static member of a generic type is called, the type argument must be specified for the type. When a generic instance member that does not support inference is called, the type argument must be specified for the member. The syntax for specifying the type argument in these two cases is different and easily confused, as the following calls demonstrate:
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+// Static method in a generic type.
+GenericType&lt;int&gt;.StaticMethod();
+
+// Generic instance method that does not support inference.
+someObject.GenericMethod&lt;int&gt;();
+
+
+
+
+
+Generally, both of the prior declarations should be avoided so that the type argument does not have to be specified when the member is called. This results in a syntax for calling members in generics that is no different from the syntax for non-generics. For more information, see CA1004: Generic methods should provide type parameter.
+
+
+
+
+
+
+                How to Fix Violations
+
+
+
+
+
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. Providing generics in a syntax that is easy to understand and use reduces the time that is required to learn and increases the adoption rate of new libraries.
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA1005: Avoid excessive parameters on generic types
+
+
+
+
+                CA1010: Collections should implement generic interface
+
+
+
+
+                CA1002: Do not expose generic lists
+
+
+
+
+                CA1006: Do not nest generic types in member signatures
+
+
+
+
+                CA1004: Generic methods should provide type parameter
+
+
+
+
+                CA1003: Use generic event handler instances
+
+
+
+
+                CA1007: Use generics where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1001">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1001]]></name>
-    <description>CA1001</description>
+    <name><![CDATA[CA1001: Types that own disposable fields should be disposable]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A class declares and implements an instance field that is a <code>System.IDisposable</code> type and the class does not implement <code>IDisposable</code>.
+</p>
+<h2>Rule Description</h2>
+<p>
+            A class implements the <code>IDisposable</code> interface to dispose of unmanaged resources that it owns. An instance field that is an <code>IDisposable</code> type indicates that the field owns an unmanaged resource. A class that declares an <code>IDisposable</code> field indirectly owns an unmanaged resource and should implement the <code>IDisposable</code> interface. If the class does not directly own any unmanaged resources, it should not implement a finalizer.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, implement <code>IDisposable</code> and from the <code>IDisposable.Dispose</code> method call the <code>Dispose</code> method of the field.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA2213: Disposable fields should be disposed
+
+
+
+
+                CA2216: Disposable types should declare finalizer
+
+
+
+
+                CA2215: Dispose methods should call base class dispose
+
+
+
+
+                CA1049: Types that own native resources should be disposable
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1002">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1002]]></name>
-    <description>CA1002</description>
+    <name><![CDATA[CA1002: Do not expose generic lists]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A type contains an externally visible member that is a <code>System.Collections.Generic.List&lt;T&gt;</code> type, returns a <code>System.Collections.Generic.List&lt;T&gt;</code> type, or whose signature includes a <code>System.Collections.Generic.List&lt;T&gt;</code> parameter.
+</p>
+<h2>Rule Description</h2>
+<p>
+
+
+                <code>System.Collections.Generic.List&lt;T&gt;</code>
+               is a generic collection that is designed for performance and not inheritance. <code>System.Collections.Generic.List&lt;T&gt;</code> does not contain virtual members that make it easier to change the behavior of an inherited class. The following generic collections are designed for inheritance and should be exposed instead of <code>System.Collections.Generic.List&lt;T&gt;</code>.
+            <ul>
+              <li>
+
+
+                    System.Collections.ObjectModel.Collection&lt;T&gt;
+
+
+              </li>
+              <li>
+
+
+                    System.Collections.ObjectModel.ReadOnlyCollection&lt;T&gt;
+
+
+              </li>
+              <li>
+
+
+                    System.Collections.ObjectModel.KeyedCollection&lt;TKey, TItem&gt;
+
+
+              </li>
+            </ul>
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the <code>System.Collections.Generic.List&lt;T&gt;</code> type to one of the generic collections that is designed for inheritance.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule unless the assembly that raises this warning is not meant to be a reusable library. For example, it would be safe to suppress this warning in a performance tuned application where a performance benefit was gained from the use of generic lists.
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA1005: Avoid excessive parameters on generic types
+
+
+
+
+                CA1010: Collections should implement generic interface
+
+
+
+
+                CA1000: Do not declare static members on generic types
+
+
+
+
+                CA1006: Do not nest generic types in member signatures
+
+
+
+
+                CA1004: Generic methods should provide type parameter
+
+
+
+
+                CA1003: Use generic event handler instances
+
+
+
+
+                CA1007: Use generics where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1003">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1003]]></name>
-    <description>CA1003</description>
+    <name><![CDATA[CA1003: Use generic event handler instances]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A type contains a delegate that returns void, whose signature contains two parameters (the first an object and the second a type that is assignable to EventArgs), and the containing assembly targets .NET Framework 2.0.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Before .NET Framework 2.0, in order to pass custom information to the event handler, a new delegate had to be declared that specified a class that was derived from the <code>System.EventArgs</code> class. This is no longer true in .NET Framework 2.0, which introduced the System.EventHandler&lt;TEventArgs&gt; delegate. This generic delegate allows any class that is derived from <code>EventArgs</code> to be used together with the event handler.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, remove the delegate and replace its use by using the System.EventHandler&lt;TEventArgs&gt; delegate. If the delegate is autogenerated by the Visual Basic compiler, change the syntax of the event declaration to use the System.EventHandler&lt;TEventArgs&gt; delegate.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1005: Avoid excessive parameters on generic types
+
+
+
+
+                CA1010: Collections should implement generic interface
+
+
+
+
+                CA1000: Do not declare static members on generic types
+
+
+
+
+                CA1002: Do not expose generic lists
+
+
+
+
+                CA1006: Do not nest generic types in member signatures
+
+
+
+
+                CA1004: Generic methods should provide type parameter
+
+
+
+
+                CA1007: Use generics where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1004">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1004]]></name>
-    <description>CA1004</description>
+    <name><![CDATA[CA1004: Generic methods should provide type parameter]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The parameter signature of an externally visible generic method does not contain types that correspond to all the type parameters of the method.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Inference is how the type argument of a generic method is determined by the type of argument that is passed to the method, instead of by the explicit specification of the type argument. To enable inference, the parameter signature of a generic method must include a parameter that is of the same type as the type parameter for the method. In this case, the type argument does not have to be specified. When you use inference for all type parameters, the syntax for calling generic and nongeneric instance methods is identical. This simplifies the usability of generic methods.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the design so that the parameter signature contains the same type for each type parameter of the method.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. Providing generics in a syntax that is easy to understand and use reduces the time that is required to learn and increases the adoption rate of new libraries.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1005: Avoid excessive parameters on generic types
+
+
+
+
+                CA1010: Collections should implement generic interface
+
+
+
+
+                CA1000: Do not declare static members on generic types
+
+
+
+
+                CA1002: Do not expose generic lists
+
+
+
+
+                CA1006: Do not nest generic types in member signatures
+
+
+
+
+                CA1003: Use generic event handler instances
+
+
+
+
+                CA1007: Use generics where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1005">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1005]]></name>
-    <description>CA1005</description>
+    <name><![CDATA[CA1005: Avoid excessive parameters on generic types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible generic type has more than two type parameters.
+</p>
+<h2>Rule Description</h2>
+<p>
+            The more type parameters a generic type contains, the more difficult it is to know and remember what each type parameter represents. It is usually obvious with one type parameter, as in List&lt;T&gt;, and in certain cases with two type parameters, as in Dictionary&lt;TKey, TValue&gt;. If more than two type parameters exist, the difficulty becomes too great for most users (for example, TooManyTypeParameters&lt;T, K, V&gt; in C# or TooManyTypeParameters(Of T, K, V) in Visual Basic).
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the design to use no more than two type parameters.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule unless the design absolutely requires more than two type parameters. Providing generics in a syntax that is easy to understand and use reduces the time that is required to learn and increases the adoption rate of new libraries.
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA1010: Collections should implement generic interface
+
+
+
+
+                CA1000: Do not declare static members on generic types
+
+
+
+
+                CA1002: Do not expose generic lists
+
+
+
+
+                CA1006: Do not nest generic types in member signatures
+
+
+
+
+                CA1004: Generic methods should provide type parameter
+
+
+
+
+                CA1003: Use generic event handler instances
+
+
+
+
+                CA1007: Use generics where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1006">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1006]]></name>
-    <description>CA1006</description>
+    <name><![CDATA[CA1006: Do not nest generic types in member signatures]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible member has a signature that contains a nested type argument.
+</p>
+<h2>Rule Description</h2>
+<p>
+            A nested type argument is a type argument that is also a generic type. To call a member whose signature contains a nested type argument, the user must instantiate one generic type and pass this type to the constructor of a second generic type. The required procedure and syntax are complex and should be avoided.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the design to remove the nested type argument.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. Providing generics in a syntax that is easy to understand and use reduces the time that is required to learn and increases the adoption rate of new libraries.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1005: Avoid excessive parameters on generic types
+
+
+
+
+                CA1010: Collections should implement generic interface
+
+
+
+
+                CA1000: Do not declare static members on generic types
+
+
+
+
+                CA1002: Do not expose generic lists
+
+
+
+
+                CA1004: Generic methods should provide type parameter
+
+
+
+
+                CA1003: Use generic event handler instances
+
+
+
+
+                CA1007: Use generics where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1007">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1007]]></name>
-    <description>CA1007</description>
+    <name><![CDATA[CA1007: Use generics where appropriate]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible method contains a reference parameter of type <code>System.Object</code>, and the containing assembly targets .NET Framework 2.0.
+</p>
+<h2>Rule Description</h2>
+<p>
+            A reference parameter is a parameter that is modified by using the ref (ByRef in Visual Basic) keyword. The argument type that is supplied for a reference parameter must exactly match the reference parameter type. To use a type that is derived from the reference parameter type, the type must first be cast and assigned to a variable of the reference parameter type. Use of a generic method allows all types, subject to constraints, to be passed to the method without first casting the type to the reference parameter type.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, make the method generic and replace the <code>Object</code> parameter by using a type parameter.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1005: Avoid excessive parameters on generic types
+
+
+
+
+                CA1010: Collections should implement generic interface
+
+
+
+
+                CA1000: Do not declare static members on generic types
+
+
+
+
+                CA1002: Do not expose generic lists
+
+
+
+
+                CA1006: Do not nest generic types in member signatures
+
+
+
+
+                CA1004: Generic methods should provide type parameter
+
+
+
+
+                CA1003: Use generic event handler instances
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1008">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1008]]></name>
-    <description>CA1008</description>
+    <name><![CDATA[CA1008: Enums should have zero value]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An enumeration without an applied <code>System.FlagsAttribute</code> does not define a member that has a value of zero; or an enumeration that has an applied <code>FlagsAttribute</code> defines a member that has a value of zero but its name is not 'None', or the enumeration defines multiple zero-valued members.
+</p>
+<h2>Rule Description</h2>
+<p>
+            The default value of an uninitialized enumeration, just like other value types, is zero. A non-flags−attributed enumeration should define a member that has the value of zero so that the default value is a valid value of the enumeration. If appropriate, name the member 'None'. Otherwise, assign zero to the most frequently used member. Note that, by default, if the value of the first enumeration member is not set in the declaration, its value is zero.
+            If an enumeration that has the <code>FlagsAttribute</code> applied defines a zero-valued member, its name should be 'None' to indicate that no values have been set in the enumeration. Using a zero-valued member for any other purpose is contrary to the use of the <code>FlagsAttribute</code> in that the AND and OR bitwise operators are useless with the member. This implies that only one member should be assigned the value zero. Note that if multiple members that have the value zero occur in a flags-attributed enumeration, Enum.ToString() returns incorrect results for members that are not zero.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule for non-flags−attributed enumerations, define a member that has the value of zero; this is a non-breaking change. For flags-attributed enumerations that define a zero-valued member, name this member 'None' and delete any other members that have a value of zero; this is a breaking change.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule except for flags-attributed enumerations that have previously shipped.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA2217: Do not mark enums with FlagsAttribute
+
+
+
+
+                CA1700: Do not name enum values 'Reserved'
+
+
+
+
+                CA1712: Do not prefix enum values with type name
+
+
+
+
+                CA1028: Enum storage should be Int32
+
+
+
+
+                CA1027: Mark enums with FlagsAttribute
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1009">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1009]]></name>
-    <description>CA1009</description>
+    <name><![CDATA[CA1009: Declare event handlers correctly]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A delegate that handles a public or protected event does not have the correct signature, return type, or parameter names.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Event handler methods take two parameters. The first is of type <code>System.Object</code> and is named 'sender'. This is the object that raised the event. The second parameter is of type <code>System.EventArgs</code> and is named 'e'. This is the data that is associated with the event. For example, if the event is raised whenever a file is opened, the event data typically contains the name of the file.
+            Event handler methods should not return a value. In the C# programming language, this is indicated by the return type void. An event handler can invoke multiple methods in multiple objects. If the methods were allowed to return a value, multiple return values would occur for each event, and only the value of the last method that was invoked would be available.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, correct the signature, return type, or parameter names of the delegate. For details, see the following example.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA2109: Review visible event handlers
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1010">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1010]]></name>
-    <description>CA1010</description>
+    <name><![CDATA[CA1010: Collections should implement generic interface]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible type implements the <code>System.Collections.IEnumerable</code> interface but does not implement the <code>System.Collections.Generic.IEnumerable&lt;T&gt;</code> interface, and the containing assembly targets .NET Framework 2.0. This rule ignores types that implement <code>System.Collections.IDictionary</code>.
+</p>
+<h2>Rule Description</h2>
+<p>
+            To broaden the usability of a collection, implement one of the generic collection interfaces. Then the collection can be used to populate generic collection types such as the following:
+            <ul>
+              <li>
+
+
+                    <code>System.Collections.Generic.List&lt;T&gt;</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.Generic.Queue&lt;T&gt;</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.Generic.Stack&lt;T&gt;</code>
+
+
+              </li>
+            </ul>
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, implement one of the following generic collection interfaces:
+            <ul>
+              <li>
+
+
+                    <code>System.Collections.Generic.IEnumerable&lt;T&gt;</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.Generic.ICollection&lt;T&gt;</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.Generic.IList&lt;T&gt;</code>
+
+
+              </li>
+            </ul>
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule; however, the collection will have a more limited use.
+</p>
+<h2>Example Violation</h2>
+
+<h2>Description</h2>
+<p>
+                The following example shows a class (reference type) that derives from the non-generic CollectionBase class, which violates this rule.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+using System;
+using System.Collections;
+
+namespace Samples
+{
+    public class Book
+    {
+        public Book()
+        {
+        }
+    }
+
+    public class BookCollection : CollectionBase
+    {
+        public BookCollection()
+        {
+        }
+
+        public void Add(Book value)
+        {
+            InnerList.Add(value);
+        }
+
+        public void Remove(Book value)
+        {
+            InnerList.Remove(value);
+        }
+
+        public void Insert(int index, Book value)
+        {
+            InnerList.Insert(index, value);
+        }
+
+        public Book this[int index]
+        {
+            get { return (Book)InnerList[index]; }
+            set { InnerList[index] = value; }
+        }
+
+        public bool Contains(Book value)
+        {
+            return InnerList.Contains(value);
+        }
+
+        public int IndexOf(Book value)
+        {
+            return InnerList.IndexOf(value);
+        }
+
+        public void CopyTo(Book[] array, int arrayIndex)
+        {
+            InnerList.CopyTo(array, arrayIndex);
+        }
+    }
+}
+
+
+
+
+
+
+</p>
+<h2>Comments</h2>
+<p>
+                To fix a violation of this violation, you should either implement the generic interfaces or change the base class to a type that already implements both the generic and non-generic interfaces, such as the Collection&lt;T&gt; class.
+</p>
+<h2>Fix by Base Class Change</h2>
+
+<h2>Description</h2>
+<p>
+                The following example fixes the violation by changing the base class of the collection from the non-generic CollectionBase class to the generic Collection&lt;T&gt; (Collection(Of T) in Visual Basic) class.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+using System;
+using System.Collections.ObjectModel;
+
+namespace Samples
+{
+    public class Book
+    {
+        public Book()
+        {
+        }
+    }
+
+    public class BookCollection : Collection&lt;Book&gt;
+    {
+        public BookCollection()
+        {
+        }
+    }
+}
+
+
+
+
+
+
+</p>
+<h2>Comments</h2>
+<p>
+                Changing the base class of an already released class is considered a breaking change to existing consumers.
+</p>
+<h2>Fix by Interface Implementation</h2>
+
+<h2>Description</h2>
+<p>
+                The following example fixes the violation by implementing these generic interfaces: IEnumerable&lt;T&gt;, ICollection&lt;T&gt;, and IList&lt;T&gt; (IEnumerable(Of T), ICollection(Of T), and IList(Of T) in Visual Basic).
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace Samples
+{
+    public class Book
+    {
+        public Book()
+        {
+        }
+    }
+
+    public class BookCollection : CollectionBase, IList&lt;Book&gt;
+    {
+        public BookCollection()
+        {
+        }
+
+        int IList&lt;Book&gt;.IndexOf(Book item)
+        {
+            return this.List.IndexOf(item);
+        }
+
+        void IList&lt;Book&gt;.Insert(int location, Book item)
+        {
+        }
+
+        Book IList&lt;Book&gt;.this[int index]
+        {
+            get { return (Book) this.List[index]; }
+            set { }
+        }
+
+        void ICollection&lt;Book&gt;.Add(Book item)
+        {
+        }
+
+        bool ICollection&lt;Book&gt;.Contains(Book item)
+        {
+            return true;
+        }
+
+        void ICollection&lt;Book&gt;.CopyTo(Book[] array, int arrayIndex)
+        {
+        }
+
+        bool ICollection&lt;Book&gt;.IsReadOnly
+        {
+            get { return false; }
+        }
+
+        bool ICollection&lt;Book&gt;.Remove(Book item)
+        {
+            if (InnerList.Contains(item))
+            {
+                InnerList.Remove(item);
+                return true;
+            }
+            return false;
+        }
+
+        IEnumerator&lt;Book&gt; IEnumerable&lt;Book&gt;.GetEnumerator()
+        {
+            return new BookCollectionEnumerator(InnerList.GetEnumerator());
+        }
+
+        private class BookCollectionEnumerator : IEnumerator&lt;Book&gt;
+        {
+            private IEnumerator _Enumerator;
+
+            public BookCollectionEnumerator(IEnumerator enumerator)
+            {
+                _Enumerator = enumerator;
+            }
+
+            public Book Current
+            {
+                get { return (Book)_Enumerator.Current; }
+            }
+
+            object IEnumerator.Current
+            {
+                get { return _Enumerator.Current; }
+            }
+
+            public bool MoveNext()
+            {
+                return _Enumerator.MoveNext();
+            }
+
+            public void Reset()
+            {
+                _Enumerator.Reset();
+            }
+
+            public void Dispose()
+            {
+            }
+        }
+    }
+}
+
+
+
+
+
+
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA1005: Avoid excessive parameters on generic types
+
+
+
+
+                CA1000: Do not declare static members on generic types
+
+
+
+
+                CA1002: Do not expose generic lists
+
+
+
+
+                CA1006: Do not nest generic types in member signatures
+
+
+
+
+                CA1004: Generic methods should provide type parameter
+
+
+
+
+                CA1003: Use generic event handler instances
+
+
+
+
+                CA1007: Use generics where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1011">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1011]]></name>
-    <description>CA1011</description>
+    <name><![CDATA[CA1011: Consider passing base types as parameters]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A method declaration includes a formal parameter that is a derived type, and the method calls only members of the base type of the parameter.
+</p>
+<h2>Rule Description</h2>
+<p>
+            When a base type is specified as a parameter in a method declaration, any type that is derived from the base type can be passed as the corresponding argument to the method. When the argument is used inside the method body, the specific method that is executed depends on the type of the argument. If the additional functionality that is provided by the derived type is not required, use of the base type allows wider use of the method.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the type of the parameter to its base type.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule
+            <ul>
+              <li>
+                if the method requires the specific functionality that is provided by the derived type
+                - or -
+              </li>
+              <li>
+                to enforce that only the derived type, or a more derived type, is passed to the method.
+              </li>
+            </ul>
+            In these cases, the code will be more robust because of the strong type checking that is provided by the compiler and runtime.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1059: Members should not expose certain concrete types
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1012">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1012]]></name>
-    <description>CA1012</description>
+    <name><![CDATA[CA1012: Abstract types should not have constructors]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public type is abstract and has a public constructor.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Constructors on abstract types can be called only by derived types. Because public constructors create instances of a type, and you cannot create instances of an abstract type, an abstract type that has a public constructor is incorrectly designed.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, either make the constructor protected or do not declare the type as abstract.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. The abstract type has a public constructor.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1013">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1013]]></name>
-    <description>CA1013</description>
+    <name><![CDATA[CA1013: Overload operator equals on overloading add and subtract]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected type implements the addition or subtraction operators without implementing the equality operator.
+</p>
+<h2>Rule Description</h2>
+<p>
+            When instances of a type can be combined by using operations such as addition and subtraction, you should almost always define equality to return true for any two instances that have the same constituent values.
+            You cannot use the default equality operator in an overloaded implementation of the equality operator. Doing so will cause a stack overflow. To implement the equality operator, use the Object.Equals method in your implementation. See the following example.
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+if (Object.ReferenceEquals(left, null))
+    return Object.ReferenceEquals(right, null);
+return left.Equals(right);
+
+
+
+
+
+
+
+
+
+
+
+
+                How to Fix Violations
+
+
+
+
+
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule when the default implementation of the equality operator provides the correct behavior for the type.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1014">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1014]]></name>
-    <description>CA1014</description>
+    <name><![CDATA[CA1014: Mark assemblies with CLSCompliantAttribute]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An assembly does not have the <code>System.CLSCompliantAttribute</code> attribute applied to it.
+</p>
+<h2>Rule Description</h2>
+<p>
+            The Common Language Specification (CLS) defines naming restrictions, data types, and rules to which assemblies must conform if they will be used across programming languages. Good design dictates that all assemblies explicitly indicate CLS compliance with <code>CLSCompliantAttribute</code>. If the attribute is not present on an assembly, the assembly is not compliant.
+            It is possible for a CLS-compliant assembly to contain types or type members that are not compliant.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, add the attribute to the assembly. Instead of marking the whole assembly as noncompliant, you should determine which type or type members are not compliant and mark these elements as such. If possible, you should provide a CLS-compliant alternative for noncompliant members so that the widest possible audience can access all the functionality of your assembly.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. If you do not want the assembly to be compliant, apply the attribute and set its value to false.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1016">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1016]]></name>
-    <description>CA1016</description>
+    <name><![CDATA[CA1016: Mark assemblies with AssemblyVersionAttribute]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The assembly does not have a version number.
+</p>
+<h2>Rule Description</h2>
+<p>
+            The identity of an assembly is composed of the following information:
+            <ul>
+              <li>
+                Assembly name
+              </li>
+              <li>
+                Version number
+              </li>
+              <li>
+                Culture
+              </li>
+              <li>
+                Public key (for strongly named assemblies).
+              </li>
+            </ul>
+            The .NET Framework uses the version number to uniquely identify an assembly, and to bind to types in strongly named assemblies. The version number is used together with version and publisher policy. By default, applications run only with the assembly version with which they were built.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, add a version number to the assembly by using the <code>System.Reflection.AssemblyVersionAttribute</code> attribute. See the following example.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule for assemblies that are used by third parties, or in a production environment.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1017">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1017]]></name>
-    <description>CA1017</description>
+    <name><![CDATA[CA1017: Mark assemblies with ComVisibleAttribute]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An assembly does not have the <code>System.Runtime.InteropServices.ComVisibleAttribute</code> attribute applied to it.
+</p>
+<h2>Rule Description</h2>
+<p>
+            The <code>ComVisibleAttribute</code> attribute determines how COM clients access managed code. Good design dictates that assemblies explicitly indicate COM visibility. COM visibility can be set for a whole assembly and then overridden for individual types and type members. If the attribute is not present, the contents of the assembly are visible to COM clients.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, add the attribute to the assembly. If you do not want the assembly to be visible to COM clients, apply the attribute and set its value to false.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. If you want the assembly to be visible, apply the attribute and set its value to true.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1018">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1018]]></name>
-    <description>CA1018</description>
+    <name><![CDATA[CA1018: Mark attributes with AttributeUsageAttribute]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The <code>System.AttributeUsageAttribute</code> attribute is not present on the custom attribute.
+</p>
+<h2>Rule Description</h2>
+<p>
+            When you define a custom attribute, mark it by using <code>AttributeUsageAttribute</code> to indicate where in the source code the custom attribute can be applied. The meaning and intended usage of an attribute will determine its valid locations in code. For example, you might define an attribute that identifies the person who is responsible for maintaining and enhancing each type in a library, and that responsibility is always assigned at the type level. In this case, compilers should enable the attribute on classes, enumerations, and interfaces, but should not enable it on methods, events, or properties. Organizational policies and procedures would dictate whether the attribute should be enabled on assemblies.
+            The <code>System.AttributeTargets</code> enumeration defines the targets that you can specify for a custom attribute. If you omit <code>AttributeUsageAttribute</code>, your custom attribute will be valid for all targets, as defined by the All value of <code>AttributeTargets</code> enumeration.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, specify targets for the attribute by using <code>AttributeUsageAttribute</code>. See the following example.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            You should fix a violation of this rule instead of excluding the message. Even if the attribute inherits <code>AttributeUsageAttribute</code>, the attribute should be present to simplify code maintenance.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1019: Define accessors for attribute arguments
+
+
+
+
+                CA1813: Avoid unsealed attributes
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1019">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1019]]></name>
-    <description>CA1019</description>
+    <name><![CDATA[CA1019: Define accessors for attribute arguments]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            In its constructor, an attribute defines arguments that do not have corresponding properties.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Attributes can define mandatory arguments that must be specified when you apply the attribute to a target. These are also known as positional arguments because they are supplied to attribute constructors as positional parameters. For every mandatory argument, the attribute should also provide a corresponding read-only property so that the value of the argument can be retrieved at execution time. This rule checks that for each constructor parameter, you have defined the corresponding property.
+            Attributes can also define optional arguments, which are also known as named arguments. These arguments are supplied to attribute constructors by name and should have a corresponding read/write property.
+            For mandatory and optional arguments, the corresponding properties and constructor parameters should use the same name but different casing. Properties use Pascal casing, and parameters use camel casing.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, add a read-only property for each constructor parameter that does not have one.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule if you do not want the value of the mandatory argument to be retrievable.
+</p>
+<h2>Custom Attributes Example</h2>
+
+<h2>Description</h2>
+<p>
+                The following example shows two attributes that define a mandatory (positional) parameter. The first implementation of the attribute is incorrectly defined. The second implementation is correct.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+using System;
+
+namespace DesignLibrary
+{
+// Violates rule: DefineAccessorsForAttributeArguments.
+
+   [AttributeUsage(AttributeTargets.All)]
+   public sealed class BadCustomAttribute :Attribute
+   {
+      string data;
+
+      // Missing the property that corresponds to  
+      // the someStringData parameter. 
+
+      public BadCustomAttribute(string someStringData)
+      {
+         data = someStringData;
+      }
+   }
+
+// Satisfies rule: Attributes should have accessors for all arguments.
+
+   [AttributeUsage(AttributeTargets.All)]
+   public sealed class GoodCustomAttribute :Attribute
+   {
+      string data;
+
+      public GoodCustomAttribute(string someStringData)
+      {
+         data = someStringData;
+      }
+      //The constructor parameter and property 
+      //name are the same except for case. 
+
+      public string SomeStringData
+      {
+         get
+         {
+            return data;
+         }
+      }
+   }
+}
+
+
+
+
+
+
+</p>
+<h2>Positional and Named Arguments</h2>
+
+<h2>Description</h2>
+<p>
+                Positional and named arguments make to clear to consumers of your library which arguments are mandatory for the attribute and which arguments are optional.
+                The following example shows an implementation of an attribute that has both positional and named arguments.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+using System;
+
+namespace DesignLibrary
+{
+    [AttributeUsage(AttributeTargets.All)]
+    public sealed class GoodCustomAttribute : Attribute
+    {
+        string mandatory;
+        string optional;
+
+        public GoodCustomAttribute(string mandatoryData)
+        {
+            mandatory = mandatoryData;
+        }
+
+        public string MandatoryData
+        {
+            get { return mandatory; }
+        }
+
+        public string OptionalData
+        {
+            get { return optional; }
+            set { optional = value; }
+        }
+    }
+}
+
+
+
+
+
+
+</p>
+<h2>Comments</h2>
+<p>
+                The following example shows how to apply the custom attribute to two properties.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+[GoodCustomAttribute("ThisIsSomeMandatoryData", OptionalData = "ThisIsSomeOptionalData")]
+public string MyProperty
+{
+    get { return myProperty; }
+    set { myProperty = value; }
+}
+
+[GoodCustomAttribute("ThisIsSomeMoreMandatoryData")]
+public string MyOtherProperty
+{
+    get { return myOtherProperty; }
+    set { myOtherProperty = value; }
+}
+
+
+
+
+
+
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA1813: Avoid unsealed attributes
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1020">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1020]]></name>
-    <description>CA1020</description>
+    <name><![CDATA[CA1020: Avoid namespaces with few types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A namespace other than the global namespace contains fewer than five types.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Make sure that each of your namespaces has a logical organization, and that a valid reason exists to put types in a sparsely populated namespace. Namespaces should contain types that are used together in most scenarios. When their applications are mutually exclusive, types should be located in separate namespaces. For example, the <code>System.Web.UI</code> namespace contains types that are used in Web applications, and the <code>System.Windows.Forms</code> namespace contains types that are used in Windows-based applications. Even though both namespaces have types that control aspects of the user interface, these types are not designed for use in the same application. Therefore, they are located in separate namespaces. Careful namespace organization can also be helpful because it increases the discoverability of a feature. By examining the namespace hierarchy, library consumers should be able to locate the types that implement a feature.
+
+
+
+
+
+                    Note
+
+
+
+
+                    Design-time types and permissions should not be merged into other namespaces to comply with this guideline. These types belong in their own namespaces below your main namespace, and the namespaces should end in .Design and .Permissions, respectively.
+
+
+
+
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, try to combine namespaces that contain just a few types into a single namespace.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule when the namespace does not contain types that are used with the types in your other namespaces.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1021">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1021]]></name>
-    <description>CA1021</description>
+    <name><![CDATA[CA1021: Avoid out parameters]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected method in a public type has an out parameter.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Passing types by reference (using out or ref) requires experience with pointers, understanding how value types and reference types differ, and handling methods with multiple return values. Also, the difference between out and ref parameters is not widely understood.
+            When a reference type is passed "by reference," the method intends to use the parameter to return a different instance of the object. Passing a reference type by reference is also known as using a double pointer, pointer to a pointer, or double indirection. By using the default calling convention, which is pass "by value," a parameter that takes a reference type already receives a pointer to the object. The pointer, not the object to which it points, is passed by value. Pass by value means that the method cannot change the pointer to have it point to a new instance of the reference type. However, it can change the contents of the object to which it points. For most applications this is sufficient and yields the desired behavior.
+            If a method must return a different instance, use the return value of the method to accomplish this. See the <code>System.String</code> class for a variety of methods that operate on strings and return a new instance of a string. When this model is used, the caller must decide whether the original object is preserved.
+            Although return values are commonplace and heavily used, the correct application of out and ref parameters requires intermediate design and coding skills. Library architects who design for a general audience should not expect users to master working with out or ref parameters.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule that is caused by a value type, have the method return the object as its return value. If the method must return multiple values, redesign it to return a single instance of an object that holds the values.
+            To fix a violation of this rule that is caused by a reference type, make sure that the desired behavior is to return a new instance of the reference. If it is, the method should use its return value to do this.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule. However, this design could cause usability issues.
+</p>
+<h2>Example</h2>
+
+<h2>Description</h2>
+<p>
+                Methods that implement the Try&lt;Something&gt; pattern, such as Int32.TryParse, do not raise this violation. The following example shows a structure (value type) that implements the Int32.TryParse method.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+using System;
+
+namespace Samples
+{
+    public struct Point
+    {
+        private readonly int _X;
+        private readonly int _Y;
+
+        public Point(int axisX, int axisY)
+        {
+            _X = axisX;
+            _Y = axisY;
+        }
+
+        public int X
+        {
+            get { return _X; }
+        }
+
+        public int Y
+        {
+            get { return _Y; }
+        }
+
+        public override int GetHashCode()
+        {
+            return _X ^ _Y;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Point))
+                return false;
+
+            return Equals((Point)obj);
+        }
+
+        public bool Equals(Point other)
+        {
+            if (_X != other._X)
+                return false;
+
+            return _Y == other._Y;
+        }
+
+        public static bool operator ==(Point point1, Point point2)
+        {
+            return point1.Equals(point2);
+        }
+
+        public static bool operator !=(Point point1, Point point2)
+        {
+            return !point1.Equals(point2);
+        }
+
+        // Does not violate this rule 
+        public static bool TryParse(string value, out Point result)
+        {
+            // TryParse Implementation
+            result = new Point(0,0);
+            return false;
+        }
+    }
+}
+
+
+
+
+
+
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA1045: Do not pass types by reference
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1023">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1023]]></name>
-    <description>CA1023</description>
+    <name><![CDATA[CA1023: Indexers should not be multidimensional]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected type contains a public or protected indexer that uses more than one index.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Indexers, that is, indexed properties, should use a single index. Multi-dimensional indexers can significantly reduce the usability of the library. If the design requires multiple indexes, reconsider whether the type represents a logical data store. If not, use a method.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the design to use a lone integer or string index, or use a method instead of the indexer.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule only after carefully considering the need for the nonstandard indexer.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1043: Use integral or string argument for indexers
+
+
+
+
+                CA1024: Use properties where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1024">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1024]]></name>
-    <description>CA1024</description>
+    <name><![CDATA[CA1024: Use properties where appropriate]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected method has a name that starts with Get, takes no parameters, and returns a value that is not an array.
+</p>
+<h2>Rule Description</h2>
+<p>
+            In most cases, properties represent data and methods perform actions. Properties are accessed like fields, which makes them easier to use. A method is a good candidate to become a property if one of these conditions is present:
+            <ul>
+              <li>
+                Takes no arguments and returns the state information of an object.
+              </li>
+              <li>
+                Accepts a single argument to set some part of the state of an object.
+              </li>
+            </ul>
+            Properties should behave as if they are fields; if the method cannot, it should not be changed to a property. Methods are better than properties in the following situations:
+            <ul>
+              <li>
+                The method performs a time-consuming operation. The method is perceivably slower than the time that is required to set or get the value of a field.
+              </li>
+              <li>
+                The method performs a conversion. Accessing a field does not return a converted version of the data that it stores.
+              </li>
+              <li>
+                The Get method has an observable side effect. Retrieving the value of a field does not produce any side effects.
+              </li>
+              <li>
+                The order of execution is important. Setting the value of a field does not rely on the occurrence of other operations.
+              </li>
+              <li>
+                Calling the method two times in succession creates different results.
+              </li>
+              <li>
+                The method is static but returns an object that can be changed by the caller. Retrieving the value of a field does not allow the caller to change the data that is stored by the field.
+              </li>
+              <li>
+                The method returns an array.
+              </li>
+            </ul>
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the method to a property.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule if the method meets at least one of the previously listed criteria.
+</p>
+<h2>Controlling Property Expansion in the Debugger</h2>
+<p>
+            One reason programmers avoid using a property is because they do not want the debugger to auto-expand it. For example, the property might involve allocating a large object or calling a P/Invoke, but it might not actually have any observable side effects.
+            You can prevent the debugger from auto-expanding properties by applying <code>System.Diagnostics.DebuggerBrowsableAttribute</code>. The following example shows this attribute being applied to an instance property.
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+using System;
+using System.Diagnostics;
+
+namespace Microsoft.Samples
+{
+    public class TestClass
+    {
+        // [...]
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public LargeObject LargeObject
+        {
+            get
+            {
+                // Allocate large object
+                // [...]
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+                Example
+
+
+
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1025">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1025]]></name>
-    <description>CA1025</description>
+    <name><![CDATA[CA1025: Replace repetitive arguments with params array]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected method in a public type has more than three parameters, and its last three parameters are the same type.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Use a parameter array instead of repeated arguments when the exact number of arguments is unknown and the variable arguments are the same type, or can be passed as the same type. For example, the <code>WriteLine</code> method provides a general-purpose overload that uses a parameter array to accept any number of <code>Object</code> arguments.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, replace the repeated arguments with a parameter array.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is always safe to suppress a warning from this rule; however, this design might cause usability issues.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1026">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1026]]></name>
-    <description>CA1026</description>
+    <name><![CDATA[CA1026: Default parameters should not be used]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible type contains an externally visible method that uses a default parameter.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Methods that use default parameters are allowed under the Common Language Specification (CLS); however, the CLS allows compilers to ignore the values that are assigned to these parameters. Code that is written for compilers that ignore default parameter values must explicitly provide arguments for each default parameter. To maintain the behavior that you want across programming languages, methods that use default parameters should be replaced with method overloads that provide the default parameters.
+            The compiler ignores the values of default parameters for Managed Extension for C++ when it accesses managed code. The Visual Basic compiler supports methods that have default parameters that use the <code>Optional (Visual Basic)</code> keyword.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, replace the method that uses default parameters with method overloads that supply the default parameters.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1025: Replace repetitive arguments with params array
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1027">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1027]]></name>
-    <description>CA1027</description>
+    <name><![CDATA[CA1027: Mark enums with FlagsAttribute]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The values of a public enumeration are powers of two or are combinations of other values that are defined in the enumeration, and the <code>System.FlagsAttribute</code> attribute is not present. To reduce false positives, this rule does not report a violation for enumerations that have contiguous values.
+</p>
+<h2>Rule Description</h2>
+<p>
+            An enumeration is a value type that defines a set of related named constants. Apply <code>FlagsAttribute</code> to an enumeration when its named constants can be meaningfully combined. For example, consider an enumeration of the days of the week in an application that keeps track of which day's resources are available. If the availability of each resource is encoded by using the enumeration that has <code>FlagsAttribute</code> present, any combination of days can be represented. Without the attribute, only one day of the week can be represented.
+            For fields that store combinable enumerations, the individual enumeration values are treated as groups of bits in the field. Therefore, such fields are sometimes referred to as bit fields. To combine enumeration values for storage in a bit field, use the Boolean conditional operators. To test a bit field to determine whether a specific enumeration value is present, use the Boolean logical operators. For a bit field to store and retrieve combined enumeration values correctly, each value that is defined in the enumeration must be a power of two. Unless this is so, the Boolean logical operators will not be able to extract the individual enumeration values that are stored in the field.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, add <code>FlagsAttribute</code> to the enumeration.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule if you do not want the enumeration values to be combinable.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA2217: Do not mark enums with FlagsAttribute
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1028">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1028]]></name>
-    <description>CA1028</description>
+    <name><![CDATA[CA1028: Enum storage should be Int32]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The underlying type of a public enumeration is not System.Int32.
+</p>
+<h2>Rule Description</h2>
+<p>
+            An enumeration is a value type that defines a set of related named constants. By default, the System.Int32 data type is used to store the constant value. Even though you can change this underlying type, it is not necessary or recommended for most scenarios. Note that no significant performance gain is achieved by using a data type that is smaller than Int32. If you cannot use the default data type, you should use one of the Common Language System (CLS)-compliant integral types, <code>Byte</code>, Int16, Int32, or Int64 to make sure that all values of the enumeration can be represented in CLS-compliant programming languages.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, unless size or compatibility issues exist, use Int32. For situations where Int32 is not large enough to hold the values, use Int64. If backward compatibility requires a smaller data type, use <code>Byte</code> or Int16.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule only if backward compatibility issues require it. In applications, failure to comply with this rule usually does not cause problems. In libraries, where language interoperability is required, failure to comply with this rule might adversely affect your users.
+</p>
+<h2>Example of a Violation</h2>
+
+<h2>Description</h2>
+<p>
+                The following example shows two enumerations that do not use the recommended underlying data type.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+using System;
+
+namespace DesignLibrary
+{
+   [Flags]
+   public enum Days : uint
+   {
+      None        = 0,
+      Monday      = 1,
+      Tuesday     = 2,
+      Wednesday   = 4,
+      Thursday    = 8,
+      Friday      = 16,
+      All         = Monday| Tuesday | Wednesday | Thursday | Friday
+   }
+
+   public enum Color :sbyte
+   {
+      None        = 0,
+      Red         = 1,
+      Orange      = 3,
+      Yellow      = 4
+   }
+}
+
+
+
+
+
+
+</p>
+<h2>Example of How to Fix</h2>
+
+<h2>Description</h2>
+<p>
+                The following example fixes the previous violation by changing the underlying data type to Int32.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+using System;
+
+namespace Samples
+{
+    [Flags]
+    public enum Days : int
+    {
+        None        = 0,
+        Monday      = 1,
+        Tuesday     = 2,
+        Wednesday   = 4,
+        Thursday    = 8,
+        Friday      = 16,
+        All         = Monday| Tuesday | Wednesday | Thursday | Friday
+    }
+
+    public enum Color : int
+    {
+        None        = 0,
+        Red         = 1,
+        Orange      = 3,
+        Yellow      = 4
+    }
+}
+
+
+
+
+
+
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA1008: Enums should have zero value
+
+
+
+
+                CA1027: Mark enums with FlagsAttribute
+
+
+
+
+                CA2217: Do not mark enums with FlagsAttribute
+
+
+
+
+                CA1700: Do not name enum values 'Reserved'
+
+
+
+
+                CA1712: Do not prefix enum values with type name
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1030">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1030]]></name>
-    <description>CA1030</description>
+    <name><![CDATA[CA1030: Use events where appropriate]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public, protected, or private method name begins with one of the following:
+            <ul>
+              <li>
+                AddOn
+              </li>
+              <li>
+                RemoveOn
+              </li>
+              <li>
+                Fire
+              </li>
+              <li>
+                Raise
+              </li>
+            </ul>
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule detects methods that have names that ordinarily would be used for events. Events follow the Observer or Publish-Subscribe design pattern; they are used when a state change in one object must be communicated to other objects. If a method gets called in response to a clearly defined state change, the method should be invoked by an event handler. Objects that call the method should raise events instead of calling the method directly.
+            Some common examples of events are found in user interface applications where a user action such as clicking a button causes a segment of code to execute. The .NET Framework event model is not limited to user interfaces; it should be used anywhere you must communicate state changes to one or more objects.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            If the method is called when the state of an object changes, you should consider changing the design to use the .NET Framework event model.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule if the method does not work with the .NET Framework event model.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1031">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1031]]></name>
-    <description>CA1031</description>
+    <name><![CDATA[CA1031: Do not catch general exception types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A general exception such as <code>System.Exception</code> or <code>System.SystemException</code> is caught in a catch statement, or a general catch clause such as catch() is used.
+</p>
+<h2>Rule Description</h2>
+<p>
+            General exceptions should not be caught.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, catch a more specific exception, or rethrow the general exception as the last statement in the catch block.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. Catching general exception types can hide run-time problems from the library user and can make debugging more difficult.
+
+
+
+
+
+                    Note
+
+
+
+
+                    Starting with the .NET Framework 4, the common language runtime (CLR) no longer delivers corrupted state exceptions that occur in the operating system and managed code, such as access violations in Windows, to be handled by managed code. If you want to compile an application in the .NET Framework 4 or later versions and maintain handling of corrupted state exceptions, you can apply the <code>HandleProcessCorruptedStateExceptionsAttribute</code> attribute to the method that handles the corrupted state exception.
+
+
+
+
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA2200: Rethrow to preserve stack details
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1032">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1032]]></name>
-    <description>CA1032</description>
+    <name><![CDATA[CA1032: Implement standard exception constructors]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A type extends <code>System.Exception</code> and does not declare all the required constructors.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Exception types must implement the following constructors:
+            <ul>
+              <li>
+                public NewException()
+              </li>
+              <li>
+                public NewException(string)
+              </li>
+              <li>
+                public NewException(string, Exception)
+              </li>
+              <li>
+                protected or private NewException(SerializationInfo, StreamingContext)
+              </li>
+            </ul>
+            Failure to provide the full set of constructors can make it difficult to correctly handle exceptions. For example, the constructor that has the signature NewException(string, Exception) is used to create exceptions that are caused by other exceptions. Without this constructor you cannot create and throw an instance of your custom exception that contains an inner (nested) exception, which is what managed code should do in such a situation. The first three exception constructors are public by convention. The fourth constructor is protected in unsealed classes, and private in sealed classes. For more information, see CA2229: Implement serialization constructors
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, add the missing constructors to the exception, and make sure that they have the correct accessibility.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule when the violation is caused by using a different access level for the public constructors.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1033">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1033]]></name>
-    <description>CA1033</description>
+    <name><![CDATA[CA1033: Interface methods should be callable by child types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An unsealed externally visible type provides an explicit method implementation of a public interface and does not provide an alternative externally visible method that has the same name.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Consider a base type that explicitly implements a public interface method. A type that derives from the base type can access the inherited interface method only through a reference to the current instance (this in C#) that is cast to the interface. If the derived type re-implements (explicitly) the inherited interface method, the base implementation can no longer be accessed. The call through the current instance reference will invoke the derived implementation; this causes recursion and an eventual stack overflow.
+            This rule does not report a violation for an explicit implementation of <code>IDisposable.Dispose</code> when an externally visible Close() or System.IDisposable.Dispose(Boolean) method is provided.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, implement a new method that exposes the same functionality and is visible to derived types or change to a nonexplicit implementation. If a breaking change is acceptable, an alternative is to make the type sealed.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule if an externally visible method is provided that has the same functionality but a different name than the explicitly implemented method.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1034">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1034]]></name>
-    <description>CA1034</description>
+    <name><![CDATA[CA1034: Nested types should not be visible]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible type contains an externally visible type declaration. Nested enumerations and protected types are exempt from this rule.
+</p>
+<h2>Rule Description</h2>
+<p>
+            A nested type is a type declared within the scope of another type. Nested types are useful for encapsulating private implementation details of the containing type. Used for this purpose, nested types should not be externally visible.
+            Do not use externally visible nested types for logical grouping or to avoid name collisions; instead, use namespaces.
+            Nested types include the notion of member accessibility, which some programmers do not understand clearly.
+            Protected types can be used in subclasses and nested types in advance customization scenarios.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            If you do not intend the nested type to be externally visible, change the type's accessibility. Otherwise, remove the nested type from its parent. If the purpose of the nesting is to categorize the nested type, use a namespace to create the hierarchy instead.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1035">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1035]]></name>
-    <description>CA1035</description>
+    <name><![CDATA[CA1035: ICollection implementations have strongly typed members]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected type implements <code>System.Collections.ICollection</code> but does not provide a strongly typed method for <code>ICollection.CopyTo</code>. The strongly typed version of <code>CopyTo</code> must accept two parameters and cannot have a <code>System.Array</code> or an array of <code>System.Object</code> as its first parameter.
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule requires <code>ICollection</code> implementations to provide strongly typed members so that users are not required to cast arguments to the <code>Object</code> type when they use the functionality that is provided by the interface. This rule assumes that the type that implements <code>ICollection</code> does so to manage a collection of instances of a type that is stronger than <code>Object</code>.
+
+
+                <code>ICollection</code>
+               implements the <code>System.Collections.IEnumerable</code> interface. If the objects in the collection extend <code>System.ValueType</code>, you must provide a strongly typed member for <code>GetEnumerator</code> to avoid the decrease in performance that is caused by boxing. This is not required when the objects of the collection are a reference type.
+            To implement a strongly typed version of an interface member, implement the interface members explicitly by using names in the form InterfaceName.InterfaceMemberName, such as <code>CopyTo</code>. The explicit interface members use the data types that are declared by the interface. Implement the strongly typed members by using the interface member name, such as <code>CopyTo</code>. Declare the strongly typed members as public, and declare parameters and return values to be of the strong type that is managed by the collection. The strong types replace weaker types such as <code>Object</code> and <code>Array</code> that are declared by the interface.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, implement the interface member explicitly (declare it as <code>CopyTo</code>). Add the public strongly typed member, declared as CopyTo, and have it take a strongly typed array as its first parameter.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule if you implement a new object-based collection, such as a binary tree, where types that extend the new collection determine the strong type. These types should comply with this rule and expose strongly typed members.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1038: Enumerators should be strongly typed
+
+
+
+
+                CA1039: Lists are strongly typed
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1036">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1036]]></name>
-    <description>CA1036</description>
+    <name><![CDATA[CA1036: Override methods on comparable types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected type implements the <code>System.IComparable</code> interface and does not override <code>Object.Equals</code> or does not overload the language-specific operator for equality, inequality, less than, or greater than. The rule does not report a violation if the type inherits only an implementation of the interface.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Types that define a custom sort order implement the <code>IComparable</code> interface. The <code>CompareTo</code> method returns an integer value that indicates the correct sort order for two instances of the type. This rule identifies types that set a sort order; this implies that the ordinary meaning of equality, inequality, less than, and greater than do not apply. When you provide an implementation of <code>IComparable</code>, you must usually also override <code>Equals</code> so that it returns values that are consistent with <code>CompareTo</code>. If you override <code>Equals</code> and are coding in a language that supports operator overloads, you should also provide operators that are consistent with <code>Equals</code>.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, override <code>Equals</code>. If your programming language supports operator overloading, supply the following operators:
+            <ul>
+              <li>
+                op_Equality
+              </li>
+              <li>
+                op_Inequality
+              </li>
+              <li>
+                op_LessThan
+              </li>
+              <li>
+                op_GreaterThan
+              </li>
+            </ul>
+            In C#, the tokens that are used to represent these operators are as follows: ==, !=, &lt;, and &gt;.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule when the violation is caused by missing operators and your programming language does not support operator overloading, as is the case with Visual Basic .NET. It is also safe to suppress a warning for from this rule when it fires on equality operators other than op_Equality if you determine that implementing the operators does not make sense in your application context. However, you should always over op_Equality and the == operator if you override Object.Equals.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1038">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1038]]></name>
-    <description>CA1038</description>
+    <name><![CDATA[CA1038: Enumerators should be strongly typed]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected type implements <code>System.Collections.IEnumerator</code> but does not provide a strongly typed version of the <code>IEnumerator.Current</code> property. Types that are derived from the following types are exempt from this rule:
+            <ul>
+              <li>
+
+
+                    <code>System.Collections.CollectionBase</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.DictionaryBase</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.ReadOnlyCollectionBase</code>
+
+
+              </li>
+            </ul>
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule requires <code>IEnumerator</code> implementations to also provide a strongly typed version of the <code>Current</code> property so that users are not required to cast the return value to the strong type when they use the functionality that is provided by the interface. This rule assumes that the type that implements <code>IEnumerator</code> contains a collection of instances of a type that is stronger than <code>Object</code>.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, implement the interface property explicitly (declare it as IEnumerator.Current). Add a public strongly typed version of the property, declared as Current, and have it return a strongly typed object.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule when you implement an object-based enumerator for use with an object-based collection, such as a binary tree. Types that extend the new collection will define the strongly typed enumerator and expose the strongly typed property.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                <code>CA1035: ICollection implementations have strongly typed members</code>
+
+
+
+
+                CA1039: Lists are strongly typed
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1039">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1039]]></name>
-    <description>CA1039</description>
+    <name><![CDATA[CA1039: Lists are strongly typed]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The public or protected type implements <code>System.Collections.IList</code> but does not provide a strongly typed method for one or more of the following:
+            <ul>
+              <li>
+                IList.Item
+              </li>
+              <li>
+                IList.Add
+              </li>
+              <li>
+                IList.Contains
+              </li>
+              <li>
+                IList.IndexOf
+              </li>
+              <li>
+                IList.Insert
+              </li>
+              <li>
+                IList.Remove
+              </li>
+            </ul>
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule requires <code>IList</code> implementations to provide strongly typed members so that users are not required to cast arguments to the <code>System.Object</code> type when they use the functionality that is provided by the interface. The <code>IList</code> interface is implemented by collections of objects that can be accessed by index. This rule assumes that the type that implements <code>IList</code> does this to manage a collection of instances of a type that is stronger than <code>Object</code>.
+
+
+                <code>IList</code>
+               implements the <code>System.Collections.ICollection</code> and <code>System.Collections.IEnumerable</code> interfaces. If you implement <code>IList</code>, you must provide the required strongly typed members for <code>ICollection</code>. If the objects in the collection extend <code>System.ValueType</code>, you must provide a strongly typed member for <code>GetEnumerator</code> to avoid the decrease in performance that is caused by boxing; this is not required when the objects of the collection are a reference type.
+            To comply with this rule, implement the interface members explicitly by using names in the form InterfaceName.InterfaceMemberName, such as <code>Add</code>. The explicit interface members use the data types that are declared by the interface. Implement the strongly typed members by using the interface member name, such as Add. Declare the strongly typed members as public, and declare parameters and return values to be of the strong type that is managed by the collection. The strong types replace weaker types such as <code>Object</code> and <code>Array</code> that are declared by the interface.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, explicitly implement <code>IList</code> members and provide strongly typed alternatives for the members that were noted previously. For code that correctly implements the <code>IList</code> interface and provides the required strongly typed members, see the following example.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule when you implement a new object-based collection, such as a linked list, where types that extend the new collection determine the strong type. These types should comply with this rule and expose strongly typed members.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                <code>CA1035: ICollection implementations have strongly typed members</code>
+
+
+
+
+                CA1038: Enumerators should be strongly typed
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1040">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1040]]></name>
-    <description>CA1040</description>
+    <name><![CDATA[CA1040: Avoid empty interfaces]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The interface does not declare any members or implement two or more other interfaces.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Interfaces define members that provide a behavior or usage contract. The functionality that is described by the interface can be adopted by any type, regardless of where the type appears in the inheritance hierarchy. A type implements an interface by providing implementations for the members of the interface. An empty interface does not define any members. Therefore, it does not define a contract that can be implemented.
+            If your design includes empty interfaces that types are expected to implement, you are probably using an interface as a marker or a way to identify a group of types. If this identification will occur at run time, the correct way to accomplish this is to use a custom attribute. Use the presence or absence of the attribute, or the properties of the attribute, to identify the target types. If the identification must occur at compile time, then it is acceptable to use an empty interface.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            Remove the interface or add members to it. If the empty interface is being used to label a set of types, replace the interface with a custom attribute.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule when the interface is used to identify a set of types at compile time.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1041">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1041]]></name>
-    <description>CA1041</description>
+    <name><![CDATA[CA1041: Provide ObsoleteAttribute message]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A type or member is marked by using a <code>System.ObsoleteAttribute</code> attribute that does not have its <code>ObsoleteAttribute.Message</code> property specified.
+</p>
+<h2>Rule Description</h2>
+<p>
+
+
+                <code>ObsoleteAttribute</code>
+               is used to mark deprecated library types and members. Library consumers should avoid the use of any type or member that is marked obsolete. This is because it might not be supported and will eventually be removed from later versions of the library. When a type or member marked by using <code>ObsoleteAttribute</code> is compiled, the <code>Message</code> property of the attribute is displayed. This gives the user information about the obsolete type or member. This information generally includes how long the obsolete type or member will be supported by the library designers and the preferred replacement to use.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, add the message parameter to the <code>ObsoleteAttribute</code> constructor.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule because the <code>Message</code> property provides critical information about the obsolete type or member.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1043">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1043]]></name>
-    <description>CA1043</description>
+    <name><![CDATA[CA1043: Use integral or string argument for indexers]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected type contains a public or protected indexer that uses an index type other than System.Int32, System.Int64, <code>System.Object</code>, or <code>System.String</code>.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Indexers, that is, indexed properties, should use integer or string types for the index. These types are typically used for indexing data structures and increase the usability of the library. Use of the <code>Object</code> type should be restricted to those cases where the specific integer or string type cannot be specified at design time. If the design requires other types for the index, reconsider whether the type represents a logical data store. If it does not represent a logical data store, use a method.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the index to an integer or string type, or use a method instead of the indexer.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule only after carefully considering the need for the nonstandard indexer.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1023: Indexers should not be multidimensional
+
+
+
+
+                CA1024: Use properties where appropriate
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1044">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1044]]></name>
-    <description>CA1044</description>
+    <name><![CDATA[CA1044: Properties should not be write only]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The public or protected property has a set accessor but does not have a get accessor.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Get accessors provide read access to a property and set accessors provide write access. Although it is acceptable and often necessary to have a read-only property, the design guidelines prohibit the use of write-only properties. This is because letting a user set a value and then preventing the user from viewing the value does not provide any security. Also, without read access, the state of shared objects cannot be viewed, which limits their usefulness.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, add a get accessor to the property. Alternatively, if the behavior of a write-only property is necessary, consider converting this property to a method.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is strongly recommended that you do not suppress a warning from this rule.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1045">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1045]]></name>
-    <description>CA1045</description>
+    <name><![CDATA[CA1045: Do not pass types by reference]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected method in a public type has a ref parameter that takes a primitive type, a reference type, or a value type that is not one of the built-in types.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Passing types by reference (using out or ref) requires experience with pointers, understanding how value types and reference types differ, and handling methods that have multiple return values. Also, the difference between out and ref parameters is not widely understood.
+            When a reference type is passed "by reference," the method intends to use the parameter to return a different instance of the object. (Passing a reference type by reference is also known as using a double pointer, pointer to a pointer, or double indirection.) Using the default calling convention, which is pass "by value," a parameter that takes a reference type already receives a pointer to the object. The pointer, not the object to which it points, is passed by value. Passing by value means that the method cannot change the pointer to have it point to a new instance of the reference type, but can change the contents of the object to which it points. For most applications this is sufficient and yields the behavior that you want.
+            If a method must return a different instance, use the return value of the method to accomplish this. See the <code>System.String</code> class for a variety of methods that operate on strings and return a new instance of a string. By using this model, it is left to the caller to decide whether the original object is preserved.
+            Although return values are commonplace and heavily used, the correct application of out and ref parameters requires intermediate design and coding skills. Library architects who design for a general audience should not expect users to master working with out or ref parameters.
+
+
+
+
+
+                    Note
+
+
+
+
+                    When you work with parameters that are large structures, the additional resources that are required to copy these structures could cause a performance effect when you pass by value. In these cases, you might consider using ref or out parameters.
+
+
+
+
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule that is caused by a value type, have the method return the object as its return value. If the method must return multiple values, redesign it to return a single instance of an object that holds the values.
+            To fix a violation of this rule that is caused by a reference type, make sure that the behavior that you want is to return a new instance of the reference. If it is, the method should use its return value to do this.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule; however, this design could cause usability issues.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1021: Avoid out parameters
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1046">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1046]]></name>
-    <description>CA1046</description>
+    <name><![CDATA[CA1046: Do not overload operator equals on reference types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or nested public reference type overloads the equality operator.
+</p>
+<h2>Rule Description</h2>
+<p>
+            For reference types, the default implementation of the equality operator is almost always correct. By default, two references are equal only if they point to the same object.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, remove the implementation of the equality operator.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule when the reference type behaves like a built-in value type. If it is meaningful to do addition or subtraction on instances of the type, it is probably correct to implement the equality operator and suppress the violation.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1013: Overload operator equals on overloading add and subtract
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1047">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1047]]></name>
-    <description>CA1047</description>
+    <name><![CDATA[CA1047: Do not declare protected members in sealed types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public type is sealed (NotInheritable in Visual basic) and declares a protected member or a protected nested type. This rule does not report violations for <code>Finalize</code> methods, which must follow this pattern.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Types declare protected members so that inheriting types can access or override the member. By definition, you cannot inherit from a sealed type, which means that protected methods on sealed types cannot be called.
+            The C# compiler issues a warning for this error.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the access level of the member to private, or make the type inheritable.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. Leaving the type in its current state can cause maintenance issues and does not provide any benefits.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1048">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1048]]></name>
-    <description>CA1048</description>
+    <name><![CDATA[CA1048: Do not declare virtual members in sealed types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public type is sealed and declares a method that is both virtual (Overridable in Visual Basic) and not final. This rule does not report violations for delegate types, which must follow this pattern.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Types declare methods as virtual so that inheriting types can override the implementation of the virtual method. By definition, you cannot inherit from a sealed type, making a virtual method on a sealed type meaningless.
+            The Visual Basic .NET and C# compilers do not allow types to violate this rule.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, make the method non-virtual or make the type inheritable.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. Leaving the type in its current state can cause maintenance issues and does not provide any benefits.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1049">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1049]]></name>
-    <description>CA1049</description>
+    <name><![CDATA[CA1049: Types that own native resources should be disposable]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A type references a <code>System.IntPtr</code> field, a <code>System.UIntPtr</code> field, or a <code>System.Runtime.InteropServices.HandleRef</code> field, but does not implement <code>System.IDisposable</code>.
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule assumes that <code>IntPtr</code>, <code>UIntPtr</code>, and <code>HandleRef</code> fields store pointers to unmanaged resources. Types that allocate unmanaged resources should implement <code>IDisposable</code> to let callers to release those resources on demand and shorten the lifetimes of the objects that hold the resources.
+            The recommended design pattern to clean up unmanaged resources is to provide both an implicit and an explicit means to free those resources by using the <code>Object.Finalize</code> method and the <code>IDisposable.Dispose</code> method, respectively. The garbage collector calls the <code>Finalize</code> method of an object at some indeterminate time after the object is determined to be no longer reachable. After <code>Finalize</code> is called, an additional garbage collection is required to free the object. The <code>Dispose</code> method allows the caller to explicitly release resources on demand, earlier than the resources would be released if left to the garbage collector. After it cleans up the unmanaged resources, <code>Dispose</code> should call the <code>GC.SuppressFinalize</code> method to let the garbage collector know that <code>Finalize</code> no longer has to be called; this eliminates the need for the additional garbage collection and shortens the lifetime of the object.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, implement <code>IDisposable</code>.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule if the type does not reference an unmanaged resource. Otherwise, do not suppress a warning from this rule because failure to implement <code>IDisposable</code> can cause unmanaged resources to become unavailable or underused.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA2115: Call GC.KeepAlive when using native resources
+
+
+
+
+                CA1816: Call GC.SuppressFinalize correctly
+
+
+
+
+                CA2216: Disposable types should declare finalizer
+
+
+
+
+                CA1001: Types that own disposable fields should be disposable
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1050">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1050]]></name>
-    <description>CA1050</description>
+    <name><![CDATA[CA1050: Declare types in namespaces]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected type is defined outside the scope of a named namespace.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Types are declared in namespaces to prevent name collisions, and as a way to organize related types in an object hierarchy. Types that are outside any named namespace are in a global namespace that cannot be referenced in code.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, place the type in a namespace.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Although you never have to suppress a warning from this rule, it is safe to do this when the assembly will never be used together with other assemblies.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1051">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1051]]></name>
-    <description>CA1051</description>
+    <name><![CDATA[CA1051: Do not declare visible instance fields]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible type has an externally visible instance field.
+</p>
+<h2>Rule Description</h2>
+<p>
+            The primary use of a field should be as an implementation detail. Fields should be private or internal and should be exposed by using properties. It is as easy to access a property as it is to access a field, and the code in the accessors of a property can change as the features of the type expand without introducing breaking changes. Properties that just return the value of a private or internal field are optimized to perform on par with accessing a field; very little performance gain is associated with the use of externally visible fields over properties.
+            Externally visible refers to public, protected, and protected internal (Public, Protected, and Protected Friend in Visual Basic) accessibility levels.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, make the field private or internal and expose it by using an externally visible property.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. Externally visible fields do not provide any benefits that are unavailable to properties. Additionally, public fields cannot be protected by Link Demands. See CA2112: Secured types should not expose fields.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA2112: Secured types should not expose fields
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1052">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1052]]></name>
-    <description>CA1052</description>
+    <name><![CDATA[CA1052: Static holder types should be sealed]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or protected type contains only static members and is not declared with the <code>sealed (C# Reference)</code> (NotInheritable (Visual Basic)) modifier.
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule assumes that a type that contains only static members is not designed to be inherited, because the type does not provide any functionality that can be overridden in a derived type. A type that is not meant to be inherited should be marked with the sealed modifier to prohibit its use as a base type.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, mark the type as sealed. If you are targeting .NET Framework 2.0 or earlier, a better approach is to mark the type as static. In this manner, you avoid having to declare a private constructor to prevent the class from being created.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a warning from this rule only if the type is designed to be inherited. The absence of the sealed modifier suggests that the type is useful as a base type.
+</p>
+<h2>Example of a Violation</h2>
+
+<h2>Description</h2>
+<p>
+                The following example shows a type that violates the rule.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#C++VB
+
+
+
+
+                Copy
+
+
+
+
+using System;
+
+namespace DesignLibrary
+{
+    public class StaticMembers
+    {
+        static int someField;
+
+        public static int SomeProperty
+        {
+            get
+            {
+                return someField;
+            }
+            set
+            {
+                someField = value;
+            }
+        }
+
+        StaticMembers() {}
+
+        public static void SomeMethod() {}
+    }
+}
+
+
+
+
+
+
+</p>
+<h2>Fix with the Static Modifier</h2>
+
+<h2>Description</h2>
+<p>
+                The following example shows how to fix a violation of this rule by marking the type with the static modifier.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+using System;
+
+namespace DesignLibrary
+{
+    public static class StaticMembers
+    {
+        private static int someField;
+
+        public static int SomeProperty
+        {
+            get { return someField; }
+            set { someField = value; }
+        }
+
+        public static void SomeMethod()
+        {
+        }
+
+        public static event SomeDelegate SomeEvent;
+    }
+
+    public delegate void SomeDelegate();
+}
+
+
+
+
+
+
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA1053: Static holder types should not have constructors
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1053">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1053]]></name>
-    <description>CA1053</description>
+    <name><![CDATA[CA1053: Static holder types should not have constructors]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A public or nested public type declares only static members and has a public or protected default constructor.
+</p>
+<h2>Rule Description</h2>
+<p>
+            The constructor is unnecessary because calling static members does not require an instance of the type. Also, because the type does not have non-static members, creating an instance does not provide access to any of the type's members.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, remove the default constructor or make it private.
+
+
+
+
+
+                    Note
+
+
+
+
+                    Some compilers automatically create a public default constructor if the type does not define any constructors. If this is the case with your type, add a private default constructor to eliminate the violation.
+
+
+
+
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule. The presence of the constructor suggests that the type is not a static type.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1054">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1054]]></name>
-    <description>CA1054</description>
+    <name><![CDATA[CA1054: URI parameters should not be strings]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A type declares a method with a string parameter whose name contains "uri", "Uri", "urn", "Urn", "url", or "Url" and the type does not declare a corresponding overload that takes a <code>System.Uri</code> parameter.
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule splits the parameter name into tokens based on the camel casing convention and checks whether each token equals "uri", "Uri", "urn", "Urn", "url", or "Url". If there is a match, the rule assumes that the parameter represents a uniform resource identifier (URI). A string representation of a URI is prone to parsing and encoding errors, and can lead to security vulnerabilities. If a method takes a string representation of a URI, a corresponding overload should be provided that takes an instance of the <code>Uri</code> class, which provides these services in a safe and secure manner.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the parameter to a <code>Uri</code> type; this is a breaking change. Alternately, provide an overload of the method which takes a <code>Uri</code> parameter; this is a nonbreaking change.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule if the parameter does not represent a URI.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1056: URI properties should not be strings
+
+
+
+
+                CA1055: URI return values should not be strings
+
+
+
+
+                CA2234: Pass System.Uri objects instead of strings
+
+
+
+
+                CA1057: String URI overloads call System.Uri overloads
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1055">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1055]]></name>
-    <description>CA1055</description>
+    <name><![CDATA[CA1055: URI return values should not be strings]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            The name of a method contains "uri", "Uri", "urn", "Urn", "url", or "Url", and the method returns a string.
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule splits the method name into tokens based on the Pascal casing convention and checks whether each token equals "uri", "Uri", "urn", "Urn", "url", or "Url". If there is a match, the rule assumes that the method returns a uniform resource identifier (URI). A string representation of a URI is prone to parsing and encoding errors, and can lead to security vulnerabilities. The <code>System.Uri</code> class provides these services in a safe and secure manner.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the return type to a <code>Uri</code>.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule if the return value does not represent a URI.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1056: URI properties should not be strings
+
+
+
+
+                CA1054: URI parameters should not be strings
+
+
+
+
+                CA2234: Pass System.Uri objects instead of strings
+
+
+
+
+                CA1057: String URI overloads call System.Uri overloads
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1056">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1056]]></name>
-    <description>CA1056</description>
+    <name><![CDATA[CA1056: URI properties should not be strings]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A type declares a string property whose name contains "uri", "Uri", "urn", "Urn", "url", or "Url".
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule splits the property name into tokens based on the Pascal casing convention and checks whether each token equals "uri", "Uri", "urn", "Urn", "url", or "Url". If there is a match, the rule assumes that the property represents a uniform resource identifier (URI). A string representation of a URI is prone to parsing and encoding errors, and can lead to security vulnerabilities. The <code>System.Uri</code> class provides these services in a safe and secure manner.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the property to a <code>Uri</code> type.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule if the property does not represent a URI.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA1054: URI parameters should not be strings
+
+
+
+
+                CA1055: URI return values should not be strings
+
+
+
+
+                CA2234: Pass System.Uri objects instead of strings
+
+
+
+
+                CA1057: String URI overloads call System.Uri overloads
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1057">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1057]]></name>
-    <description>CA1057</description>
+    <name><![CDATA[CA1057: String URI overloads call System.Uri overloads]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A type declares method overloads that differ only by the replacement of a string parameter with a <code>System.Uri</code> parameter, and the overload that takes the string parameter does not call the overload that takes the <code>Uri</code> parameter.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Because the overloads differ only by the string/<code>Uri</code> parameter, the string is assumed to represent a uniform resource identifier (URI). A string representation of a URI is prone to parsing and encoding errors, and can lead to security vulnerabilities. The <code>Uri</code> class provides these services in a safe and secure manner. To reap the benefits of the <code>Uri</code> class, the string overload should call the <code>Uri</code> overload using the string argument.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            Re-implement the method that uses the string representation of the URI so that it creates an instance of the <code>Uri</code> class using the string argument, and then passes the <code>Uri</code> object to the overload that has the <code>Uri</code> parameter.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule if the string parameter does not represent a URI.
+</p>
+<h2>Example</h2>
+<p>
+
+
+                CA2234: Pass System.Uri objects instead of strings
+
+
+
+
+                CA1056: URI properties should not be strings
+
+
+
+
+                CA1054: URI parameters should not be strings
+
+
+
+
+                CA1055: URI return values should not be strings
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1058">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1058]]></name>
-    <description>CA1058</description>
+    <name><![CDATA[CA1058: Types should not extend certain base types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible type extends certain base types. Currently, this rule reports types that derive from the following types:
+            <ul>
+              <li>
+
+
+                    <code>System.ApplicationException</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Xml.XmlDocument</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.CollectionBase</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.DictionaryBase</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.Queue</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.ReadOnlyCollectionBase</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.SortedList</code>
+
+
+              </li>
+              <li>
+
+
+                    <code>System.Collections.Stack</code>
+
+
+              </li>
+            </ul>
+</p>
+<h2>Rule Description</h2>
+<p>
+            For .NET Framework version 1, it was recommended to derive new exceptions from <code>ApplicationException</code>. The recommendation has changed and new exceptions should derive from <code>System.Exception</code> or one of its subclasses in the <code>System</code> namespace.
+            Do not create a subclass of <code>XmlDocument</code> if you want to create an XML view of an underlying object model or data source.
+
+
+
+
+
+
+                    Non-generic Collections
+
+
+
+
+
+
+
+
+
+
+                Use and/or extend generic collections whenever possible. Do not extend non-generic collections in your code, unless you shipped it previously.
+
+                  Examples of Incorrect Usage
+
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+public class MyCollection : CollectionBase
+{
+}
+
+public class MyReadOnlyCollection : ReadOnlyCollectionBase
+{
+}
+
+
+
+
+
+Examples of Correct Usage
+
+
+        C#
+
+
+
+
+                Copy
+
+
+
+
+public class MyCollection : Collection&lt;T&gt;
+{
+}
+
+public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
+{
+}
+
+
+
+
+
+
+
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, derive the type from a different base type or a generic collection.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule for violations about <code>ApplicationException</code>. It is safe to suppress a warning from this rule for violations about <code>XmlDocument</code>. It is safe to suppress a warning about a non-generic collection if the code was released previously.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1059">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1059]]></name>
-    <description>CA1059</description>
+    <name><![CDATA[CA1059: Members should not expose certain concrete types]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible member is a certain concrete type or exposes certain concrete types through one of its parameters or return value. Currently, this rule reports exposure of the following concrete types:
+            <ul>
+              <li>
+                A type derived from <code>System.Xml.XmlNode</code>.
+              </li>
+            </ul>
+</p>
+<h2>Rule Description</h2>
+<p>
+            A concrete type is a type that has a complete implementation and therefore can be instantiated. To allow widespread use of the member, replace the concrete type with the suggested interface. This allows the member to accept any type that implements the interface or be used where a type that implements the interface is expected.
+            The following table lists the targeted concrete types and their suggested replacements.
+
+
+
+
+
+
+
+                    Concrete type
+
+
+                    Replacement
+
+
+
+
+
+
+                        <code>XPathDocument</code>
+
+
+
+
+
+
+                        <code>System.Xml.XPath.IXPathNavigable</code>
+                      .
+                    Using the interface decouples the member from a specific implementation of an XML data source.
+
+
+
+
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, change the concrete type to the suggested interface.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a message from this rule if the specific functionality provided by the concrete type is required.
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                <code>CA1011: Consider passing base types as parameters</code>
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1060">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1060]]></name>
-    <description>CA1060</description>
+    <name><![CDATA[CA1060: Move P/Invokes to NativeMethods class]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A method uses Platform Invocation Services to access unmanaged code and is not a member of one of the NativeMethods classes.
+</p>
+<h2>Rule Description</h2>
+<p>
+            Platform Invocation methods, such as those that are marked by using the <code>System.Runtime.InteropServices.DllImportAttribute</code> attribute, or methods that are defined by using the Declare keyword in Visual Basic, access unmanaged code. These methods should be in one of the following classes:
+            <ul>
+              <li>
+
+                  NativeMethods - This class does not suppress stack walks for unmanaged code permission. (<code>System.Security.SuppressUnmanagedCodeSecurityAttribute</code> must not be applied to this class.) This class is for methods that can be used anywhere because a stack walk will be performed.
+              </li>
+              <li>
+
+                  SafeNativeMethods - This class suppresses stack walks for unmanaged code permission. (<code>System.Security.SuppressUnmanagedCodeSecurityAttribute</code> is applied to this class.) This class is for methods that are safe for anyone to call. Callers of these methods are not required to perform a full security review to make sure that the usage is secure because the methods are harmless for any caller.
+              </li>
+              <li>
+
+                  UnsafeNativeMethods - This class suppresses stack walks for unmanaged code permission. (<code>System.Security.SuppressUnmanagedCodeSecurityAttribute</code> is applied to this class.) This class is for methods that are potentially dangerous. Any caller of these methods must perform a full security review to make sure that the usage is secure because no stack walk will be performed.
+              </li>
+            </ul>
+            These classes are declared as internal (Friend, in Visual Basic) and declare a private constructor to prevent new instances from being created. The methods in these classes should be static and internal (Shared and Friend in Visual Basic).
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, move the method to the appropriate NativeMethods class. For most applications, moving P/Invokes to a new class that is named NativeMethods is enough.
+            However, if you are developing libraries for use in other applications, you should consider defining two other classes that are called SafeNativeMethods and UnsafeNativeMethods. These classes resemble the NativeMethods class; however, they are marked by using a special attribute called SuppressUnmanagedCodeSecurityAttribute. When this attribute is applied, the runtime does not perform a full stack walk to make sure that all callers have the UnmanagedCode permission. The runtime ordinarily checks for this permission at startup. Because the check is not performed, it can greatly improve performance for calls to these unmanaged methods, It also enables code that has limited permissions to call these methods.
+            However, you should use this attribute with great care. It can have serious security implications if it is implemented incorrectly..
+            For information about how to implement the methods, see the NativeMethods Example, SafeNativeMethods Example, and UnsafeNativeMethods Example.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>
+<h2>Example</h2>
+
+<h2>Description</h2>
+<p>
+                Because the NativeMethods class should not be marked by using SuppressUnmanagedCodeSecurityAttribute, P/Invokes that are put in it will require UnmanagedCode permission. Because most applications run from the local computer and run together with full trust, this is usually not a problem. However, if you are developing reusable libraries, you should consider defining a SafeNativeMethods or UnsafeNativeMethods class.
+                The following example shows an Interaction.Beep method that wraps the MessageBeep function from user32.dll. The MessageBeep P/Invoke is put in the NativeMethods class.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+using System;
+using System.Runtime.InteropServices;
+using System.ComponentModel;
+
+public static class Interaction
+{
+    // Callers require Unmanaged permission         
+    public static void Beep()
+    {
+        // No need to demand a permission as callers of Interaction.Beep             
+        // will require UnmanagedCode permission             
+        if (!NativeMethods.MessageBeep(-1))
+            throw new Win32Exception();
+    }
+}
+
+internal static class NativeMethods
+{
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    internal static extern bool MessageBeep(int uType);
+}
+
+
+
+
+
+
+</p>
+<h2>SafeNativeMethods Example</h2>
+
+<h2>Description</h2>
+<p>
+                P/Invoke methods that can be safely exposed to any application and that do not have any side effects should be put in a class that is named SafeNativeMethods. You do not have to demand permissions and you do not have to pay much attention to where they are called from.
+                The following example shows an Environment.TickCount property that wraps the GetTickCount function from kernel32.dll.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+using System;
+using System.Runtime.InteropServices;
+using System.Security;
+
+public static class Environment
+{
+    // Callers do not require UnmanagedCode permission        
+    public static int TickCount
+    {
+        get
+        {
+            // No need to demand a permission in place of                
+            // UnmanagedCode as GetTickCount is considered               
+            // a safe method               
+            return SafeNativeMethods.GetTickCount();
+        }
+    }
+}
+
+[SuppressUnmanagedCodeSecurityAttribute]
+internal static class SafeNativeMethods
+{
+    [DllImport("kernel32.dll", CharSet=CharSet.Auto, ExactSpelling=true)]
+    internal static extern int GetTickCount();
+}
+
+
+
+
+
+
+</p>
+<h2>UnsafeNativeMethods Example</h2>
+
+<h2>Description</h2>
+<p>
+                P/Invoke methods that cannot be safely called and that could cause side effects should be put in a class that is named UnsafeNativeMethods. These methods should be rigorously checked to make sure that they are not exposed to the user unintentionally. The rule CA2118: Review SuppressUnmanagedCodeSecurityAttribute usage can help with this. Alternatively, the methods should have another permission that is demanded instead of UnmanagedCode when they use them.
+                The following example shows a Cursor.Hide method that wraps the ShowCursor function from user32.dll.
+</p>
+<h2>Code</h2>
+<p>
+
+
+
+        C#VB
+
+
+
+
+                Copy
+
+
+
+
+using System;
+using System.Runtime.InteropServices;
+using System.Security;
+using System.Security.Permissions;
+
+public static class Cursor
+{
+    // Callers do not require UnmanagedCode permission, however,        
+    // they do require UIPermissionWindow.AllWindows        
+    public static void Hide()
+    {
+        // Need to demand an appropriate permission            
+        // in  place of UnmanagedCode permission as             
+        // ShowCursor is not considered a safe method            
+        new UIPermission(UIPermissionWindow.AllWindows).Demand();
+        UnsafeNativeMethods.ShowCursor(false);
+    }
+}
+
+[SuppressUnmanagedCodeSecurityAttribute]
+internal static class UnsafeNativeMethods
+{
+    [DllImport("user32.dll", CharSet = CharSet.Auto, ExactSpelling = true)]
+    internal static extern int ShowCursor([MarshalAs(UnmanagedType.Bool)]bool bShow);
+}
+
+
+
+
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1061">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1061]]></name>
-    <description>CA1061</description>
+    <name><![CDATA[CA1061: Do not hide base class methods]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A derived type declares a method with the same name and with the same number of parameters as one of its base methods; one or more of the parameters is a base type of the corresponding parameter in the base method; and any remaining parameters have types that are identical to the corresponding parameters in the base method.
+</p>
+<h2>Rule Description</h2>
+<p>
+            A method in a base type is hidden by an identically named method in a derived type when the parameter signature of the derived method differs only by types that are more weakly derived than the corresponding types in the parameter signature of the base method.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, remove or rename the method, or change the parameter signature so that the method does not hide the base method.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1062">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1062]]></name>
-    <description>CA1062</description>
+    <name><![CDATA[CA1062: Validate arguments of public methods]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An externally visible method dereferences one of its reference arguments without verifying whether that argument is null (Nothing in Visual Basic).
+</p>
+<h2>Rule Description</h2>
+<p>
+            All reference arguments that are passed to externally visible methods should be checked against null. If appropriate, throw a <code>ArgumentNullException</code> when the argument is null.
+            If a method can be called from an unknown assembly because it is declared public or protected, you should validate all parameters of the method. If the method is designed to be called only by known assemblies, you should make the method internal and apply the <code>InternalsVisibleToAttribute</code>  attribute to the assembly that contains the method.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            To fix a violation of this rule, validate each reference argument against null.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+             You can suppress a warning from this rule if you are sure that the dereferenced parameter has been validated by another method call in the function.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1063">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1063]]></name>
-    <description>CA1063</description>
+    <name><![CDATA[CA1063: Implement IDisposable correctly]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+
+
+                IDisposable
+               is not implemented correctly. Some reasons for this problem are listed here:
+            <ul>
+              <li>
+                IDisposable is re-implemented in the class.
+              </li>
+              <li>
+                Finalize is re-overridden.
+              </li>
+              <li>
+                Dispose is overridden.
+              </li>
+              <li>
+                Dispose() is not public, sealed, or named Dispose.
+              </li>
+              <li>
+                Dispose(bool) is not protected, virtual, or unsealed.
+              </li>
+              <li>
+                In unsealed types, Dispose() must call Dispose(true).
+              </li>
+              <li>
+                For unsealed types, the Finalize implementation does not call either or both Dispose(bool) or the case class finalizer.
+              </li>
+            </ul>
+            Violation of any one of these patterns will trigger this warning.
+            Every unsealed root IDisposable type must provide its own protected virtual void Dispose(bool) method. Dispose() should call Dipose(true) and Finalize should call Dispose(false). If you are creating an unsealed root IDisposable type, you must define Dispose(bool) and call it. For more information, see <code>Cleaning Up Unmanaged Resources</code> in the Framework Design Guidelines section of the .NET Framework documentation.
+</p>
+<h2>Rule Description</h2>
+<p>
+            All IDisposable types should implement the Dispose pattern correctly.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            Examine your code and determine which of the following resolutions will fix this violation.
+            <ul>
+              <li>
+                Remove IDisposable from the list of interfaces that are implemented by {0} and override the base class Dispose implementation instead.
+              </li>
+              <li>
+                Remove the finalizer from type {0}, override Dispose(bool disposing), and put the finalization logic in the code path where 'disposing' is false.
+              </li>
+              <li>
+                Remove {0}, override Dispose(bool disposing), and put the dispose logic in the code path where 'disposing' is true.
+              </li>
+              <li>
+                Ensure that {0} is declared as public and sealed.
+              </li>
+              <li>
+                Rename {0} to 'Dispose' and make sure that it is declared as public and sealed.
+              </li>
+              <li>
+                Make sure that {0} is declared as protected, virtual, and unsealed.
+              </li>
+              <li>
+                Modify {0} so that it calls Dispose(true), then calls GC.SuppressFinalize on the current object instance ('this' or 'Me' in Visual Basic), and then returns.
+              </li>
+              <li>
+                Modify {0} so that it calls Dispose(false) and then returns.
+              </li>
+              <li>
+                If you are writing an unsealed root IDisposable class, make sure that the implementation of IDisposable follows the pattern that is described earlier in this section.
+              </li>
+            </ul>
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Do not suppress a warning from this rule.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1064">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1064]]></name>
-    <description>CA1064</description>
+    <name><![CDATA[CA1064: Exceptions should be public]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A non-public exception derives directly from <code>Exception</code>, <code>SystemException</code>, or <code>ApplicationException</code>.
+</p>
+<h2>Rule Description</h2>
+<p>
+            An internal exception is only visible inside its own internal scope. After the exception falls outside the internal scope, only the base exception can be used to catch the exception. If the internal exception is inherited from <code>Exception</code>, <code>SystemException</code>, or <code>ApplicationException</code>, the external code will not have sufficient information to know what to do with the exception.
+            But, if the code has a public exception that later is used as the base for a internal exception, it is reasonable to assume the code further out will be able to do something intelligent with the base exception. The public exception will have more information than what is provided by T:System.Exception, T:System.SystemException, or T:System.ApplicationException.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            Make the exception public, or derive the internal exception from a public exception that is not <code>Exception</code>, <code>SystemException</code>, or <code>ApplicationException</code>.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Suppress a message from this rule if you are sure in all cases that the private exception will be caught within its own internal scope.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1065">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA1065]]></name>
-    <description>CA1065</description>
+    <name><![CDATA[CA1065: Do not raise exceptions in unexpected locations]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            A method that is not expected to throw exceptions throws an exception.
+</p>
+<h2>Rule Description</h2>
+
+<h2>Property Get Methods</h2>
+<p>
+                Properties are basically smart fields. Therefore, they should behave like a field as much as possible. Fields do not throw exceptions and neither should properties. If you have a property that throws an exception, consider making it a method.
+                The following exceptions are allowed to be thrown from a property get method:
+                <ul>
+                  <li>
+
+
+                        <code>System.InvalidOperationException</code>
+                       and all derivatives (including <code>System.ObjectDisposedException</code>)
+                  </li>
+                  <li>
+
+
+                        <code>System.NotSupportedException</code>
+                       and all derivatives
+                  </li>
+                  <li>
+
+
+                        <code>System.ArgumentException</code>
+                       (only from indexed get)
+                  </li>
+                  <li>
+
+
+                        <code>KeyNotFoundException</code>
+                       (only from indexed get)
+                  </li>
+                </ul>
+</p>
+<h2>Event Accessor Methods</h2>
+<p>
+                Event accessors should be simple operations that do not throw exceptions. An event should not throw an exception when you try to add or remove an event handler.
+                The following exceptions are allowed to be thrown from an event accesor:
+                <ul>
+                  <li>
+
+
+                        <code>System.InvalidOperationException</code>
+                       and all derivatives (including <code>System.ObjectDisposedException</code>)
+                  </li>
+                  <li>
+
+
+                        <code>System.NotSupportedException</code>
+                       and all derivatives
+                  </li>
+                  <li>
+
+
+                        <code>ArgumentException</code>
+                       and derivatives
+                  </li>
+                </ul>
+</p>
+<h2>Equals Methods</h2>
+<p>
+                The following Equals methods should not throw exceptions:
+                <ul>
+                  <li>
+
+
+                        <code>Object.Equals</code>
+
+
+                  </li>
+                  <li>
+
+                      M:IEquatable.Equals
+
+                  </li>
+                </ul>
+                An Equals method should return true or false instead of throwing an exception. For example, if Equals is passed two mismatched types it should just return false instead of throwing an <code>ArgumentException</code>.
+</p>
+<h2>GetHashCode Methods</h2>
+<p>
+                The following GetHashCode methods should usually not throw exceptions:
+                <ul>
+                  <li>
+
+
+                        <code>GetHashCode</code>
+
+
+                  </li>
+                  <li>
+
+                      M:IEqualityComparer.GetHashCode(T)
+
+                  </li>
+                </ul>
+
+                  GetHashCode should always return a value. Otherwise, you can lose items in the hash table.
+                The versions of GetHashCode that take an argument can throw an <code>ArgumentException</code>. However, Object.GetHashCode should never throw an exception.
+</p>
+<h2>ToString Methods</h2>
+<p>
+                The debugger uses <code>Object.ToString</code> to help display information about objects in string format. Therefore, ToString should not change the state of an object and it should not throw exceptions.
+</p>
+<h2>Static Constructors</h2>
+<p>
+                Throwing exceptions from a static constructor causes the type to be unusable in the current application domain. You should have a very good reason (such as a security issue) for throwing an exception from a static constructor.
+</p>
+<h2>Finalizers</h2>
+<p>
+                Throwing an exception from a finalizer causes the CLR to fail fast, which tears down the process. Therefore, throwing exceptions in a finalizer should always be avoided.
+</p>
+<h2>Dispose Methods</h2>
+<p>
+                A <code>IDisposable.Dispose</code> method should not throw an exception. Dispose is often called as part of the clean up logic in a finally clause. Therefore, explicitly throwing an exception from Dispose forces the user to add exception handling inside the finally clause.
+                The Dispose(false) code path should never throw exceptions, because this is almost always called from a finalizer.
+</p>
+<h2>Equality Operators (==, !=)</h2>
+<p>
+                Like Equals methods, equality operators should return either true or false and should not throw exceptions.
+</p>
+<h2>Implicit Cast Operators</h2>
+<p>
+                Because the user is often unaware that an implicit cast operator has been called, an exception thrown by the implicit cast operator is completely unexpected. Therefore, no exceptions should be thrown from implicit cast operators.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+            For property getters, either change the logic so that it no longer has to throw an exception, or change the property into a method.
+            For all other method types listed previously, change the logic so that it no longer must throw an exception.
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            It is safe to suppress a warning from this rule if the violation was caused by an exception declaration instead of a thrown exception.
+</p>
+<h2>Related Rules</h2>
+<p>
+
+
+                CA2219: Do not raise exceptions in exception clauses
+
+
+</p>]]></description>
   </rule>
+
 
   <rule key="CA1300">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1300]]></name>
-    <description>CA1300</description>
+    <description><![CDATA[CA1300]]></description>
   </rule>
+
 
   <rule key="CA1301">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1301]]></name>
-    <description>CA1301</description>
+    <description><![CDATA[CA1301]]></description>
   </rule>
+
 
   <rule key="CA1302">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1302]]></name>
-    <description>CA1302</description>
+    <description><![CDATA[CA1302]]></description>
   </rule>
+
 
   <rule key="CA1303">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1303]]></name>
-    <description>CA1303</description>
+    <description><![CDATA[CA1303]]></description>
   </rule>
+
 
   <rule key="CA1304">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1304]]></name>
-    <description>CA1304</description>
+    <description><![CDATA[CA1304]]></description>
   </rule>
+
 
   <rule key="CA1305">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1305]]></name>
-    <description>CA1305</description>
+    <description><![CDATA[CA1305]]></description>
   </rule>
+
 
   <rule key="CA1306">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1306]]></name>
-    <description>CA1306</description>
+    <description><![CDATA[CA1306]]></description>
   </rule>
+
 
   <rule key="CA1307">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1307]]></name>
-    <description>CA1307</description>
+    <description><![CDATA[CA1307]]></description>
   </rule>
+
 
   <rule key="CA1308">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1308]]></name>
-    <description>CA1308</description>
+    <description><![CDATA[CA1308]]></description>
   </rule>
+
 
   <rule key="CA1309">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1309]]></name>
-    <description>CA1309</description>
+    <description><![CDATA[CA1309]]></description>
   </rule>
+
 
   <rule key="CA1400">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1400]]></name>
-    <description>CA1400</description>
+    <description><![CDATA[CA1400]]></description>
   </rule>
+
 
   <rule key="CA1401">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1401]]></name>
-    <description>CA1401</description>
+    <description><![CDATA[CA1401]]></description>
   </rule>
+
 
   <rule key="CA1402">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1402]]></name>
-    <description>CA1402</description>
+    <description><![CDATA[CA1402]]></description>
   </rule>
+
 
   <rule key="CA1403">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1403]]></name>
-    <description>CA1403</description>
+    <description><![CDATA[CA1403]]></description>
   </rule>
+
 
   <rule key="CA1404">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1404]]></name>
-    <description>CA1404</description>
+    <description><![CDATA[CA1404]]></description>
   </rule>
+
 
   <rule key="CA1405">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1405]]></name>
-    <description>CA1405</description>
+    <description><![CDATA[CA1405]]></description>
   </rule>
+
 
   <rule key="CA1406">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1406]]></name>
-    <description>CA1406</description>
+    <description><![CDATA[CA1406]]></description>
   </rule>
+
 
   <rule key="CA1407">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1407]]></name>
-    <description>CA1407</description>
+    <description><![CDATA[CA1407]]></description>
   </rule>
+
 
   <rule key="CA1408">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1408]]></name>
-    <description>CA1408</description>
+    <description><![CDATA[CA1408]]></description>
   </rule>
+
 
   <rule key="CA1409">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1409]]></name>
-    <description>CA1409</description>
+    <description><![CDATA[CA1409]]></description>
   </rule>
+
 
   <rule key="CA1410">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1410]]></name>
-    <description>CA1410</description>
+    <description><![CDATA[CA1410]]></description>
   </rule>
+
 
   <rule key="CA1411">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1411]]></name>
-    <description>CA1411</description>
+    <description><![CDATA[CA1411]]></description>
   </rule>
+
 
   <rule key="CA1412">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1412]]></name>
-    <description>CA1412</description>
+    <description><![CDATA[CA1412]]></description>
   </rule>
+
 
   <rule key="CA1413">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1413]]></name>
-    <description>CA1413</description>
+    <description><![CDATA[CA1413]]></description>
   </rule>
+
 
   <rule key="CA1414">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1414]]></name>
-    <description>CA1414</description>
+    <description><![CDATA[CA1414]]></description>
   </rule>
+
 
   <rule key="CA1415">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1415]]></name>
-    <description>CA1415</description>
+    <description><![CDATA[CA1415]]></description>
   </rule>
+
 
   <rule key="CA1500">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1500]]></name>
-    <description>CA1500</description>
+    <description><![CDATA[CA1500]]></description>
   </rule>
+
 
   <rule key="CA1501">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1501]]></name>
-    <description>CA1501</description>
+    <description><![CDATA[CA1501]]></description>
   </rule>
+
 
   <rule key="CA1502">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1502]]></name>
-    <description>CA1502</description>
+    <description><![CDATA[CA1502]]></description>
   </rule>
+
 
   <rule key="CA1504">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1504]]></name>
-    <description>CA1504</description>
+    <description><![CDATA[CA1504]]></description>
   </rule>
+
 
   <rule key="CA1505">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1505]]></name>
-    <description>CA1505</description>
+    <description><![CDATA[CA1505]]></description>
   </rule>
+
 
   <rule key="CA1506">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1506]]></name>
-    <description>CA1506</description>
+    <description><![CDATA[CA1506]]></description>
   </rule>
+
 
   <rule key="CA1600">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1600]]></name>
-    <description>CA1600</description>
+    <description><![CDATA[CA1600]]></description>
   </rule>
+
 
   <rule key="CA1601">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1601]]></name>
-    <description>CA1601</description>
+    <description><![CDATA[CA1601]]></description>
   </rule>
+
 
   <rule key="CA1700">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1700]]></name>
-    <description>CA1700</description>
+    <description><![CDATA[CA1700]]></description>
   </rule>
+
 
   <rule key="CA1701">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1701]]></name>
-    <description>CA1701</description>
+    <description><![CDATA[CA1701]]></description>
   </rule>
+
 
   <rule key="CA1702">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1702]]></name>
-    <description>CA1702</description>
+    <description><![CDATA[CA1702]]></description>
   </rule>
+
 
   <rule key="CA1703">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1703]]></name>
-    <description>CA1703</description>
+    <description><![CDATA[CA1703]]></description>
   </rule>
+
 
   <rule key="CA1704">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1704]]></name>
-    <description>CA1704</description>
+    <description><![CDATA[CA1704]]></description>
   </rule>
+
 
   <rule key="CA1707">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1707]]></name>
-    <description>CA1707</description>
+    <description><![CDATA[CA1707]]></description>
   </rule>
+
 
   <rule key="CA1708">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1708]]></name>
-    <description>CA1708</description>
+    <description><![CDATA[CA1708]]></description>
   </rule>
+
 
   <rule key="CA1709">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1709]]></name>
-    <description>CA1709</description>
+    <description><![CDATA[CA1709]]></description>
   </rule>
+
 
   <rule key="CA1710">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1710]]></name>
-    <description>CA1710</description>
+    <description><![CDATA[CA1710]]></description>
   </rule>
+
 
   <rule key="CA1711">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1711]]></name>
-    <description>CA1711</description>
+    <description><![CDATA[CA1711]]></description>
   </rule>
+
 
   <rule key="CA1712">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1712]]></name>
-    <description>CA1712</description>
+    <description><![CDATA[CA1712]]></description>
   </rule>
+
 
   <rule key="CA1713">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1713]]></name>
-    <description>CA1713</description>
+    <description><![CDATA[CA1713]]></description>
   </rule>
+
 
   <rule key="CA1714">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1714]]></name>
-    <description>CA1714</description>
+    <description><![CDATA[CA1714]]></description>
   </rule>
+
 
   <rule key="CA1715">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1715]]></name>
-    <description>CA1715</description>
+    <description><![CDATA[CA1715]]></description>
   </rule>
+
 
   <rule key="CA1716">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1716]]></name>
-    <description>CA1716</description>
+    <description><![CDATA[CA1716]]></description>
   </rule>
+
 
   <rule key="CA1717">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1717]]></name>
-    <description>CA1717</description>
+    <description><![CDATA[CA1717]]></description>
   </rule>
+
 
   <rule key="CA1719">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1719]]></name>
-    <description>CA1719</description>
+    <description><![CDATA[CA1719]]></description>
   </rule>
+
 
   <rule key="CA1720">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1720]]></name>
-    <description>CA1720</description>
+    <description><![CDATA[CA1720]]></description>
   </rule>
+
 
   <rule key="CA1721">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1721]]></name>
-    <description>CA1721</description>
+    <description><![CDATA[CA1721]]></description>
   </rule>
+
 
   <rule key="CA1722">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1722]]></name>
-    <description>CA1722</description>
+    <description><![CDATA[CA1722]]></description>
   </rule>
+
 
   <rule key="CA1724">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1724]]></name>
-    <description>CA1724</description>
+    <description><![CDATA[CA1724]]></description>
   </rule>
+
 
   <rule key="CA1725">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1725]]></name>
-    <description>CA1725</description>
+    <description><![CDATA[CA1725]]></description>
   </rule>
+
 
   <rule key="CA1726">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1726]]></name>
-    <description>CA1726</description>
+    <description><![CDATA[CA1726]]></description>
   </rule>
+
 
   <rule key="CA1800">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1800]]></name>
-    <description>CA1800</description>
+    <description><![CDATA[CA1800]]></description>
   </rule>
+
 
   <rule key="CA1801">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1801]]></name>
-    <description>CA1801</description>
+    <description><![CDATA[CA1801]]></description>
   </rule>
+
 
   <rule key="CA1802">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1802]]></name>
-    <description>CA1802</description>
+    <description><![CDATA[CA1802]]></description>
   </rule>
+
 
   <rule key="CA1804">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1804]]></name>
-    <description>CA1804</description>
+    <description><![CDATA[CA1804]]></description>
   </rule>
+
 
   <rule key="CA1806">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1806]]></name>
-    <description>CA1806</description>
+    <description><![CDATA[CA1806]]></description>
   </rule>
+
 
   <rule key="CA1809">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1809]]></name>
-    <description>CA1809</description>
+    <description><![CDATA[CA1809]]></description>
   </rule>
+
 
   <rule key="CA1810">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1810]]></name>
-    <description>CA1810</description>
+    <description><![CDATA[CA1810]]></description>
   </rule>
+
 
   <rule key="CA1811">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1811]]></name>
-    <description>CA1811</description>
+    <description><![CDATA[CA1811]]></description>
   </rule>
+
 
   <rule key="CA1812">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1812]]></name>
-    <description>CA1812</description>
+    <description><![CDATA[CA1812]]></description>
   </rule>
+
 
   <rule key="CA1813">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1813]]></name>
-    <description>CA1813</description>
+    <description><![CDATA[CA1813]]></description>
   </rule>
+
 
   <rule key="CA1814">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1814]]></name>
-    <description>CA1814</description>
+    <description><![CDATA[CA1814]]></description>
   </rule>
+
 
   <rule key="CA1815">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1815]]></name>
-    <description>CA1815</description>
+    <description><![CDATA[CA1815]]></description>
   </rule>
+
 
   <rule key="CA1816">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1816]]></name>
-    <description>CA1816</description>
+    <description><![CDATA[CA1816]]></description>
   </rule>
+
 
   <rule key="CA1819">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1819]]></name>
-    <description>CA1819</description>
+    <description><![CDATA[CA1819]]></description>
   </rule>
+
 
   <rule key="CA1820">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1820]]></name>
-    <description>CA1820</description>
+    <description><![CDATA[CA1820]]></description>
   </rule>
+
 
   <rule key="CA1821">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1821]]></name>
-    <description>CA1821</description>
+    <description><![CDATA[CA1821]]></description>
   </rule>
+
 
   <rule key="CA1822">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1822]]></name>
-    <description>CA1822</description>
+    <description><![CDATA[CA1822]]></description>
   </rule>
+
 
   <rule key="CA1823">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1823]]></name>
-    <description>CA1823</description>
+    <description><![CDATA[CA1823]]></description>
   </rule>
+
 
   <rule key="CA1824">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1824]]></name>
-    <description>CA1824</description>
+    <description><![CDATA[CA1824]]></description>
   </rule>
+
 
   <rule key="CA1900">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1900]]></name>
-    <description>CA1900</description>
+    <description><![CDATA[CA1900]]></description>
   </rule>
+
 
   <rule key="CA1901">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1901]]></name>
-    <description>CA1901</description>
+    <description><![CDATA[CA1901]]></description>
   </rule>
+
 
   <rule key="CA1903">
     <priority>MAJOR</priority>
     <name><![CDATA[CA1903]]></name>
-    <description>CA1903</description>
+    <description><![CDATA[CA1903]]></description>
   </rule>
+
 
   <rule key="CA2000">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2000]]></name>
-    <description>CA2000</description>
+    <description><![CDATA[CA2000]]></description>
   </rule>
+
 
   <rule key="CA2001">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2001]]></name>
-    <description>CA2001</description>
+    <description><![CDATA[CA2001]]></description>
   </rule>
+
 
   <rule key="CA2002">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2002]]></name>
-    <description>CA2002</description>
+    <description><![CDATA[CA2002]]></description>
   </rule>
+
 
   <rule key="CA2003">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2003]]></name>
-    <description>CA2003</description>
+    <description><![CDATA[CA2003]]></description>
   </rule>
+
 
   <rule key="CA2004">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2004]]></name>
-    <description>CA2004</description>
+    <description><![CDATA[CA2004]]></description>
   </rule>
+
 
   <rule key="CA2006">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2006]]></name>
-    <description>CA2006</description>
+    <description><![CDATA[CA2006]]></description>
   </rule>
+
 
   <rule key="CA2100">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2100]]></name>
-    <description>CA2100</description>
+    <description><![CDATA[CA2100]]></description>
   </rule>
+
 
   <rule key="CA2101">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2101]]></name>
-    <description>CA2101</description>
+    <description><![CDATA[CA2101]]></description>
   </rule>
+
 
   <rule key="CA2102">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2102]]></name>
-    <description>CA2102</description>
+    <description><![CDATA[CA2102]]></description>
   </rule>
+
 
   <rule key="CA2103">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2103]]></name>
-    <description>CA2103</description>
+    <description><![CDATA[CA2103]]></description>
   </rule>
+
 
   <rule key="CA2104">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2104]]></name>
-    <description>CA2104</description>
+    <description><![CDATA[CA2104]]></description>
   </rule>
+
 
   <rule key="CA2105">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2105]]></name>
-    <description>CA2105</description>
+    <description><![CDATA[CA2105]]></description>
   </rule>
+
 
   <rule key="CA2106">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2106]]></name>
-    <description>CA2106</description>
+    <description><![CDATA[CA2106]]></description>
   </rule>
+
 
   <rule key="CA2107">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2107]]></name>
-    <description>CA2107</description>
+    <description><![CDATA[CA2107]]></description>
   </rule>
+
 
   <rule key="CA2108">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2108]]></name>
-    <description>CA2108</description>
+    <description><![CDATA[CA2108]]></description>
   </rule>
+
 
   <rule key="CA2109">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2109]]></name>
-    <description>CA2109</description>
+    <description><![CDATA[CA2109]]></description>
   </rule>
+
 
   <rule key="CA2111">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2111]]></name>
-    <description>CA2111</description>
+    <description><![CDATA[CA2111]]></description>
   </rule>
+
 
   <rule key="CA2112">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2112]]></name>
-    <description>CA2112</description>
+    <description><![CDATA[CA2112]]></description>
   </rule>
+
 
   <rule key="CA2114">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2114]]></name>
-    <description>CA2114</description>
+    <description><![CDATA[CA2114]]></description>
   </rule>
+
 
   <rule key="CA2115">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2115]]></name>
-    <description>CA2115</description>
+    <description><![CDATA[CA2115]]></description>
   </rule>
+
 
   <rule key="CA2116">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2116]]></name>
-    <description>CA2116</description>
+    <description><![CDATA[CA2116]]></description>
   </rule>
+
 
   <rule key="CA2117">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2117]]></name>
-    <description>CA2117</description>
+    <description><![CDATA[CA2117]]></description>
   </rule>
+
 
   <rule key="CA2118">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2118]]></name>
-    <description>CA2118</description>
+    <description><![CDATA[CA2118]]></description>
   </rule>
+
 
   <rule key="CA2119">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2119]]></name>
-    <description>CA2119</description>
+    <description><![CDATA[CA2119]]></description>
   </rule>
+
 
   <rule key="CA2120">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2120]]></name>
-    <description>CA2120</description>
+    <description><![CDATA[CA2120]]></description>
   </rule>
+
 
   <rule key="CA2121">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2121]]></name>
-    <description>CA2121</description>
+    <description><![CDATA[CA2121]]></description>
   </rule>
+
 
   <rule key="CA2122">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2122]]></name>
-    <description>CA2122</description>
+    <description><![CDATA[CA2122]]></description>
   </rule>
+
 
   <rule key="CA2123">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2123]]></name>
-    <description>CA2123</description>
+    <description><![CDATA[CA2123]]></description>
   </rule>
+
 
   <rule key="CA2124">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2124]]></name>
-    <description>CA2124</description>
+    <description><![CDATA[CA2124]]></description>
   </rule>
+
 
   <rule key="CA2126">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2126]]></name>
-    <description>CA2126</description>
+    <description><![CDATA[CA2126]]></description>
   </rule>
+
 
   <rule key="CA2130">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2130]]></name>
-    <description>CA2130</description>
+    <description><![CDATA[CA2130]]></description>
   </rule>
+
 
   <rule key="CA2131">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2131]]></name>
-    <description>CA2131</description>
+    <description><![CDATA[CA2131]]></description>
   </rule>
+
 
   <rule key="CA2132">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2132]]></name>
-    <description>CA2132</description>
+    <description><![CDATA[CA2132]]></description>
   </rule>
+
 
   <rule key="CA2133">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2133]]></name>
-    <description>CA2133</description>
+    <description><![CDATA[CA2133]]></description>
   </rule>
+
 
   <rule key="CA2134">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2134]]></name>
-    <description>CA2134</description>
+    <description><![CDATA[CA2134]]></description>
   </rule>
+
 
   <rule key="CA2135">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2135]]></name>
-    <description>CA2135</description>
+    <description><![CDATA[CA2135]]></description>
   </rule>
+
 
   <rule key="CA2136">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2136]]></name>
-    <description>CA2136</description>
+    <description><![CDATA[CA2136]]></description>
   </rule>
+
 
   <rule key="CA2137">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2137]]></name>
-    <description>CA2137</description>
+    <description><![CDATA[CA2137]]></description>
   </rule>
+
 
   <rule key="CA2138">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2138]]></name>
-    <description>CA2138</description>
+    <description><![CDATA[CA2138]]></description>
   </rule>
+
 
   <rule key="CA2139">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2139]]></name>
-    <description>CA2139</description>
+    <description><![CDATA[CA2139]]></description>
   </rule>
+
 
   <rule key="CA2140">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2140]]></name>
-    <description>CA2140</description>
+    <description><![CDATA[CA2140]]></description>
   </rule>
+
 
   <rule key="CA2141">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2141]]></name>
-    <description>CA2141</description>
+    <description><![CDATA[CA2141]]></description>
   </rule>
+
 
   <rule key="CA2142">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2142]]></name>
-    <description>CA2142</description>
+    <description><![CDATA[CA2142]]></description>
   </rule>
+
 
   <rule key="CA2143">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2143]]></name>
-    <description>CA2143</description>
+    <description><![CDATA[CA2143]]></description>
   </rule>
+
 
   <rule key="CA2144">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2144]]></name>
-    <description>CA2144</description>
+    <description><![CDATA[CA2144]]></description>
   </rule>
+
 
   <rule key="CA2145">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2145]]></name>
-    <description>CA2145</description>
+    <description><![CDATA[CA2145]]></description>
   </rule>
+
 
   <rule key="CA2146">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2146]]></name>
-    <description>CA2146</description>
+    <description><![CDATA[CA2146]]></description>
   </rule>
+
 
   <rule key="CA2147">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2147]]></name>
-    <description>CA2147</description>
+    <description><![CDATA[CA2147]]></description>
   </rule>
+
 
   <rule key="CA2149">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2149]]></name>
-    <description>CA2149</description>
+    <description><![CDATA[CA2149]]></description>
   </rule>
+
 
   <rule key="CA2151">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2151]]></name>
-    <description>CA2151</description>
+    <description><![CDATA[CA2151]]></description>
   </rule>
+
 
   <rule key="CA2200">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2200]]></name>
-    <description>CA2200</description>
+    <description><![CDATA[CA2200]]></description>
   </rule>
+
 
   <rule key="CA2201">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2201]]></name>
-    <description>CA2201</description>
+    <description><![CDATA[CA2201]]></description>
   </rule>
+
 
   <rule key="CA2202">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2202]]></name>
-    <description>CA2202</description>
+    <description><![CDATA[CA2202]]></description>
   </rule>
+
 
   <rule key="CA2204">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2204]]></name>
-    <description>CA2204</description>
+    <description><![CDATA[CA2204]]></description>
   </rule>
+
 
   <rule key="CA2205">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2205]]></name>
-    <description>CA2205</description>
+    <description><![CDATA[CA2205]]></description>
   </rule>
+
 
   <rule key="CA2207">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2207]]></name>
-    <description>CA2207</description>
+    <description><![CDATA[CA2207]]></description>
   </rule>
+
 
   <rule key="CA2208">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2208]]></name>
-    <description>CA2208</description>
+    <description><![CDATA[CA2208]]></description>
   </rule>
+
 
   <rule key="CA2210">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA2210]]></name>
-    <description>CA2210</description>
+    <name><![CDATA[CA2210: Assemblies should have valid strong names]]></name>
+    <description><![CDATA[
+<h2>Cause</h2>
+<p>
+            An assembly is not signed with a strong name, the strong name could not be verified, or the strong name would not be valid without the current registry settings of the computer.
+</p>
+<h2>Rule Description</h2>
+<p>
+            This rule retrieves and verifies the strong name of an assembly. A violation occurs if any of the following are true:
+            <ul>
+              <li>
+                The assembly does not have a strong name.
+              </li>
+              <li>
+                The assembly was altered after signing.
+              </li>
+              <li>
+                The assembly is delay-signed.
+              </li>
+              <li>
+                The assembly was incorrectly signed, or signing failed.
+              </li>
+              <li>
+                The assembly requires registry settings to pass verification. For example, the Strong Name tool (Sn.exe) was used to skip verification for the assembly.
+              </li>
+            </ul>
+            The strong name protects clients from unknowingly loading an assembly that has been tampered with. Assemblies without strong names should not be deployed outside very limited scenarios. If you share or distribute assemblies that are not correctly signed, the assembly can be tampered with, the common language runtime might not load the assembly, or the user might have to disable verification on his or her computer. An assembly without a strong name has from the following drawbacks:
+            <ul>
+              <li>
+                Its origins cannot be verified.
+              </li>
+              <li>
+                The common language runtime cannot warn users if the contents of the assembly have been altered.
+              </li>
+              <li>
+                It cannot be loaded into the global assembly cache.
+              </li>
+            </ul>
+            Note that to load and analyze a delay-signed assembly, you must disable verification for the assembly.
+</p>
+<h2>How to Fix Violations</h2>
+<p>
+
+              To create a key file
+            Use one of the following procedures:
+            <ul>
+              <li>
+                Use the Assembly Linker tool (Al.exe) provided by the .NET Framework SDK.
+              </li>
+              <li>
+                For the .NET Framework v1.0 or v1.1, use either the <code>System.Reflection.AssemblyKeyFileAttribute</code> or <code>System.Reflection.AssemblyKeyNameAttribute</code> attribute.
+              </li>
+              <li>
+                For the .NET Framework 2.0, use either the /keyfile or /keycontainer compiler option /KEYFILE (Specify Key or Key Pair to Sign an Assembly) or <code>/KEYCONTAINER (Specify a Key Container to Sign an Assembly)</code> linker option in C++).
+              </li>
+            </ul>
+
+              To sign your assembly with a strong name in Visual Studio
+
+
+              <li>
+                In Visual Studio, open your solution.
+              </li>
+              <li>
+                In Solution Explorer, right-click your project and then click Properties.
+              </li>
+              <li>
+                Click the Signing tab, and select the Sign the assembly check box.
+              </li>
+              <li>
+                From Choose a strong name key file, select New.
+                The Create Strong Name Key window will display.
+              </li>
+              <li>
+                In Key file name, type a name for your strong name key.
+              </li>
+              <li>
+                Choose whether to protect the key with a password, and then click OK.
+              </li>
+              <li>
+                In Solution Explorer, right-click your project and then click Build.
+              </li>
+
+
+
+
+
+              To sign your assembly with a strong name outside Visual Studio
+
+            <ul>
+              <li>
+                Use the strong name tool (Sn.exe) that is provided by the .NET Framework SDK. For more information, see Sn.exe (Strong Name Tool).
+              </li>
+            </ul>
+</p>
+<h2>When to Suppress Warnings</h2>
+<p>
+            Only suppress a warning from this rule if the assembly is used in an environment where tampering with the contents is not a concern.
+</p>]]></description>
   </rule>
+
 
   <rule key="CA2211">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2211]]></name>
-    <description>CA2211</description>
+    <description><![CDATA[CA2211]]></description>
   </rule>
+
 
   <rule key="CA2212">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2212]]></name>
-    <description>CA2212</description>
+    <description><![CDATA[CA2212]]></description>
   </rule>
+
 
   <rule key="CA2213">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2213]]></name>
-    <description>CA2213</description>
+    <description><![CDATA[CA2213]]></description>
   </rule>
+
 
   <rule key="CA2214">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2214]]></name>
-    <description>CA2214</description>
+    <description><![CDATA[CA2214]]></description>
   </rule>
+
 
   <rule key="CA2215">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2215]]></name>
-    <description>CA2215</description>
+    <description><![CDATA[CA2215]]></description>
   </rule>
+
 
   <rule key="CA2216">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2216]]></name>
-    <description>CA2216</description>
+    <description><![CDATA[CA2216]]></description>
   </rule>
+
 
   <rule key="CA2217">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2217]]></name>
-    <description>CA2217</description>
+    <description><![CDATA[CA2217]]></description>
   </rule>
+
 
   <rule key="CA2218">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2218]]></name>
-    <description>CA2218</description>
+    <description><![CDATA[CA2218]]></description>
   </rule>
+
 
   <rule key="CA2219">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2219]]></name>
-    <description>CA2219</description>
+    <description><![CDATA[CA2219]]></description>
   </rule>
+
 
   <rule key="CA2220">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2220]]></name>
-    <description>CA2220</description>
+    <description><![CDATA[CA2220]]></description>
   </rule>
+
 
   <rule key="CA2221">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2221]]></name>
-    <description>CA2221</description>
+    <description><![CDATA[CA2221]]></description>
   </rule>
+
 
   <rule key="CA2222">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2222]]></name>
-    <description>CA2222</description>
+    <description><![CDATA[CA2222]]></description>
   </rule>
+
 
   <rule key="CA2223">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2223]]></name>
-    <description>CA2223</description>
+    <description><![CDATA[CA2223]]></description>
   </rule>
+
 
   <rule key="CA2224">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2224]]></name>
-    <description>CA2224</description>
+    <description><![CDATA[CA2224]]></description>
   </rule>
+
 
   <rule key="CA2225">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2225]]></name>
-    <description>CA2225</description>
+    <description><![CDATA[CA2225]]></description>
   </rule>
+
 
   <rule key="CA2226">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2226]]></name>
-    <description>CA2226</description>
+    <description><![CDATA[CA2226]]></description>
   </rule>
+
 
   <rule key="CA2227">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2227]]></name>
-    <description>CA2227</description>
+    <description><![CDATA[CA2227]]></description>
   </rule>
+
 
   <rule key="CA2228">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2228]]></name>
-    <description>CA2228</description>
+    <description><![CDATA[CA2228]]></description>
   </rule>
+
 
   <rule key="CA2229">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2229]]></name>
-    <description>CA2229</description>
+    <description><![CDATA[CA2229]]></description>
   </rule>
+
 
   <rule key="CA2230">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2230]]></name>
-    <description>CA2230</description>
+    <description><![CDATA[CA2230]]></description>
   </rule>
+
 
   <rule key="CA2231">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2231]]></name>
-    <description>CA2231</description>
+    <description><![CDATA[CA2231]]></description>
   </rule>
+
 
   <rule key="CA2232">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2232]]></name>
-    <description>CA2232</description>
+    <description><![CDATA[CA2232]]></description>
   </rule>
+
 
   <rule key="CA2233">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2233]]></name>
-    <description>CA2233</description>
+    <description><![CDATA[CA2233]]></description>
   </rule>
+
 
   <rule key="CA2234">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2234]]></name>
-    <description>CA2234</description>
+    <description><![CDATA[CA2234]]></description>
   </rule>
+
 
   <rule key="CA2235">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2235]]></name>
-    <description>CA2235</description>
+    <description><![CDATA[CA2235]]></description>
   </rule>
+
 
   <rule key="CA2236">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2236]]></name>
-    <description>CA2236</description>
+    <description><![CDATA[CA2236]]></description>
   </rule>
+
 
   <rule key="CA2237">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2237]]></name>
-    <description>CA2237</description>
+    <description><![CDATA[CA2237]]></description>
   </rule>
+
 
   <rule key="CA2238">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2238]]></name>
-    <description>CA2238</description>
+    <description><![CDATA[CA2238]]></description>
   </rule>
+
 
   <rule key="CA2239">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2239]]></name>
-    <description>CA2239</description>
+    <description><![CDATA[CA2239]]></description>
   </rule>
+
 
   <rule key="CA2240">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2240]]></name>
-    <description>CA2240</description>
+    <description><![CDATA[CA2240]]></description>
   </rule>
+
 
   <rule key="CA2241">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2241]]></name>
-    <description>CA2241</description>
+    <description><![CDATA[CA2241]]></description>
   </rule>
+
 
   <rule key="CA2242">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2242]]></name>
-    <description>CA2242</description>
+    <description><![CDATA[CA2242]]></description>
   </rule>
+
 
   <rule key="CA2243">
     <priority>MAJOR</priority>
     <name><![CDATA[CA2243]]></name>
-    <description>CA2243</description>
+    <description><![CDATA[CA2243]]></description>
   </rule>
+
 
   <rule key="CA5122">
     <priority>MAJOR</priority>
     <name><![CDATA[CA5122]]></name>
-    <description>CA5122</description>
+    <description><![CDATA[CA5122]]></description>
   </rule>
 
 </rules>
