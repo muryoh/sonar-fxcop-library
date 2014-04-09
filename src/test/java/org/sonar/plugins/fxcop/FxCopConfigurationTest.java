@@ -19,12 +19,14 @@
  */
 package org.sonar.plugins.fxcop;
 
+import com.google.common.collect.Maps;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.sonar.api.config.Settings;
 
 import java.io.File;
+import java.util.Map;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -34,6 +36,8 @@ public class FxCopConfigurationTest {
 
   @Rule
   public ExpectedException thrown = ExpectedException.none();
+
+  private static final String ASSEMBLY_PATH = "src/test/resources/FxCopConfigurationTest/MyLibrary.dll";
 
   @Test
   public void test() {
@@ -54,7 +58,7 @@ public class FxCopConfigurationTest {
   public void check_properties() {
     Settings settings = mock(Settings.class);
     when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
-    when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibrary.dll").getAbsolutePath());
+    when(settings.getString("fooAssemblyKey")).thenReturn(new File(ASSEMBLY_PATH).getAbsolutePath());
     when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(true);
 
     new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey").checkProperties(settings);
@@ -116,10 +120,23 @@ public class FxCopConfigurationTest {
 
     Settings settings = mock(Settings.class);
     when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
-    when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibrary.dll").getAbsolutePath());
+    when(settings.getString("fooAssemblyKey")).thenReturn(new File(ASSEMBLY_PATH).getAbsolutePath());
     when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(false);
 
     new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey").checkProperties(settings);
   }
 
+  @Test
+  public void check_deprecated_fxcop_assemblies_property() {
+    Settings settings = new Settings();
+    Map<String, String> props = Maps.newHashMap();
+    props.put("sonar.dotnet.assemblies", ASSEMBLY_PATH);
+    props.put("cmd.prop", "fake/path/FxCopCmd.exe");
+    settings.addProperties(props);
+
+    FxCopConfiguration conf = new FxCopConfiguration("", "", "assembly.prop", "cmd.prop");
+
+    conf.checkProperties(settings);
+    assertThat(settings.getString(conf.assemblyPropertyKey())).isEqualTo(ASSEMBLY_PATH);
+  }
 }
