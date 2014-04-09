@@ -139,4 +139,18 @@ public class FxCopConfigurationTest {
     conf.checkProperties(settings);
     assertThat(settings.getString(conf.assemblyPropertyKey())).isEqualTo(ASSEMBLY_PATH);
   }
+
+  @Test
+  public void check_deprecated_fxcopcmd_path_property() {
+    Settings settings = new Settings();
+    Map<String, String> props = Maps.newHashMap();
+    props.put("sonar.dotnet.assemblies", ASSEMBLY_PATH);
+    props.put("sonar.fxcop.installDirectory", "fake/path/FxCopCmd.exe");
+    settings.addProperties(props);
+
+    FxCopConfiguration conf = new FxCopConfiguration("", "", "assembly.prop", "cmd.prop");
+
+    conf.checkProperties(settings);
+    assertThat(settings.getString(conf.fxCopCmdPropertyKey())).isEqualTo("fake/path/FxCopCmd.exe");
+  }
 }

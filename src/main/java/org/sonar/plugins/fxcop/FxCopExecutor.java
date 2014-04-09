@@ -35,7 +35,7 @@ public class FxCopExecutor {
 
   public void execute(String executable, String assemblies, File rulesetFile, File reportFile) {
     int exitCode = CommandExecutor.create().execute(
-      Command.create(executable)
+      Command.create(getExecutable(executable))
         .addArgument("/file:" + assemblies)
         .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
         .addArgument("/out:" + reportFile.getAbsolutePath())
@@ -45,6 +45,19 @@ public class FxCopExecutor {
       TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
     Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || exitCode == EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD,
       "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");
+  }
+
+  /**
+   * Handles deprecated property: "installDirectory", which gives the path to the directory only.
+   */
+  private static String getExecutable(String propertyValue) {
+    String execName = "FxCopCmd.exe";
+
+    if (!propertyValue.endsWith(execName)) {
+      return (new File(propertyValue, execName)).getAbsolutePath();
+    } else {
+      return propertyValue;
+    }
   }
 
 }
