@@ -31,9 +31,7 @@ public class FxCopExecutor {
   private static final int EXIT_CODE_SUCCESS = 0;
   private static final int EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD = 1024;
 
-  private static final int FXCOPCMD_TIMEOUT_MINUTES = 30;
-
-  public void execute(String executable, String assemblies, File rulesetFile, File reportFile) {
+  public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout) {
     int exitCode = CommandExecutor.create().execute(
       Command.create(getExecutable(executable))
         .addArgument("/file:" + assemblies)
@@ -42,7 +40,7 @@ public class FxCopExecutor {
         .addArgument("/outxsl:none")
         .addArgument("/forceoutput")
         .addArgument("/searchgac"),
-      TimeUnit.MINUTES.toMillis(FXCOPCMD_TIMEOUT_MINUTES));
+      TimeUnit.MINUTES.toMillis(timeout));
     Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || exitCode == EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD,
       "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");
   }

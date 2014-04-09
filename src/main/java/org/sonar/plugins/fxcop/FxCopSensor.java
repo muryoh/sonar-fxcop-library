@@ -90,7 +90,8 @@ public class FxCopSensor implements Sensor {
 
     File reportFile = new File(fileSystem.workingDir(), "fxcop-report.xml");
 
-    executor.execute(settings.getString(fxCopConf.fxCopCmdPropertyKey()), settings.getString(fxCopConf.assemblyPropertyKey()), rulesetFile, reportFile);
+    executor.execute(settings.getString(fxCopConf.fxCopCmdPropertyKey()), settings.getString(fxCopConf.assemblyPropertyKey()),
+      rulesetFile, reportFile, settings.getInt(fxCopConf.timeoutPropertyKey()));
 
     for (FxCopIssue issue : parser.parse(reportFile)) {
       if (!hasFileAndLine(issue)) {
