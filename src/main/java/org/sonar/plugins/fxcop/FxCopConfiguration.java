@@ -71,8 +71,6 @@ public class FxCopConfiguration {
   private void checkFxCopCmdPathProperty(Settings settings) {
     if (settings.hasKey(DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY)) {
       fxCopCmdPropertyKey = DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY;
-    } else {
-      checkProperty(settings, fxCopCmdPropertyKey);
     }
   }
 

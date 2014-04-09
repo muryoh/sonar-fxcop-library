@@ -116,19 +116,6 @@ public class FxCopConfigurationTest {
   }
 
   @Test
-  public void check_properties_fxcopcmd_property() {
-    thrown.expect(IllegalArgumentException.class);
-    thrown.expectMessage("The property \"fooFxCopCmdPathKey\" must be set.");
-
-    Settings settings = mock(Settings.class);
-    when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
-    when(settings.getString("fooAssemblyKey")).thenReturn(new File(ASSEMBLY_PATH).getAbsolutePath());
-    when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(false);
-
-    new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "").checkProperties(settings);
-  }
-
-  @Test
   public void check_deprecated_fxcop_assemblies_property() {
     Settings settings = new Settings();
     Map<String, String> props = Maps.newHashMap();
