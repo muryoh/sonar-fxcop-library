@@ -26,7 +26,6 @@ import java.io.File;
 
 public class FxCopConfiguration {
 
-  private static final String DEPRECATED_FXCOP_ASSEMBLIES_PROPERTY_KEY = "sonar.dotnet.assemblies";
   private static final String DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY = "sonar.fxcop.installDirectory";
   private static final String DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY = "sonar.fxcop.timeoutMinutes";
 
@@ -83,11 +82,7 @@ public class FxCopConfiguration {
   }
 
   private void checkAssemblyProperty(Settings settings) {
-    if (settings.hasKey(DEPRECATED_FXCOP_ASSEMBLIES_PROPERTY_KEY)) {
-      assemblyPropertyKey = DEPRECATED_FXCOP_ASSEMBLIES_PROPERTY_KEY;
-    } else {
-      checkProperty(settings, assemblyPropertyKey);
-    }
+    checkProperty(settings, assemblyPropertyKey);
 
     String assemblyPath = settings.getString(assemblyPropertyKey);
 
