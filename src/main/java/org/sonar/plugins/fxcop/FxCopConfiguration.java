@@ -28,10 +28,11 @@ public class FxCopConfiguration {
 
   private static final String DEPRECATED_FXCOP_ASSEMBLIES_PROPERTY_KEY = "sonar.dotnet.assemblies";
   private static final String DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY = "sonar.fxcop.installDirectory";
+  private static final String DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY = "sonar.fxcop.timeoutMinutes";
 
   private final String languageKey;
   private final String repositoryKey;
-  private final String timeoutPropertyKey;
+  private String timeoutPropertyKey;
   private String assemblyPropertyKey;
   private String fxCopCmdPropertyKey;
 
@@ -66,6 +67,13 @@ public class FxCopConfiguration {
   public void checkProperties(Settings settings) {
     checkAssemblyProperty(settings);
     checkFxCopCmdPathProperty(settings);
+    checkTimeoutProeprty(settings);
+  }
+
+  private void checkTimeoutProeprty(Settings settings) {
+    if (settings.hasKey(DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY)) {
+      timeoutPropertyKey = DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY;
+    }
   }
 
   private void checkFxCopCmdPathProperty(Settings settings) {
