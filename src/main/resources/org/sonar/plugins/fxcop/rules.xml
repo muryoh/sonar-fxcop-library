@@ -700,11 +700,11 @@ Generally, both of the prior declarations should be avoided so that the type arg
 </p>
 <h2>Example Violation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a class (reference type) that derives from the non-generic CollectionBase class, which violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -779,17 +779,17 @@ namespace Samples
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 To fix a violation of this violation, you should either implement the generic interfaces or change the base class to a type that already implements both the generic and non-generic interfaces, such as the Collection&lt;T&gt; class.
 </p>
 <h2>Fix by Base Class Change</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example fixes the violation by changing the base class of the collection from the non-generic CollectionBase class to the generic Collection&lt;T&gt; (Collection(Of T) in Visual Basic) class.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -828,17 +828,17 @@ namespace Samples
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 Changing the base class of an already released class is considered a breaking change to existing consumers.
 </p>
 <h2>Fix by Interface Implementation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example fixes the violation by implementing these generic interfaces: IEnumerable&lt;T&gt;, ICollection&lt;T&gt;, and IList&lt;T&gt; (IEnumerable(Of T), ICollection(Of T), and IList(Of T) in Visual Basic).
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -1278,11 +1278,11 @@ return left.Equals(right);
 </p>
 <h2>Custom Attributes Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows two attributes that define a mandatory (positional) parameter. The first implementation of the attribute is incorrectly defined. The second implementation is correct.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -1347,12 +1347,12 @@ namespace DesignLibrary
 </p>
 <h2>Positional and Named Arguments</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 Positional and named arguments make to clear to consumers of your library which arguments are mandatory for the attribute and which arguments are optional.
                 The following example shows an implementation of an attribute that has both positional and named arguments.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -1399,11 +1399,11 @@ namespace DesignLibrary
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 The following example shows how to apply the custom attribute to two properties.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -1515,11 +1515,11 @@ public string MyOtherProperty
 </p>
 <h2>Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 Methods that implement the Try&lt;Something&gt; pattern, such as Int32.TryParse, do not raise this violation. The following example shows a structure (value type) that implements the Int32.TryParse method.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -1880,11 +1880,11 @@ namespace Microsoft.Samples
 </p>
 <h2>Example of a Violation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows two enumerations that do not use the recommended underlying data type.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -1930,11 +1930,11 @@ namespace DesignLibrary
 </p>
 <h2>Example of How to Fix</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example fixes the previous violation by changing the underlying data type to Int32.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -2784,11 +2784,11 @@ namespace Samples
 </p>
 <h2>Example of a Violation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a type that violates the rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -2835,11 +2835,11 @@ namespace DesignLibrary
 </p>
 <h2>Fix with the Static Modifier</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows how to fix a violation of this rule by marking the type with the <code>static</code> modifier.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -3389,12 +3389,12 @@ public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
 </p>
 <h2>Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 Because the NativeMethods class should not be marked by using SuppressUnmanagedCodeSecurityAttribute, P/Invokes that are put in it will require UnmanagedCode permission. Because most applications run from the local computer and run together with full trust, this is usually not a problem. However, if you are developing reusable libraries, you should consider defining a SafeNativeMethods or UnsafeNativeMethods class.
                 The following example shows an Interaction.Beep method that wraps the MessageBeep function from user32.dll. The MessageBeep P/Invoke is put in the NativeMethods class.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -3438,12 +3438,12 @@ internal static class NativeMethods
 </p>
 <h2>SafeNativeMethods Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 P/Invoke methods that can be safely exposed to any application and that do not have any side effects should be put in a class that is named SafeNativeMethods. You do not have to demand permissions and you do not have to pay much attention to where they are called from.
                 The following example shows an Environment.TickCount property that wraps the GetTickCount function from kernel32.dll.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -3490,12 +3490,12 @@ internal static class SafeNativeMethods
 </p>
 <h2>UnsafeNativeMethods Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 P/Invoke methods that cannot be safely called and that could cause side effects should be put in a class that is named UnsafeNativeMethods. These methods should be rigorously checked to make sure that they are not exposed to the user unintentionally. The rule {rule:cs-fxcop:CA2118} can help with this. Alternatively, the methods should have another permission that is demanded instead of UnmanagedCode when they use them.
                 The following example shows a Cursor.Hide method that wraps the ShowCursor function from user32.dll.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -3714,7 +3714,7 @@ internal static class UnsafeNativeMethods
 </p>
 <h2>Rule Description</h2>
 
-<h2>Property Get Methods</h2>
+<h3>Property Get Methods</h3>
 <p>
                 Properties are basically smart fields. Therefore, they should behave like a field as much as possible. Fields do not throw exceptions and neither should properties. If you have a property that throws an exception, consider making it a method.
                 The following exceptions are allowed to be thrown from a property get method:
@@ -3745,7 +3745,7 @@ internal static class UnsafeNativeMethods
                   </li>
                 </ul>
 </p>
-<h2>Event Accessor Methods</h2>
+<h3>Event Accessor Methods</h3>
 <p>
                 Event accessors should be simple operations that do not throw exceptions. An event should not throw an exception when you try to add or remove an event handler.
                 The following exceptions are allowed to be thrown from an event accesor:
@@ -3770,7 +3770,7 @@ internal static class UnsafeNativeMethods
                   </li>
                 </ul>
 </p>
-<h2>Equals Methods</h2>
+<h3>Equals Methods</h3>
 <p>
                 The following Equals methods should not throw exceptions:
                 <ul>
@@ -3789,7 +3789,7 @@ internal static class UnsafeNativeMethods
                 </ul>
                 An Equals method should return <code>true</code> or <code>false</code> instead of throwing an exception. For example, if Equals is passed two mismatched types it should just return <code>false</code> instead of throwing an <code>ArgumentException</code>.
 </p>
-<h2>GetHashCode Methods</h2>
+<h3>GetHashCode Methods</h3>
 <p>
                 The following GetHashCode methods should usually not throw exceptions:
                 <ul>
@@ -3810,28 +3810,28 @@ internal static class UnsafeNativeMethods
                   GetHashCode should always return a value. Otherwise, you can lose items in the hash table.
                 The versions of GetHashCode that take an argument can throw an <code>ArgumentException</code>. However, Object.GetHashCode should never throw an exception.
 </p>
-<h2>ToString Methods</h2>
+<h3>ToString Methods</h3>
 <p>
                 The debugger uses <code>Object.ToString</code> to help display information about objects in string format. Therefore, ToString should not change the state of an object and it should not throw exceptions.
 </p>
-<h2>Static Constructors</h2>
+<h3>Static Constructors</h3>
 <p>
                 Throwing exceptions from a static constructor causes the type to be unusable in the current application domain. You should have a very good reason (such as a security issue) for throwing an exception from a static constructor.
 </p>
-<h2>Finalizers</h2>
+<h3>Finalizers</h3>
 <p>
                 Throwing an exception from a finalizer causes the CLR to fail fast, which tears down the process. Therefore, throwing exceptions in a finalizer should always be avoided.
 </p>
-<h2>Dispose Methods</h2>
+<h3>Dispose Methods</h3>
 <p>
                 A <code>IDisposable.Dispose</code> method should not throw an exception. Dispose is often called as part of the clean up logic in a <code>finally</code> clause. Therefore, explicitly throwing an exception from Dispose forces the user to add exception handling inside the <code>finally</code> clause.
                 The Dispose(false) code path should never throw exceptions, because this is almost always called from a finalizer.
 </p>
-<h2>Equality Operators (==, !=)</h2>
+<h3>Equality Operators (==, !=)</h3>
 <p>
                 Like Equals methods, equality operators should return either <code>true</code> or <code>false</code> and should not throw exceptions.
 </p>
-<h2>Implicit Cast Operators</h2>
+<h3>Implicit Cast Operators</h3>
 <p>
                 Because the user is often unaware that an implicit cast operator has been called, an exception thrown by the implicit cast operator is completely unexpected. Therefore, no exceptions should be thrown from implicit cast operators.
 </p>
@@ -4612,11 +4612,11 @@ namespace Samples
 </p>
 <h2>Example Violation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a <code>static</code> method that violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -4673,18 +4673,18 @@ namespace Samples
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 In this example, the Book.FromPages method cannot be called from COM.
 </p>
 <h2>Example Fix</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 To fix the violation in the previous example, you could change the method to an instance method, but that does not make sense in this instance. A better solution is to explicitly apply ComVisible(false) to the method to make it clear to other developers that the method cannot be seen from COM.
                 The following example applies <code>ComRegisterFunctionAttribute</code> to the method.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -7632,11 +7632,11 @@ mc.Create();
 </p>
 <h2>Example of a Violation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a structure (value type) that violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -7685,11 +7685,11 @@ namespace Samples
 </p>
 <h2>Example of How to Fix</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example fixes the previous violation by overriding ValueType.Equals and implementing the equality operators (==, !=).
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -7864,11 +7864,11 @@ namespace Samples
 </p>
 <h2>Example Violation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a property that violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -7907,17 +7907,17 @@ namespace PerformanceLibrary
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 To fix a violation of this rule, either make the property a method or change the property to return a collection instead of an array.
 </p>
 <h2>Change the Property to a Method Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example fixes the violation by changing the property to a method.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -7960,13 +7960,13 @@ namespace PerformanceLibrary
 </p>
 <h2>Return a Collection Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example fixes the violation by changing the property to return a
 
                   ReadOnlyCollection.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -8007,11 +8007,11 @@ namespace PerformanceLibrary
 </p>
 <h2>Allowing Users to Modify a Property</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 You might want to allow the consumer of the class to modify a property. The following example shows a read/write property that violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -8051,11 +8051,11 @@ namespace PerformanceLibrary
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 The following example fixes the violation by changing the property to return a Collection.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -9677,7 +9677,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 </p>
 <h2>Pseudo-code Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following pseudo-code illustrates the pattern detected by this rule.
 </p><h2>MSDN Documentation</h2>
@@ -9803,7 +9803,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 </p>
 <h2>When to Suppress Warnings</h2>
 
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -9886,7 +9886,7 @@ namespace TransparencyWarningsDemo
 </p>
 <h2>When to Suppress Warnings</h2>
 
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -9966,7 +9966,7 @@ namespace TransparencyWarningsDemo
 </p>
 <h2>Examples</h2>
 
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -10369,7 +10369,7 @@ namespace TransparencyWarningsDemo
 </p>
 <h2>When to Suppress Warnings</h2>
 
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -11481,11 +11481,11 @@ namespace TransparencyWarningsDemo
 </p>
 <h2>Class Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a class (reference type) that violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -11548,11 +11548,11 @@ namespace Samples
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 The following example fixes the violation by overriding GetHashCode.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -11631,11 +11631,11 @@ namespace Samples
 </p>
 <h2>Structure Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a structure (value type) that violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -11708,11 +11708,11 @@ namespace Samples
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 The following example fixes the violation by overriding GetHashCode.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -11980,11 +11980,11 @@ namespace Samples
 </p>
 <h2>Examples of Inconsistent Equality Definitions</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a type with inconsistent definitions of equality. BadPoint changes the meaning of equality by providing a custom implementation of the equality operator, but does not override <code>Equals</code> so that it behaves identically.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -12057,11 +12057,11 @@ namespace UsageLibrary
 </p>
 <h2>Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a class (reference type) that violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -12134,11 +12134,11 @@ namespace Samples
 </p>
 <h2>Structure Example</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example shows a structure (value type) that violates this rule.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -13168,11 +13168,11 @@ return left.Equals(right);
 </p>
 <h2>Example of a Violation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 A method in the following example manipulates an integer that violates this rule. Visual Basic requires the Remove integer overflow option to be disabled for this to fire.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -13206,7 +13206,7 @@ namespace Samples
 
 
 </p>
-<h2>Comments</h2>
+<h3>Comments</h3>
 <p>
                 If the method in this example is passed MinValue, the operation would underflow. This causes the most significant bit of the result to be discarded. The following code shows how this occurs.
                 [C#]
@@ -13268,11 +13268,11 @@ End Sub
 </p>
 <h2>Fix with Input Parameter Validation</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example fixes the previous violation by validating the value of input.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
@@ -13310,12 +13310,12 @@ namespace Samples
 </p>
 <h2>Fix with a Checked Block</h2>
 
-<h2>Description</h2>
+<h3>Description</h3>
 <p>
                 The following example fixes the previous violation by wrapping the operation in a checked block. If the operation causes an overflow, a <code>System.OverflowException</code> will be thrown.
                 Note that checked blocks are not supported in Visual Basic.
 </p>
-<h2>Code</h2>
+<h3>Code</h3>
 <p>
 
 
