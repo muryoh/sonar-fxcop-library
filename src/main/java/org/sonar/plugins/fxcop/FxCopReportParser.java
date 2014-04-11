@@ -93,7 +93,7 @@ public class FxCopReportParser {
     }
 
     private void handleMessageTag() {
-      this.ruleKey = getRequiredAttribute("CheckId");
+      this.ruleKey = getRequiredAttribute("TypeName");
     }
 
     private void handleIssueTag() throws XMLStreamException {
