@@ -186,11 +186,11 @@ public class FxCopSensorTest {
     return issueBuilder;
   }
 
-  private static List<ActiveRule> mockActiveRules(String... activeRuleKeys) {
+  private static List<ActiveRule> mockActiveRules(String... activeRuleConfigKeys) {
     ImmutableList.Builder<ActiveRule> builder = ImmutableList.builder();
-    for (String activeRuleKey : activeRuleKeys) {
+    for (String activeRuleConfigKey : activeRuleConfigKeys) {
       ActiveRule activeRule = mock(ActiveRule.class);
-      when(activeRule.getRuleKey()).thenReturn(activeRuleKey);
+      when(activeRule.getConfigKey()).thenReturn(activeRuleConfigKey);
       builder.add(activeRule);
     }
     return builder.build();

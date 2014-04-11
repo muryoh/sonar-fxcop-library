@@ -30,7 +30,7 @@ import java.util.List;
 
 public class FxCopRulesetWriter {
 
-  public void write(List<String> ruleKeys, File file) {
+  public void write(List<String> ruleConfigKeys, File file) {
     StringBuilder sb = new StringBuilder();
 
     appendLine(sb, "<?xml version=\"1.0\" encoding=\"utf-8\"?>");
@@ -38,8 +38,8 @@ public class FxCopRulesetWriter {
 
     appendLine(sb, "  <Rules AnalyzerId=\"Microsoft.Analyzers.ManagedCodeAnalysis\" RuleNamespace=\"Microsoft.Rules.Managed\">");
 
-    for (String ruleKey : ruleKeys) {
-      appendLine(sb, "    <Rule Id=\"" + ruleKey + "\" Action=\"Error\" />");
+    for (String ruleConfigKey : ruleConfigKeys) {
+      appendLine(sb, "    <Rule Id=\"" + ruleConfigKey + "\" Action=\"Error\" />");
     }
 
     appendLine(sb, "  </Rules>");

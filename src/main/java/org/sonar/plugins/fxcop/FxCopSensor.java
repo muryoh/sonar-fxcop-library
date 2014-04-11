@@ -86,7 +86,7 @@ public class FxCopSensor implements Sensor {
     fxCopConf.checkProperties(settings);
 
     File rulesetFile = new File(fileSystem.workingDir(), "fxcop-sonarqube.ruleset");
-    writer.write(enabledRuleKeys(), rulesetFile);
+    writer.write(enabledRuleConfigKeys(), rulesetFile);
 
     File reportFile = new File(fileSystem.workingDir(), "fxcop-report.xml");
 
@@ -131,10 +131,10 @@ public class FxCopSensor implements Sensor {
     LOG.info("Skipping the FxCop issue at line " + issue.reportLine() + " " + reason);
   }
 
-  private List<String> enabledRuleKeys() {
+  private List<String> enabledRuleConfigKeys() {
     ImmutableList.Builder<String> builder = ImmutableList.builder();
     for (ActiveRule activeRule : profile.getActiveRulesByRepository(fxCopConf.repositoryKey())) {
-      builder.add(activeRule.getRuleKey());
+      builder.add(activeRule.getConfigKey());
     }
     return builder.build();
   }
