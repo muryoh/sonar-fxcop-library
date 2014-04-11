@@ -30,10 +30,25 @@ import static org.fest.assertions.Assertions.assertThat;
 public class FxCopRuleRepositoryTest {
 
   @Test
-  public void test() {
+  public void test_cs() {
     FxCopRuleRepository repo = new FxCopRuleRepository(new FxCopConfiguration("cs", "cs-fxcop", "", "", ""), new XMLRuleParser());
     assertThat(repo.getLanguage()).isEqualTo("cs");
     assertThat(repo.getKey()).isEqualTo("cs-fxcop");
+
+    List<Rule> rules = repo.createRules();
+    assertThat(rules.size()).isEqualTo(232);
+    for (Rule rule : rules) {
+      assertThat(rule.getKey()).isNotNull();
+      assertThat(rule.getName()).isNotNull();
+      assertThat(rule.getDescription()).isNotNull();
+    }
+  }
+
+  @Test
+  public void test_vbnet() {
+    FxCopRuleRepository repo = new FxCopRuleRepository(new FxCopConfiguration("vbnet", "vbnet-fxcop", "", "", ""), new XMLRuleParser());
+    assertThat(repo.getLanguage()).isEqualTo("vbnet");
+    assertThat(repo.getKey()).isEqualTo("vbnet-fxcop");
 
     List<Rule> rules = repo.createRules();
     assertThat(rules.size()).isEqualTo(232);

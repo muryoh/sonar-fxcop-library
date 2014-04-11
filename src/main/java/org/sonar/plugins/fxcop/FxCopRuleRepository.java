@@ -30,16 +30,18 @@ public class FxCopRuleRepository extends RuleRepository {
   private static final String REPOSITORY_NAME = "FxCop / Code Analysis";
 
   private final XMLRuleParser xmlRuleParser;
+  private final String languageKey;
 
   public FxCopRuleRepository(FxCopConfiguration fxCopConf, XMLRuleParser xmlRuleParser) {
     super(fxCopConf.repositoryKey(), fxCopConf.languageKey());
     setName(REPOSITORY_NAME);
     this.xmlRuleParser = xmlRuleParser;
+    this.languageKey = fxCopConf.languageKey();
   }
 
   @Override
   public List<Rule> createRules() {
-    return xmlRuleParser.parse(getClass().getResourceAsStream("/org/sonar/plugins/fxcop/rules.xml"));
+    return xmlRuleParser.parse(getClass().getResourceAsStream("/org/sonar/plugins/fxcop/" + languageKey + "-rules.xml"));
   }
 
 }
