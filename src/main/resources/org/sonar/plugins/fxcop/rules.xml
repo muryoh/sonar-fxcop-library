@@ -10232,7 +10232,7 @@ namespace TransparencyWarningsDemo
 
   <rule key="CA2141">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA2141]]></name>
+    <name><![CDATA[CA2141: Transparent methods must not satisfy LinkDemands]]></name>
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
@@ -10250,7 +10250,9 @@ namespace TransparencyWarningsDemo
 <h2>When to Suppress Warnings</h2>
 <p>
             Do not suppress a warning from this rule.
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997445.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997445.aspx</a></p>
+]]></description>
   </rule>
 
 
@@ -13931,7 +13933,7 @@ namespace Samples
 
   <rule key="CA5122">
     <priority>MAJOR</priority>
-    <name><![CDATA[CA5122]]></name>
+    <name><![CDATA[CA5122: P/Invoke declarations should not be safe critical]]></name>
     <description><![CDATA[
 <h2>Cause</h2>
 <p>
@@ -14019,7 +14021,9 @@ class C
 
 
 
-</p>]]></description>
+</p><h2>MSDN Documentation</h2>
+<p><a href="http://msdn.microsoft.com/en-us/library/dn621099.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dn621099.aspx</a></p>
+]]></description>
   </rule>
 
 </rules>
