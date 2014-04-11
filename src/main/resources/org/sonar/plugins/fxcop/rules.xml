@@ -87,7 +87,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182139.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182139.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182139.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -135,7 +135,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182172.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182172.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182172.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -224,7 +224,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182142.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182142.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182142.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -287,7 +287,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182178.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182178.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182178.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -350,7 +350,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182150.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182150.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182150.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -413,7 +413,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182129.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182129.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182129.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -476,7 +476,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182144.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182144.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182144.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -539,7 +539,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182179.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182179.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182179.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -593,7 +593,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182149.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182149.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182149.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -627,7 +627,7 @@ Generally, both of the prior declarations should be avoided so that the type arg
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182133.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182133.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182133.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -998,7 +998,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182132.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182132.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182132.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1041,7 +1041,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/3hk32yyz.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/3hk32yyz.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/3hk32yyz.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1066,7 +1066,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule. The abstract type has a public constructor.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182126.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182126.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182126.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1119,7 +1119,7 @@ return left.Equals(right);
 <p>
             It is safe to suppress a warning from this rule when the default implementation of the equality operator provides the correct behavior for the type.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182164.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182164.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182164.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1145,7 +1145,7 @@ return left.Equals(right);
 <p>
             Do not suppress a warning from this rule. If you do not want the assembly to be compliant, apply the attribute and set its value to <code>false</code>.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182156.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182156.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182156.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1185,7 +1185,7 @@ return left.Equals(right);
 <p>
             Do not suppress a warning from this rule for assemblies that are used by third parties, or in a production environment.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182155.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182155.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182155.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1210,7 +1210,7 @@ return left.Equals(right);
 <p>
             Do not suppress a warning from this rule. If you want the assembly to be visible, apply the attribute and set its value to <code>true</code>.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182157.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182157.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182157.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1249,7 +1249,7 @@ return left.Equals(right);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182158.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182158.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182158.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1444,7 +1444,7 @@ public string MyOtherProperty
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182136.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182136.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182136.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1484,7 +1484,7 @@ public string MyOtherProperty
 <p>
             It is safe to suppress a warning from this rule when the namespace does not contain types that are used with the types in your other namespaces.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182130.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182130.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182130.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1612,7 +1612,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182131.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182131.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182131.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1650,7 +1650,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182152.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182152.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182152.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1760,7 +1760,7 @@ namespace Microsoft.Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182181.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182181.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182181.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1785,7 +1785,7 @@ namespace Microsoft.Samples
 <p>
             It is always safe to suppress a warning from this rule; however, this design might cause usability issues.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182167.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182167.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182167.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1819,7 +1819,7 @@ namespace Microsoft.Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182135.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182135.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182135.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -1853,7 +1853,7 @@ namespace Microsoft.Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182159.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182159.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182159.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2006,7 +2006,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182147.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182147.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182147.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2046,7 +2046,7 @@ namespace Samples
 <p>
             Suppress a warning from this rule if the method does not work with the .NET Framework event model.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182177.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182177.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182177.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2094,7 +2094,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182137.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182137.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182137.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2134,7 +2134,7 @@ namespace Samples
 <p>
             It is safe to suppress a warning from this rule when the violation is caused by using a different access level for the public constructors.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182151.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182151.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182151.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2160,7 +2160,7 @@ namespace Samples
 <p>
             It is safe to suppress a warning from this rule if an externally visible method is provided that has the same functionality but a different name than the explicitly implemented method.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182153.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182153.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182153.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2188,7 +2188,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182162.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182162.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182162.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2231,7 +2231,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/49stb304.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/49stb304.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/49stb304.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2271,7 +2271,7 @@ namespace Samples
 <p>
             It is safe to suppress a warning from this rule when the violation is caused by missing operators and your programming language does not support operator overloading, as is the case with Visual Basic .NET. It is also safe to suppress a warning for from this rule when it fires on equality operators other than op_Equality if you determine that implementing the operators does not make sense in your application context. However, you should always over op_Equality and the == operator if you override Object.Equals.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182163.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182163.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182163.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2332,7 +2332,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182148.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182148.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182148.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2395,7 +2395,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182154.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182154.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182154.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2421,7 +2421,7 @@ namespace Samples
 <p>
             It is safe to suppress a warning from this rule when the interface is used to identify a set of types at compile time.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182128.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182128.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182128.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2449,7 +2449,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule because the <code>Message</code> property provides critical information about the obsolete type or member.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182166.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182166.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182166.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2487,7 +2487,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182180.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182180.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182180.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2512,7 +2512,7 @@ namespace Samples
 <p>
             It is strongly recommended that you do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182165.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182165.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182165.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2564,7 +2564,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182146.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182146.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182146.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2597,7 +2597,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182145.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182145.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182145.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2623,7 +2623,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule. Leaving the type in its current state can cause maintenance issues and does not provide any benefits.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182138.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182138.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182138.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2649,7 +2649,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule. Leaving the type in its current state can cause maintenance issues and does not provide any benefits.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182140.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182140.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182140.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2698,7 +2698,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182173.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182173.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182173.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2723,7 +2723,7 @@ namespace Samples
 <p>
             Although you never have to suppress a warning from this rule, it is safe to do this when the assembly will never be used together with other assemblies.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182134.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182134.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182134.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2757,7 +2757,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182141.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182141.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182141.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2890,7 +2890,7 @@ namespace DesignLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182168.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182168.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182168.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2930,7 +2930,7 @@ namespace DesignLibrary
 <p>
             Do not suppress a warning from this rule. The presence of the constructor suggests that the type is not a static type.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182169.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182169.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182169.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -2978,7 +2978,7 @@ namespace DesignLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182174.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182174.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182174.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3026,7 +3026,7 @@ namespace DesignLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182176.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182176.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182176.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3074,7 +3074,7 @@ namespace DesignLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182175.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182175.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182175.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3122,7 +3122,7 @@ namespace DesignLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182170.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182170.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182170.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3274,7 +3274,7 @@ public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
 <p>
             Do not suppress a warning from this rule for violations about <code>ApplicationException</code>. It is safe to suppress a warning from this rule for violations about <code>XmlDocument</code>. It is safe to suppress a warning about a non-generic collection if the code was released previously.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182171.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182171.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182171.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3344,7 +3344,7 @@ public class MyReadOnlyCollection : ReadOnlyCollection&lt;T&gt;
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182160.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182160.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182160.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3540,7 +3540,7 @@ internal static class UnsafeNativeMethods
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182161.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182161.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182161.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3565,7 +3565,7 @@ internal static class UnsafeNativeMethods
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182143.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182143.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182143.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3591,7 +3591,7 @@ internal static class UnsafeNativeMethods
 <p>
              You can suppress a warning from this rule if you are sure that the dereferenced parameter has been validated by another method call in the function.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182182.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182182.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182182.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3673,7 +3673,7 @@ internal static class UnsafeNativeMethods
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms244737.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms244737.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms244737.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3699,7 +3699,7 @@ internal static class UnsafeNativeMethods
 <p>
             Suppress a message from this rule if you are sure in all cases that the private exception will be caught within its own internal scope.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264484.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264484.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264484.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3852,7 +3852,7 @@ internal static class UnsafeNativeMethods
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb386039.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386039.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb386039.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3877,7 +3877,7 @@ internal static class UnsafeNativeMethods
 <p>
             It is safe to suppress a warning from this rule when the code library will not be localized for a culture that uses a right-to-left reading order.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182191.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182191.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182191.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3903,7 +3903,7 @@ internal static class UnsafeNativeMethods
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182185.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182185.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182185.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3937,7 +3937,7 @@ internal static class UnsafeNativeMethods
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182186.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182186.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182186.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -3975,7 +3975,7 @@ internal static class UnsafeNativeMethods
             It is safe to suppress a warning from this rule if the code library will not be localized, or if the string is not exposed to the end user or a developer using the code library.
             Users can eliminate noise against methods which should not be passed localized strings by either renaming the parameter or property named, or by marking these items as conditional.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182187.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182187.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182187.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4044,7 +4044,7 @@ internal static class UnsafeNativeMethods
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182189.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182189.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182189.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4113,7 +4113,7 @@ internal static class UnsafeNativeMethods
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182190.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182190.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182190.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4138,7 +4138,7 @@ internal static class UnsafeNativeMethods
 <p>
             It is safe to suppress a warning from this rule when the library or application is for a limited local audience, the data is not shared, or the default setting yields the desired behavior in all supported scenarios.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182188.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182188.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182188.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4164,7 +4164,7 @@ internal static class UnsafeNativeMethods
 <p>
             It is safe to suppress a warning from this rule when the library or application is intended for a limited local audience and will therefore not be localized.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb386080.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386080.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb386080.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4189,7 +4189,7 @@ internal static class UnsafeNativeMethods
 <p>
             It is safe to suppress a warning message when you are not making security decision based on the result (for example, when you are displaying it in the UI).
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb386042.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386042.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb386042.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4215,7 +4215,7 @@ internal static class UnsafeNativeMethods
 <p>
             It is safe to suppress a warning from this rule when the library or application is intended for a limited local audience or when the semantics of the current culture should be used.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb385972.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb385972.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb385972.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4240,7 +4240,7 @@ internal static class UnsafeNativeMethods
 <p>
             Do not suppress a warning from this rule when the unmanaged library is in the same directory as the managed assembly that references it. It might be safe to suppress a warning from this rule in the case where the unmanaged library could not be located.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182208.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182208.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182208.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4265,7 +4265,7 @@ internal static class UnsafeNativeMethods
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182209.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182209.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182209.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4354,7 +4354,7 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182197.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182197.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182197.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4391,7 +4391,7 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182194.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182194.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182194.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4475,7 +4475,7 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182199.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182199.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182199.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4500,7 +4500,7 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182202.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182202.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182202.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4544,7 +4544,7 @@ Visual Basic 6 COM clients cannot implement interface methods by using an unders
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182195.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182195.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182195.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4761,7 +4761,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182198.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182198.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182198.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4800,7 +4800,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182205.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182205.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182205.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4835,7 +4835,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182203.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182203.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182203.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4868,7 +4868,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182200.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182200.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182200.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4901,7 +4901,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182201.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182201.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182201.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4937,7 +4937,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182207.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182207.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182207.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -4976,7 +4976,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182196.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182196.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182196.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5015,7 +5015,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182206.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182206.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182206.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5040,7 +5040,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182204.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182204.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182204.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5065,7 +5065,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182216.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182216.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182216.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5090,7 +5090,7 @@ namespace Samples
 <p>
             It is safe to suppress a warning from this rule. However, the code might be more difficult to maintain. Note that, depending on the visibility of base types, resolving violations of this rule might create breaking changes. For example, removing public base types is a breaking change.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182213.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182213.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182213.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5141,7 +5141,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182212.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182212.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182212.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5166,7 +5166,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb164506.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb164506.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb164506.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5192,7 +5192,7 @@ namespace Samples
 <p>
             Exclude this warning when a type or method is still considered maintainable despite its large size or when the type or method cannot be split.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb386043.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386043.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb386043.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5218,7 +5218,7 @@ namespace Samples
 <p>
             Exclude this warning when the type or method is still considered maintainable despite its large number of dependencies on other types.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb397994.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb397994.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb397994.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5243,7 +5243,7 @@ namespace Samples
 <p>
             This rule should be suppressed only when Idle process priority is required and mobility considerations can be ignored safely.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182219.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182219.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182219.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5268,7 +5268,7 @@ namespace Samples
 <p>
             This rule should be suppressed only if firing the timer more than one time per second is required and mobility considerations can safely be ignored.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182230.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182230.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182230.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5335,7 +5335,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182236.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182236.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182236.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5380,7 +5380,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264481.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264481.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264481.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5424,7 +5424,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264474.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264474.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264474.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5468,7 +5468,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264483.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264483.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264483.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5603,7 +5603,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264492.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264492.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264492.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5642,7 +5642,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182245.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182245.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182245.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5710,7 +5710,7 @@ namespace NamingLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182242.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182242.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182242.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -5752,7 +5752,7 @@ namespace NamingLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182240.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182240.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182240.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6037,7 +6037,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182244.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182244.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182244.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6253,7 +6253,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182247.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182247.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182247.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6297,7 +6297,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182237.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182237.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182237.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6323,7 +6323,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182238.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182238.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182238.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6362,7 +6362,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264486.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264486.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264486.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6400,7 +6400,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182243.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182243.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182243.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6438,7 +6438,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
             You can suppress a warning from this rule if you are convinced that the identifier will not confuse users of the API, and that  the library is usable in all available languages in the .NET Framework.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182248.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182248.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182248.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6483,7 +6483,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264487.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264487.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264487.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6526,7 +6526,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182252.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182252.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182252.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6712,7 +6712,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb531486.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb531486.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb531486.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6761,7 +6761,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182253.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182253.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182253.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6796,7 +6796,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182246.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182246.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182246.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6821,7 +6821,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
             For new development, no known scenarios occur where you must suppress a warning from this rule. Before you suppress the warning, carefully consider how the users of your library might be confused by the matching name. For shipping libraries, you might have to suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182257.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182257.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182257.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -6846,7 +6846,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
             Do not suppress a warning from this rule except for COM visible methods in libraries that have previously shipped.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182251.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182251.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182251.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7086,7 +7086,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182258.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182258.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182258.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7112,7 +7112,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
             It is safe to suppress a warning from this rule, or to ignore the rule completely, if performance is not a concern.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182271.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182271.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182271.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7176,7 +7176,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182268.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182268.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182268.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7203,7 +7203,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
             It is safe to suppress a warning from this rule, or disable the rule, if performance is not of concern.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182280.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182280.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182280.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7251,7 +7251,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182278.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182278.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182278.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7289,7 +7289,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 <p>
             Do not suppress a warning from this rule unless the act of creating the object serves some purpose.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182273.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182273.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182273.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7322,7 +7322,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182263.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182263.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182263.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7365,7 +7365,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182275.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182275.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182275.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7425,7 +7425,7 @@ A <code>DataSet</code> object consists of a collection of <code>DataTable</code>
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182264.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182264.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182264.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7542,7 +7542,7 @@ mc.Create();
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182265.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182265.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182265.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7580,7 +7580,7 @@ mc.Create();
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182267.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182267.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182267.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7605,7 +7605,7 @@ mc.Create();
 <p>
             Suppress a warning from this rule if the multidimensional array does not waste space.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182277.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182277.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182277.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7784,7 +7784,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182276.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182276.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182276.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -7837,7 +7837,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182269.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182269.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182269.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8103,7 +8103,7 @@ namespace PerformanceLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/0fss9skc.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/0fss9skc.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/0fss9skc.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8129,7 +8129,7 @@ namespace PerformanceLibrary
 <p>
             It is safe to suppress a warning from this rule if performance is not an issue.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182279.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182279.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182279.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8154,7 +8154,7 @@ namespace PerformanceLibrary
 <p>
             Do not suppress a message from this rule. Failure to suppress finalization decreases performance and provides no benefits.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264476.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264476.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264476.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8197,7 +8197,7 @@ namespace PerformanceLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms245046.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms245046.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms245046.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8245,7 +8245,7 @@ namespace PerformanceLibrary
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms245042.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms245042.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms245042.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8290,7 +8290,7 @@ namespace PerformanceLibrary
 <p>
             It is permissible to suppress a warning from this rule. However, startup performance might decrease.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb385967.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb385967.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb385967.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8315,7 +8315,7 @@ namespace PerformanceLibrary
 <p>
             This warning should be suppressed only if it occurs in error.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182285.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182285.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182285.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8348,7 +8348,7 @@ namespace PerformanceLibrary
 <p>
             You should not suppress this warning.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182284.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182284.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182284.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8424,7 +8424,7 @@ namespace PerformanceLibrary
 <p>
             Do not suppress a warning from this rule if this was not a deliberate dependency on the specified service pack. In this situation, your application might fail to run on systems without this service pack installed. Suppress the warning or turn this rule off if this was a deliberate dependency.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/cc667408.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/cc667408.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/cc667408.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8495,7 +8495,7 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182289.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182289.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182289.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8611,7 +8611,7 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <p>
             You should suppress messages from this rule only when no alternatives to the problematic method are available.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb385973.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb385973.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb385973.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8702,7 +8702,7 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182290.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182290.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182290.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8727,7 +8727,7 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <p>
             You should not suppress this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182291.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182291.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182291.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8752,7 +8752,7 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <p>
             You can suppress this warning only if it is not technically correct to convert to <code>SafeHandle</code> usage in your class.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182293.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182293.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182293.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8779,7 +8779,7 @@ causes CA2000 to occur because a failure in the construction of the StreamReader
 <p>
             You should not suppress this warning.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182294.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182294.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182294.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8891,7 +8891,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             It is safe to suppress a warning from this rule if the command text does not contain any user input.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182310.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182310.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182310.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8917,7 +8917,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182319.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182319.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182319.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8959,7 +8959,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264489.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264489.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264489.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -8985,7 +8985,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             It is safe to suppress a warning from this rule if the permission does not rely on changing data. However, it is better to change the imperative demand to its declarative equivalent.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182309.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182309.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182309.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9012,7 +9012,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             It is safe to suppress a warning from this rule if the field type is immutable.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182302.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182302.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182302.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9047,7 +9047,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Exclusion of a warning from this rule is strongly discouraged. Almost no scenarios occur where the contents of a read-only field are unimportant. If this is the case with your scenario, remove the <code>readonly</code> modifier instead of excluding the message.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182299.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182299.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182299.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9072,7 +9072,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Suppress a warning from this rule only after a careful security review.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182314.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182314.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182314.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9119,7 +9119,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Suppress a warning from this rule only after you complete a security review.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182308.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182308.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182308.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9144,7 +9144,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             You can suppress a warning from this rule if any caller can obtain instances of the value type in its default state without posing a threat to security.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182307.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182307.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182307.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9190,7 +9190,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Suppress a warning from this rule only after a careful security review to make sure that your code does not pose a security threat.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182312.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182312.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182312.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9232,7 +9232,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182306.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182306.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182306.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9265,7 +9265,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182318.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182318.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182318.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9290,7 +9290,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             It is safe to suppress a warning from this rule if the method does not require the security specified by the type. However, this is not an ordinary scenario and might indicate a need for a careful design review.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182304.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182304.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182304.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9325,7 +9325,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
             </ul>
             Carefully review other messages before excluding them. This rule detects errors that are difficult to reproduce and debug.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182300.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182300.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182300.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9374,7 +9374,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182297.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182297.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182297.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9426,7 +9426,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182298.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182298.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182298.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9468,7 +9468,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             To safely suppress a warning from this rule, you must ensure that your code does not provide callers access to native operations or resources that can be used in a destructive manner.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182311.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182311.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182311.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9510,7 +9510,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             It is safe to suppress a warning from this rule if, after careful review, no security issues exist that might be exploitable if the method is overridden outside the assembly.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182313.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182313.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182313.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9548,7 +9548,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182317.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182317.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182317.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9583,7 +9583,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Do not suppress these violations. If your software design requires an explicit call to a static constructor, it is likely that the design contains serious flaws and should be reviewed.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182320.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182320.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182320.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9608,7 +9608,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             To safely suppress a warning from this rule, you must make sure that your code does not grant its callers access to operations or resources that can be used in a destructive manner.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182303.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182303.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182303.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9634,7 +9634,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182305.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182305.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182305.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9681,7 +9681,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
                 The following pseudo-code illustrates the pattern detected by this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182322.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182322.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182322.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9729,7 +9729,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182321.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182321.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182321.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9754,7 +9754,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997446.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997446.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997446.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9779,7 +9779,7 @@ string query = String.Format("SELECT TOP {0} FROM Table", x);
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997564.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997564.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997564.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9863,7 +9863,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd983956.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd983956.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd983956.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -9934,7 +9934,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997710.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997710.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997710.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10038,7 +10038,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997447.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997447.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997447.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10063,7 +10063,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997569.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997569.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997569.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10088,7 +10088,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress warnings from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264493.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264493.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264493.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10114,7 +10114,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd983954.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd983954.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd983954.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10140,7 +10140,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997711.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997711.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997711.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10165,7 +10165,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997565.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997565.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997565.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10225,7 +10225,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264475.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264475.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264475.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10274,7 +10274,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997567.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997567.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997567.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10299,7 +10299,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997566.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997566.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997566.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10346,7 +10346,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997568.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997568.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997568.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10406,7 +10406,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997570.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997570.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997570.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10431,7 +10431,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dd997443.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dd997443.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dd997443.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10459,7 +10459,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a message from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264482.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264482.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264482.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10484,7 +10484,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ee155709.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ee155709.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ee155709.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10626,7 +10626,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/dn621098.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/dn621098.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/dn621098.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10651,7 +10651,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182363.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182363.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182363.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10830,7 +10830,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182338.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182338.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182338.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10863,7 +10863,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule. Even if <code>Dispose</code> for the object is known to be safely callable multiple times, the implementation might change in the future.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182334.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182334.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182334.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10914,7 +10914,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264488.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264488.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264488.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -10967,7 +10967,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182365.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182365.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182365.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11001,7 +11001,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182346.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182346.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182346.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11067,7 +11067,7 @@ namespace TransparencyWarningsDemo
 <p>
             It is safe to suppress a warning from this rule only if a parameterized constructor is called with the correct string arguments.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182347.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182347.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182347.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11173,7 +11173,7 @@ namespace TransparencyWarningsDemo
 <p>
             Only suppress a warning from this rule if the assembly is used in an environment where tampering with the contents is not a concern.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182127.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182127.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182127.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11198,7 +11198,7 @@ namespace TransparencyWarningsDemo
 <p>
             It is safe to suppress a warning from this rule if you are developing an application and therefore have full control over access to the type that contains the static field. Library designers should not suppress a warning from this rule; using non-constant static fields can make using the library difficult for developers to use correctly.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182353.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182353.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182353.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11226,7 +11226,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule. There are no scenarios where combining these elements is correct.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182336.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182336.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182336.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11251,7 +11251,7 @@ namespace TransparencyWarningsDemo
 <p>
             It is safe to suppress a warning from this rule if you are not responsible for releasing the resource held by the field, or if the call to <code>Dispose</code> occurs at a deeper calling level than the rule checks.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182328.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182328.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182328.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11276,7 +11276,7 @@ namespace TransparencyWarningsDemo
 <p>
             Do not suppress a warning from this rule. The constructor should be redesigned to eliminate the call to the virtual method.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182331.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182331.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182331.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11301,7 +11301,7 @@ namespace TransparencyWarningsDemo
 <p>
             It is safe to suppress a warning from this rule if the call to <code>base</code>.<code>Dispose</code> occurs at a deeper calling level than the rule checks.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182330.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182330.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182330.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11367,7 +11367,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182329.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182329.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182329.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11400,7 +11400,7 @@ namespace TransparencyWarningsDemo
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182335.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182335.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182335.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11817,7 +11817,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182358.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182358.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182358.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11852,7 +11852,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb386041.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb386041.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb386041.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11877,7 +11877,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule. Some compilers that target the common language runtime insert a call to the base type's finalizer into the Microsoft intermediate language (MSIL). If a warning from this rule is reported, your compiler does not insert the call, and you must add it to your code.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182341.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182341.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182341.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11902,7 +11902,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182340.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182340.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182340.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11927,7 +11927,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182332.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182332.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182332.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -11952,7 +11952,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182352.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182352.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182352.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -12231,7 +12231,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182357.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182357.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182357.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -12813,7 +12813,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182355.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182355.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182355.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -12867,7 +12867,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182356.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182356.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182356.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -12901,7 +12901,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182327.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182327.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182327.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -12926,7 +12926,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182339.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182339.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182339.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -12970,7 +12970,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182343.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182343.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182343.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -12996,7 +12996,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182366.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182366.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182366.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13098,7 +13098,7 @@ return left.Equals(right);
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182359.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182359.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182359.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13141,7 +13141,7 @@ return left.Equals(right);
 <p>
             It is safe to suppress a warning from this rule if you are developing for the .NET Compact Framework, for which the <code>STAThreadAttribute</code> attribute is unnecessary and not supported.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182351.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182351.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182351.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13370,7 +13370,7 @@ namespace Samples
               </li>
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182354.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182354.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182354.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13418,7 +13418,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182360.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182360.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182360.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13481,7 +13481,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182349.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182349.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182349.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13552,7 +13552,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182326.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182326.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182326.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13615,7 +13615,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182350.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182350.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182350.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13709,7 +13709,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182344.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182344.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182344.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13772,7 +13772,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182362.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182362.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182362.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13844,7 +13844,7 @@ namespace Samples
 
 
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182342.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182342.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182342.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13869,7 +13869,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/ms182361.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms182361.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/ms182361.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13897,7 +13897,7 @@ namespace Samples
 <p>
             Do not suppress a warning from this rule.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264491.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264491.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264491.aspx</a></p>
 ]]></description>
   </rule>
 
@@ -13924,7 +13924,7 @@ namespace Samples
 <p>
             It is safe to suppress a warning from this rule if the parameter does not represent a URL, GUID, or Version.
 </p><h2>MSDN Documentation</h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/bb264490.aspx" target="_blank">See also the original MSDN documentation.</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/bb264490.aspx" target="_blank">http://msdn.microsoft.com/en-us/library/bb264490.aspx</a></p>
 ]]></description>
   </rule>
 
