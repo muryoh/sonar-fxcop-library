@@ -128,4 +128,5 @@ public class FxCopConfigurationTest {
     conf.checkProperties(settings);
     assertThat(settings.getString(conf.fxCopCmdPropertyKey())).isEqualTo("fake/path/FxCopCmd.exe");
   }
+
 }
