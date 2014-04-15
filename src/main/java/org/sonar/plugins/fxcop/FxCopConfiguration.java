@@ -32,7 +32,7 @@ public class FxCopConfiguration {
   private final String languageKey;
   private final String repositoryKey;
   private String timeoutPropertyKey;
-  private String assemblyPropertyKey;
+  private final String assemblyPropertyKey;
   private String fxCopCmdPropertyKey;
 
   public FxCopConfiguration(String languageKey, String repositoryKey, String assemblyPropertyKey, String fxCopCmdPropertyKey, String timeoutPropertyKey) {
@@ -70,13 +70,13 @@ public class FxCopConfiguration {
   }
 
   private void checkTimeoutProeprty(Settings settings) {
-    if (settings.hasKey(DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY)) {
+    if (!settings.hasKey(timeoutPropertyKey) && settings.hasKey(DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY)) {
       timeoutPropertyKey = DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY;
     }
   }
 
   private void checkFxCopCmdPathProperty(Settings settings) {
-    if (settings.hasKey(DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY)) {
+    if (!settings.hasKey(fxCopCmdPropertyKey) && settings.hasKey(DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY)) {
       fxCopCmdPropertyKey = DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY;
     }
   }
