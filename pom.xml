@@ -37,9 +37,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git@github.com:SonarCommunity/sonar-fxcop.git</connection>
-    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-fxcop.git</developerConnection>
-    <url>https://github.com/SonarCommunity/sonar-fxcop</url>
+    <connection>scm:git:git@github.com:SonarCommunity/sonar-fxcop-libray.git</connection>
+    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-fxcop-library.git</developerConnection>
+    <url>https://github.com/SonarCommunity/sonar-fxcop-library</url>
     <tag>HEAD</tag>
   </scm>
   <issueManagement>
