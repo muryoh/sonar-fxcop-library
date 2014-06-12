@@ -19,17 +19,20 @@
  */
 package org.sonar.plugins.fxcop;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import org.sonar.api.utils.command.Command;
 import org.sonar.api.utils.command.CommandExecutor;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FxCopExecutor {
 
+  private static final Logger LOG = LoggerFactory.getLogger(FxCopExecutor.class);
   private static final int EXIT_CODE_SUCCESS = 0;
-  private static final int EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD = 1024;
 
   public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout) {
     int exitCode = CommandExecutor.create().execute(
@@ -41,10 +44,80 @@ public class FxCopExecutor {
         .addArgument("/forceoutput")
         .addArgument("/searchgac"),
       TimeUnit.MINUTES.toMillis(timeout));
-    Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || exitCode == EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD,
-      "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");
+    StringBuilder errorData = new StringBuilder();
+    
+    if(exitCode != EXIT_CODE_SUCCESS) {
+        LOG.info("Some errors were reported during execution of FxCop: " + errorData.toString());
+        LOG.info("http://msdn.microsoft.com/en-us/library/bb429400(v=vs.80).aspx");        
+    }
+    
+    Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || !IsFatalError(exitCode, errorData),
+      "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");   
   }
 
+  @VisibleForTesting
+  boolean IsFatalError(int errorCode, StringBuilder errorData) {
+      boolean isFatal = false;
+      int errorCopy = errorCode;
+      
+      if((errorCode & 0x1) == 1) {
+          errorData.append("[Analysis error]");
+          isFatal = true;          
+      }
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Rule exceptions]");          
+      }
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Project load error]");          
+      }
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Assembly load error]");          
+      }      
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Rule library load error]");          
+      }
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Import report load error]");          
+      }      
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Output error]");          
+      }
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Command line switch error]");          
+      }
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Initialization error]");          
+      }      
+      
+      errorCopy = errorCopy >> 1;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Assembly references error]");          
+      }
+      
+      errorCopy = errorCopy >> 4;
+      if((errorCopy & 0x1) == 1) {
+          errorData.append("[Unknown error]");          
+      }                  
+      
+      return isFatal;
+  } 
+    
   /**
    * Handles deprecated property: "installDirectory", which gives the path to the directory only.
    */
