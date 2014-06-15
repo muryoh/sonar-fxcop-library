@@ -46,12 +46,15 @@ public class FxCopExecutor {
       TimeUnit.MINUTES.toMillis(timeout));
     StringBuilder errorData = new StringBuilder();
     
+    boolean isFatal = IsFatalError(exitCode, errorData);
+    
     if(exitCode != EXIT_CODE_SUCCESS) {
-        LOG.info("Some errors were reported during execution of FxCop: " + errorData.toString());
-        LOG.info("http://msdn.microsoft.com/en-us/library/bb429400(v=vs.80).aspx");        
+        LOG.info("Some errors were reported during execution of FxCop Error Code: " + exitCode);
+        LOG.info("Error Data: " + errorData);
+        LOG.info("See: http://msdn.microsoft.com/en-us/library/bb429400(v=vs.80).aspx");       
     }
     
-    Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || !IsFatalError(exitCode, errorData),
+    Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || !isFatal,
       "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");   
   }
 
