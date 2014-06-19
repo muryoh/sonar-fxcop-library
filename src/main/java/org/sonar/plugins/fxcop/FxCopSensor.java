@@ -20,6 +20,7 @@
 package org.sonar.plugins.fxcop;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -110,7 +111,7 @@ public class FxCopSensor implements Sensor {
         } else {
           issuable.addIssue(
             issuable.newIssueBuilder()
-              .ruleKey(RuleKey.of(fxCopConf.repositoryKey(), issue.ruleKey()))
+              .ruleKey(RuleKey.of(fxCopConf.repositoryKey(), ruleKey(issue.ruleConfigKey())))
               .line(issue.line())
               .message(issue.message())
               .build());
@@ -137,6 +138,12 @@ public class FxCopSensor implements Sensor {
       builder.add(activeRule.getConfigKey());
     }
     return builder.build();
+  }
+
+  private String ruleKey(String ruleConfigKey) {
+    ActiveRule a = profile.getActiveRuleByConfigKey(fxCopConf.repositoryKey(), ruleConfigKey);
+    Preconditions.checkNotNull(a, "got null for rule config key = " + ruleConfigKey);
+    return profile.getActiveRuleByConfigKey(fxCopConf.repositoryKey(), ruleConfigKey).getRuleKey();
   }
 
 }
