@@ -28,6 +28,8 @@ import java.util.concurrent.TimeUnit;
 
 public class FxCopExecutor {
 
+  private static final String EXECUTABLE = "FxCopCmd.exe";
+
   private static final int EXIT_CODE_SUCCESS = 0;
   private static final int EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD = 1024;
 
@@ -48,14 +50,8 @@ public class FxCopExecutor {
   /**
    * Handles deprecated property: "installDirectory", which gives the path to the directory only.
    */
-  private static String getExecutable(String propertyValue) {
-    String execName = "FxCopCmd.exe";
-
-    if (!propertyValue.endsWith(execName)) {
-      return (new File(propertyValue, execName)).getAbsolutePath();
-    } else {
-      return propertyValue;
-    }
+  private static String getExecutable(String path) {
+    return path.endsWith(EXECUTABLE) ? path : new File(path, EXECUTABLE).getAbsolutePath();
   }
 
 }
