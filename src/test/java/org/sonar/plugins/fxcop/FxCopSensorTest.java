@@ -24,8 +24,6 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mockito.Mockito;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.component.ResourcePerspectives;
 import org.sonar.api.config.Settings;
@@ -101,20 +99,6 @@ public class FxCopSensorTest {
     List<ActiveRule> activeRules = mockActiveRules("CA0000", "CA1000");
     when(profile.getActiveRulesByRepository("foo-fxcop")).thenReturn(activeRules);
 
-    when(profile.getActiveRuleByConfigKey(Mockito.eq("foo-fxcop"), Mockito.anyString())).thenAnswer(
-      new Answer<ActiveRule>() {
-        @Override
-        public ActiveRule answer(InvocationOnMock invocation) throws Throwable {
-          String ruleConfigKey = (String) invocation.getArguments()[1];
-          String ruleKey = ruleConfigKey.substring(1);
-
-          ActiveRule activeRule = mock(ActiveRule.class);
-          when(activeRule.getRuleKey()).thenReturn(ruleKey);
-
-          return activeRule;
-        }
-      });
-
     SensorContext context = mock(SensorContext.class);
     FileProvider fileProvider = mock(FileProvider.class);
     FxCopExecutor executor = mock(FxCopExecutor.class);
@@ -153,14 +137,14 @@ public class FxCopSensorTest {
     FxCopReportParser parser = mock(FxCopReportParser.class);
     when(parser.parse(new File(workingDir, "fxcop-report.xml"))).thenReturn(
       ImmutableList.of(
-        new FxCopIssue(100, "_CA0000", null, "Class1.cs", 1, "Dummy message"),
-        new FxCopIssue(200, "_CA0000", "basePath", null, 2, "Dummy message"),
-        new FxCopIssue(300, "_CA0000", "basePath", "Class3.cs", null, "Dummy message"),
-        new FxCopIssue(400, "_CA0000", "basePath", "Class4.cs", 4, "First message"),
-        new FxCopIssue(500, "_CA0000", "basePath", "Class5.cs", 5, "Second message"),
-        new FxCopIssue(600, "_CA1000", "basePath", "Class6.cs", 6, "Third message"),
-        new FxCopIssue(700, "_CA0000", "basePath", "Class7.cs", 7, "Fourth message"),
-        new FxCopIssue(800, "_CA0000", "basePath", "Class8.cs", 8, "Fifth message")));
+        new FxCopIssue(100, "CA0000", null, "Class1.cs", 1, "Dummy message"),
+        new FxCopIssue(200, "CA0000", "basePath", null, 2, "Dummy message"),
+        new FxCopIssue(300, "CA0000", "basePath", "Class3.cs", null, "Dummy message"),
+        new FxCopIssue(400, "CA0000", "basePath", "Class4.cs", 4, "First message"),
+        new FxCopIssue(500, "CA0000", "basePath", "Class5.cs", 5, "Second message"),
+        new FxCopIssue(600, "CA1000", "basePath", "Class6.cs", 6, "Third message"),
+        new FxCopIssue(700, "CA0000", "basePath", "Class7.cs", 7, "Fourth message"),
+        new FxCopIssue(800, "CA0000", "basePath", "Class8.cs", 8, "Fifth message")));
 
     sensor.analyse(context, fileProvider, writer, parser, executor);
 
@@ -170,9 +154,11 @@ public class FxCopSensorTest {
     verify(issuable).addIssue(issue1);
     verify(issuable).addIssue(issue2);
 
+    verify(issueBuilder1).ruleKey(RuleKey.of("foo-fxcop", "_CA0000"));
     verify(issueBuilder1).line(5);
     verify(issueBuilder1).message("Second message");
 
+    verify(issueBuilder2).ruleKey(RuleKey.of("foo-fxcop", "_CA1000"));
     verify(issueBuilder2).line(6);
     verify(issueBuilder2).message("Third message");
   }
@@ -202,11 +188,12 @@ public class FxCopSensorTest {
     return issueBuilder;
   }
 
-  private static List<ActiveRule> mockActiveRules(String... activeRuleConfigKeys) {
+  private static List<ActiveRule> mockActiveRules(String... activeConfigRuleKeys) {
     ImmutableList.Builder<ActiveRule> builder = ImmutableList.builder();
-    for (String activeRuleConfigKey : activeRuleConfigKeys) {
+    for (String activeConfigRuleKey : activeConfigRuleKeys) {
       ActiveRule activeRule = mock(ActiveRule.class);
-      when(activeRule.getConfigKey()).thenReturn(activeRuleConfigKey);
+      when(activeRule.getConfigKey()).thenReturn(activeConfigRuleKey);
+      when(activeRule.getRuleKey()).thenReturn("_" + activeConfigRuleKey);
       builder.add(activeRule);
     }
     return builder.build();

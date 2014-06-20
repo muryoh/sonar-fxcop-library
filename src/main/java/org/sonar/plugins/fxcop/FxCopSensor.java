@@ -20,7 +20,6 @@
 package org.sonar.plugins.fxcop;
 
 import com.google.common.annotations.VisibleForTesting;
-import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -141,9 +140,14 @@ public class FxCopSensor implements Sensor {
   }
 
   private String ruleKey(String ruleConfigKey) {
-    ActiveRule a = profile.getActiveRuleByConfigKey(fxCopConf.repositoryKey(), ruleConfigKey);
-    Preconditions.checkNotNull(a, "got null for rule config key = " + ruleConfigKey);
-    return profile.getActiveRuleByConfigKey(fxCopConf.repositoryKey(), ruleConfigKey).getRuleKey();
+    for (ActiveRule activeRule : profile.getActiveRulesByRepository(fxCopConf.repositoryKey())) {
+      if (activeRule.getConfigKey().equals(ruleConfigKey)) {
+        return activeRule.getRuleKey();
+      }
+    }
+
+    throw new IllegalStateException(
+      "Unable to find the rule key corresponding to the rule config key \"" + ruleConfigKey + "\" in repository \"" + fxCopConf.repositoryKey() + "\".");
   }
 
 }
