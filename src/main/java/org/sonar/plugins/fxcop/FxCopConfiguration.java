@@ -79,6 +79,13 @@ public class FxCopConfiguration {
     if (!settings.hasKey(fxCopCmdPropertyKey) && settings.hasKey(DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY)) {
       fxCopCmdPropertyKey = DEPRECATED_FXCOPCMD_PATH_PROPERTY_KEY;
     }
+
+    String value = settings.getString(fxCopCmdPropertyKey);
+
+    File file = new File(value);
+    Preconditions.checkArgument(
+      file.isFile(),
+      "Cannot find the FxCopCmd executable \"" + file.getAbsolutePath() + "\" provided by the property \"" + fxCopCmdPropertyKey + "\".");
   }
 
   private void checkAssemblyProperty(Settings settings) {
@@ -89,7 +96,7 @@ public class FxCopConfiguration {
     File assemblyFile = new File(assemblyPath);
     Preconditions.checkArgument(
       assemblyFile.isFile(),
-      "Cannot find the assembly \"" + assemblyFile.getAbsolutePath() + "\" provided in the property \"" + assemblyPropertyKey + "\".");
+      "Cannot find the assembly \"" + assemblyFile.getAbsolutePath() + "\" provided by the property \"" + assemblyPropertyKey + "\".");
 
     File pdbFile = new File(pdbPath(assemblyPath));
     Preconditions.checkArgument(

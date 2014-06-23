@@ -19,14 +19,12 @@
  */
 package org.sonar.plugins.fxcop;
 
-import com.google.common.collect.Maps;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.sonar.api.config.Settings;
 
 import java.io.File;
-import java.util.Map;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -37,31 +35,30 @@ public class FxCopConfigurationTest {
   @Rule
   public ExpectedException thrown = ExpectedException.none();
 
-  private static final String ASSEMBLY_PATH = "src/test/resources/FxCopConfigurationTest/MyLibrary.dll";
-
   @Test
   public void test() {
-    FxCopConfiguration fxCopConf = new FxCopConfiguration("cs", "cs-fxcop", "fooAssemblyKey", "fooFxCopCmdPathKey", "footimeout");
+    FxCopConfiguration fxCopConf = new FxCopConfiguration("cs", "cs-fxcop", "fooAssemblyKey", "fooFxCopCmdPathKey", "fooTimeoutKey");
     assertThat(fxCopConf.languageKey()).isEqualTo("cs");
     assertThat(fxCopConf.repositoryKey()).isEqualTo("cs-fxcop");
     assertThat(fxCopConf.assemblyPropertyKey()).isEqualTo("fooAssemblyKey");
     assertThat(fxCopConf.fxCopCmdPropertyKey()).isEqualTo("fooFxCopCmdPathKey");
-    assertThat(fxCopConf.timeoutPropertyKey()).isEqualTo("footimeout");
+    assertThat(fxCopConf.timeoutPropertyKey()).isEqualTo("fooTimeoutKey");
 
-    fxCopConf = new FxCopConfiguration("vbnet", "vbnet-fxcop", "barAssemblyKey", "barFxCopCmdPathKey", "bartimeout");
+    fxCopConf = new FxCopConfiguration("vbnet", "vbnet-fxcop", "barAssemblyKey", "barFxCopCmdPathKey", "barTimeoutKey");
     assertThat(fxCopConf.languageKey()).isEqualTo("vbnet");
     assertThat(fxCopConf.repositoryKey()).isEqualTo("vbnet-fxcop");
     assertThat(fxCopConf.assemblyPropertyKey()).isEqualTo("barAssemblyKey");
     assertThat(fxCopConf.fxCopCmdPropertyKey()).isEqualTo("barFxCopCmdPathKey");
-    assertThat(fxCopConf.timeoutPropertyKey()).isEqualTo("bartimeout");
+    assertThat(fxCopConf.timeoutPropertyKey()).isEqualTo("barTimeoutKey");
   }
 
   @Test
   public void check_properties() {
     Settings settings = mock(Settings.class);
     when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
-    when(settings.getString("fooAssemblyKey")).thenReturn(new File(ASSEMBLY_PATH).getAbsolutePath());
+    when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibrary.dll").getAbsolutePath());
     when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(true);
+    when(settings.getString("fooFxCopCmdPathKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/FxCopCmd.exe").getAbsolutePath());
 
     new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "").checkProperties(settings);
   }
@@ -72,6 +69,7 @@ public class FxCopConfigurationTest {
     when(settings.hasKey("fooAssemblyKey")).thenReturn(true);
     when(settings.getString("fooAssemblyKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/MyLibrary").getAbsolutePath());
     when(settings.hasKey("fooFxCopCmdPathKey")).thenReturn(true);
+    when(settings.getString("fooFxCopCmdPathKey")).thenReturn(new File("src/test/resources/FxCopConfigurationTest/FxCopCmd.exe").getAbsolutePath());
 
     new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "").checkProperties(settings);
   }
@@ -116,17 +114,42 @@ public class FxCopConfigurationTest {
   }
 
   @Test
-  public void check_deprecated_fxcopcmd_path_property() {
+  public void check_properties_fxcopcmd_property_deprecated() {
     Settings settings = new Settings();
-    Map<String, String> props = Maps.newHashMap();
-    props.put("assembly.prop", ASSEMBLY_PATH);
-    props.put("sonar.fxcop.installDirectory", "fake/path/FxCopCmd.exe");
-    settings.addProperties(props);
+    settings.setProperty("fooAssemblyKey", "src/test/resources/FxCopConfigurationTest/MyLibrary.dll");
+    settings.setProperty("sonar.fxcop.installDirectory", new File("src/test/resources/FxCopConfigurationTest/FxCopCmd.exe").getAbsolutePath());
 
-    FxCopConfiguration conf = new FxCopConfiguration("", "", "assembly.prop", "cmd.prop", "");
+    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "");
+    fxCopConf.checkProperties(settings);
 
-    conf.checkProperties(settings);
-    assertThat(settings.getString(conf.fxCopCmdPropertyKey())).isEqualTo("fake/path/FxCopCmd.exe");
+    assertThat(settings.getString(fxCopConf.fxCopCmdPropertyKey())).isEqualTo(new File("src/test/resources/FxCopConfigurationTest/FxCopCmd.exe").getAbsolutePath());
+  }
+
+  @Test
+  public void check_properties_fxcopcmd_property_not_found() {
+    thrown.expect(IllegalArgumentException.class);
+    thrown.expectMessage("Cannot find the FxCopCmd executable");
+    thrown.expectMessage(new File("src/test/resources/FxCopConfigurationTest/FxCopCmdNotFound.exe").getAbsolutePath());
+    thrown.expectMessage("\"fooFxCopCmdPathKey\"");
+
+    Settings settings = new Settings();
+    settings.setProperty("fooAssemblyKey", "src/test/resources/FxCopConfigurationTest/MyLibrary.dll");
+    settings.setProperty("fooFxCopCmdPathKey", new File("src/test/resources/FxCopConfigurationTest/FxCopCmdNotFound.exe").getAbsolutePath());
+
+    new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "").checkProperties(settings);
+  }
+
+  @Test
+  public void check_properties_timeout_property_deprecated() {
+    Settings settings = new Settings();
+    settings.setProperty("fooAssemblyKey", "src/test/resources/FxCopConfigurationTest/MyLibrary.dll");
+    settings.setProperty("fooFxCopCmdPathKey", new File("src/test/resources/FxCopConfigurationTest/FxCopCmd.exe").getAbsolutePath());
+    settings.setProperty("sonar.fxcop.timeoutMinutes", "42");
+
+    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "fooFxCopCmdPathKey", "fooTimeoutKey");
+    fxCopConf.checkProperties(settings);
+
+    assertThat(settings.getString(fxCopConf.timeoutPropertyKey())).isEqualTo("42");
   }
 
 }
