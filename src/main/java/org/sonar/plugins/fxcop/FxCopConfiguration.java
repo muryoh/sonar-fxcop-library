@@ -64,15 +64,40 @@ public class FxCopConfiguration {
   }
 
   public void checkProperties(Settings settings) {
+    checkMandatoryProperties(settings);
     checkAssemblyProperty(settings);
     checkFxCopCmdPathProperty(settings);
     checkTimeoutProeprty(settings);
   }
 
-  private void checkTimeoutProeprty(Settings settings) {
-    if (!settings.hasKey(timeoutPropertyKey) && settings.hasKey(DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY)) {
-      timeoutPropertyKey = DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY;
+  private void checkMandatoryProperties(Settings settings) {
+    if (!settings.hasKey(assemblyPropertyKey)) {
+      throw new IllegalArgumentException("The property \"" + assemblyPropertyKey + "\" must be set to execute FxCop rules. "
+        + "This property can be automatically set by the Analysis Bootstrapper for Visual Studio Projects plugin, see: http://docs.codehaus.org/x/TAA1Dg");
     }
+  }
+
+  private void checkAssemblyProperty(Settings settings) {
+    String assemblyPath = settings.getString(assemblyPropertyKey);
+
+    File assemblyFile = new File(assemblyPath);
+    Preconditions.checkArgument(
+      assemblyFile.isFile(),
+      "Cannot find the assembly \"" + assemblyFile.getAbsolutePath() + "\" provided by the property \"" + assemblyPropertyKey + "\".");
+
+    File pdbFile = new File(pdbPath(assemblyPath));
+    Preconditions.checkArgument(
+      pdbFile.isFile(),
+      "Cannot find the .pdb file \"" + pdbFile.getAbsolutePath() + "\" inferred from the property \"" + assemblyPropertyKey + "\".");
+  }
+
+  private static String pdbPath(String assemblyPath) {
+    int i = assemblyPath.lastIndexOf('.');
+    if (i == -1) {
+      i = assemblyPath.length();
+    }
+
+    return assemblyPath.substring(0, i) + ".pdb";
   }
 
   private void checkFxCopCmdPathProperty(Settings settings) {
@@ -88,35 +113,10 @@ public class FxCopConfiguration {
       "Cannot find the FxCopCmd executable \"" + file.getAbsolutePath() + "\" provided by the property \"" + fxCopCmdPropertyKey + "\".");
   }
 
-  private void checkAssemblyProperty(Settings settings) {
-    checkProperty(settings, assemblyPropertyKey);
-
-    String assemblyPath = settings.getString(assemblyPropertyKey);
-
-    File assemblyFile = new File(assemblyPath);
-    Preconditions.checkArgument(
-      assemblyFile.isFile(),
-      "Cannot find the assembly \"" + assemblyFile.getAbsolutePath() + "\" provided by the property \"" + assemblyPropertyKey + "\".");
-
-    File pdbFile = new File(pdbPath(assemblyPath));
-    Preconditions.checkArgument(
-      pdbFile.isFile(),
-      "Cannot find the .pdb file \"" + pdbFile.getAbsolutePath() + "\" inferred from the property \"" + assemblyPropertyKey + "\".");
-  }
-
-  private static void checkProperty(Settings settings, String property) {
-    if (!settings.hasKey(property)) {
-      throw new IllegalArgumentException("The property \"" + property + "\" must be set.");
+  private void checkTimeoutProeprty(Settings settings) {
+    if (!settings.hasKey(timeoutPropertyKey) && settings.hasKey(DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY)) {
+      timeoutPropertyKey = DEPRECATED_TIMEOUT_MINUTES_PROPERTY_KEY;
     }
-  }
-
-  private static String pdbPath(String assemblyPath) {
-    int i = assemblyPath.lastIndexOf('.');
-    if (i == -1) {
-      i = assemblyPath.length();
-    }
-
-    return assemblyPath.substring(0, i) + ".pdb";
   }
 
 }
