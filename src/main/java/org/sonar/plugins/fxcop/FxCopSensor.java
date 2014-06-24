@@ -40,6 +40,8 @@ import java.util.List;
 
 public class FxCopSensor implements Sensor {
 
+  private static final String CUSTOM_RULE_KEY = "CustomRuleTemplate";
+  private static final String CUSTOM_RULE_CHECK_ID_PARAMETER = "CheckId";
   private static final Logger LOG = LoggerFactory.getLogger(FxCopSensor.class);
 
   private final FxCopConfiguration fxCopConf;
@@ -134,14 +136,21 @@ public class FxCopSensor implements Sensor {
   private List<String> enabledRuleConfigKeys() {
     ImmutableList.Builder<String> builder = ImmutableList.builder();
     for (ActiveRule activeRule : profile.getActiveRulesByRepository(fxCopConf.repositoryKey())) {
-      builder.add(activeRule.getConfigKey());
+      if (!CUSTOM_RULE_KEY.equals(activeRule.getRuleKey())) {
+        String effectiveConfigKey = activeRule.getConfigKey();
+        if (effectiveConfigKey == null) {
+          effectiveConfigKey = activeRule.getParameter(CUSTOM_RULE_CHECK_ID_PARAMETER);
+        }
+
+        builder.add(effectiveConfigKey);
+      }
     }
     return builder.build();
   }
 
   private String ruleKey(String ruleConfigKey) {
     for (ActiveRule activeRule : profile.getActiveRulesByRepository(fxCopConf.repositoryKey())) {
-      if (activeRule.getConfigKey().equals(ruleConfigKey)) {
+      if (ruleConfigKey.equals(activeRule.getConfigKey()) || ruleConfigKey.equals(activeRule.getParameter(CUSTOM_RULE_CHECK_ID_PARAMETER))) {
         return activeRule.getRuleKey();
       }
     }
