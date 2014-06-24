@@ -19,7 +19,6 @@
  */
 package org.sonar.plugins.fxcop;
 
-import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +32,6 @@ public class FxCopExecutor {
 
   private static final Logger LOG = LoggerFactory.getLogger(FxCopExecutor.class);
   private static final String EXECUTABLE = "FxCopCmd.exe";
-  private static final int EXIT_CODE_SUCCESS = 0;
 
   public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout) {
     int exitCode = CommandExecutor.create().execute(
@@ -45,81 +43,12 @@ public class FxCopExecutor {
         .addArgument("/forceoutput")
         .addArgument("/searchgac"),
       TimeUnit.MINUTES.toMillis(timeout));
-    StringBuilder errorData = new StringBuilder();
 
-    boolean isFatal = IsFatalError(exitCode, errorData);
+    LOG.info("FxCopCmd.exe ended with the exit code: " + exitCode);
 
-    if (exitCode != EXIT_CODE_SUCCESS) {
-      LOG.info("Some errors were reported during execution of FxCop Error Code: " + exitCode);
-      LOG.info("Error Data: " + errorData);
-      LOG.info("See: http://msdn.microsoft.com/en-us/library/bb429400(v=vs.80).aspx");
-    }
-
-    Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || !isFatal,
-      "The execution of \"" + executable + "\" failed and returned " + exitCode + " as exit code.");
-  }
-
-  @VisibleForTesting
-  boolean IsFatalError(int errorCode, StringBuilder errorData) {
-    boolean isFatal = false;
-    int errorCopy = errorCode;
-
-    if ((errorCode & 0x1) == 1) {
-      errorData.append("[Analysis error]");
-      isFatal = true;
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Rule exceptions]");
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Project load error]");
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Assembly load error]");
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Rule library load error]");
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Import report load error]");
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Output error]");
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Command line switch error]");
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Initialization error]");
-    }
-
-    errorCopy = errorCopy >> 1;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Assembly references error]");
-    }
-
-    errorCopy = errorCopy >> 4;
-    if ((errorCopy & 0x1) == 1) {
-      errorData.append("[Unknown error]");
-    }
-
-    return isFatal;
+    Preconditions.checkState((exitCode & 1) == 0,
+      "The execution of \"" + executable + "\" failed and returned " + exitCode
+        + " as exit code. See http://msdn.microsoft.com/en-us/library/bb429400(v=vs.80).aspx for details.");
   }
 
   /**
