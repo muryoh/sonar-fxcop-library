@@ -33,15 +33,20 @@ public class FxCopExecutor {
   private static final Logger LOG = LoggerFactory.getLogger(FxCopExecutor.class);
   private static final String EXECUTABLE = "FxCopCmd.exe";
 
-  public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout) {
+  public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout, boolean aspnet) {
+    Command command = Command.create(getExecutable(executable))
+      .addArgument("/file:" + assemblies)
+      .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
+      .addArgument("/out:" + reportFile.getAbsolutePath())
+      .addArgument("/outxsl:none")
+      .addArgument("/forceoutput")
+      .addArgument("/searchgac");
+    if (aspnet) {
+      command.addArgument("/aspnet");
+    }
+
     int exitCode = CommandExecutor.create().execute(
-      Command.create(getExecutable(executable))
-        .addArgument("/file:" + assemblies)
-        .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
-        .addArgument("/out:" + reportFile.getAbsolutePath())
-        .addArgument("/outxsl:none")
-        .addArgument("/forceoutput")
-        .addArgument("/searchgac"),
+      command,
       TimeUnit.MINUTES.toMillis(timeout));
 
     LOG.info("FxCopCmd.exe ended with the exit code: " + exitCode);
