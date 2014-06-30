@@ -79,7 +79,7 @@ public class FxCopConfigurationTest {
   @Test
   public void check_properties_assembly_property_not_set() {
     thrown.expect(IllegalArgumentException.class);
-    thrown.expectMessage("The property \"fooAssemblyKey\" must be set to execute FxCop rules.");
+    thrown.expectMessage("The property \"fooAssemblyKey\" must be set and the project must have been built to execute FxCop rules.");
     thrown.expectMessage("http://docs.codehaus.org/x/TAA1Dg");
 
     Settings settings = mock(Settings.class);
