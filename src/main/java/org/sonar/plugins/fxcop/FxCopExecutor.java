@@ -51,7 +51,6 @@ public class FxCopExecutor {
   private Command createCommand(String executable, String assemblies, File rulesetFile, File reportFile, String assemblyDependencyDirectories, boolean aspnet) {
 	  Command command = Command.create(getExecutable(executable))
 
-      .addArgument("/file:" + assemblies)
       .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
       .addArgument("/out:" + reportFile.getAbsolutePath())
       .addArgument("/outxsl:none")
@@ -60,6 +59,10 @@ public class FxCopExecutor {
 
     if (aspnet) {
       command.addArgument("/aspnet");
+    }
+
+    for (String assembly : assemblies.split(",")) {
+      command.addArgument("/file:" + assembly);
     }
 
     if (assemblyDependencyDirectories != null
@@ -72,7 +75,7 @@ public class FxCopExecutor {
     return command;
 
   }
-  
+
   /**
    * Handles deprecated property: "installDirectory", which gives the path to the directory only.
    */
