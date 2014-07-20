@@ -61,7 +61,7 @@ public class FxCopSensorTest {
     Project project = mock(Project.class);
 
     FxCopSensor sensor = new FxCopSensor(
-      new FxCopConfiguration("", "foo-fxcop", "", "", "", ""),
+      new FxCopConfiguration("", "foo-fxcop", "", "", "", "", ""),
       settings, profile, fileSystem, perspectives);
 
     when(fileSystem.files(Mockito.any(FileQuery.class))).thenReturn(ImmutableList.<File>of());
@@ -87,6 +87,7 @@ public class FxCopSensorTest {
     when(fxCopConf.languageKey()).thenReturn("foo");
     when(fxCopConf.repositoryKey()).thenReturn("foo-fxcop");
     when(fxCopConf.assemblyPropertyKey()).thenReturn("assemblyKey");
+    when(fxCopConf.directoryPropertyKey()).thenReturn("directoryKey");
     when(fxCopConf.fxCopCmdPropertyKey()).thenReturn("fxcopcmdPath");
     when(fxCopConf.timeoutPropertyKey()).thenReturn("timeout");
     when(fxCopConf.aspnetPropertyKey()).thenReturn("aspnet");
@@ -108,6 +109,7 @@ public class FxCopSensorTest {
     when(fileSystem.workingDir()).thenReturn(workingDir);
 
     when(settings.getString("assemblyKey")).thenReturn("MyLibrary.dll");
+    when(settings.getString("directoryKey")).thenReturn("c:\\assemblyDependencyDirectories 1,c:\\assemblyDependencyDirectories 2");
     when(settings.getString("fxcopcmdPath")).thenReturn("FxCopCmd.exe");
     when(settings.getInt("timeout")).thenReturn(42);
     when(settings.getBoolean("aspnet")).thenReturn(true);
@@ -157,7 +159,8 @@ public class FxCopSensorTest {
     sensor.analyse(context, fileProvider, writer, parser, executor);
 
     verify(writer).write(ImmutableList.of("CA0000", "CA1000", "CR1000"), new File(workingDir, "fxcop-sonarqube.ruleset"));
-    verify(executor).execute("FxCopCmd.exe", "MyLibrary.dll", new File(workingDir, "fxcop-sonarqube.ruleset"), new File(workingDir, "fxcop-report.xml"), 42, true);
+    verify(executor).execute("FxCopCmd.exe", "MyLibrary.dll", new File(workingDir, "fxcop-sonarqube.ruleset"), new File(workingDir, "fxcop-report.xml"), 42, "c:\\assemblyDependencyDirectories 1,c:\\assemblyDependencyDirectories 2", true);
+
 
     verify(issuable).addIssue(issue1);
     verify(issuable).addIssue(issue2);
@@ -180,7 +183,7 @@ public class FxCopSensorTest {
   public void check_properties() {
     thrown.expectMessage("fooAssemblyKey");
 
-    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "", "", "");
+    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "", "", "", "");
     new FxCopSensor(fxCopConf, mock(Settings.class), mock(RulesProfile.class), mock(ModuleFileSystem.class), mock(ResourcePerspectives.class))
       .analyse(mock(Project.class), mock(SensorContext.class));
   }

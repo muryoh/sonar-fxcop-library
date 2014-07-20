@@ -32,14 +32,19 @@ public class FxCopConfiguration {
   private final String languageKey;
   private final String repositoryKey;
   private final String assemblyPropertyKey;
+  private final String directoryPropertyKey;
   private String fxCopCmdPropertyKey;
   private String timeoutPropertyKey;
   private final String aspnetPropertyKey;
 
-  public FxCopConfiguration(String languageKey, String repositoryKey, String assemblyPropertyKey, String fxCopCmdPropertyKey, String timeoutPropertyKey, String aspnetPropertyKey) {
+  public FxCopConfiguration(String languageKey, String repositoryKey,
+      String assemblyPropertyKey, String directoryPropertyKey,
+      String fxCopCmdPropertyKey, String timeoutPropertyKey,
+      String aspnetPropertyKey) {
     this.languageKey = languageKey;
     this.repositoryKey = repositoryKey;
     this.assemblyPropertyKey = assemblyPropertyKey;
+    this.directoryPropertyKey = directoryPropertyKey;
     this.fxCopCmdPropertyKey = fxCopCmdPropertyKey;
     this.timeoutPropertyKey = timeoutPropertyKey;
     this.aspnetPropertyKey = aspnetPropertyKey;
@@ -56,6 +61,10 @@ public class FxCopConfiguration {
   public String assemblyPropertyKey() {
     return assemblyPropertyKey;
   }
+  
+  public String directoryPropertyKey() { 
+	  return directoryPropertyKey; 
+	  }
 
   public String fxCopCmdPropertyKey() {
     return fxCopCmdPropertyKey;

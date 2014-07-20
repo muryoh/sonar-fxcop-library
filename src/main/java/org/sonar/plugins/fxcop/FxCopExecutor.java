@@ -31,36 +31,60 @@ import java.util.concurrent.TimeUnit;
 public class FxCopExecutor {
 
   private static final Logger LOG = LoggerFactory.getLogger(FxCopExecutor.class);
-  private static final String EXECUTABLE = "FxCopCmd.exe";
 
-  public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout, boolean aspnet) {
-    Command command = Command.create(getExecutable(executable))
+  private static final int EXIT_CODE_SUCCESS = 0;
+  private static final int EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD = 1024;
+  
+  public void execute(String executable, String assemblies, File rulesetFile,
+      File reportFile, int timeout, String assemblyDependencyDirectories,
+      boolean aspnet) {
+    int exitCode = CommandExecutor.create().execute(
+        createCommand(executable, assemblies, rulesetFile, reportFile, assemblyDependencyDirectories, aspnet),
+        TimeUnit.MINUTES.toMillis(timeout));
+    Preconditions.checkState(exitCode == EXIT_CODE_SUCCESS || exitCode == EXIT_CODE_SUCCESS_SHOULD_BREAK_BUILD,
+        "The execution of \"" + executable + "\" failed and returned "
+            + exitCode + " as exit code.");
+    LOG.info("FxCopCmd.exe ended with the exit code: " + exitCode);
+
+  }
+  
+  private Command createCommand(String executable, String assemblies, File rulesetFile, File reportFile, String assemblyDependencyDirectories, boolean aspnet) {
+	  Command command = Command.create(getExecutable(executable))
+
       .addArgument("/file:" + assemblies)
       .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
       .addArgument("/out:" + reportFile.getAbsolutePath())
       .addArgument("/outxsl:none")
       .addArgument("/forceoutput")
       .addArgument("/searchgac");
+
     if (aspnet) {
       command.addArgument("/aspnet");
     }
 
-    int exitCode = CommandExecutor.create().execute(
-      command,
-      TimeUnit.MINUTES.toMillis(timeout));
+    if (assemblyDependencyDirectories != null
+        && assemblyDependencyDirectories.length() > 0) {
+      String[] directories = assemblyDependencyDirectories.split(",");
+      for (String directory : directories) {
+        command.addArgument("/directory:" + directory);
+      }
+    }
+    return command;
 
-    LOG.info("FxCopCmd.exe ended with the exit code: " + exitCode);
-
-    Preconditions.checkState((exitCode & 1) == 0,
-      "The execution of \"" + executable + "\" failed and returned " + exitCode
-        + " as exit code. See http://msdn.microsoft.com/en-us/library/bb429400(v=vs.80).aspx for details.");
   }
-
+  
   /**
    * Handles deprecated property: "installDirectory", which gives the path to the directory only.
    */
-  private static String getExecutable(String path) {
-    return path.endsWith(EXECUTABLE) ? path : new File(path, EXECUTABLE).getAbsolutePath();
-  }
+  private static String getExecutable(String propertyValue) {
+    String execName = "FxCopCmd.exe";
 
+
+    if (!propertyValue.endsWith(execName)) {
+      return (new File(propertyValue, execName)).getAbsolutePath();
+    } else {
+      return propertyValue;
+    }
+  }
+  
 }
