@@ -130,7 +130,7 @@ public class FxCopSensor implements Sensor {
   }
 
   private static void logSkippedIssue(FxCopIssue issue, String reason) {
-    LOG.info("Skipping the FxCop issue at line " + issue.reportLine() + " " + reason);
+    LOG.debug("Skipping the FxCop issue at line " + issue.reportLine() + " " + reason);
   }
 
   private List<String> enabledRuleConfigKeys() {
