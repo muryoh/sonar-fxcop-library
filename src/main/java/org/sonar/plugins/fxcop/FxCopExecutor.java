@@ -26,6 +26,7 @@ import org.sonar.api.utils.command.Command;
 import org.sonar.api.utils.command.CommandExecutor;
 
 import java.io.File;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class FxCopExecutor {
@@ -33,7 +34,7 @@ public class FxCopExecutor {
   private static final Logger LOG = LoggerFactory.getLogger(FxCopExecutor.class);
   private static final String EXECUTABLE = "FxCopCmd.exe";
 
-  public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout, boolean aspnet) {
+  public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout, boolean aspnet, List<String> directories, List<String> references) {
     Command command = Command.create(getExecutable(executable))
       .addArgument("/file:" + assemblies)
       .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
@@ -41,8 +42,16 @@ public class FxCopExecutor {
       .addArgument("/outxsl:none")
       .addArgument("/forceoutput")
       .addArgument("/searchgac");
+
     if (aspnet) {
       command.addArgument("/aspnet");
+    }
+
+    for (String directory : directories) {
+      command.addArgument("/directory:" + directory);
+    }
+    for (String reference : references) {
+      command.addArgument("/reference:" + reference);
     }
 
     int exitCode = CommandExecutor.create().execute(

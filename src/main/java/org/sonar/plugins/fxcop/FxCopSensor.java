@@ -20,6 +20,7 @@
 package org.sonar.plugins.fxcop;
 
 import com.google.common.annotations.VisibleForTesting;
+import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,6 +35,8 @@ import org.sonar.api.rule.RuleKey;
 import org.sonar.api.rules.ActiveRule;
 import org.sonar.api.scan.filesystem.FileQuery;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
+
+import javax.annotation.Nullable;
 
 import java.io.File;
 import java.util.List;
@@ -93,7 +96,8 @@ public class FxCopSensor implements Sensor {
     File reportFile = new File(fileSystem.workingDir(), "fxcop-report.xml");
 
     executor.execute(settings.getString(fxCopConf.fxCopCmdPropertyKey()), settings.getString(fxCopConf.assemblyPropertyKey()),
-      rulesetFile, reportFile, settings.getInt(fxCopConf.timeoutPropertyKey()), settings.getBoolean(fxCopConf.aspnetPropertyKey()));
+      rulesetFile, reportFile, settings.getInt(fxCopConf.timeoutPropertyKey()), settings.getBoolean(fxCopConf.aspnetPropertyKey()),
+      splitOnCommas(settings.getString(fxCopConf.directoriesPropertyKey())), splitOnCommas(settings.getString(fxCopConf.referencesPropertyKey())));
 
     for (FxCopIssue issue : parser.parse(reportFile)) {
       if (!hasFileAndLine(issue)) {
@@ -118,6 +122,14 @@ public class FxCopSensor implements Sensor {
               .build());
         }
       }
+    }
+  }
+
+  private static List<String> splitOnCommas(@Nullable String property) {
+    if (property == null) {
+      return ImmutableList.of();
+    } else {
+      return ImmutableList.copyOf(Splitter.on(",").trimResults().omitEmptyStrings().split(property));
     }
   }
 
