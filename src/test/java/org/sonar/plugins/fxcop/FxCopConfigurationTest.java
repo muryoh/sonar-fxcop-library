@@ -86,6 +86,7 @@ public class FxCopConfigurationTest {
     thrown.expect(IllegalArgumentException.class);
     thrown.expectMessage("The property \"fooAssemblyKey\" must be set and the project must have been built to execute FxCop rules.");
     thrown.expectMessage("http://docs.codehaus.org/x/TAA1Dg");
+    thrown.expectMessage("sonar.visualstudio.skipIfNotBuilt");
 
     Settings settings = mock(Settings.class);
     when(settings.hasKey("fooAssemblyKey")).thenReturn(false);

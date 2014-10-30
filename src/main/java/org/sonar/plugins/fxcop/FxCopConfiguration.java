@@ -92,7 +92,8 @@ public class FxCopConfiguration {
   private void checkMandatoryProperties(Settings settings) {
     if (!settings.hasKey(assemblyPropertyKey)) {
       throw new IllegalArgumentException("The property \"" + assemblyPropertyKey + "\" must be set and the project must have been built to execute FxCop rules. "
-        + "This property can be automatically set by the Analysis Bootstrapper for Visual Studio Projects plugin, see: http://docs.codehaus.org/x/TAA1Dg");
+        + "This property can be automatically set by the Analysis Bootstrapper for Visual Studio Projects plugin, see: http://docs.codehaus.org/x/TAA1Dg."
+        + "If you wish to skip the analysis of not built projects, set the property \"sonar.visualstudio.skipIfNotBuilt\".");
     }
   }
 
