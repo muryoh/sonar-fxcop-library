@@ -114,7 +114,7 @@ public class FxCopSensorTest {
     when(settings.getInt("timeout")).thenReturn(42);
     when(settings.getBoolean("aspnet")).thenReturn(true);
     when(settings.getString("directories")).thenReturn(" c:/,,  d:/ ");
-    when(settings.getString("references")).thenReturn(",,c:/foo.dll , c:/bar.dll ");
+    when(settings.getString("references")).thenReturn(null);
 
     org.sonar.api.resources.File fooSonarFileWithIssuable = mockSonarFile("foo");
     org.sonar.api.resources.File fooSonarFileWithoutIssuable = mockSonarFile("foo");
@@ -162,7 +162,7 @@ public class FxCopSensorTest {
 
     verify(writer).write(ImmutableList.of("CA0000", "CA1000", "CR1000"), new File(workingDir, "fxcop-sonarqube.ruleset"));
     verify(executor).execute("FxCopCmd.exe", "MyLibrary.dll", new File(workingDir, "fxcop-sonarqube.ruleset"), new File(workingDir, "fxcop-report.xml"), 42, true,
-      ImmutableList.of("c:/", "d:/"), ImmutableList.of("c:/foo.dll", "c:/bar.dll"));
+      ImmutableList.of("c:/", "d:/"), ImmutableList.<String>of());
 
     verify(issuable).addIssue(issue1);
     verify(issuable).addIssue(issue2);
