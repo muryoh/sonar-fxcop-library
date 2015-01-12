@@ -64,7 +64,7 @@ public class FxCopSensorTest {
     Project project = mock(Project.class);
 
     FxCopSensor sensor = new FxCopSensor(
-      new FxCopConfiguration("foo", "foo-fxcop", "", "", "", "", "", "", ""),
+      new FxCopConfiguration("foo", "foo-fxcop", "", "", "", "", "", "", "", ""),
       settings, profile, fs, perspectives);
 
     assertThat(sensor.shouldExecuteOnProject(project)).isFalse();
@@ -98,6 +98,7 @@ public class FxCopSensorTest {
     when(fxCopConf.aspnetPropertyKey()).thenReturn("aspnet");
     when(fxCopConf.directoriesPropertyKey()).thenReturn("directories");
     when(fxCopConf.referencesPropertyKey()).thenReturn("references");
+    when(fxCopConf.assemblyCompareModePropertyKey()).thenReturn("assembly-compare-mode");
 
     FxCopSensor sensor = new FxCopSensor(
       fxCopConf,
@@ -120,6 +121,7 @@ public class FxCopSensorTest {
     when(settings.getBoolean("aspnet")).thenReturn(true);
     when(settings.getString("directories")).thenReturn(" c:/,,  d:/ ");
     when(settings.getString("references")).thenReturn(null);
+    when(settings.getString("assembly-compare-mode")).thenReturn("compareUsingMyMode");
 
     InputFile class5InputFile = new DefaultInputFile("Class5.cs").setAbsolutePath(new File(new File("basePath"), "Class5.cs").getAbsolutePath()).setLanguage("foo");
     InputFile class6InputFile = new DefaultInputFile("Class6.cs").setAbsolutePath(new File(new File("basePath"), "Class6.cs").getAbsolutePath()).setLanguage("foo");
@@ -170,7 +172,7 @@ public class FxCopSensorTest {
 
     verify(writer).write(ImmutableList.of("CA0000", "CA1000", "CR1000"), new File(workingDir, "fxcop-sonarqube.ruleset"));
     verify(executor).execute("FxCopCmd.exe", "MyLibrary.dll", new File(workingDir, "fxcop-sonarqube.ruleset"), new File(workingDir, "fxcop-report.xml"), 42, true,
-      ImmutableList.of("c:/", "d:/"), ImmutableList.<String>of());
+      ImmutableList.of("c:/", "d:/"), ImmutableList.<String>of(), "compareUsingMyMode");
 
     verify(issuable).addIssue(issue1);
     verify(issuable).addIssue(issue2);
@@ -216,7 +218,7 @@ public class FxCopSensorTest {
 
     verify(writer, Mockito.never()).write(Mockito.anyList(), Mockito.any(File.class));
     verify(executor, Mockito.never()).execute(
-      Mockito.anyString(), Mockito.anyString(), Mockito.any(File.class), Mockito.any(File.class), Mockito.anyInt(), Mockito.anyBoolean(), Mockito.anyList(), Mockito.anyList());
+      Mockito.anyString(), Mockito.anyString(), Mockito.any(File.class), Mockito.any(File.class), Mockito.anyInt(), Mockito.anyBoolean(), Mockito.anyList(), Mockito.anyList(), Mockito.anyString());
 
     verify(parser).parse(new File(reportFile.getAbsolutePath()));
   }
@@ -225,7 +227,7 @@ public class FxCopSensorTest {
   public void check_properties() {
     thrown.expectMessage("fooAssemblyKey");
 
-    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "", "", "", "", "", "");
+    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "", "", "", "", "", "", "");
     new FxCopSensor(fxCopConf, mock(Settings.class), mock(RulesProfile.class), mock(FileSystem.class), mock(ResourcePerspectives.class))
       .analyse(mock(Project.class), mock(SensorContext.class));
   }

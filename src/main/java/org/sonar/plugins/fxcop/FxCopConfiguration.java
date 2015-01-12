@@ -38,10 +38,12 @@ public class FxCopConfiguration {
   private final String directoriesPropertyKey;
   private final String referencesPropertyKey;
   private final String reportPathPropertyKey;
+  private final String assemblyCompareModePropertyKey;
 
   public FxCopConfiguration(String languageKey, String repositoryKey, String assemblyPropertyKey, String fxCopCmdPropertyKey, String timeoutPropertyKey, String aspnetPropertyKey,
     String directoriesPropertyKey, String referencesPropertyKey,
-    String reportPathPropertyKey) {
+    String reportPathPropertyKey,
+	String assemblyCompareModePropertyKey) {
     this.languageKey = languageKey;
     this.repositoryKey = repositoryKey;
     this.assemblyPropertyKey = assemblyPropertyKey;
@@ -51,6 +53,7 @@ public class FxCopConfiguration {
     this.directoriesPropertyKey = directoriesPropertyKey;
     this.referencesPropertyKey = referencesPropertyKey;
     this.reportPathPropertyKey = reportPathPropertyKey;
+    this.assemblyCompareModePropertyKey = assemblyCompareModePropertyKey;
   }
 
   public String languageKey() {
@@ -83,6 +86,10 @@ public class FxCopConfiguration {
 
   public String referencesPropertyKey() {
     return referencesPropertyKey;
+  }
+
+  public String assemblyCompareModePropertyKey() {
+    return assemblyCompareModePropertyKey;
   }
 
   public String reportPathPropertyKey() {

@@ -101,7 +101,8 @@ public class FxCopSensor implements Sensor {
 
       executor.execute(settings.getString(fxCopConf.fxCopCmdPropertyKey()), settings.getString(fxCopConf.assemblyPropertyKey()),
         rulesetFile, reportFile, settings.getInt(fxCopConf.timeoutPropertyKey()), settings.getBoolean(fxCopConf.aspnetPropertyKey()),
-        splitOnCommas(settings.getString(fxCopConf.directoriesPropertyKey())), splitOnCommas(settings.getString(fxCopConf.referencesPropertyKey())));
+        splitOnCommas(settings.getString(fxCopConf.directoriesPropertyKey())), splitOnCommas(settings.getString(fxCopConf.referencesPropertyKey())),
+		settings.getString(fxCopConf.assemblyCompareModePropertyKey()));
     } else {
       LOG.debug("Using the provided FxCop report" + reportPath);
       reportFile = new File(reportPath);
