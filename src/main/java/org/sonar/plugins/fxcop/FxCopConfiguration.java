@@ -37,9 +37,10 @@ public class FxCopConfiguration {
   private final String aspnetPropertyKey;
   private final String directoriesPropertyKey;
   private final String referencesPropertyKey;
+  private final String assemblyCompareModePropertyKey;
 
   public FxCopConfiguration(String languageKey, String repositoryKey, String assemblyPropertyKey, String fxCopCmdPropertyKey, String timeoutPropertyKey, String aspnetPropertyKey,
-    String directoriesPropertyKey, String referencesPropertyKey) {
+    String directoriesPropertyKey, String referencesPropertyKey, String assemblyCompareModePropertyKey) {
     this.languageKey = languageKey;
     this.repositoryKey = repositoryKey;
     this.assemblyPropertyKey = assemblyPropertyKey;
@@ -48,6 +49,7 @@ public class FxCopConfiguration {
     this.aspnetPropertyKey = aspnetPropertyKey;
     this.directoriesPropertyKey = directoriesPropertyKey;
     this.referencesPropertyKey = referencesPropertyKey;
+    this.assemblyCompareModePropertyKey = assemblyCompareModePropertyKey;
   }
 
   public String languageKey() {
@@ -80,6 +82,10 @@ public class FxCopConfiguration {
 
   public String referencesPropertyKey() {
     return referencesPropertyKey;
+  }
+
+  public String assemblyCompareModePropertyKey() {
+    return assemblyCompareModePropertyKey;
   }
 
   public void checkProperties(Settings settings) {

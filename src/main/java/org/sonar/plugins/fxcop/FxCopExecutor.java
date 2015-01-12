@@ -34,7 +34,7 @@ public class FxCopExecutor {
   private static final Logger LOG = LoggerFactory.getLogger(FxCopExecutor.class);
   private static final String EXECUTABLE = "FxCopCmd.exe";
 
-  public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout, boolean aspnet, List<String> directories, List<String> references) {
+  public void execute(String executable, String assemblies, File rulesetFile, File reportFile, int timeout, boolean aspnet, List<String> directories, List<String> references, String assemblyCompareMode) {
     Command command = Command.create(getExecutable(executable))
       .addArgument("/file:" + assemblies)
       .addArgument("/ruleset:=" + rulesetFile.getAbsolutePath())
@@ -45,6 +45,9 @@ public class FxCopExecutor {
 
     if (aspnet) {
       command.addArgument("/aspnet");
+    }
+    if (assemblyCompareMode != null) {
+      command.addArgument("/assemblyCompareMode:" + assemblyCompareMode);
     }
 
     for (String directory : directories) {
