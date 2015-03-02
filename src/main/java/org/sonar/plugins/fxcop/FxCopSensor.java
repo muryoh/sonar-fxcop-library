@@ -90,14 +90,21 @@ public class FxCopSensor implements Sensor {
   void analyse(SensorContext context, FileProvider fileProvider, FxCopRulesetWriter writer, FxCopReportParser parser, FxCopExecutor executor) {
     fxCopConf.checkProperties(settings);
 
-    File rulesetFile = new File(fileSystem.workingDir(), "fxcop-sonarqube.ruleset");
-    writer.write(enabledRuleConfigKeys(), rulesetFile);
+    File reportFile;
+    String reportPath = settings.getString(fxCopConf.reportPathPropertyKey());
+    if (reportPath == null) {
+      File rulesetFile = new File(fileSystem.workingDir(), "fxcop-sonarqube.ruleset");
+      writer.write(enabledRuleConfigKeys(), rulesetFile);
 
-    File reportFile = new File(fileSystem.workingDir(), "fxcop-report.xml");
+      reportFile = new File(fileSystem.workingDir(), "fxcop-report.xml");
 
-    executor.execute(settings.getString(fxCopConf.fxCopCmdPropertyKey()), settings.getString(fxCopConf.assemblyPropertyKey()),
-      rulesetFile, reportFile, settings.getInt(fxCopConf.timeoutPropertyKey()), settings.getBoolean(fxCopConf.aspnetPropertyKey()),
-      splitOnCommas(settings.getString(fxCopConf.directoriesPropertyKey())), splitOnCommas(settings.getString(fxCopConf.referencesPropertyKey())));
+      executor.execute(settings.getString(fxCopConf.fxCopCmdPropertyKey()), settings.getString(fxCopConf.assemblyPropertyKey()),
+        rulesetFile, reportFile, settings.getInt(fxCopConf.timeoutPropertyKey()), settings.getBoolean(fxCopConf.aspnetPropertyKey()),
+        splitOnCommas(settings.getString(fxCopConf.directoriesPropertyKey())), splitOnCommas(settings.getString(fxCopConf.referencesPropertyKey())));
+    } else {
+      LOG.debug("Using the provided FxCop report" + reportPath);
+      reportFile = new File(reportPath);
+    }
 
     for (FxCopIssue issue : parser.parse(reportFile)) {
       if (!hasFileAndLine(issue)) {

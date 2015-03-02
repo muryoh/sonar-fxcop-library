@@ -61,7 +61,7 @@ public class FxCopSensorTest {
     Project project = mock(Project.class);
 
     FxCopSensor sensor = new FxCopSensor(
-      new FxCopConfiguration("", "foo-fxcop", "", "", "", "", "", ""),
+      new FxCopConfiguration("", "foo-fxcop", "", "", "", "", "", "", ""),
       settings, profile, fileSystem, perspectives);
 
     when(fileSystem.files(Mockito.any(FileQuery.class))).thenReturn(ImmutableList.<File>of());
@@ -182,10 +182,43 @@ public class FxCopSensorTest {
   }
 
   @Test
+  public void analyze_with_report() {
+    Settings settings = new Settings();
+    RulesProfile profile = mock(RulesProfile.class);
+    ModuleFileSystem fileSystem = mock(ModuleFileSystem.class);
+    ResourcePerspectives perspectives = mock(ResourcePerspectives.class);
+
+    FxCopConfiguration fxCopConf = mock(FxCopConfiguration.class);
+    when(fxCopConf.repositoryKey()).thenReturn("foo-fxcop");
+    when(fxCopConf.reportPathPropertyKey()).thenReturn("reportPath");
+
+    FxCopSensor sensor = new FxCopSensor(
+      fxCopConf,
+      settings, profile, fileSystem, perspectives);
+
+    File reportFile = new File("src/test/resources/FxCopSensorTest/fxcop-report.xml");
+    settings.setProperty("reportPath", reportFile.getAbsolutePath());
+
+    SensorContext context = mock(SensorContext.class);
+    FileProvider fileProvider = mock(FileProvider.class);
+    FxCopRulesetWriter writer = mock(FxCopRulesetWriter.class);
+    FxCopReportParser parser = mock(FxCopReportParser.class);
+    FxCopExecutor executor = mock(FxCopExecutor.class);
+
+    sensor.analyse(context, fileProvider, writer, parser, executor);
+
+    verify(writer, Mockito.never()).write(Mockito.anyList(), Mockito.any(File.class));
+    verify(executor, Mockito.never()).execute(
+      Mockito.anyString(), Mockito.anyString(), Mockito.any(File.class), Mockito.any(File.class), Mockito.anyInt(), Mockito.anyBoolean(), Mockito.anyList(), Mockito.anyList());
+
+    verify(parser).parse(new File(reportFile.getAbsolutePath()));
+  }
+
+  @Test
   public void check_properties() {
     thrown.expectMessage("fooAssemblyKey");
 
-    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "", "", "", "", "");
+    FxCopConfiguration fxCopConf = new FxCopConfiguration("", "", "fooAssemblyKey", "", "", "", "", "", "");
     new FxCopSensor(fxCopConf, mock(Settings.class), mock(RulesProfile.class), mock(ModuleFileSystem.class), mock(ResourcePerspectives.class))
       .analyse(mock(Project.class), mock(SensorContext.class));
   }
