@@ -54,8 +54,7 @@
   </distributionManagement>
 
   <properties>
-    <sonarqube.version>3.7</sonarqube.version>
-
+    <sonarqube.version>4.5.2</sonarqube.version>
     <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
   </properties>
 
